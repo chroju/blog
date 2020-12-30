@@ -27,11 +27,19 @@ export default function Post({ postData }) {
     useEffect(() => {
         Prism.highlightAll()
     }, [])
+    const pageTitle = postData.title + " - " + siteTitle
 
     return (
         <Layout>
             <Head>
-                <title>{postData.title} - {siteTitle}</title>
+                <title>{pageTitle}</title>
+                <meta
+                    property="og:image"
+                    content={`https://og-image.now.sh/${encodeURI(
+                        pageTitle
+                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+                />
+                <meta name="og:title" content={pageTitle} />
             </Head>
             <article>
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>

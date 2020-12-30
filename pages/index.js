@@ -8,6 +8,11 @@ export default function Home() {
     <Layout home>
       <Head>
         <title>chroju</title>
+        <meta
+          property="og:image"
+          content={`https://og-image.now.sh/chroju.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        />
+        <meta name="og:title" content="chroju" />
       </Head>
       <section className={utilsStyles.menu}>
         <a href="https://github.com/chroju"><Fa iconName="github" /></a>
