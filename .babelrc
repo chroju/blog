@@ -23,7 +23,9 @@
                     "vim",
                     "yaml"
                 ],
-                "plugins": [],
+                "plugins": [
+                    "line-numbers"
+                ],
                 "theme": "tomorrow",
                 "css": true
             }
