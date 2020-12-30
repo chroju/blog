@@ -28,6 +28,7 @@ export default function Post({ postData }) {
         Prism.highlightAll()
     }, [])
     const pageTitle = postData.title + " - " + siteTitle
+    const pageURL = "https://chroju.dev/blog/" + postData.title
 
     return (
         <Layout>
@@ -35,11 +36,12 @@ export default function Post({ postData }) {
                 <title>{pageTitle}</title>
                 <meta
                     property="og:image"
-                    content={`https://og-image.now.sh/${encodeURI(
-                        pageTitle
-                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+                    content={`https://og-image.chroju.dev/${encodeURI(
+                        postData.title
+                    )}.png?theme=dark&md=0&fontSize=75px`}
                 />
                 <meta name="og:title" content={pageTitle} />
+                <meta name="og:url" content={pageURL} />
             </Head>
             <article>
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>

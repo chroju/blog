@@ -18,6 +18,7 @@ export default function Layout({ children, home }) {
                     name="description"
                     content="Learn how to build a personal website using Next.js"
                 />
+                <meta name="og:description" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             {home ? (
