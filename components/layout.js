@@ -11,6 +11,7 @@ export default function Layout({ children, home }) {
         <div className={styles.container}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="alternate" type="application/atom+xml" href="https://chroju.dev/blog/feed.xml" title="Atom" />
                 <meta
                     name="description"
                     content="Learn how to build a personal website using Next.js"

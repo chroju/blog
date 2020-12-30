@@ -3,6 +3,8 @@ import Layout from '../../components/layout'
 import Date from '../../components/date'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
+import { useEffect } from 'react'
+import Prism from 'prismjs'
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
@@ -22,6 +24,10 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+    useEffect(() => {
+        Prism.highlightAll()
+    }, [])
+
     return (
         <Layout>
             <Head>
@@ -30,7 +36,7 @@ export default function Post({ postData }) {
             <article>
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>
                 <div className={utilStyles.lightText}>
-                    <Date dateString={postData.date}/>
+                    <Date dateString={postData.date} />
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>
