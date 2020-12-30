@@ -22,18 +22,13 @@ p {
   margin-bottom: 40px;
 }
 
-p > code {
+p > code, li > code {
   font-family: Ubuntu;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 3px;
   background-color: #eee;
-  counter-reset: linenumber;
-}
-
-img {
-  border: 1px solid #999999;
 }
 
 blockquote {
@@ -66,6 +61,33 @@ a:hover {
 }
 
 img {
+  border: 1px solid #999999;
   max-width: 100%;
   display: block;
+}
+
+dl {
+  font-size: 21px;
+}
+
+dd {
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+
+ul {
+  margin: 40px auto;
+  font-weight: 300;
+}
+
+li {
+  line-height: 1.8em;
+  margin-bottom: 18px;
+}
+
+ /* TODO */
+.svg-inline--fa {
+  width: 10%;
+  padding: 5px;
+  color: #999;
 }
