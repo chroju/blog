@@ -1,7 +1,7 @@
 import Head from 'next/head'
+import Menu from '../components/menu'
 import Layout from '../components/layout'
 import utilsStyles from '../styles/utils.module.css'
-import Fa from '../components/fontawesome'
 
 export default function Home() {
   return (
@@ -14,12 +14,7 @@ export default function Home() {
         />
         <meta name="og:title" content="chroju" />
       </Head>
-      <section className={utilsStyles.menu}>
-        <a href="https://github.com/chroju"><Fa iconName="github" /></a>
-        <a href="https://twitter.com/chroju"><Fa iconName="twitter" /></a>
-        <a href="https://www.instagrafa-instagramm.com/chroju"><Fa iconName="instagram" /></a>
-        <a href="https://speakerdeck.com/chroju"><Fa iconName="speaker-deck" /></a>
-      </section>
+      <Menu />
       <section className={utilsStyles.headingMd}>
         <h2 className={utilsStyles.headingLg}>Who?</h2>
         <dl>
@@ -57,7 +52,7 @@ export default function Home() {
         <h2 className={utilsStyles.headingLg}>Blog</h2>
         <ul>
           <li><a href="./blog">the world as code</a> (about tech)</li>
-          <li><a href="./blog">the world was not enough</a> (about culture)</li>
+          <li><a href="https://chroju.hatenablog.jp">the world was not enough</a> (about culture)</li>
         </ul>
       </section>
     </Layout>

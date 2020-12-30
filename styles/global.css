@@ -8,6 +8,10 @@ body {
   font-size: 18px;
 }
 
+h1 {
+  margin: 3px auto;
+}
+
 h2 {
   margin-top: 120px;
 }
@@ -87,7 +91,7 @@ li {
 
  /* TODO */
 .svg-inline--fa {
-  width: 10%;
+  width: 30px;
   padding: 5px;
   color: #999;
 }

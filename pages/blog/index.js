@@ -17,7 +17,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout >
       <Head>
         <title>{siteTitle}</title>
         <meta
@@ -28,9 +28,7 @@ export default function Home({ allPostsData }) {
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <h1 className={utilsStyles.headingLg}>the world as code</h1>
       <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
-        <h2 className={utilsStyles.headingLg}>Entries</h2>
         <ul className={utilsStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilsStyles.listItem} key={id}>
