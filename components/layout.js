@@ -6,17 +6,17 @@ import Menu from '../components/menu'
 import Fa from './fontawesome'
 
 const name = 'chroju'
-export const siteTitle = 'the world as code (WIP)'
+export const siteTitle = 'the world as code'
 
 export default function Layout({ children, home }) {
     return (
         <div className={styles.container}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <link rel="alternate" type="application/atom+xml" href="https://chroju.dev/blog/feed.xml" title="Atom" />
+                <link rel="alternate" type="application/xml" href="https://chroju.dev/feed.xml" title="RSS 2.0" />
                 <meta
                     name="description"
-                    content="Learn how to build a personal website using Next.js"
+                    content="chroju's blog"
                 />
                 <meta name="og:description" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -46,16 +46,21 @@ export default function Layout({ children, home }) {
             {
                 !home && (
                     <div className={styles.backToHome}>
-                        <Link href="/">
-                            <a>
-                                <img
-                                    src="/images/profile.jpg"
-                                    className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                                    alt={name}
-                                />
-                            </a>
-                        </Link>
-                        <Menu />
+                        <section className={styles.footerSection}>
+                            <Link href="/blog"><a>Blog top</a></Link>
+                        </section>
+                        <section className={styles.footerSection}>
+                            <Link href="/">
+                                <a>
+                                    <img
+                                        src="/images/profile.jpg"
+                                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                                        alt={name}
+                                    />
+                                </a>
+                            </Link>
+                            <Menu />
+                        </section>
                     </div>
                 )
             }
