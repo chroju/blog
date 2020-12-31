@@ -22,11 +22,12 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
         <meta
           property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
+          content={`https://og-image.chroju.dev/${encodeURI(
             siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          )}.png?theme=dark&md=0&fontSize=75px`}
         />
         <meta name="og:title" content={siteTitle} />
+        <meta name="og:url" content="https://chroju.dev/blog" />
       </Head>
       <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
         <ul className={utilsStyles.list}>

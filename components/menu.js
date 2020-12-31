@@ -11,11 +11,11 @@ export default function Menu() {
             <Link href="https://twitter.com/chroju">
                 <a><Fa iconName="twitter" /></a>
             </Link>
-            <Link href="https://instagram.com/chroju">
-                <a><Fa iconName="instagram" /></a>
-            </Link>
             <Link href="https://speakerdeck.com/chroju">
                 <a><Fa iconName="speaker-deck" /></a>
+            </Link>
+            <Link href="https://instagram.com/chroju">
+                <a><Fa iconName="instagram" /></a>
             </Link>
         </section>
     )

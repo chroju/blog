@@ -10,9 +10,10 @@ export default function Home() {
         <title>chroju</title>
         <meta
           property="og:image"
-          content={`https://og-image.now.sh/chroju.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content={`https://og-image.chroju.dev/chroju.png?theme=dark&md=0&fontSize=75px`}
         />
         <meta name="og:title" content="chroju" />
+        <meta name="og:url" content="https://chroju.dev" />
       </Head>
       <Menu />
       <section className={utilsStyles.headingMd}>
@@ -23,7 +24,7 @@ export default function Home() {
           <dt>Location</dt>
           <dd>Tokyo, Japan</dd>
           <dt>Favorite</dt>
-          <dd>Terraform / Kubernetes / Go / Simplicity</dd>
+          <dd>Terraform / Kubernetes / Go / AWS</dd>
         </dl>
         <h2 className={utilsStyles.headingLg}>Experience</h2>
         <dl>
