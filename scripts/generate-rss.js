@@ -6,7 +6,7 @@ const remark = require('remark')
 const html = require('remark-html')
 
 const postsDirectory = path.join(process.cwd(), 'posts')
-const siteURL = 'https://chroju.dev/blog'
+const siteURL = 'https://chroju.dev'
 
 async function getSortedPostsData() {
     const fileNames = fs.readdirSync(postsDirectory)
@@ -48,7 +48,7 @@ async function generate() {
         feed.item({
             title: post.data.title,
             guid: post.id,
-            url: `${siteURL}/${post.id}`,
+            url: `${siteURL}/blog/${post.id}`,
             date: post.data.date,
             description: post.contentHtml,
             author: "chroju",

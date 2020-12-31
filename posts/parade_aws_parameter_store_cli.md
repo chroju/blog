@@ -91,7 +91,7 @@ func (m *mockSSMClient) GetParameter(i *ssm.GetParameterInput) (*ssm.GetParamete
 
 Go のコマンドラインツールを作るためのパッケージの1つ。競合として [urfave/cli](https://github.com/urfave/cli) や [mitchellh/cli](https://github.com/mitchellh/cli) もあるが、 cobra が現時点で最もスター数が多く、用例も多いのかなと勝手に思っている。作成者が Docker, Google, MongoDB あたりに関わっているゲキヤバな人であることもあってか、 [kubectl](https://kubernetes.io/docs/reference/kubectl/) や [Istio](https://istio.io/) などでも使われている。
 
-使ってみた感想としてはなんでも出来る、そしてサクッと書ける良いツールではあった。が、サブコマンドのテストが書きづらい。というのも、以下のように　`&cobra.Command` で変数として定義する方式を取るから。
+使ってみた感想としてはなんでも出来る、そしてサクッと書ける良いツールではあった。が、サブコマンドのテストが書きづらい。というのも、以下のように `&cobra.Command` で変数として定義する方式を取るから。
 
 ```go
 var versionCmd = &cobra.Command{
