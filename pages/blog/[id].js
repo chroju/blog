@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Helmet from 'react-helmet'
 import Layout, { siteTitle } from '../../components/layout'
 import Date from '../../components/date'
 import { getAllPostIds, getPostData } from '../../lib/posts'
@@ -43,6 +44,9 @@ export default function Post({ postData }) {
                 <meta name="og:title" content={pageTitle} />
                 <meta name="og:url" content={pageURL} />
             </Head>
+            <Helmet>
+                <script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+            </Helmet>
             <article>
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>
                 <div className={utilStyles.lightText}>
