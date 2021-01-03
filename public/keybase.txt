@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/chroju
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://chroju.dev
+  * I am chroju (https://keybase.io/chroju) on keybase.
+  * I have a public key with fingerprint 5B15 86BD 87F8 1233 D5A7  2590 B290 1C02 871B 6CD5
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01011027fedb4ecb1cc4a0939828aa968b299cfc421b131f39b1b520397d9ce4b3210a",
+      "fingerprint": "5b1586bd87f81233d5a72590b2901c02871b6cd5",
+      "host": "keybase.io",
+      "key_id": "b2901c02871b6cd5",
+      "kid": "01011027fedb4ecb1cc4a0939828aa968b299cfc421b131f39b1b520397d9ce4b3210a",
+      "uid": "40724956268bfbf5188e7e3d5bf3a019",
+      "username": "chroju"
+    },
+    "service": {
+      "hostname": "chroju.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1600570025,
+  "expire_in": 157680000,
+  "prev": "1ca3376abfd430b025ecce49b2f1abdc0141f0e4f883cc8d94f1ac0460f736f2",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUn1MVWUcvnxcAhTBJogWFEdRhCu87/k+lxkNFy2glogQQbucj/fAETgH7qfI
+YG7ISBBlfWFgCF5X4UpGhgmUOpJafmCKWu6qi4wFBISzTwzpXJZ/tPVn7z/v3ud9
+nuf3/H77NYf4GQJ92kLuXp26dUX1OT8hGCzy4KdVmKBJlZi5CitBixcqlZDNbilR
+JMyMAQggBDgjI0kgkShAUSR5wBEci7M8z9GsgHOcKIskDgVIQJngBChQOCA4RuJE
+RAoEDgGPmTBZUYuQtdyqqHbdlhIgxdKCxDIyC3GCkCiewSkO6G4AigBnGSjQokTp
+wmLN5lXo4QTehhIVTcf0h2Ux3n/w/+fcjkU7EjA4yVE0rgtlQaYgyyIG6bEFmeAB
+5LxEG7KqfBnS2WKxVdvuwKpNmI45FRF5x+rt41//iRJy6rpyq2bXRK1Ux4vt9nKb
+2auzV5Z7iS4kWP6xsAiKKukz1BVOZLUpmoqZoc4U7YrXE9IAUAwAOGXC0I5yxYos
+ipdBMTQL9OOto5czY1DkCYKheUGWskkCCLoCiXrDnIDLkBckEUASygCRMssSoshK
+HKnjIiBpIDMELeOYt6sKVcPMnJ6TL9I9bUqRytsdVoRVB+/xJfwNPoGGqIgY/7Cd
+b70TdmrJ+yn16155uHdGX+/SGYKDwh4ibZtDF56NO+pxRd34c1lB2h3jwd9Oz/+8
+O25pcxTriN/V46cULnviGJ3ZC2I9Kx/5enduTlv6u34fum+PjvsW+z5Z+EvSbPuF
+qm7zsbGp1rA9h7LXnVl+YtUKd+djK5dnTj6zekvDZRsNC1tdCwOeDS2Rc+3uggjP
+EbQmOn5sdsbTMHPzC8vWsrKz6cnzva0XwyN/vFS7MXzGEDtf99KQljmcnZGDjAHN
+60HCpYCSlKTeTW44SUw12e6y2yrH8s/hOVmfuyPRwV6mpVEtzTNuvD8ycg1FjHQY
+6u+FitV1eRVLk/zHu54LuLXf1Ji2s8Npixt2VdtXmRZWdzW61083fbk2P0+rbg1V
+M060vTCHjvdfOFXUvLmvezpkl+vimfqGUevNzp4uY3jF6PUgcfA6VTHhVxNbwzj2
+3ZnuM36HjT7dOde8X+jOnIu53I/HvGxFcEt/sOubN/MPrWnPoAfG8tR9kTlhniM+
+W/uG635KnT45u62AjOee1x4/PB6/tiN5RbL/XuOVrNcfPGhpF1+NHLjthh/0tNXk
+Uv3E0LWT6TsS/ygCWU8xKRG1X50rv9+Y2pPQ77p6+IDp3osT1orTG/xu9EJC/Wzo
+jaC+o39pVWTgR/Gi8/y3TQlxuR9Lrdtfm6x32D9xjkVT79Ue/300uuTRgIXgX1Pf
+Ths+4L/kh8FNcWe/b0/zRJTN/g0=
+=NjBW
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/chroju
+
+==================================================================
+
