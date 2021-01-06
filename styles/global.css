@@ -19,7 +19,7 @@ h3 {
   margin-top: 50px;
 }
 
-p {
+div > p {
   line-height: 2.0;
   font-weight: 200;
   margin-bottom: 38px;
@@ -35,20 +35,14 @@ p > code, li > code {
 }
 
 blockquote {
-  margin: 3px;
   font-style: italic;
+  border-left: 8px solid #ddd;
+  color: #666;
   margin-left: 10px;
-  padding: 0.5em;
+  padding: 0.2em 2em;
   position: relative;
 }
 
-blockquote::before {
-  content: ">";
-  color: #999;
-  top: 1.5em;
-  left: -0.5em;
-  position: absolute;
-}
 
 * {
   box-sizing: border-box;
@@ -85,7 +79,7 @@ ul {
 
 li {
   line-height: 1.8em;
-  margin-bottom: 18px;
+  margin: 8px 0;
 }
 
  /* TODO */
