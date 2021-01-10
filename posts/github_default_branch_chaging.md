@@ -55,6 +55,16 @@ $ git push -u origin HEAD
 $ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 ```
 
+### 追記2 2021-01-10)
+
+もしくは以下のコマンドでも OK 。
+
+```bash
+$ git remote set-head origin --auto
+```
+
+（追記2 ここまで）
+
 また、 `git init` した際の default branch については、 `.gitconfig` で global に設定できる。
 
 ```ini
