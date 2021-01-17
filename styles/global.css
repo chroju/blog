@@ -72,7 +72,7 @@ dd {
   margin-bottom: 5px;
 }
 
-ul {
+ul, ol {
   margin: 40px auto;
   font-weight: 300;
 }
