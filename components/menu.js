@@ -8,11 +8,14 @@ export default function Menu() {
             <Link href="https://github.com/chroju">
                 <a><Fa iconName="github" /></a>
             </Link>
-            <Link href="https://twitter.com/chroju">
-                <a><Fa iconName="twitter" /></a>
+            <Link href="https://keybase.io/chroju">
+                <a><Fa iconName="keybase" /></a>
             </Link>
             <Link href="https://speakerdeck.com/chroju">
                 <a><Fa iconName="speaker-deck" /></a>
+            </Link>
+            <Link href="https://twitter.com/chroju">
+                <a><Fa iconName="twitter" /></a>
             </Link>
             <Link href="https://instagram.com/chroju">
                 <a><Fa iconName="instagram" /></a>
