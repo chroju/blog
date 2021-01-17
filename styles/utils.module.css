@@ -35,6 +35,10 @@
   line-height: 1.5;
 }
 
+.faText {
+  display: none;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
@@ -58,6 +62,6 @@
 }
 
 .lightText {
-  color: #999;
+  color: rgb(120, 120, 120);
   margin-bottom: 40px;
 }
