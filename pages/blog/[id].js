@@ -37,7 +37,7 @@ export default function Post({ postData }) {
                 <title>{pageTitle}</title>
                 <meta
                     property="og:image"
-                    content={`https://og-image.chroju.dev/${postData.title}.png?theme=dark&md=0&fontSize=75px`}
+                    content={`https://og-image.chroju.dev/${encodeURIComponent(postData.title)}.png?theme=dark&md=0&fontSize=96px`}
                 />
                 <meta name="og:title" content={pageTitle} />
                 <meta name="og:url" content={pageURL} />
