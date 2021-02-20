@@ -25,6 +25,7 @@
     "react-dom": "16.13.1",
     "react-helmet": "^6.1.0",
     "remark": "^13.0.0",
+    "remark-gfm": "^1.0.0",
     "remark-html": "^13.0.1",
     "rss": "^1.2.2",
     "ts-node": "^9.1.1"
