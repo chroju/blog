@@ -1,7 +1,7 @@
 ---
 title: "SRE NEXT 2020 に行ってきた"
 date: "2020-01-28T00:21:52+09:00"
-tags: [""]
+tags: ["event", "sre"]
 isCJKLanguage: true
 draft: false
 ---

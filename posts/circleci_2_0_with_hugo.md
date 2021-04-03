@@ -1,7 +1,7 @@
 ---
 title: "CircleCI 2.0でhugoのブログ生成を自動化する"
 date: "2017-12-18T10:15:06+09:00"
-tags: [""]
+tags: ["hugo", "circle-ci"]
 isCJKLanguage: true
 draft: false
 ---

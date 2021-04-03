@@ -1,7 +1,7 @@
 ---
 title: "SRE としてのキャリアパスを考える"
 date: "2020-10-06T14:48:02+09:00"
-tags: [""]
+tags: ["sre", "career"]
 isCJKLanguage: true
 draft: false
 ---

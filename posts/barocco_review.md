@@ -2,7 +2,7 @@
 date: "2017-02-05T23:34:24+09:00"
 description: ""
 title: "Baroccoで分割キーボードデビューした"
-
+tags: ["keyboard"]
 ---
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/gp/chroju/hY667o" title="Baroccoとどいた"><img src="https://c1.staticflickr.com/1/579/31813875193_36398a3d15.jpg" width="500" height="500" alt="Baroccoとどいた"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

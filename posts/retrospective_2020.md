@@ -1,6 +1,7 @@
 ---
 title: "Retrospective 2020"
 date: "2020-12-31T11:22:28+09:00"
+tags: ["retrospective"]
 ---
 
 年間振り返りエントリー6年目。

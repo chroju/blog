@@ -1,6 +1,7 @@
 ---
 title: "帝京大学通信課程での社会人大学生2年目を終えて"
 date: "2021-03-10T09:22:06+0900"
+tags: ["university"]
 ---
 
 帝京大学理工学部情報科学科通信課程2年目（2年次編入のため、学年は3年生）を終えたので記録する。1年目については [社会人大学生1年目を終えて、大学生活と勉強法とその困難 - the world as code](https://chroju.dev/blog/adult_university_learner_first_year) で書いた。

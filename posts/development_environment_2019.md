@@ -1,7 +1,7 @@
 ---
 title: "CUI 開発環境 2019 - tmux, fzf, ghq, Starship, aws-vault, etc"
 date: "2019-11-17T12:45:58+09:00"
-tags: [""]
+tags: ["cui"]
 isCJKLanguage: true
 draft: false
 ---

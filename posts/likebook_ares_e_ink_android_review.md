@@ -1,7 +1,7 @@
 ---
 title: "読書用に Likebook Ares という電子ペーパー Android を買った"
 date: "2020-02-22T18:58:45+09:00"
-tags: [""]
+tags: ["gadget"]
 isCJKLanguage: true
 draft: false
 ---

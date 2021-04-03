@@ -1,7 +1,6 @@
 ---
 title: "NTT技術史料館に行ってきた"
 date: "2019-01-28T23:41:48+09:00"
-tags: [""]
 isCJKLanguage: true
 draft: false
 ---

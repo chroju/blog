@@ -1,6 +1,7 @@
 ---
 title: "ブログを Next.js + Vercel に移行した"
 date: "2021-01-02T10:19:59+0900"
+tags: ["next.js"]
 ---
 
 ということで、 feed を購読していただいていた方は `https://chroju.dev/feed.xml` に購読先を変更いただけますと幸いです。移行前のブログが `https://chroju.github.io` 、移行後のブログが `https://chroju.dev/blog` です。この記事までは双方に並行で上げていますが、今月中に以下の移行措置を行う予定でいます。

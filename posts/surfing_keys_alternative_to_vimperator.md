@@ -1,7 +1,7 @@
 ---
 title: "cVim から SurfingKeys へ移行した"
 date: "2020-03-13T09:25:32+09:00"
-tags: [""]
+tags: ["vivaldi"]
 isCJKLanguage: true
 draft: false
 ---

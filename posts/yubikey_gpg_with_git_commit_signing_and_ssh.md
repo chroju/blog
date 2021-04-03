@@ -1,6 +1,7 @@
 ---
 title: "YubiKey + GPG で統一的な鍵の管理を行う"
 date: "2021-01-17T19:04:25+0900"
+tags: ["yubikey", "gpg"]
 ---
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">$5,000で Let&#39;s Encryptを12時間ご利用いただけます。次の12時間で$5,000を寄付しましょう！お礼の印として、<a href="https://twitter.com/Yubico?ref_src=twsrc%5Etfw">@Yubico</a> よりSecurity Key NFCを無料でお受け取りいただけます (送料はかかりません)！<a href="https://t.co/swycXbtpSz">https://t.co/swycXbtpSz</a> <a href="https://t.co/QJwoWKWKS8">pic.twitter.com/QJwoWKWKS8</a></p>&mdash; Let&#39;s Encrypt (@letsencrypt) <a href="https://twitter.com/letsencrypt/status/1288733908771561473?ref_src=twsrc%5Etfw">July 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -1,7 +1,7 @@
 ---
 title: "社会人大学生1年目を終えて、大学生活と勉強法とその困難"
 date: "2020-03-28T11:25:27+09:00"
-tags: [""]
+tags: ["university"]
 isCJKLanguage: true
 draft: false
 ---

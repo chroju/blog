@@ -1,7 +1,7 @@
 ---
 title: "COVID-19 とリモートワーク - 設備だけではなくルーチンも大事"
 date: "2020-04-15T23:10:50+09:00"
-tags: [""]
+tags: ["wfh"]
 isCJKLanguage: true
 draft: false
 ---

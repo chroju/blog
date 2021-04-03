@@ -1,6 +1,7 @@
 ---
 title: "Macbook Pro (13-inch, M1, 2020) を購入した"
 date: "2021-01-11T18:22:53+0900"
+tags: ["gadget"]
 ---
 
 <a href="https://gyazo.com/f0ee461dcb5907e157a826e803e47bbb"><img src="https://i.gyazo.com/f0ee461dcb5907e157a826e803e47bbb.jpg" alt="Image from Gyazo" width="600"/></a>

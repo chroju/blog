@@ -1,7 +1,7 @@
 ---
 title: "WFH を始めて半年が過ぎ、調えたり諦めたりしたこと"
 date: "2020-11-21T15:37:04+09:00"
-tags: [""]
+tags: ["wfh"]
 isCJKLanguage: true
 draft: false
 ---

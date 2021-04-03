@@ -1,7 +1,7 @@
 ---
 title: "Terraformドキュメントをコマンドで見るツールをGoで作る"
 date: "2018-03-25T22:56:51+09:00"
-tags: [""]
+tags: ["terraform", "go"]
 isCJKLanguage: true
 draft: false
 ---

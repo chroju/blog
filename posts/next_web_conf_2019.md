@@ -1,7 +1,7 @@
 ---
 title: "次世代 Web カンファレンスに行ってきた"
 date: "2019-01-13T18:37:41+09:00"
-tags: [""]
+tags: ["event", "web"]
 isCJKLanguage: true
 draft: false
 ---

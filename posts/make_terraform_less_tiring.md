@@ -1,7 +1,7 @@
 ---
 title: "Terraform で疲れないために"
 date: "2019-02-25T22:32:12+09:00"
-tags: [""]
+tags: ["terraform"]
 isCJKLanguage: true
 draft: false
 ---

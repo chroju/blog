@@ -1,7 +1,7 @@
 ---
 title: "『入門 監視』を『ウェブオペレーション』『SRE』と一緒に読もう"
 date: "2019-01-31T22:31:19+09:00"
-tags: [""]
+tags: ["book", "sre"]
 isCJKLanguage: true
 draft: false
 ---
