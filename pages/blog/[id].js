@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Helmet from 'react-helmet'
 import Layout, { siteTitle } from '../../components/layout'
 import Date from '../../components/date'
+import Tags from '../../components/tags'
+import Fa from '../../components/fontawesome'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import utilStyles from '../../styles/utils.module.css'
+import utilsStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
 
@@ -46,9 +48,10 @@ export default function Post({ postData }) {
                 <script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
             </Helmet>
             <article>
-                <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-                <div className={utilStyles.lightText}>
-                    <Date dateString={postData.date} />
+                <h1 className={utilsStyles.headingXl}>{postData.title}</h1>
+                <div className={utilsStyles.lightText}>
+                    <section><Date dateString={postData.date} /></section>
+                    <section className={utilsStyles.tagSection}><Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span><Tags tags={postData.tags} /></section>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>

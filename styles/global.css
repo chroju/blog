@@ -34,6 +34,10 @@ p > code, li > code {
   background-color: #eee;
 }
 
+svg {
+  vertical-align: middle;
+}
+
 blockquote {
   font-style: italic;
   border-left: 8px solid #ddd;
