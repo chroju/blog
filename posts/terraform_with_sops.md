@@ -1,7 +1,7 @@
 ---
 title: "Terraform の秘匿情報を mozilla/sops で管理する"
 date: "2020-01-18T13:17:06+09:00"
-tags: [""]
+tags: ["terraform", "sops"]
 isCJKLanguage: true
 draft: false
 ---

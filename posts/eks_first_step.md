@@ -3,6 +3,7 @@ title: "EKS 学び始めに使った資料のまとめ"
 date: "2020-03-01T13:15:17+09:00"
 isCJKLanguage: true
 draft: false
+tags: ["kubernetes", "eks"]
 ---
 
 EKS を今年はじめぐらいから調べて使い始めているのだが、それにあたって参考にした資料群を一度まとめておく。

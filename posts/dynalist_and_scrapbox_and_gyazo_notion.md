@@ -1,7 +1,7 @@
 ---
 title: "脳内 dump のための Dynalist と、永続する外部脳としての Scrapbox"
 date: "2020-09-13T18:46:53+09:00"
-tags: [""]
+tags: ["scrapbox"]
 isCJKLanguage: true
 draft: false
 ---

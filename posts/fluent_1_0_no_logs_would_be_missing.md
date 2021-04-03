@@ -1,7 +1,7 @@
 ---
 title: "fluentd 1.0 でログの欠損を防ぐ"
 date: "2018-08-13T22:29:26+09:00"
-tags: [""]
+tags: ["fluentd"]
 isCJKLanguage: true
 draft: false
 ---

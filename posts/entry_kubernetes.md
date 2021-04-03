@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes に入門してからやってきたことのメモ"
 date: "2018-08-19T14:46:59+09:00"
-tags: [""]
+tags: ["kubernetes", "book"]
 isCJKLanguage: true
 draft: false
 ---

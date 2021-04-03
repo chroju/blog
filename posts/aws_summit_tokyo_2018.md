@@ -1,7 +1,7 @@
 ---
 title: "AWS Summit 2018と大規模企業Confの回り方について"
 date: "2018-06-04T21:19:00+09:00"
-tags: [""]
+tags: ["aws", "event"]
 isCJKLanguage: true
 draft: false
 ---

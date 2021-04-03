@@ -1,7 +1,7 @@
 ---
 title: "Netlify Functions と Go で動的なウェブページを作る"
 date: "2019-06-10T17:43:55+09:00"
-tags: [""]
+tags: ["go", "netlify"]
 isCJKLanguage: true
 draft: false
 ---

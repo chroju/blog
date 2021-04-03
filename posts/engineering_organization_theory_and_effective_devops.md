@@ -1,7 +1,7 @@
 ---
 title: "『Effective DevOps』と『エンジニアリング組織論への招待』を読んだ"
 date: "2018-05-13T19:35:05+09:00"
-tags: [""]
+tags: ["book"]
 isCJKLanguage: true
 draft: false
 ---

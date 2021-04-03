@@ -1,7 +1,7 @@
 ---
 title: "転職ドラフトに5回参加した感想とエンジニアの給与について"
 date: "2019-05-28T10:15:42+09:00"
-tags: [""]
+tags: ["career"]
 isCJKLanguage: true
 draft: true
 ---

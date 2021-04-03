@@ -2,7 +2,7 @@
 date: "2017-02-15T23:30:43+09:00"
 description: ""
 title: "VimperatorからVivaldi + Vimiumへ乗り換える"
-
+tags: ["vivaldi"]
 ---
 
 Firefox 51から、Vimperatorの一部機能が使用できなくなる状態が発生した。これについてはGitHub上でFixが進んでいるが、2017-02-15現在だとまだ修正版の公開までには至っていない。

@@ -1,6 +1,7 @@
 ---
 title: "『Implementing Service Level Objectives』を読んだ"
 date: "2021-01-28T12:59:09+0900"
+tags: ["book", "sre"]
 ---
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.oreilly.com/library/view/implementing-service-level/9781492076803/" data-iframely-url="//cdn.iframe.ly/H5CaSrl"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>

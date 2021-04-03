@@ -20,7 +20,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
     const allTags = getAllTags()
-    const paths = allTags.map(tag => {
+    const paths = Object.keys(allTags).map(tag => {
         return {
             params: {
                 tag: tag
@@ -35,17 +35,18 @@ export async function getStaticPaths() {
 
 export default function TagHome({ tagPostsData, tag }) {
     const pageURL = "https://chroju.dev/blog/tags/" + tag
+    const pageTitle = "tag: " + tag + " - " + siteTitle
     return (
         <Layout >
             <Head>
-                <title>{siteTitle}</title>
+                <title>{pageTitle}</title>
                 <meta
                     property="og:image"
                     content={`https://og-image.chroju.dev/${encodeURI(
-                        siteTitle
+                        pageTitle
                     )}.png?theme=dark&md=0&fontSize=75px`}
                 />
-                <meta name="og:title" content={siteTitle} />
+                <meta name="og:title" content={pageTitle} />
                 <meta name="og:url" content={pageURL} />
             </Head>
             <h2><Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span> {tag}</h2>

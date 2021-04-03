@@ -1,7 +1,7 @@
 ---
 title: "buildersconを契機にOSS活動始めてterraform-provider-awsにcontributeできた"
 date: "2018-07-10T21:02:20+09:00"
-tags: [""]
+tags: ["terraform"]
 isCJKLanguage: true
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Terraform Cloud の terraform バージョンアップを GitHub Actions で自動化する"
 date: "2020-06-01T08:06:51+09:00"
-tags: [""]
+tags: ["terraform", "テスト"]
 isCJKLanguage: true
 draft: false
 ---

@@ -1,9 +1,7 @@
 ---
-categories:  "poem"
-comments: true
 date: "2015-12-31T00:00:00+09:00"
 title: "2015年総括"
-
+tags: ["retrospective"]
 ---
 
 いろいろとチャレンジングに動いてみただけに、難しい年だった。

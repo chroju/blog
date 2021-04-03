@@ -1,7 +1,7 @@
 ---
 title: "Nature Remo API で遊んだ"
 date: "2018-06-11T22:08:35+09:00"
-tags: [""]
+tags: ["go"]
 isCJKLanguage: true
 draft: false
 ---

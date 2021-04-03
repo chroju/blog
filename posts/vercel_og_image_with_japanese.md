@@ -1,6 +1,7 @@
 ---
 title: "vercel/og-image を日本語に対応させたい"
 date: "2021-02-21T11:01:26+0900"
+tags: ["next.js"]
 ---
 
 このブログを Next.js へ移した際、 [ブログを Next.js + Vercel に移行した - the world as code](https://chroju.dev/blog/blog_with_next_js_vercel) の中で、 OGP 画像の動的生成を行っていることを書いた。使っているのは Next.js の Vercel が提供している [vercel/og-image: Open Graph Image as a Service - generate cards for Twitter, Facebook, Slack, etc](https://github.com/vercel/og-image) 。画像を動的生成する API サーバとして動作させることができるのだが、元のレポジトリでは日本語対応ができていないので、 fork して使っている旨を書いていた。

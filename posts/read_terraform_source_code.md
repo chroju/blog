@@ -1,7 +1,7 @@
 ---
 title: "3rd Party tool をきっかけに Terraform のソースコードを少し嗜んだ話"
 date: "2019-05-14T20:30:00+09:00"
-tags: [""]
+tags: ["terraform"]
 isCJKLanguage: true
 draft: false
 ---

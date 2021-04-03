@@ -1,7 +1,7 @@
 ---
 title: "AWS Lambda による Web Scraping プラクティス in 2020"
 date: "2020-02-01T14:24:52+09:00"
-tags: [""]
+tags: ["aws", "aws-lambda"]
 isCJKLanguage: true
 draft: false
 ---

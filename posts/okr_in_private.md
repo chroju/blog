@@ -1,7 +1,7 @@
 ---
 title: "プライベートにも OKR を取り入れてフォーカスする"
 date: "2020-01-13T18:48:26+09:00"
-tags: [""]
+tags: ["okr"]
 isCJKLanguage: true
 draft: false
 ---

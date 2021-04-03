@@ -1,7 +1,7 @@
 ---
 title: "パラレルワーカー兼大学生になることになった"
 date: "2019-06-14T18:19:10+09:00"
-tags: [""]
+tags: ["university", "career"]
 isCJKLanguage: true
 draft: false
 ---

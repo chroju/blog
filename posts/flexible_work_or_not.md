@@ -1,7 +1,7 @@
 ---
 title: "裁量労働制の恩恵、個々の裁量で働くということ"
 date: "2018-02-28T23:03:59+09:00"
-tags: [""]
+tags: ["career"]
 isCJKLanguage: true
 draft: false
 ---

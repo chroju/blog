@@ -5,6 +5,7 @@ cat <<EOS > ./posts/$1.md
 ---
 title: "$1"
 date: "$datetime"
+tags: []
 ---
 
 

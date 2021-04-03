@@ -1,7 +1,7 @@
 ---
 title: "Terraform Source Code Reading#3 に参加した"
 date: "2019-11-10T15:11:37+09:00"
-tags: [""]
+tags: ["terraform", "event"]
 isCJKLanguage: true
 draft: false
 ---

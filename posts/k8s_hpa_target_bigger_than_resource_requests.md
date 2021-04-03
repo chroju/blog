@@ -1,6 +1,7 @@
 ---
 title: "k8s HPA target > resource requests という設定方針"
 date: "2021-03-05T09:38:32+0900"
+tags: ["kubernetes"]
 ---
 
 言われてみれば当たり前のような話かもしれないが、自分としては大きな気付きだったことを書いてみる。

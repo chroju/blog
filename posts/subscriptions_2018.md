@@ -1,7 +1,7 @@
 ---
 title: "Subscriptions 2018"
 date: "2018-12-17T20:31:56+09:00"
-tags: [""]
+tags: ["subscription"]
 isCJKLanguage: true
 draft: false
 ---

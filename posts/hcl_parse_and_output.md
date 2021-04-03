@@ -1,7 +1,7 @@
 ---
 title: "HCL をパースして、構造を組み替えて再出力する"
 date: "2020-04-11T18:24:00+09:00"
-tags: [""]
+tags: ["go", "terraform"]
 isCJKLanguage: true
 draft: false
 ---

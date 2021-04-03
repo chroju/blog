@@ -1,7 +1,7 @@
 ---
 title: "SRE になって3か月目に考える、 SRE とは何か、如何に実践すべきか"
 date: "2019-09-18T23:22:43+09:00"
-tags: [""]
+tags: ["sre"]
 isCJKLanguage: true
 draft: false
 ---

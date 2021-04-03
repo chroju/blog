@@ -1,7 +1,7 @@
 ---
 title: "Corne Chocolate を組み立てる、40%キーボードに目覚める"
 date: "2019-06-09T17:30:59+09:00"
-tags: [""]
+tags: ["keyboard"]
 isCJKLanguage: true
 draft: false
 ---

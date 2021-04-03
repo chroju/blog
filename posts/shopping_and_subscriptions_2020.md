@@ -1,7 +1,7 @@
 ---
-title: "Shopping and Subscriptions 2020"
+title: "Best Buy and Subscriptions 2020"
 date: "2020-12-29T17:15:29+09:00"
-tags: [""]
+tags: ["best-buy", "subscription"]
 isCJKLanguage: true
 draft: false
 ---
