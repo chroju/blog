@@ -5,6 +5,7 @@ body {
   font-family: -apple-system, Hiragino Sans, Meiryo, Helvetica Neue, Arial, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  color: #4e4e4e
 }
 
 h1 {
@@ -20,8 +21,8 @@ h3 {
 }
 
 div > p {
-  line-height: 2.0;
-  font-weight: 200;
+  line-height: 2.3;
+  font-weight: 300;
   margin-bottom: 38px;
 }
 
