@@ -1,7 +1,7 @@
 ---
 title: "AWS Organization 等、マルチアカウント管理サービスをどう使うか"
 date: "2020-02-29T14:10:31+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

@@ -1,6 +1,7 @@
 ---
 title: "GitHub CLI に不可能はない"
 date: "2021-03-21T11:17:22+0900"
+tags: ["gh", "github"]
 ---
 
 タイトルは誇張気味だが、 `gh` こと GitHub CLI こと [cli/cli: GitHub’s official command line tool](https://github.com/cli/cli) には任意の GitHub API を呼び出せる `gh api` サブコマンドがあるので、あながち間違ってもいない。サブコマンドが実装されていなくとも、アイデア次第で GitHub のあらゆる操作が gh から呼び出せる。

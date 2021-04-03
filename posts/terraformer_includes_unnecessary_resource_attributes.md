@@ -1,7 +1,7 @@
 ---
 title: "Terraformer が import した resource は不要な属性を含む場合がある"
 date: "2019-11-02T16:58:17+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

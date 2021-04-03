@@ -1,7 +1,7 @@
 ---
 title: "CNCF の活動から Serverless の今を追う"
 date: "2018-12-05T00:10:00+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

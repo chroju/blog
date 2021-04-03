@@ -1,7 +1,7 @@
 ---
 date: "2016-02-18T20:51:20+09:00"
 description: ""
-tags: ["blog"]
+tags: ["blog", "hugo"]
 title: "ブログをHugoに移行した"
 
 ---

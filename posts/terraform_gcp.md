@@ -1,7 +1,7 @@
 ---
 title: "GCP 公開の Terraform modules から module による効果的な抽象化を学ぶ"
 date: "2019-12-24T19:16:59+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

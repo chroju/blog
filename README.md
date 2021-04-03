@@ -1,7 +1,7 @@
 Blog
 ====
 
-https://chroju.dev
+https://chroju.dev test
 
 Usage
 ----

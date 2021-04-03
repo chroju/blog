@@ -1,7 +1,7 @@
 ---
 title: "『エンジニアの知的生産術』を読んだ"
 date: "2018-08-23T20:54:12+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions - Dockerfile を突っ込んで自動化するという考え方"
 date: "2018-12-15T12:26:04+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

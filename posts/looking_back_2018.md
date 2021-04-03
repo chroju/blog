@@ -1,7 +1,7 @@
 ---
 title: "2018年総括"
 date: "2018-12-31T08:57:32+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

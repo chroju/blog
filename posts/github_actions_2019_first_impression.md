@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions (2019) ファーストインプレッション"
 date: "2019-10-30T22:52:38+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

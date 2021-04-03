@@ -1,7 +1,7 @@
 ---
 title: "競技プログラミングを始めてみた"
 date: "2018-10-03T22:04:35+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

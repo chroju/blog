@@ -1,7 +1,7 @@
 ---
 title: "July Tech Festa 2018 に行って打ちのめされた"
 date: "2018-07-30T21:58:46+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

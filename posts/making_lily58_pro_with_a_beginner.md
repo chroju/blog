@@ -1,7 +1,7 @@
 ---
 title: "電子工作初心者が Lily58 Pro を買ってから作って持ち運ぶまで"
 date: "2019-04-27T12:41:43+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

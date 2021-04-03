@@ -1,7 +1,7 @@
 ---
 title: "Usage の書き方について標準仕様を探る"
 date: "2019-02-19T21:52:03+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

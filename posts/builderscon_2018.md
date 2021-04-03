@@ -1,7 +1,7 @@
 ---
 title: "builderscon 2018 に行ってきた"
 date: "2018-09-09T11:33:56+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

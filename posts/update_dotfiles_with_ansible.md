@@ -1,7 +1,7 @@
 ---
 title: "開発環境を見直し、dotfilesを更新して、VimからVSCodeへ移行した"
 date: "2018-07-01T16:06:10+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

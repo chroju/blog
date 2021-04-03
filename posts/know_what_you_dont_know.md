@@ -1,7 +1,7 @@
 ---
 title: "『なぜ危機に気づけなかったのか』を読んだ"
 date: "2020-12-22T18:47:57+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

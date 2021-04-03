@@ -1,7 +1,7 @@
 ---
 title: "分割無線キーボード Caravelle-BLE を組んだ"
 date: "2020-11-22T19:20:41+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

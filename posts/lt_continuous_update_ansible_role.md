@@ -1,7 +1,7 @@
 ---
 title: "Ansible Roleの継続的自動UpdateについてLTした"
 date: "2018-04-28T10:32:32+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

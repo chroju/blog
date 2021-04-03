@@ -1,7 +1,7 @@
 ---
 title: "Terraform state 概論"
 date: "2019-12-13T21:50:10+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

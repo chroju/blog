@@ -1,7 +1,7 @@
 ---
 title: "AWS DHCP オプションセットを RFC から理解する"
 date: "2019-09-11T21:34:11+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

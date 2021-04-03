@@ -1,7 +1,7 @@
 ---
 title: "Alfred は「黒い窓」を使わなくなってからが本番"
 date: "2020-12-16T18:29:31+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

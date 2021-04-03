@@ -1,7 +1,7 @@
 ---
 title: "競技プログラミングで Write Code Every Day を2か月続けてみて"
 date: "2018-11-18T15:22:00+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

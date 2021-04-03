@@ -1,7 +1,7 @@
 ---
 title: "notion と情報管理、あるいは階層整理欲求と非階層整理の両立"
 date: "2020-08-12T21:57:36+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

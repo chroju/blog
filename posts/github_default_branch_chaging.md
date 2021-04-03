@@ -1,7 +1,7 @@
 ---
 title: "GitHub default branch を意識しなくて済むようにする"
 date: "2020-09-21T19:25:32+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

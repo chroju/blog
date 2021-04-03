@@ -1,7 +1,7 @@
 ---
 title: "2019年総括"
 date: "2019-12-30T14:36:57+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

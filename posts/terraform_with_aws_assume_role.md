@@ -1,7 +1,7 @@
 ---
 title: "Terraform で AWS assume role が使用できない場合がある"
 date: "2018-12-10T21:08:16+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

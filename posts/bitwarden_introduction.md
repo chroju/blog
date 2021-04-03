@@ -1,7 +1,7 @@
 ---
 title: "パスワード管理サービスを Bitwarden でセルフホストする"
 date: "2019-08-18T10:51:15+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

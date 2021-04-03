@@ -1,7 +1,7 @@
 ---
 title: "Terraform meetup tokyo#3 に参加した"
 date: "2019-12-04T21:43:01+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "gRPC ちょっと理解した"
 date: "2019-06-21T17:05:00+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

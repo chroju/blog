@@ -1,7 +1,7 @@
 ---
 title: "Lily58 Pro または私は如何にして市販品を探すのをやめて分割キーボードを自作するようになったか"
 date: "2019-04-25T18:00:00+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

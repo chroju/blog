@@ -1,7 +1,7 @@
 ---
 title: "Nature Remo の CLI ツールをつくった"
 date: "2018-11-03T21:32:37+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Terraform moduleは何が嬉しいのか"
 date: "2017-12-27T22:09:25+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

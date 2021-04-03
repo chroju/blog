@@ -1,7 +1,7 @@
 ---
 title: "都内の図書館でコンピュータ書を読む"
 date: "2018-03-31T14:41:26+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

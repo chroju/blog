@@ -1,7 +1,7 @@
 ---
 title: "AWS Parameter Store をターミナルから操作する Parade を作った"
 date: "2019-10-14T08:23:39+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

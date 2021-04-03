@@ -1,7 +1,7 @@
 ---
 title: "VSCode と TeX で大学のレポートを書く"
 date: "2019-06-24T16:57:55+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

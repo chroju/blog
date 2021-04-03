@@ -1,7 +1,7 @@
 ---
 title: "TerraformドキュメントをCLIで読むtfdoc v0.1.0をリリースした"
 date: "2018-05-05T13:33:36+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---

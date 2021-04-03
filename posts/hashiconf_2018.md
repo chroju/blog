@@ -1,7 +1,7 @@
 ---
 title: "HashiCorp が Terraform state 用 remote storage を出すらしい"
 date: "2018-10-29T20:49:07+09:00"
-tags: ""
+tags: [""]
 isCJKLanguage: true
 draft: false
 ---
