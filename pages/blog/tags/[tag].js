@@ -20,7 +20,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
     const allTags = getAllTags()
-    const paths = allTags.map(tag => {
+    const paths = Object.keys(allTags).map(tag => {
         return {
             params: {
                 tag: tag
