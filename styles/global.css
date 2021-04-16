@@ -98,6 +98,10 @@ li {
   margin: 8px 0;
 }
 
+code[class*="language-"], pre[class*="language-"] {
+  font-size: 14px !important; 
+}
+
  /* TODO */
 .svg-inline--fa {
   width: 30px;
