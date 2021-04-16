@@ -71,6 +71,7 @@
 }
 
 .lightText {
-  color: rgb(120, 120, 120);
+  color: rgb(88, 88, 88);
+  font-size: 0.9rem;
   margin-bottom: 40px;
 }
