@@ -20,7 +20,6 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 )
 
 var (
@@ -58,10 +57,6 @@ func init() {
 
 	rootCmd.PersistentFlags().StringP("author", "a", "YOUR NAME", "author name for copyright attribution")
 	rootCmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "name of license for the project")
-	viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author"))
-	viper.BindPFlag("useViper", rootCmd.PersistentFlags().Lookup("viper"))
-	viper.SetDefault("author", "NAME HERE <EMAIL ADDRESS>")
-	viper.SetDefault("license", "apache")
 
 	rootCmd.AddCommand(tryCmd)
 }
@@ -106,11 +101,11 @@ func try(value string) error {
 }
 ```
 
-引数の validation などの処理は呼び出し関数である `tryCommand()` のほうに寄せて、 `try()` は実処理だけを担うようにしたことで、だいぶ見通しがよくなった。
+引数の validation などの処理は呼び出し関数である `tryCmd` のほうに寄せて、 `try()` は実処理だけを担うようにしたことで、これだけでもだいぶ見通しがよくなった。実処理に必要な引数も、 `args []string` という曖昧なものではなく、 string 型1個だということがこれで明示できる。
 
 ### 出力処理に fmt.Println() を使わない
 
-さらに、改善ポイントの2つ目に上げた、「出力内容のテストがしづらい」という問題もこれで改善の余地が出た。 `try()` が引数で `io.Writer` を受け取るようにすればよい。これにより、テストの際には `&bytes.Buffer{}` を生成して `try()` に渡すことで、出力をかすめ取ることができるようになる。
+さらに、改善ポイントの2つ目に上げた、「出力内容のテストがしづらい」という問題もこれで改善の余地が出た。 `try()` に引数を自由に設定できるようになったので、 `io.Writer` を受け取るようにすればよい。これにより、テストの際には `&bytes.Buffer{}` を生成して `try()` に渡すことで、出力をかすめ取ることができるようになる。
 
 ```go
 var {
@@ -185,10 +180,10 @@ func init() {
 }
 ```
 
-`rootCmd` も同様に `newRootCommand()` 関数で生成する。これにより関数の中で `*cobra.Command` を操作可能になったので、最初のサンプルでは `init()` の中で行っていた Flag の付与や、 `AddCommand()` によるサブコマンドの設定処理も一緒にまかなえるようになった。
+`rootCmd` も同様に `newRootCmd()` 関数で生成する。これにより関数の中で `*cobra.Command` を操作可能になったので、最初のサンプルでは `init()` の中で `func (c *cobra.Command) PersistentFlags()` で行っていた Flag の付与や、同 `AddCommand()` によるサブコマンドの設定処理も一緒にまかなえるようになった。
 
 ```go
-func newRootCommand() (*cobra.Command, error) {
+func newRootCmd() (*cobra.Command, error) {
     var userLicense string
 
 	cmd := &cobra.Command{
@@ -202,19 +197,19 @@ to quickly create a Cobra application.`,
 	cmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "name of license for the project")
 
 	cmd.AddCommand(
-		newTryCommand(),
+		newTryCmd(),
 	)
 
 	return cmd, nil
 }
 ```
 
-`tryCommand` のときと同様、 `rootCmd` についても出力先は io.Writer を引数で与えるようにする。`newTryCommand` にも io.Writer の引数を追加すれば、 `rootCmd` に渡した io.Writer をサブコマンドへと伝播させる形が実現できる。
+`tryCmd` のときと同様、 `rootCmd` についても出力先は io.Writer を引数で与えるようにする。`newTryCmd` にも io.Writer の引数を追加すれば、 `rootCmd` に渡した io.Writer をサブコマンドへと伝播させる形が実現できる。
 
 さらに、 `*cobra.Command` の `func (c *Command) SetOut()` と、同 `SetErr()` にも io.Writer を渡す。これらは `*cobra.Command` 自身が出力する、 Usage やエラーメッセージの出力先になる。
 
 ```go
-func newRootCommand(outWriter, errWriter io.Writer) (*cobra.Command, error) {
+func newRootCmd(outWriter, errWriter io.Writer) (*cobra.Command, error) {
     var userLicense string
 
 	cmd := &cobra.Command{
@@ -228,7 +223,7 @@ to quickly create a Cobra application.`,
 	cmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "name of license for the project")
 
 	cmd.AddCommand(
-		newTryCommand(outWriter, errWriter),
+		newTryCmd(outWriter, errWriter),
 	)
 	cmd.SetOut(outWriter)
 	cmd.SetErr(errWriter)
@@ -240,7 +235,7 @@ func Execute() error {
 	o := os.Stdout
 	e := os.Stderr
 
-	rootCmd, err := NewRootCommand(o, e)
+	rootCmd, err := NewRootCmd(o, e)
 	if err != nil {
 		return err
 	}
@@ -286,7 +281,7 @@ func try(o *tryOption) error {
     return nil
 }
 
-func newRootCommand(out, errOut io.Writer) (*cobra.Command, error) {
+func newRootCmd(out, errOut io.Writer) (*cobra.Command, error) {
     var userLicense string
 
 	cmd := &cobra.Command{
@@ -300,7 +295,7 @@ to quickly create a Cobra application.`,
 	cmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "name of license for the project")
 
 	cmd.AddCommand(
-		newTryCommand(out, errOut),
+		newTryCmd(out, errOut),
 	)
 	cmd.SetOut(out)
 	cmd.SetErr(errOut)
@@ -312,7 +307,7 @@ func Execute() error {
 	o := os.Stdout
 	e := os.Stderr
 
-	rootCmd, err := NewRootCommand(o, e)
+	rootCmd, err := NewRootCmd(o, e)
 	if err != nil {
 		return err
 	}
