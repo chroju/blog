@@ -43,7 +43,7 @@ export default function Layout({ children, home }) {
                             </Link>
                         </h1>
                         <Link href="/feed.xml">
-                            <a><Fa iconPrefix="fas" iconName="rss-square" /></a>
+                            <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" /></a>
                         </Link>
                     </header>
                 )}
