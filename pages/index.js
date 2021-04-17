@@ -5,7 +5,7 @@ import utilsStyles from '../styles/utils.module.css'
 
 export default function Home() {
   return (
-    <Layout home>
+    <Layout home footer={false}>
       <Head>
         <title>chroju</title>
         <meta

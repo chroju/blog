@@ -8,7 +8,7 @@ import Fa from './fontawesome'
 const name = 'chroju'
 export const siteTitle = 'the world as code'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, footer = true }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -49,10 +49,10 @@ export default function Layout({ children, home }) {
                 )}
             <main>{children}</main>
             {
-                !home && (
+                footer && (
                     <div className={styles.backToHome}>
                         <section className={styles.footerSection}>
-                            <Link href="/blog"><a>Blog top</a></Link>
+                            <Link href="/blog"><a>Articles</a></Link>
                         </section>
                         <section className={styles.footerSection}>
                             <Link href="/">
@@ -65,6 +65,9 @@ export default function Layout({ children, home }) {
                                 </a>
                             </Link>
                             <Menu />
+                        </section>
+                        <section className={styles.footerSection}>
+                            <small className={utilStyles.lightText}>This site created by <Link href="/"><a>chroju</a></Link>. See our <Link href="/privacy"><a>privacy policy</a></Link>. </small>
                         </section>
                     </div>
                 )
