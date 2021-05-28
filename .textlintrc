@@ -1,0 +1,16 @@
+{
+  "filters": {},
+  "rules": {
+    "preset-ja-spacing": {
+      "textlint-rule-ja-space-between-half-and-full-width": false
+    },
+    "ja-no-abusage": true,
+    "ja-no-redundant-expression": true,
+    "ja-no-successive-word": true,
+    "@textlint-ja/no-synonyms": true,
+    "no-doubled-conjunction": true,
+    "preset-jtf-style": {
+      "3.1.1.全角文字と半角文字の間": false
+    } 
+  }
+}
