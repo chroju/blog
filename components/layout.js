@@ -29,7 +29,7 @@ export default function Layout({ children, home, footer = true }) {
             {home ? (
                 <header className={styles.header}>
                     <img
-                        src="/images/profile.jpg"
+                        src="/images/profile.webp"
                         className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                         alt={name}
                     />
@@ -58,7 +58,7 @@ export default function Layout({ children, home, footer = true }) {
                             <Link href="/">
                                 <a>
                                     <img
-                                        src="/images/profile.jpg"
+                                        src="/images/profile.webp"
                                         className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                                         alt={name}
                                     />
