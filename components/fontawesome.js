@@ -1,9 +1,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faKeybase, faSpeakerDeck, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faRssSquare, faTags } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Fa({ iconPrefix = 'fab', iconName, title }) {
-    library.add(fab, fas)
+    library.add(faGithub, faKeybase, faSpeakerDeck, faTwitter, faInstagram, faRssSquare, faTags)
     return <FontAwesomeIcon icon={[iconPrefix, iconName]} title={title} size='xs' />
 }
