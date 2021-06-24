@@ -108,3 +108,7 @@ code[class*="language-"], pre[class*="language-"] {
   padding: 10px;
   color: #999;
 }
+
+.fa-rss-square {
+  padding: 12px 24px 12px 0;
+}
