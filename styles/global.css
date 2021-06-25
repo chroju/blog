@@ -104,7 +104,11 @@ code[class*="language-"], pre[class*="language-"] {
 
  /* TODO */
 .svg-inline--fa {
-  width: 30px;
-  padding: 5px;
+  width: 48px;
+  padding: 10px;
   color: #999;
+}
+
+.fa-rss-square {
+  padding: 12px 24px 12px 0;
 }

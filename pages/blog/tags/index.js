@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../../../components/layout'
+import Layout from '../../../components/layout'
 import utilsStyles from '../../../styles/utils.module.css'
 import Link from 'next/link'
-import Date from '../../../components/date'
 import Fa from '../../../components/fontawesome'
 
 import { getAllTags } from '../../../lib/posts'
