@@ -36,17 +36,17 @@ export default function Layout({ children, home, footer = true }) {
                     <h1 className={utilStyles.heading2Xl}>{name}</h1>
                 </header>
             ) : (
-                    <header className={styles.headerBlog}>
-                        <h1 className={utilStyles.headingMd}>
-                            <Link href="/blog">
-                                <a className={utilStyles.colorInherit}>{siteTitle}</a>
-                            </Link>
-                        </h1>
-                        <Link href="/feed.xml">
-                            <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" /></a>
+                <header className={styles.headerBlog}>
+                    <h1 className={utilStyles.headingMd}>
+                        <Link href="/blog">
+                            <a className={utilStyles.colorInherit}>{siteTitle}</a>
                         </Link>
-                    </header>
-                )}
+                    </h1>
+                    <Link href="/feed.xml">
+                        <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" /></a>
+                    </Link>
+                </header>
+            )}
             <main>{children}</main>
             {
                 footer && (

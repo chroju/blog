@@ -20,6 +20,7 @@
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
     "next": "^10.0.0",
+    "next-pwa": "^5.2.21",
     "prismjs": "^1.22.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
