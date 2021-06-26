@@ -109,6 +109,11 @@ code[class*="language-"], pre[class*="language-"] {
   color: #999;
 }
 
+section[class*="tagSection"] > .svg-inline--fa {
+  width: 32px;
+  padding: 0 10px 0 0;
+}
+
 .fa-rss-square {
   padding: 12px 24px 12px 0;
 }
