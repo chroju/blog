@@ -15,6 +15,12 @@
 # production
 /build
 
+# PWA
+
+**/public/workbox-*.js*
+**/public/sw.js*
+**/public/fallback-*.js
+
 # misc
 .DS_Store
 
