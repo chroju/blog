@@ -4,7 +4,7 @@ import Link from 'next/link'
 import utilsStyles from '../styles/utils.module.css'
 
 export default function Home() {
-    const pageTitle = "Privacy policy - " + siteTitle
+    const pageTitle = "Our policy - " + siteTitle
     return (
         <Layout footer={false}>
             <Head>
@@ -14,8 +14,14 @@ export default function Home() {
                     content={`https://og-image.chroju.dev/privacy%20policy.png?theme=dark&md=0&fontSize=75px`}
                 />
                 <meta name="og:title" content="{pageTitle}" />
-                <meta name="og:url" content="https://chroju.dev/privacy" />
+                <meta name="og:url" content="https://chroju.dev/policy" />
             </Head>
+            <section className={utilsStyles.headingMd}>
+                <h2 className={utilsStyles.headingLg}>Notice</h2>
+                <ul>
+                    <p><small>このサイトで公開している文書は、著者 chroju 個人の調査、研究、考察に基づくものであり、著者が所属する各団体、企業の意見を代表するものではありません。</small></p>
+                </ul>
+            </section>
             <section className={utilsStyles.headingMd}>
                 <h2 className={utilsStyles.headingLg}>Privacy policy</h2>
                 <ul>
