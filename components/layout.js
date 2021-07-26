@@ -67,7 +67,7 @@ export default function Layout({ children, home, footer = true }) {
                             <Menu />
                         </section>
                         <section className={styles.footerSection}>
-                            <small className={utilStyles.lightText}>This site created by <Link href="/"><a>chroju</a></Link>. See our <Link href="/privacy"><a>privacy policy</a></Link>. </small>
+                            <small className={utilStyles.lightText}>This site created by <Link href="/"><a>chroju</a></Link>. See <Link href="/policy"><a>our policy</a></Link>. </small>
                         </section>
                     </div>
                 )
