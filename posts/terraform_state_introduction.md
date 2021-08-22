@@ -135,7 +135,9 @@ resource "aws_instance" "foobar" {
 
 ### terraform plan と tfstate
 
-`terraform plan` を実行した際には、 tfstate を元にして設定ファイルと現実のインフラとの差分が導かれます。とはいえ、 tfstate に書き出された設定を、直接 terraform 設定ファイルの内容と比較して差分を出しているわけではありません。 tfstate からは、先述のように各 Terraform resource と対応する現実のリソースが存在するのかどうかを読み取るだけです。そして存在していれば、その設定情報を API などを用いて実際に取得し、設定ファイルとの比較を行うことになります。もしも Terraform resource に対応するリソースの情報が tfstate に存在しなければ、そのリソースは新規作成するべきものと判断されます。
+`terraform plan` を実行した際には、 tfstate を元にして設定ファイルと現実のインフラとの差分が導かれます。とはいえ、 tfstate に書き出された設定を、直接 terraform 設定ファイルの内容と比較して差分を出しているわけではありません。 tfstate からは、先述のように各 Terraform resource と対応する現実のリソースが存在するのかどうかを読み取るだけです。そして存在していれば、その設定情報を API などを用いて実際に取得し、設定ファイルとの比較を行うことになります（）。もしも Terraform resource に対応するリソースの情報が tfstate に存在しなければ、そのリソースは新規作成するべきものと判断されます。
+
+**2021-08-22追記 : 正確には `terraform plan` を実行した際、差分確認が行われる直前に、 `terraform refresh` が裏で実行され、 tfstate の状態が最新の設定と同期されています。 [Terraform 0.15](https://www.terraform.io/upgrade-guides/0-15.html) においては、この `refresh` 時に実設定と state の差分が発見された際、その旨が plan 結果にも付記されるようになりました。なお、 `plan` 時に `refresh` を行いたくない場合、 `-refresh=false` オプションが利用できます。**
 
 つまり、 `terraform plan` の挙動を表にまとめると以下のようになります。
 
@@ -306,7 +308,7 @@ mv の対象がかなりの数に上ってくると、 address を手で書い�
 
 tfstate の挙動や背景を知ることで、 Terraform への理解も一層深まると思いますので、ここに書いていないことについても是非深堀りしてみてください。
 
+### 更新履歴
 
-
-
+* 2021-08-22 : `terraform plan` 時における `refresh` の実行に関して追記。
 
