@@ -1,10 +1,10 @@
 ---
 title: "今年買ってよかったものと、今年のサブスク 2021"
 date: "2021-12-27T19:19:14+0900"
-tags: ["best-buy", "subscriptions"]
+tags: ["best-buy", "subscription"]
 ---
 
-とりあえず書いてはみるものの、今年あんまり買い物してないです。昨年以前は [#best-buy](https://chroju.dev/blog/tags/best-buy) と [#subscriptions](https://chroju.dev/blog/tags/subscriptions) それぞれのタグからどうぞ。
+とりあえず書いてはみるものの、今年あんまり買い物してないです。昨年以前は [#best-buy](https://chroju.dev/blog/tags/best-buy) と [#subscription](https://chroju.dev/blog/tags/subscription) それぞれのタグからどうぞ。
 
 ## 今年買ってよかったもの
 
