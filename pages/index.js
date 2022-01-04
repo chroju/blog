@@ -22,7 +22,7 @@ export default function Home() {
           <dt>Job</dt>
           <dd>Site Reliability Engineer</dd>
           <dt>Location</dt>
-          <dd>Tokyo, Japan</dd>
+          <dd>Kanagawa, Japan</dd>
           <dt>Favorite</dt>
           <dd>Terraform / Kubernetes / Go / AWS</dd>
         </dl>
@@ -43,11 +43,12 @@ export default function Home() {
         </dl>
         <h2 className={utilsStyles.headingLg}>Education</h2>
         <dl>
-          <dt>Teikyo University (Distance Learning)</dt>
-          <dd>Bachelor of Science in Information Technology</dd>
+          <dt>Bachelor of Science in Information Technology</dt>
+          <dd>Teikyo University (Distance Learning)</dd>
           <dd>Apr 2019 - current</dd>
-          <dt>Hitotsubashi University</dt>
-          <dd>Bachelor of Social Science</dd>
+
+          <dt>Bachelor of Social Science</dt>
+          <dd>Hitotsubashi University</dd>
           <dd>Apr 2007 - Mar 2011</dd>
         </dl>
         <h2 className={utilsStyles.headingLg}>Blog</h2>
