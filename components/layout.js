@@ -6,7 +6,8 @@ import Menu from '../components/menu'
 import Fa from './fontawesome'
 
 const name = 'chroju'
-export const siteTitle = 'the world as code'
+export const siteTitle = 'chroju.dev/blog'
+export const siteSubTitle = 'the world as code'
 
 export default function Layout({ children, home, footer = true }) {
     return (
@@ -42,6 +43,9 @@ export default function Layout({ children, home, footer = true }) {
                             <a className={utilStyles.colorInherit}>{siteTitle}</a>
                         </Link>
                     </h1>
+                    <section>
+                      <small>{siteSubTitle}</small>
+                    </section>
                     <Link href="/feed.xml">
                         <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" /></a>
                     </Link>
