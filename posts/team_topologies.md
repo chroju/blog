@@ -10,6 +10,12 @@ tags: ["book", "team", "sre"]
 
 興味を惹かれた理由としては、 SRE としての価値最大化を考えていると、組織論を外すことができないという問題意識が強くなっていたから。SRE は開発速度と信頼性のバランシングが責務となるはずだが、専任の SRE チームとして組織すると開発チームとの間でコミュニケーション上のロスが発生し得る。ならば開発チームの中に SRE が属すれば良いかと言えば、 SRE 間の横のつながりも必要なのでそう単純な話でもない。このあたりの SRE チームの構造に関する問題は [SRE at Google: How to structure your SRE team | Google Cloud Blog](https://cloud.google.com/blog/products/devops-sre/how-sre-teams-are-organized-and-how-to-get-started) にも言及があるが、ソフトウェア開発全体というレイヤーから組織論を学ぶことで、何かヒントを得たいと考えていた。
 
+### 追記（2022-01-16 11:05）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.tc3.co.jp/state-of-devops-report-2021-team-topologies/" data-iframely-url="//cdn.iframe.ly/ppDyILx?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+昨年、原著を Twitter 上で見かけていた背景として、 State of DevOps Report 2021 で言及されていたというのが大きかったのかもしれない。
+
 ## チームトポロジーとは何か
 
 トポロジー、直訳したところの「位相幾何学」はちょうど最近大学でも学んだところだが、ネットワーク・トポロジーという言葉もあるし、動的に変化する構造、ぐらいの意味で使われているように思う。チームトポロジーとは、組織や技術の成熟、進化に合わせて、チームの構造も継続的に進化させていく動的なアプローチを指す。
