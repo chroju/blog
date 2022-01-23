@@ -1,5 +1,5 @@
 ---
-title: "令和4年最新版 Amaozn S3 のストレージクラスと Backup"
+title: "令和4年最新版 Amazon S3 のストレージクラスと Backup"
 date: "2022-01-22T21:28:40+0900"
 tags: ["AWS", "S3"]
 ---
