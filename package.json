@@ -18,7 +18,7 @@
     "async": "3.2.3",
     "babel-plugin-prismjs": "2.0.1",
     "date-fns": "2.16.1",
-    "gray-matter": "4.0.2",
+    "gray-matter": "4.0.3",
     "next": "12.1.0",
     "next-pwa": "5.2.21",
     "prismjs": "1.27.0",
