@@ -36,7 +36,7 @@ Googleが発刊しているいわゆるSRE booksと呼ばれる『サイトリ�
 
 <a href="https://gyazo.com/c7a3e0bf4c97e9cf1b83711c3ca3727e"><img src="https://i.gyazo.com/c7a3e0bf4c97e9cf1b83711c3ca3727e.png" alt="Image from Gyazo" width="700"/></a>
 
-そしてさらに遡ると、LyftのエンジニアであるMatt Kleinという方が2018年6月に書いた [3 Myths About the Site Reliability Engineer, Debunked](https://www.informationweek.com/devops/3-myths-about-the-site-reliability-engineer-debunked) がある。SREをプロダクトチームの中へ組み込む必要性を説いた上で、それをEmbedded SREと呼んでいる。明確なロールとしてEmbedded SREの在り方を説明したものとしては、僕が辿れた範囲ではこれが一番古いようだった。
+そしてさらに遡ると、LyftのエンジニアであるMatt Kleinという方が2018年6月に書いた [The human scalability of “DevOps” | by Matt Klein | Medium](https://medium.com/@mattklein123/the-human-scalability-of-devops-e36c37d3db6a) がある。SREをプロダクトチームの中へ組み込む必要性を説いた上で、それをEmbedded SREと呼んでいる。明確なロールとしてEmbedded SREの在り方を説明したものとしては、僕が辿れた範囲ではこれが一番古いようだった。
 
 > The goal of embedded SREs is to increase the reliability of their products by implementing reliability oriented features and automation, mentoring and educating the rest of the team on operational best practices, and acting as a liaison between product teams and infrastructure teams (feedback on documentation, pain points, needed features, etc.).
 
