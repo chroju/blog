@@ -20,13 +20,13 @@ h3 {
   margin-top: 50px;
 }
 
-div > p {
+div>p {
   line-height: 2.3;
   font-weight: 300;
   margin-bottom: 38px;
 }
 
-p > code, li > code {
+p>code, li>code {
   font-family: Ubuntu;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -99,17 +99,23 @@ li {
 }
 
 code[class*="language-"], pre[class*="language-"] {
-  font-size: 14px !important; 
+  font-size: 14px !important;
 }
 
- /* TODO */
+/* TODO */
 .svg-inline--fa {
   width: 48px;
   padding: 10px;
   color: #999;
 }
 
-section[class*="tagSection"] > .svg-inline--fa {
+.svg-inline--fa.fa-square-rss {
+  width: 28px;
+  padding: 0;
+  color: #999;
+}
+
+section[class*="tagSection"]>.svg-inline--fa {
   width: 32px;
   padding: 0 10px 0 0;
 }
