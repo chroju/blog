@@ -3,7 +3,8 @@
 var __webpack_exports__ = {};
 
 
-self.fallback = async request => {
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'fallback' does not exist on type 'Window... Remove this comment to see the full error message
+self.fallback = async (request: any) => {
   // https://developer.mozilla.org/en-US/docs/Web/API/RequestDestination
   switch (request.destination) {
     case 'document':

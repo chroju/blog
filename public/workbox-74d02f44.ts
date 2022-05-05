@@ -1,6 +1,8 @@
-define(['exports'], (function (exports) { 'use strict';
+// @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'define'.
+define(['exports'], (function (exports: any) { 'use strict';
 
     try {
+      // @ts-expect-error ts-migrate(7015) FIXME: Element implicitly has an 'any' type because index... Remove this comment to see the full error message
       self['workbox:core:6.5.2'] && _();
     } catch (e) {}
 
@@ -14,6 +16,7 @@ define(['exports'], (function (exports) { 'use strict';
       // Don't overwrite this value if it's already set.
       // See https://github.com/GoogleChrome/workbox/pull/2284#issuecomment-560470923
       if (!('__WB_DISABLE_DEV_LOGS' in self)) {
+        // @ts-expect-error ts-migrate(2339) FIXME: Property '__WB_DISABLE_DEV_LOGS' does not exist on... Remove this comment to see the full error message
         self.__WB_DISABLE_DEV_LOGS = false;
       }
 
@@ -28,7 +31,8 @@ define(['exports'], (function (exports) { 'use strict';
 
       };
 
-      const print = function (method, args) {
+      const print = function (method: any, args: any) {
+        // @ts-expect-error ts-migrate(2339) FIXME: Property '__WB_DISABLE_DEV_LOGS' does not exist on... Remove this comment to see the full error message
         if (self.__WB_DISABLE_DEV_LOGS) {
           return;
         }
@@ -37,14 +41,17 @@ define(['exports'], (function (exports) { 'use strict';
           // Safari doesn't print all console.groupCollapsed() arguments:
           // https://bugs.webkit.org/show_bug.cgi?id=182754
           if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+            // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             console[method](...args);
             return;
           }
         }
 
+        // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
         const styles = [`background: ${methodToColorMap[method]}`, `border-radius: 0.5em`, `color: white`, `font-weight: bold`, `padding: 2px 0.5em`]; // When in a group, the workbox prefix is not displayed.
 
         const logPrefix = inGroup ? [] : ['%cworkbox', styles.join(';')];
+        // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
         console[method](...logPrefix, ...args);
 
         if (method === 'groupCollapsed') {
@@ -63,7 +70,8 @@ define(['exports'], (function (exports) { 'use strict';
       for (const key of loggerMethods) {
         const method = key;
 
-        api[method] = (...args) => {
+        // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+        api[method] = (...args: any[]) => {
           print(method, args);
         };
       }
@@ -83,7 +91,7 @@ define(['exports'], (function (exports) { 'use strict';
         paramName,
         validValueDescription,
         value
-      }) => {
+      }: any) => {
         if (!paramName || !validValueDescription) {
           throw new Error(`Unexpected input to 'invalid-value' error.`);
         }
@@ -95,7 +103,7 @@ define(['exports'], (function (exports) { 'use strict';
         className,
         funcName,
         paramName
-      }) => {
+      }: any) => {
         if (!moduleName || !className || !funcName || !paramName) {
           throw new Error(`Unexpected input to 'not-an-array' error.`);
         }
@@ -108,7 +116,7 @@ define(['exports'], (function (exports) { 'use strict';
         moduleName,
         className,
         funcName
-      }) => {
+      }: any) => {
         if (!expectedType || !paramName || !moduleName || !funcName) {
           throw new Error(`Unexpected input to 'incorrect-type' error.`);
         }
@@ -123,7 +131,7 @@ define(['exports'], (function (exports) { 'use strict';
         className,
         funcName,
         isReturnValueProblem
-      }) => {
+      }: any) => {
         if (!expectedClassName || !moduleName || !funcName) {
           throw new Error(`Unexpected input to 'incorrect-class' error.`);
         }
@@ -142,7 +150,7 @@ define(['exports'], (function (exports) { 'use strict';
         moduleName,
         className,
         funcName
-      }) => {
+      }: any) => {
         if (!expectedMethod || !paramName || !moduleName || !className || !funcName) {
           throw new Error(`Unexpected input to 'missing-a-method' error.`);
         }
@@ -151,13 +159,13 @@ define(['exports'], (function (exports) { 'use strict';
       },
       'add-to-cache-list-unexpected-type': ({
         entry
-      }) => {
+      }: any) => {
         return `An unexpected entry was passed to ` + `'workbox-precaching.PrecacheController.addToCacheList()' The entry ` + `'${JSON.stringify(entry)}' isn't supported. You must supply an array of ` + `strings with one or more characters, objects with a url property or ` + `Request objects.`;
       },
       'add-to-cache-list-conflicting-entries': ({
         firstEntry,
         secondEntry
-      }) => {
+      }: any) => {
         if (!firstEntry || !secondEntry) {
           throw new Error(`Unexpected input to ` + `'add-to-cache-list-duplicate-entries' error.`);
         }
@@ -166,7 +174,7 @@ define(['exports'], (function (exports) { 'use strict';
       },
       'plugin-error-request-will-fetch': ({
         thrownErrorMessage
-      }) => {
+      }: any) => {
         if (!thrownErrorMessage) {
           throw new Error(`Unexpected input to ` + `'plugin-error-request-will-fetch', error.`);
         }
@@ -176,7 +184,7 @@ define(['exports'], (function (exports) { 'use strict';
       'invalid-cache-name': ({
         cacheNameId,
         value
-      }) => {
+      }: any) => {
         if (!cacheNameId) {
           throw new Error(`Expected a 'cacheNameId' for error 'invalid-cache-name'`);
         }
@@ -185,7 +193,7 @@ define(['exports'], (function (exports) { 'use strict';
       },
       'unregister-route-but-not-found-with-method': ({
         method
-      }) => {
+      }: any) => {
         if (!method) {
           throw new Error(`Unexpected input to ` + `'unregister-route-but-not-found-with-method' error.`);
         }
@@ -197,18 +205,18 @@ define(['exports'], (function (exports) { 'use strict';
       },
       'queue-replay-failed': ({
         name
-      }) => {
+      }: any) => {
         return `Replaying the background sync queue '${name}' failed.`;
       },
       'duplicate-queue-name': ({
         name
-      }) => {
+      }: any) => {
         return `The Queue name '${name}' is already being used. ` + `All instances of backgroundSync.Queue must be given unique names.`;
       },
       'expired-test-without-max-age': ({
         methodName,
         paramName
-      }) => {
+      }: any) => {
         return `The '${methodName}()' method can only be used when the ` + `'${paramName}' is used in the constructor.`;
       },
       'unsupported-route-type': ({
@@ -216,7 +224,7 @@ define(['exports'], (function (exports) { 'use strict';
         className,
         funcName,
         paramName
-      }) => {
+      }: any) => {
         return `The supplied '${paramName}' parameter was an unsupported type. ` + `Please check the docs for ${moduleName}.${className}.${funcName} for ` + `valid input types.`;
       },
       'not-array-of-class': ({
@@ -226,28 +234,28 @@ define(['exports'], (function (exports) { 'use strict';
         className,
         funcName,
         paramName
-      }) => {
+      }: any) => {
         return `The supplied '${paramName}' parameter must be an array of ` + `'${expectedClass}' objects. Received '${JSON.stringify(value)},'. ` + `Please check the call to ${moduleName}.${className}.${funcName}() ` + `to fix the issue.`;
       },
       'max-entries-or-age-required': ({
         moduleName,
         className,
         funcName
-      }) => {
+      }: any) => {
         return `You must define either config.maxEntries or config.maxAgeSeconds` + `in ${moduleName}.${className}.${funcName}`;
       },
       'statuses-or-headers-required': ({
         moduleName,
         className,
         funcName
-      }) => {
+      }: any) => {
         return `You must define either config.statuses or config.headers` + `in ${moduleName}.${className}.${funcName}`;
       },
       'invalid-string': ({
         moduleName,
         funcName,
         paramName
-      }) => {
+      }: any) => {
         if (!paramName || !moduleName || !funcName) {
           throw new Error(`Unexpected input to 'invalid-string' error.`);
         }
@@ -265,7 +273,7 @@ define(['exports'], (function (exports) { 'use strict';
       },
       'unit-must-be-bytes': ({
         normalizedRangeHeader
-      }) => {
+      }: any) => {
         if (!normalizedRangeHeader) {
           throw new Error(`Unexpected input to 'unit-must-be-bytes' error.`);
         }
@@ -274,7 +282,7 @@ define(['exports'], (function (exports) { 'use strict';
       },
       'single-range-only': ({
         normalizedRangeHeader
-      }) => {
+      }: any) => {
         if (!normalizedRangeHeader) {
           throw new Error(`Unexpected input to 'single-range-only' error.`);
         }
@@ -283,7 +291,7 @@ define(['exports'], (function (exports) { 'use strict';
       },
       'invalid-range-values': ({
         normalizedRangeHeader
-      }) => {
+      }: any) => {
         if (!normalizedRangeHeader) {
           throw new Error(`Unexpected input to 'invalid-range-values' error.`);
         }
@@ -297,24 +305,24 @@ define(['exports'], (function (exports) { 'use strict';
         size,
         start,
         end
-      }) => {
+      }: any) => {
         return `The start (${start}) and end (${end}) values in the Range are ` + `not satisfiable by the cached response, which is ${size} bytes.`;
       },
       'attempt-to-cache-non-get-request': ({
         url,
         method
-      }) => {
+      }: any) => {
         return `Unable to cache '${url}' because it is a '${method}' request and ` + `only 'GET' requests can be cached.`;
       },
       'cache-put-with-no-response': ({
         url
-      }) => {
+      }: any) => {
         return `There was an attempt to cache '${url}' but the response was not ` + `defined.`;
       },
       'no-response': ({
         url,
         error
-      }) => {
+      }: any) => {
         let message = `The strategy could not generate a response for '${url}'.`;
 
         if (error) {
@@ -326,33 +334,33 @@ define(['exports'], (function (exports) { 'use strict';
       'bad-precaching-response': ({
         url,
         status
-      }) => {
+      }: any) => {
         return `The precaching request for '${url}' failed` + (status ? ` with an HTTP status of ${status}.` : `.`);
       },
       'non-precached-url': ({
         url
-      }) => {
+      }: any) => {
         return `createHandlerBoundToURL('${url}') was called, but that URL is ` + `not precached. Please pass in a URL that is precached instead.`;
       },
       'add-to-cache-list-conflicting-integrities': ({
         url
-      }) => {
+      }: any) => {
         return `Two of the entries passed to ` + `'workbox-precaching.PrecacheController.addToCacheList()' had the URL ` + `${url} with different integrity values. Please remove one of them.`;
       },
       'missing-precache-entry': ({
         cacheName,
         url
-      }) => {
+      }: any) => {
         return `Unable to find a precached response in ${cacheName} for ${url}.`;
       },
       'cross-origin-copy-response': ({
         origin
-      }) => {
+      }: any) => {
         return `workbox-core.copyResponse() can only be used with same-origin ` + `responses. It was passed a response with origin ${origin}.`;
       },
       'opaque-streams-source': ({
         type
-      }) => {
+      }: any) => {
         const message = `One of the workbox-streams sources resulted in an ` + `'${type}' response.`;
 
         if (type === 'opaqueredirect') {
@@ -371,7 +379,8 @@ define(['exports'], (function (exports) { 'use strict';
       https://opensource.org/licenses/MIT.
     */
 
-    const generatorFunction = (code, details = {}) => {
+    const generatorFunction = (code: any, details = {}) => {
+      // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
       const message = messages$1[code];
 
       if (!message) {
@@ -401,6 +410,7 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     class WorkboxError extends Error {
+      details: any;
       /**
        *
        * @param {string} errorCode The error code that
@@ -409,13 +419,12 @@ define(['exports'], (function (exports) { 'use strict';
        * that will help developers identify issues should
        * be added as a key on the context object.
        */
-      constructor(errorCode, details) {
+      constructor(errorCode: any, details: any) {
         const message = messageGenerator(errorCode, details);
         super(message);
         this.name = errorCode;
         this.details = details;
       }
-
     }
 
     /*
@@ -432,13 +441,13 @@ define(['exports'], (function (exports) { 'use strict';
      * needed.
      */
 
-    const isArray = (value, details) => {
+    const isArray = (value: any, details: any) => {
       if (!Array.isArray(value)) {
         throw new WorkboxError('not-an-array', details);
       }
     };
 
-    const hasMethod = (object, expectedMethod, details) => {
+    const hasMethod = (object: any, expectedMethod: any, details: any) => {
       const type = typeof object[expectedMethod];
 
       if (type !== 'function') {
@@ -447,32 +456,32 @@ define(['exports'], (function (exports) { 'use strict';
       }
     };
 
-    const isType = (object, expectedType, details) => {
+    const isType = (object: any, expectedType: any, details: any) => {
       if (typeof object !== expectedType) {
         details['expectedType'] = expectedType;
         throw new WorkboxError('incorrect-type', details);
       }
     };
 
-    const isInstance = (object, // Need the general type to do the check later.
+    const isInstance = (object: any, // Need the general type to do the check later.
     // eslint-disable-next-line @typescript-eslint/ban-types
-    expectedClass, details) => {
+    expectedClass: any, details: any) => {
       if (!(object instanceof expectedClass)) {
         details['expectedClassName'] = expectedClass.name;
         throw new WorkboxError('incorrect-class', details);
       }
     };
 
-    const isOneOf = (value, validValues, details) => {
+    const isOneOf = (value: any, validValues: any, details: any) => {
       if (!validValues.includes(value)) {
         details['validValueDescription'] = `Valid values are ${JSON.stringify(validValues)}.`;
         throw new WorkboxError('invalid-value', details);
       }
     };
 
-    const isArrayOfClass = (value, // Need general type to do check later.
-    expectedClass, // eslint-disable-line
-    details) => {
+    const isArrayOfClass = (value: any, // Need general type to do check later.
+    expectedClass: any, // eslint-disable-line
+    details: any) => {
       const error = new WorkboxError('not-array-of-class', details);
 
       if (!Array.isArray(value)) {
@@ -496,6 +505,7 @@ define(['exports'], (function (exports) { 'use strict';
     };
 
     try {
+      // @ts-expect-error ts-migrate(7015) FIXME: Element implicitly has an 'any' type because index... Remove this comment to see the full error message
       self['workbox:routing:6.5.2'] && _();
     } catch (e) {}
 
@@ -541,7 +551,7 @@ define(['exports'], (function (exports) { 'use strict';
      * @private
      */
 
-    const normalizeHandler = handler => {
+    const normalizeHandler = (handler: any) => {
       if (handler && typeof handler === 'object') {
         {
           finalAssertExports.hasMethod(handler, 'handle', {
@@ -587,6 +597,10 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     class Route {
+      catchHandler: any;
+      handler: any;
+      match: any;
+      method: any;
       /**
        * Constructor for Route class.
        *
@@ -598,7 +612,7 @@ define(['exports'], (function (exports) { 'use strict';
        * @param {string} [method='GET'] The HTTP method to match the Route
        * against.
        */
-      constructor(match, handler, method = defaultMethod) {
+      constructor(match: any, handler: any, method = defaultMethod) {
         {
           finalAssertExports.isType(match, 'function', {
             moduleName: 'workbox-routing',
@@ -627,10 +641,9 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      setCatchHandler(handler) {
+      setCatchHandler(handler: any) {
         this.catchHandler = normalizeHandler(handler);
       }
-
     }
 
     /*
@@ -666,7 +679,7 @@ define(['exports'], (function (exports) { 'use strict';
        * @param {string} [method='GET'] The HTTP method to match the Route
        * against.
        */
-      constructor(regExp, handler, method) {
+      constructor(regExp: any, handler: any, method: any) {
         {
           finalAssertExports.isInstance(regExp, RegExp, {
             moduleName: 'workbox-routing',
@@ -678,7 +691,7 @@ define(['exports'], (function (exports) { 'use strict';
 
         const match = ({
           url
-        }) => {
+        }: any) => {
           const result = regExp.exec(url.href); // Return immediately if there's no match.
 
           if (!result) {
@@ -691,6 +704,7 @@ define(['exports'], (function (exports) { 'use strict';
 
           if (url.origin !== location.origin && result.index !== 0) {
             {
+              // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
               logger.debug(`The regular expression '${regExp.toString()}' only partially matched ` + `against the cross-origin URL '${url.toString()}'. RegExpRoute's will only ` + `handle cross-origin requests if they match the entire URL.`);
             }
 
@@ -717,7 +731,7 @@ define(['exports'], (function (exports) { 'use strict';
       https://opensource.org/licenses/MIT.
     */
 
-    const getFriendlyURL = url => {
+    const getFriendlyURL = (url: any) => {
       const urlObj = new URL(String(url), location.href); // See https://github.com/GoogleChrome/workbox/issues/2323
       // We want to include everything, except for the origin if it's same-origin.
 
@@ -750,6 +764,9 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     class Router {
+      _catchHandler: any;
+      _defaultHandlerMap: any;
+      _routes: any;
       /**
        * Initializes a new Router.
        */
@@ -777,6 +794,7 @@ define(['exports'], (function (exports) { 'use strict';
         // See https://github.com/Microsoft/TypeScript/issues/28357#issuecomment-436484705
         self.addEventListener('fetch', event => {
           const {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'request' does not exist on type 'Event'.
             request
           } = event;
           const responsePromise = this.handleRequest({
@@ -785,6 +803,7 @@ define(['exports'], (function (exports) { 'use strict';
           });
 
           if (responsePromise) {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'respondWith' does not exist on type 'Eve... Remove this comment to see the full error message
             event.respondWith(responsePromise);
           }
         });
@@ -825,14 +844,16 @@ define(['exports'], (function (exports) { 'use strict';
             } = event.data;
 
             {
+              // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
               logger.debug(`Caching URLs from the window`, payload.urlsToCache);
             }
 
-            const requestPromises = Promise.all(payload.urlsToCache.map(entry => {
+            const requestPromises = Promise.all(payload.urlsToCache.map((entry: any) => {
               if (typeof entry === 'string') {
                 entry = [entry];
               }
 
+              // @ts-expect-error ts-migrate(2556) FIXME: Expected 1-2 arguments, but got 0 or more.
               const request = new Request(...entry);
               return this.handleRequest({
                 request,
@@ -842,6 +863,7 @@ define(['exports'], (function (exports) { 'use strict';
               // doesn't: `Array<Promise<Response> | undefined>`.
             })); // TypeScript
 
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'waitUntil' does not exist on type 'Messa... Remove this comment to see the full error message
             event.waitUntil(requestPromises); // If a MessageChannel was used, reply to the message on success.
 
             if (event.ports && event.ports[0]) {
@@ -867,7 +889,7 @@ define(['exports'], (function (exports) { 'use strict';
       handleRequest({
         request,
         event
-      }) {
+      }: any) {
         {
           finalAssertExports.isInstance(request, Request, {
             moduleName: 'workbox-routing',
@@ -881,6 +903,7 @@ define(['exports'], (function (exports) { 'use strict';
 
         if (!url.protocol.startsWith('http')) {
           {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`Workbox Router only supports URLs that start with 'http'.`);
           }
 
@@ -926,6 +949,7 @@ define(['exports'], (function (exports) { 'use strict';
           {
             // No handler so Workbox will do nothing. If logs is set of debug
             // i.e. verbose, we should print out this information.
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`No route found for: ${getFriendlyURL(url)}`);
           }
 
@@ -935,14 +959,18 @@ define(['exports'], (function (exports) { 'use strict';
         {
           // We have a handler, meaning Workbox is going to handle the route.
           // print the routing details to the console.
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupCollapsed' does not exist on type '... Remove this comment to see the full error message
           logger.groupCollapsed(`Router is responding to: ${getFriendlyURL(url)}`);
           debugMessages.forEach(msg => {
             if (Array.isArray(msg)) {
+              // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
               logger.log(...msg);
             } else {
+              // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
               logger.log(msg);
             }
           });
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupEnd' does not exist on type '{}'.
           logger.groupEnd();
         } // Wrap in try and catch in case the handle method throws a synchronous
         // error. It should still callback to the catch handler.
@@ -971,9 +999,13 @@ define(['exports'], (function (exports) { 'use strict';
               {
                 // Still include URL here as it will be async from the console group
                 // and may not make sense without the URL
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupCollapsed' does not exist on type '... Remove this comment to see the full error message
                 logger.groupCollapsed(`Error thrown when responding to: ` + ` ${getFriendlyURL(url)}. Falling back to route's Catch Handler.`);
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'error' does not exist on type '{}'.
                 logger.error(`Error thrown by:`, route);
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'error' does not exist on type '{}'.
                 logger.error(err);
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupEnd' does not exist on type '{}'.
                 logger.groupEnd();
               }
 
@@ -995,9 +1027,13 @@ define(['exports'], (function (exports) { 'use strict';
               {
                 // Still include URL here as it will be async from the console group
                 // and may not make sense without the URL
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupCollapsed' does not exist on type '... Remove this comment to see the full error message
                 logger.groupCollapsed(`Error thrown when responding to: ` + ` ${getFriendlyURL(url)}. Falling back to global Catch Handler.`);
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'error' does not exist on type '{}'.
                 logger.error(`Error thrown by:`, route);
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'error' does not exist on type '{}'.
                 logger.error(err);
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupEnd' does not exist on type '{}'.
                 logger.groupEnd();
               }
 
@@ -1036,7 +1072,7 @@ define(['exports'], (function (exports) { 'use strict';
         sameOrigin,
         request,
         event
-      }) {
+      }: any) {
         const routes = this._routes.get(request.method) || [];
 
         for (const route of routes) {
@@ -1055,6 +1091,7 @@ define(['exports'], (function (exports) { 'use strict';
               // Warn developers that using an async matchCallback is almost always
               // not the right thing to do.
               if (matchResult instanceof Promise) {
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'warn' does not exist on type '{}'.
                 logger.warn(`While routing ${getFriendlyURL(url)}, an async ` + `matchCallback function was used. Please convert the ` + `following route to use a synchronous matchCallback function:`, route);
               }
             } // See https://github.com/GoogleChrome/workbox/issues/2079
@@ -1104,7 +1141,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      setDefaultHandler(handler, method = defaultMethod) {
+      setDefaultHandler(handler: any, method = defaultMethod) {
         this._defaultHandlerMap.set(method, normalizeHandler(handler));
       }
       /**
@@ -1116,7 +1153,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      setCatchHandler(handler) {
+      setCatchHandler(handler: any) {
         this._catchHandler = normalizeHandler(handler);
       }
       /**
@@ -1126,7 +1163,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      registerRoute(route) {
+      registerRoute(route: any) {
         {
           finalAssertExports.isType(route, 'object', {
             moduleName: 'workbox-routing',
@@ -1175,7 +1212,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      unregisterRoute(route) {
+      unregisterRoute(route: any) {
         if (!this._routes.has(route.method)) {
           throw new WorkboxError('unregister-route-but-not-found-with-method', {
             method: route.method
@@ -1187,10 +1224,10 @@ define(['exports'], (function (exports) { 'use strict';
         if (routeIndex > -1) {
           this._routes.get(route.method).splice(routeIndex, 1);
         } else {
+          // @ts-expect-error ts-migrate(2554) FIXME: Expected 2 arguments, but got 1.
           throw new WorkboxError('unregister-route-route-not-registered');
         }
       }
-
     }
 
     /*
@@ -1200,7 +1237,7 @@ define(['exports'], (function (exports) { 'use strict';
       license that can be found in the LICENSE file or at
       https://opensource.org/licenses/MIT.
     */
-    let defaultRouter;
+    let defaultRouter: any;
     /**
      * Creates a new, singleton Router instance if one does not exist. If one
      * does already exist, that instance is returned.
@@ -1246,7 +1283,7 @@ define(['exports'], (function (exports) { 'use strict';
      * @memberof workbox-routing
      */
 
-    function registerRoute(capture, handler, method) {
+    function registerRoute(capture: any, handler: any, method: any) {
       let route;
 
       if (typeof capture === 'string') {
@@ -1268,15 +1305,17 @@ define(['exports'], (function (exports) { 'use strict';
           const wildcards = '[*:?+]';
 
           if (new RegExp(`${wildcards}`).exec(valueToCheck)) {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`The '$capture' parameter contains an Express-style wildcard ` + `character (${wildcards}). Strings are now always interpreted as ` + `exact matches; use a RegExp for partial or wildcard matches.`);
           }
         }
 
         const matchCallback = ({
           url
-        }) => {
+        }: any) => {
           {
             if (url.pathname === captureUrl.pathname && url.origin !== captureUrl.origin) {
+              // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
               logger.debug(`${capture} only partially matches the cross-origin URL ` + `${url.toString()}. This route will only handle cross-origin requests ` + `if they match the entire URL.`);
             }
           }
@@ -1308,6 +1347,7 @@ define(['exports'], (function (exports) { 'use strict';
     }
 
     try {
+      // @ts-expect-error ts-migrate(7015) FIXME: Element implicitly has an 'any' type because index... Remove this comment to see the full error message
       self['workbox:strategies:6.5.2'] && _();
     } catch (e) {}
 
@@ -1331,7 +1371,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
       cacheWillUpdate: async ({
         response
-      }) => {
+      }: any) => {
         if (response.status === 200 || response.status === 0) {
           return response;
         }
@@ -1352,37 +1392,39 @@ define(['exports'], (function (exports) { 'use strict';
       precache: 'precache-v2',
       prefix: 'workbox',
       runtime: 'runtime',
+      // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'registration'.
       suffix: typeof registration !== 'undefined' ? registration.scope : ''
     };
 
-    const _createCacheName = cacheName => {
+    const _createCacheName = (cacheName: any) => {
       return [_cacheNameDetails.prefix, cacheName, _cacheNameDetails.suffix].filter(value => value && value.length > 0).join('-');
     };
 
-    const eachCacheNameDetail = fn => {
+    const eachCacheNameDetail = (fn: any) => {
       for (const key of Object.keys(_cacheNameDetails)) {
         fn(key);
       }
     };
 
     const cacheNames = {
-      updateDetails: details => {
-        eachCacheNameDetail(key => {
+      updateDetails: (details: any) => {
+        eachCacheNameDetail((key: any) => {
           if (typeof details[key] === 'string') {
+            // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             _cacheNameDetails[key] = details[key];
           }
         });
       },
-      getGoogleAnalyticsName: userCacheName => {
+      getGoogleAnalyticsName: (userCacheName: any) => {
         return userCacheName || _createCacheName(_cacheNameDetails.googleAnalytics);
       },
-      getPrecacheName: userCacheName => {
+      getPrecacheName: (userCacheName: any) => {
         return userCacheName || _createCacheName(_cacheNameDetails.precache);
       },
       getPrefix: () => {
         return _cacheNameDetails.prefix;
       },
-      getRuntimeName: userCacheName => {
+      getRuntimeName: (userCacheName: any) => {
         return userCacheName || _createCacheName(_cacheNameDetails.runtime);
       },
       getSuffix: () => {
@@ -1397,7 +1439,7 @@ define(['exports'], (function (exports) { 'use strict';
       https://opensource.org/licenses/MIT.
     */
 
-    function stripParams(fullURL, ignoreParams) {
+    function stripParams(fullURL: any, ignoreParams: any) {
       const strippedURL = new URL(fullURL);
 
       for (const param of ignoreParams) {
@@ -1420,7 +1462,7 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
 
-    async function cacheMatchIgnoreParams(cache, request, ignoreParams, matchOptions) {
+    async function cacheMatchIgnoreParams(cache: any, request: any, ignoreParams: any, matchOptions: any) {
       const strippedRequestURL = stripParams(request.url, ignoreParams); // If the request doesn't include any ignored params, match as normal.
 
       if (request.url === strippedRequestURL) {
@@ -1461,6 +1503,9 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     class Deferred {
+      promise: any;
+      reject: any;
+      resolve: any;
       /**
        * Creates a promise and exposes its resolve and reject functions as methods.
        */
@@ -1470,7 +1515,6 @@ define(['exports'], (function (exports) { 'use strict';
           this.reject = reject;
         });
       }
-
     }
 
     /*
@@ -1502,18 +1546,22 @@ define(['exports'], (function (exports) { 'use strict';
 
     async function executeQuotaErrorCallbacks() {
       {
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
         logger.log(`About to run ${quotaErrorCallbacks.size} ` + `callbacks to clean up caches.`);
       }
 
       for (const callback of quotaErrorCallbacks) {
+        // @ts-expect-error ts-migrate(2571) FIXME: Object is of type 'unknown'.
         await callback();
 
         {
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
           logger.log(callback, 'is complete.');
         }
       }
 
       {
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
         logger.log('Finished running callbacks.');
       }
     }
@@ -1533,7 +1581,7 @@ define(['exports'], (function (exports) { 'use strict';
      * @private
      */
 
-    function timeout(ms) {
+    function timeout(ms: any) {
       return new Promise(resolve => setTimeout(resolve, ms));
     }
 
@@ -1545,7 +1593,7 @@ define(['exports'], (function (exports) { 'use strict';
       https://opensource.org/licenses/MIT.
     */
 
-    function toRequest(input) {
+    function toRequest(input: any) {
       return typeof input === 'string' ? new Request(input) : input;
     }
     /**
@@ -1560,6 +1608,15 @@ define(['exports'], (function (exports) { 'use strict';
 
 
     class StrategyHandler {
+      _cacheKeys: any;
+      _extendLifetimePromises: any;
+      _handlerDeferred: any;
+      _pluginStateMap: any;
+      _plugins: any;
+      _strategy: any;
+      event: any;
+      params: any;
+      request: any;
       /**
        * Creates a new instance associated with the passed strategy and event
        * that's handling the request.
@@ -1576,7 +1633,7 @@ define(['exports'], (function (exports) { 'use strict';
        * @param {*} [options.params] The return value from the
        *     {@link workbox-routing~matchCallback} (if applicable).
        */
-      constructor(strategy, options) {
+      constructor(strategy: any, options: any) {
         this._cacheKeys = {};
         /**
          * The request the strategy is performing (passed to the strategy's
@@ -1620,6 +1677,7 @@ define(['exports'], (function (exports) { 'use strict';
          */
 
         {
+          // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'ExtendableEvent'.
           finalAssertExports.isInstance(options.event, ExtendableEvent, {
             moduleName: 'workbox-strategies',
             className: 'StrategyHandler',
@@ -1659,17 +1717,19 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async fetch(input) {
+      async fetch(input: any) {
         const {
           event
         } = this;
         let request = toRequest(input);
 
+        // @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'FetchEvent'. Did you mean 'Touch... Remove this comment to see the full error message
         if (request.mode === 'navigate' && event instanceof FetchEvent && event.preloadResponse) {
           const possiblePreloadResponse = await event.preloadResponse;
 
           if (possiblePreloadResponse) {
             {
+              // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
               logger.log(`Using a preloaded navigation response for ` + `'${getFriendlyURL(request.url)}'`);
             }
 
@@ -1707,7 +1767,9 @@ define(['exports'], (function (exports) { 'use strict';
 
           fetchResponse = await fetch(request, request.mode === 'navigate' ? undefined : this._strategy.fetchOptions);
 
+          // @ts-expect-error ts-migrate(2367) FIXME: This condition will always return 'true' since the... Remove this comment to see the full error message
           if ("development" !== 'production') {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`Network request for ` + `'${getFriendlyURL(request.url)}' returned a response with ` + `status '${fetchResponse.status}'.`);
           }
 
@@ -1722,6 +1784,7 @@ define(['exports'], (function (exports) { 'use strict';
           return fetchResponse;
         } catch (error) {
           {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
             logger.log(`Network request for ` + `'${getFriendlyURL(request.url)}' threw an error.`, error);
           } // `originalRequest` will only exist if a `fetchDidFail` callback
           // is being used (see above).
@@ -1751,7 +1814,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async fetchAndCachePut(input) {
+      async fetchAndCachePut(input: any) {
         const response = await this.fetch(input);
         const responseClone = response.clone();
         void this.waitUntil(this.cachePut(input, responseClone));
@@ -1771,7 +1834,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async cacheMatch(key) {
+      async cacheMatch(key: any) {
         const request = toRequest(key);
         let cachedResponse;
         const {
@@ -1786,8 +1849,10 @@ define(['exports'], (function (exports) { 'use strict';
 
         {
           if (cachedResponse) {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`Found a cached response in '${cacheName}'.`);
           } else {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`No cached response found in '${cacheName}'.`);
           }
         }
@@ -1821,7 +1886,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async cachePut(key, response) {
+      async cachePut(key: any, response: any) {
         const request = toRequest(key); // Run in the next task to avoid blocking other cache reads.
         // https://github.com/w3c/ServiceWorker/issues/1397
 
@@ -1840,12 +1905,14 @@ define(['exports'], (function (exports) { 'use strict';
           const vary = response.headers.get('Vary');
 
           if (vary) {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`The response for ${getFriendlyURL(effectiveRequest.url)} ` + `has a 'Vary: ${vary}' header. ` + `Consider setting the {ignoreVary: true} option on your strategy ` + `to ensure cache matching and deletion works as expected.`);
           }
         }
 
         if (!response) {
           {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'error' does not exist on type '{}'.
             logger.error(`Cannot cache non-existent response for ` + `'${getFriendlyURL(effectiveRequest.url)}'.`);
           }
 
@@ -1858,6 +1925,7 @@ define(['exports'], (function (exports) { 'use strict';
 
         if (!responseToCache) {
           {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
             logger.debug(`Response '${getFriendlyURL(effectiveRequest.url)}' ` + `will not be cached.`, responseToCache);
           }
 
@@ -1876,6 +1944,7 @@ define(['exports'], (function (exports) { 'use strict';
         cache, effectiveRequest.clone(), ['__WB_REVISION__'], matchOptions) : null;
 
         {
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
           logger.debug(`Updating the '${cacheName}' cache with a new Response ` + `for ${getFriendlyURL(effectiveRequest.url)}.`);
         }
 
@@ -1917,7 +1986,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async getCacheKey(request, mode) {
+      async getCacheKey(request: any, mode: any) {
         const key = `${request.url} | ${mode}`;
 
         if (!this._cacheKeys[key]) {
@@ -1948,7 +2017,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      hasCallback(name) {
+      hasCallback(name: any) {
         for (const plugin of this._strategy.plugins) {
           if (name in plugin) {
             return true;
@@ -1975,7 +2044,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async runCallbacks(name, param) {
+      async runCallbacks(name: any, param: any) {
         for (const callback of this.iterateCallbacks(name)) {
           // TODO(philipwalton): not sure why `any` is needed. It seems like
           // this should work with `as WorkboxPluginCallbackParam[C]`.
@@ -1993,12 +2062,12 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      *iterateCallbacks(name) {
+      *iterateCallbacks(name: any) {
         for (const plugin of this._strategy.plugins) {
           if (typeof plugin[name] === 'function') {
             const state = this._pluginStateMap.get(plugin);
 
-            const statefulCallback = param => {
+            const statefulCallback = (param: any) => {
               const statefulParam = Object.assign(Object.assign({}, param), {
                 state
               }); // TODO(philipwalton): not sure why `any` is needed. It seems like
@@ -2026,7 +2095,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      waitUntil(promise) {
+      waitUntil(promise: any) {
         this._extendLifetimePromises.push(promise);
 
         return promise;
@@ -2071,7 +2140,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async _ensureResponseSafeToCache(response) {
+      async _ensureResponseSafeToCache(response: any) {
         let responseToCache = response;
         let pluginsUsed = false;
 
@@ -2097,8 +2166,10 @@ define(['exports'], (function (exports) { 'use strict';
             if (responseToCache) {
               if (responseToCache.status !== 200) {
                 if (responseToCache.status === 0) {
+                  // @ts-expect-error ts-migrate(2339) FIXME: Property 'warn' does not exist on type '{}'.
                   logger.warn(`The response for '${this.request.url}' ` + `is an opaque response. The caching strategy that you're ` + `using will not cache opaque responses by default.`);
                 } else {
+                  // @ts-expect-error ts-migrate(2339) FIXME: Property 'debug' does not exist on type '{}'.
                   logger.debug(`The response for '${this.request.url}' ` + `returned a status code of '${response.status}' and won't ` + `be cached as a result.`);
                 }
               }
@@ -2108,7 +2179,6 @@ define(['exports'], (function (exports) { 'use strict';
 
         return responseToCache;
       }
-
     }
 
     /*
@@ -2125,6 +2195,11 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     class Strategy {
+      _handle: any;
+      cacheName: any;
+      fetchOptions: any;
+      matchOptions: any;
+      plugins: any;
       /**
        * Creates a new instance of the strategy and sets all documented option
        * properties as public instance properties.
@@ -2155,6 +2230,7 @@ define(['exports'], (function (exports) { 'use strict';
          *
          * @type {string}
          */
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'cacheName' does not exist on type '{}'.
         this.cacheName = cacheNames.getRuntimeName(options.cacheName);
         /**
          * The list
@@ -2164,6 +2240,7 @@ define(['exports'], (function (exports) { 'use strict';
          * @type {Array<Object>}
          */
 
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'plugins' does not exist on type '{}'.
         this.plugins = options.plugins || [];
         /**
          * Values passed along to the
@@ -2173,6 +2250,7 @@ define(['exports'], (function (exports) { 'use strict';
          * @type {Object}
          */
 
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'fetchOptions' does not exist on type '{}... Remove this comment to see the full error message
         this.fetchOptions = options.fetchOptions;
         /**
          * The
@@ -2182,6 +2260,7 @@ define(['exports'], (function (exports) { 'use strict';
          * @type {Object}
          */
 
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'matchOptions' does not exist on type '{}... Remove this comment to see the full error message
         this.matchOptions = options.matchOptions;
       }
       /**
@@ -2205,7 +2284,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      handle(options) {
+      handle(options: any) {
         const [responseDone] = this.handleAll(options);
         return responseDone;
       }
@@ -2233,8 +2312,9 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      handleAll(options) {
+      handleAll(options: any) {
         // Allow for flexible options to be passed.
+        // @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'FetchEvent'. Did you mean 'Touch... Remove this comment to see the full error message
         if (options instanceof FetchEvent) {
           options = {
             event: options,
@@ -2259,7 +2339,7 @@ define(['exports'], (function (exports) { 'use strict';
         return [responseDone, handlerDone];
       }
 
-      async _getResponse(handler, request, event) {
+      async _getResponse(handler: any, request: any, event: any) {
         await handler.runCallbacks('handlerWillStart', {
           event,
           request
@@ -2294,6 +2374,7 @@ define(['exports'], (function (exports) { 'use strict';
           if (!response) {
             throw error;
           } else {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
             logger.log(`While responding to '${getFriendlyURL(request.url)}', ` + `an ${error instanceof Error ? error.toString() : ''} error occurred. Using a fallback response provided by ` + `a handlerDidError plugin.`);
           }
         }
@@ -2309,7 +2390,7 @@ define(['exports'], (function (exports) { 'use strict';
         return response;
       }
 
-      async _awaitComplete(responseDone, handler, request, event) {
+      async _awaitComplete(responseDone: any, handler: any, request: any, event: any) {
         let response;
         let error;
 
@@ -2345,7 +2426,6 @@ define(['exports'], (function (exports) { 'use strict';
           throw error;
         }
       }
-
     }
     /**
      * Classes extending the `Strategy` based class should implement this method,
@@ -2373,11 +2453,14 @@ define(['exports'], (function (exports) { 'use strict';
       https://opensource.org/licenses/MIT.
     */
     const messages = {
-      strategyStart: (strategyName, request) => `Using ${strategyName} to respond to '${getFriendlyURL(request.url)}'`,
-      printFinalResponse: response => {
+      strategyStart: (strategyName: any, request: any) => `Using ${strategyName} to respond to '${getFriendlyURL(request.url)}'`,
+      printFinalResponse: (response: any) => {
         if (response) {
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupCollapsed' does not exist on type '... Remove this comment to see the full error message
           logger.groupCollapsed(`View the final response here.`);
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
           logger.log(response || '[No response returned]');
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupEnd' does not exist on type '{}'.
           logger.groupEnd();
         }
       }
@@ -2408,6 +2491,9 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     class NetworkFirst extends Strategy {
+      _networkTimeoutSeconds: any;
+      cacheName: any;
+      plugins: any;
       /**
        * @param {Object} [options]
        * @param {string} [options.cacheName] Cache name to store and retrieve
@@ -2431,10 +2517,11 @@ define(['exports'], (function (exports) { 'use strict';
         super(options); // If this instance contains no plugins with a 'cacheWillUpdate' callback,
         // prepend the `cacheOkAndOpaquePlugin` plugin to the plugins list.
 
-        if (!this.plugins.some(p => 'cacheWillUpdate' in p)) {
+        if (!this.plugins.some((p: any) => 'cacheWillUpdate' in p)) {
           this.plugins.unshift(cacheOkAndOpaquePlugin);
         }
 
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'networkTimeoutSeconds' does not exist on... Remove this comment to see the full error message
         this._networkTimeoutSeconds = options.networkTimeoutSeconds || 0;
 
         {
@@ -2457,8 +2544,9 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async _handle(request, handler) {
-        const logs = [];
+      // @ts-expect-error ts-migrate(2425) FIXME: Class 'Strategy' defines instance member property ... Remove this comment to see the full error message
+      async _handle(request: any, handler: any) {
+        const logs: any = [];
 
         {
           finalAssertExports.isInstance(request, Request, {
@@ -2505,13 +2593,16 @@ define(['exports'], (function (exports) { 'use strict';
         })());
 
         {
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupCollapsed' does not exist on type '... Remove this comment to see the full error message
           logger.groupCollapsed(messages.strategyStart(this.constructor.name, request));
 
           for (const log of logs) {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
             logger.log(log);
           }
 
           messages.printFinalResponse(response);
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupEnd' does not exist on type '{}'.
           logger.groupEnd();
         }
 
@@ -2538,7 +2629,7 @@ define(['exports'], (function (exports) { 'use strict';
         request,
         logs,
         handler
-      }) {
+      }: any) {
         let timeoutId;
         const timeoutPromise = new Promise(resolve => {
           const onNetworkTimeout = async () => {
@@ -2573,7 +2664,7 @@ define(['exports'], (function (exports) { 'use strict';
         request,
         logs,
         handler
-      }) {
+      }: any) {
         let error;
         let response;
 
@@ -2611,7 +2702,6 @@ define(['exports'], (function (exports) { 'use strict';
 
         return response;
       }
-
     }
 
     /*
@@ -2636,6 +2726,7 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     class NetworkOnly extends Strategy {
+      _networkTimeoutSeconds: any;
       /**
        * @param {Object} [options]
        * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
@@ -2649,6 +2740,7 @@ define(['exports'], (function (exports) { 'use strict';
        */
       constructor(options = {}) {
         super(options);
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'networkTimeoutSeconds' does not exist on... Remove this comment to see the full error message
         this._networkTimeoutSeconds = options.networkTimeoutSeconds || 0;
       }
       /**
@@ -2660,7 +2752,8 @@ define(['exports'], (function (exports) { 'use strict';
        */
 
 
-      async _handle(request, handler) {
+      // @ts-expect-error ts-migrate(2425) FIXME: Class 'Strategy' defines instance member property ... Remove this comment to see the full error message
+      async _handle(request: any, handler: any) {
         {
           finalAssertExports.isInstance(request, Request, {
             moduleName: 'workbox-strategies',
@@ -2693,15 +2786,19 @@ define(['exports'], (function (exports) { 'use strict';
         }
 
         {
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupCollapsed' does not exist on type '... Remove this comment to see the full error message
           logger.groupCollapsed(messages.strategyStart(this.constructor.name, request));
 
           if (response) {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
             logger.log(`Got response from network.`);
           } else {
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'log' does not exist on type '{}'.
             logger.log(`Unable to get a response from the network.`);
           }
 
           messages.printFinalResponse(response);
+          // @ts-expect-error ts-migrate(2339) FIXME: Property 'groupEnd' does not exist on type '{}'.
           logger.groupEnd();
         }
 
@@ -2714,7 +2811,6 @@ define(['exports'], (function (exports) { 'use strict';
 
         return response;
       }
-
     }
 
     /*
@@ -2732,6 +2828,7 @@ define(['exports'], (function (exports) { 'use strict';
      */
 
     function clientsClaim() {
+      // @ts-expect-error ts-migrate(2339) FIXME: Property 'clients' does not exist on type 'Window ... Remove this comment to see the full error message
       self.addEventListener('activate', () => self.clients.claim());
     }
 
