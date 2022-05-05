@@ -1,29 +1,22 @@
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const fs = require("fs");
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const RSS = require("rss");
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const path = require('path');
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const matter = require('gray-matter');
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const remark = require('remark')
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const html = require('remark-html')
 
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'process'. Do you need to install... Remove this comment to see the full error message
 const postsDirectory = path.join(process.cwd(), 'posts')
 const siteURL = 'https://chroju.dev'
 
 async function getSortedPostsData() {
     const fileNames = fs.readdirSync(postsDirectory)
-    const allPostsData = await Promise.all(fileNames.map(async (fileName: any) => {
+    const allPostsData = await Promise.all(fileNames.map(async (fileName) => {
         const id = fileName.replace(/\.md$/, '')
         const fullPath = path.join(postsDirectory, fileName)
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const matterResult = matter(fileContents)
         const processedContent = await remark()
-            .use(html, {sanitize: false})
+            .use(html, { sanitize: false })
             .process(matterResult.content)
         const contentHtml = processedContent.toString()
 

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run build:rss && next build",
-    "build:rss": "node ./scripts/generate-rss.js",
+    "build:rss": "node ./scripts/generate-rss.ts",
     "start": "next start"
   },
   "dependencies": {

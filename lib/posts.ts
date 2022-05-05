@@ -1,13 +1,10 @@
-// @ts-expect-error ts-migrate(2307) FIXME: Cannot find module 'fs' or its corresponding type ... Remove this comment to see the full error message
 import fs from 'fs'
-// @ts-expect-error ts-migrate(2307) FIXME: Cannot find module 'path' or its corresponding typ... Remove this comment to see the full error message
 import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 import gfm from 'remark-gfm'
 
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'process'. Do you need to install... Remove this comment to see the full error message
 const postsDirectory = path.join(process.cwd(), 'posts')
 
 export function getSortedPostsData() {
@@ -84,7 +81,7 @@ export async function getPostData(id: any) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
     const processedContent = await remark()
-        .use(html, {sanitize: false})
+        .use(html, { sanitize: false })
         .use(gfm)
         .process(matterResult.content)
     const contentHtml = processedContent.toString()
