@@ -1,4 +1,4 @@
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import Helmet from 'react-helmet'
 import Layout, { siteTitle } from '../../components/layout'
@@ -10,9 +10,8 @@ import utilsStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
 
-export async function getStaticProps({
-    params
-}: any) {
+// TODO
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
     const postData = await getPostData(params.id)
     return {
         props: {

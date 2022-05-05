@@ -1,4 +1,4 @@
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../../../components/layout'
 import utilsStyles from '../../../styles/utils.module.css'
@@ -8,9 +8,8 @@ import Fa from '../../../components/fontawesome'
 
 import { getAllTags, getPostsWithTag } from '../../../lib/posts'
 
-export async function getStaticProps({
-    params
-}: any) {
+// TODO
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
     const tag = params.tag
     const tagPostsData = getPostsWithTag(tag)
     return {
