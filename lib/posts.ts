@@ -42,13 +42,12 @@ export function getSortedPostsData() {
 export function getAllTags() {
     const allPostsData = getSortedPostsData()
     const allTags = allPostsData.map((postData: any) => {
-        return postData.tags === undefined || postData.tags[0] === '' ? [] : postData.tags.map((tag: any) => {
-            return encodeURI(tag)
+        return postData.tags === undefined || postData.tags[0] === '' ? [] : postData.tags.map((tag: string) => {
+            return encodeURI(tag.toLowerCase())
         });
     }).flat()
     const tagCounts = {}
-    allTags.forEach((tag: any) => {
-        // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    allTags.forEach((tag: string) => {
         tagCounts[tag] = (tagCounts[tag] || 0) + 1;
     })
     return tagCounts
