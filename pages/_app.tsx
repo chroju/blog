@@ -1,3 +1,4 @@
+import { AppProps } from 'next/app'
 import '../styles/global.css'
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
@@ -5,10 +6,10 @@ import * as gtag from '../lib/gtag'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps) {
     const router = useRouter()
     useEffect(() => {
-        const handleRouteChange = (url) => {
+        const handleRouteChange = (url: any) => {
             gtag.pageview(url)
         }
         router.events.on('routeChangeComplete', handleRouteChange)

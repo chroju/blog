@@ -1,3 +1,4 @@
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../../../components/layout'
 import utilsStyles from '../../../styles/utils.module.css'
@@ -7,7 +8,9 @@ import Fa from '../../../components/fontawesome'
 
 import { getAllTags, getPostsWithTag } from '../../../lib/posts'
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({
+    params
+}: any) {
     const tag = params.tag
     const tagPostsData = getPostsWithTag(tag)
     return {
@@ -18,7 +21,7 @@ export async function getStaticProps({ params }) {
     }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const allTags = getAllTags()
     const paths = Object.keys(allTags).map(tag => {
         return {
@@ -33,11 +36,14 @@ export async function getStaticPaths() {
     }
 }
 
-export default function TagHome({ tagPostsData, tag }) {
+export default function TagHome({
+    tagPostsData,
+    tag
+}: any) {
     const pageURL = "https://chroju.dev/blog/tags/" + tag
     const pageTitle = "tag: " + tag + " - " + siteTitle
     return (
-        <Layout >
+        <Layout>
             <Head>
                 <title>{pageTitle}</title>
                 <meta
@@ -52,7 +58,11 @@ export default function TagHome({ tagPostsData, tag }) {
             <h2><Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span> {tag}</h2>
             <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
                 <ul className={utilsStyles.list}>
-                    {tagPostsData.map(({ id, date, title }) => (
+                    {tagPostsData.map(({
+                        id,
+                        date,
+                        title
+                    }: any) => (
                         <li className={utilsStyles.listItem} key={id}>
                             <Link href={`/blog/${id}`}>
                                 <a>{title}</a>
@@ -66,5 +76,5 @@ export default function TagHome({ tagPostsData, tag }) {
                 </ul>
             </section>
         </Layout>
-    )
+    );
 }

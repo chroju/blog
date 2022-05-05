@@ -1,3 +1,4 @@
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Helmet from 'react-helmet'
 import Layout, { siteTitle } from '../../components/layout'
@@ -9,7 +10,9 @@ import utilsStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({
+    params
+}: any) {
     const postData = await getPostData(params.id)
     return {
         props: {
@@ -18,7 +21,7 @@ export async function getStaticProps({ params }) {
     }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const paths = getAllPostIds()
     return {
         paths,
@@ -26,7 +29,9 @@ export async function getStaticPaths() {
     }
 }
 
-export default function Post({ postData }) {
+export default function Post({
+    postData
+}: any) {
     useEffect(() => {
         Prism.highlightAll()
     }, [])
@@ -45,7 +50,7 @@ export default function Post({ postData }) {
                 <meta name="og:url" content={pageURL} />
             </Head>
             <Helmet>
-                <script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+                <script async src="//cdn.iframe.ly/embed.js" charSet="utf-8"></script>
             </Helmet>
             <article>
                 <h1 className={utilsStyles.headingXl}>{postData.title}</h1>

@@ -16,7 +16,7 @@ async function getSortedPostsData() {
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const matterResult = matter(fileContents)
         const processedContent = await remark()
-            .use(html, {sanitize: false})
+            .use(html, { sanitize: false })
             .process(matterResult.content)
         const contentHtml = processedContent.toString()
 
@@ -28,6 +28,7 @@ async function getSortedPostsData() {
     }))
 
     return allPostsData.sort((a, b) => {
+        // @ts-expect-error ts-migrate(2571) FIXME: Object is of type 'unknown'.
         if (a.data.date < b.data.date) {
             return 1
         } else {
@@ -46,10 +47,15 @@ async function generate() {
 
     allPosts.map(post => {
         feed.item({
+            // @ts-expect-error ts-migrate(2571) FIXME: Object is of type 'unknown'.
             title: post.data.title,
+            // @ts-expect-error ts-migrate(2571) FIXME: Object is of type 'unknown'.
             guid: post.id,
+            // @ts-expect-error ts-migrate(2571) FIXME: Object is of type 'unknown'.
             url: `${siteURL}/blog/${post.id}`,
+            // @ts-expect-error ts-migrate(2571) FIXME: Object is of type 'unknown'.
             date: post.data.date,
+            // @ts-expect-error ts-migrate(2571) FIXME: Object is of type 'unknown'.
             description: post.contentHtml,
             author: "chroju",
         });

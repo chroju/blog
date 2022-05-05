@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../../components/layout'
 import utilsStyles from '../../styles/utils.module.css'
@@ -7,7 +8,7 @@ import Year from '../../components/year'
 
 import { getSortedPostsData } from '../../lib/posts'
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData()
   return {
     props: {
@@ -16,9 +17,11 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({
+  allPostsData
+}: any) {
   return (
-    <Layout >
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
         <meta
@@ -33,7 +36,12 @@ export default function Home({ allPostsData }) {
       <h2>Articles</h2>
       <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
         <ul className={utilsStyles.list}>
-          {allPostsData.map(({ id, date, title, firstOfYear }) => (
+          {allPostsData.map(({
+            id,
+            date,
+            title,
+            firstOfYear
+          }: any) => (
             <li className={utilsStyles.listItem} key={id}>
               <Year year={firstOfYear} />
               <Link href={`/blog/${id}`}>
@@ -48,5 +56,5 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
     </Layout>
-  )
+  );
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Fa from '../components/fontawesome'
+import Fa from './fontawesome'
 import utilsStyles from '../styles/utils.module.css'
 
 export default function Menu() {

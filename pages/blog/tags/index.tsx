@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Layout from '../../../components/layout'
 import utilsStyles from '../../../styles/utils.module.css'
@@ -6,7 +7,7 @@ import Fa from '../../../components/fontawesome'
 
 import { getAllTags } from '../../../lib/posts'
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
     const allTags = getAllTags()
     return {
         props: {
@@ -15,7 +16,9 @@ export async function getStaticProps() {
     }
 }
 
-export default function TagIndex({ allTags }) {
+export default function TagIndex({
+    allTags
+}: any) {
     const pageTitle = "Tags - {siteTitle}"
     return (
         <Layout >
@@ -30,16 +33,14 @@ export default function TagIndex({ allTags }) {
             </Head>
             <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
                 <ul className={utilsStyles.list}>
-                    {Object.keys(allTags).map(tag => (
-                        <li className={utilsStyles.listItem} key={tag}>
-                            <Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span>
-                            <Link href={`/blog/tags/${tag}`}>
-                                <a>{decodeURI(tag)} ({allTags[tag]})</a>
-                            </Link>
-                        </li>
-                    ))}
+                    {Object.keys(allTags).map((tag: any) => <li className={utilsStyles.listItem} key={tag}>
+                        <Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span>
+                        <Link href={`/blog/tags/${tag}`}>
+                            <a>{decodeURI(tag)} ({allTags[tag]})</a>
+                        </Link>
+                    </li>)}
                 </ul>
             </section>
         </Layout>
-    )
+    );
 }

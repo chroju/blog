@@ -2,14 +2,18 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
-import Menu from '../components/menu'
+import Menu from './menu'
 import Fa from './fontawesome'
 
 const name = 'chroju'
 export const siteTitle = 'chroju.dev/blog'
 export const siteSubTitle = 'the world as code'
 
-export default function Layout({ children, home, footer = true }) {
+export default function Layout({
+    children,
+    home,
+    footer = true
+}: any) {
     return (
         <div className={styles.container}>
             <Head>
@@ -44,7 +48,7 @@ export default function Layout({ children, home, footer = true }) {
                         </Link>
                     </h1>
                     <section>
-                      <small>{siteSubTitle}</small>
+                        <small>{siteSubTitle}</small>
                     </section>
                     <Link href="/feed.xml">
                         <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" /></a>
