@@ -43,6 +43,7 @@
     "textlint-rule-no-doubled-conjunction": "2.0.2",
     "textlint-rule-preset-ja-spacing": "2.2.0",
     "textlint-rule-preset-jtf-style": "2.3.12",
+    "ts-migrate": "^0.1.28",
     "typescript": "^4.6.4"
   }
 }
