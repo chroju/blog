@@ -13,7 +13,7 @@ export default function Layout({
     children,
     home,
     footer = true
-}: any) {
+}: any): JSX.Element {
     return (
         <div className={styles.container}>
             <Head>
@@ -51,7 +51,7 @@ export default function Layout({
                         <small>{siteSubTitle}</small>
                     </section>
                     <Link href="/feed.xml">
-                        <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" /></a>
+                        <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="2x" /></a>
                     </Link>
                 </header>
             )}
