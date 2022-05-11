@@ -54,8 +54,8 @@ blockquote {
 }
 
 a {
-  color: #0070f3;
-  text-decoration: none;
+  color: #605959;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -102,21 +102,24 @@ code[class*="language-"], pre[class*="language-"] {
   font-size: 14px !important;
 }
 
+hr {
+  height: 0.5px;
+  border-color: #ccc;
+  border-style: dashed;
+}
+
 /* TODO */
 .svg-inline--fa {
-  width: 48px;
-  padding: 10px;
+  padding: 0 10px;
   color: #999;
 }
 
 .svg-inline--fa.fa-square-rss {
-  width: 28px;
   padding: 0;
   color: #999;
 }
 
 section[class*="tagSection"]>.svg-inline--fa {
-  width: 32px;
   padding: 0 10px 0 0;
 }
 

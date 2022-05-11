@@ -27,15 +27,12 @@
 
 .menu {
   margin: 20px auto;
-  width: 60%;
-  size: 1em;
   color: #999;
-  font-size: 0.1px;
   text-align: center;
   line-height: 1.5;
 }
 
-.tagSection {
+.verticalMiddle {
   vertical-align: middle;
 }
 
@@ -73,5 +70,8 @@
 .lightText {
   color: rgb(88, 88, 88);
   font-size: 0.9rem;
+}
+
+.marginBottom {
   margin-bottom: 40px;
 }
