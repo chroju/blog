@@ -102,9 +102,15 @@ code[class*="language-"], pre[class*="language-"] {
   font-size: 14px !important;
 }
 
+hr {
+  height: 0.5px;
+  border-color: #ccc;
+  border-style: dashed;
+}
+
 /* TODO */
 .svg-inline--fa {
-  padding: 10px;
+  padding: 0 10px;
   color: #999;
 }
 

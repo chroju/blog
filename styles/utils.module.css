@@ -32,7 +32,7 @@
   line-height: 1.5;
 }
 
-.tagSection {
+.verticalMiddle {
   vertical-align: middle;
 }
 
@@ -70,5 +70,8 @@
 .lightText {
   color: rgb(88, 88, 88);
   font-size: 0.9rem;
+}
+
+.marginBottom {
   margin-bottom: 40px;
 }

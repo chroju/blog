@@ -9,6 +9,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilsStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
+import Link from 'next/link'
 
 export async function getStaticProps({
     params
@@ -37,6 +38,8 @@ export default function Post({
     }, [])
     const pageTitle = postData.title + " - " + siteTitle
     const pageURL = "https://chroju.dev/blog/" + postData.title
+    const editURL = "https://github.com/chroju/blog/blob/main/posts/" + postData.id + ".md"
+    const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + postData.id + ".md"
 
     return (
         <Layout>
@@ -56,10 +59,16 @@ export default function Post({
                 <h1 className={utilsStyles.headingXl}>{postData.title}</h1>
                 <div className={utilsStyles.lightText}>
                     <section><Date dateString={postData.date} /></section>
-                    <section className={utilsStyles.tagSection}><Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span><Tags tags={postData.tags} /></section>
+                    <section className={utilsStyles.verticalMiddle}><Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span><Tags tags={postData.tags} /></section>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>
+            <hr />
+            <footer className={utilsStyles.lightText}>
+                <section className={utilsStyles.verticalMiddle}><Fa iconName="github" /><Link href={editURL}>Edit this article</Link></section>
+                <section className={utilsStyles.verticalMiddle}><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className={utilsStyles.faText}>show history</span><Link href={historyURL}>Show history</Link></section>
+            </footer>
+            <hr />
         </Layout>
     )
 }
