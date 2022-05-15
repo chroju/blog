@@ -7,13 +7,13 @@
     @apply font-bold text-2xl mb-3 mt-20;
   }
   h3 {
-    @apply font-bold text-lg my-3;
+    @apply font-bold text-lg mb-3 mt-5;
   }
   p {
-    @apply my-5 leading-relaxed;
+    @apply my-5 leading-relaxed text-slate-600 font-light;
   }
   a {
-    @apply underline hover:no-underline;
+    @apply underline hover:no-underline text-slate-900 font-normal;
   }
   ul {
     @apply my-5 px-5;
@@ -25,7 +25,10 @@
     @apply font-bold;
   }
   p > code {
-    @apply px-1 outline rounded outline-slate-300 bg-slate-100 text-slate-500;
+    @apply px-2 text-slate-900 after:content-['`'] before:content-['`'];
+  }
+  blockquote > p {
+    @apply rounded bg-slate-100 p-5 italic;
   }
 }
 

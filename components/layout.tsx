@@ -42,9 +42,9 @@ export default function Layout({
                 </header>
             ) : (
                 <header className={styles.headerBlog}>
-                    <h1 className="font-bold text-lg">
+                    <h1>
                         <Link href="/blog">
-                            <a className={utilStyles.colorInherit}>{siteTitle}</a>
+                            <a className="font-extrabold text-lg">{siteTitle}</a>
                         </Link>
                     </h1>
                     <section>
