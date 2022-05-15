@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Menu from '../components/menu'
 import Layout from '../components/layout'
-import utilsStyles from '../styles/utils.module.css'
 
 export default function Home() {
   return (
@@ -16,8 +15,8 @@ export default function Home() {
         <meta name="og:url" content="https://chroju.dev" />
       </Head>
       <Menu />
-      <section className={utilsStyles.headingMd}>
-        <h2 className={utilsStyles.headingLg}>Who?</h2>
+      <section className="">
+        <h2 className="">Who?</h2>
         <dl>
           <dt>Job</dt>
           <dd>Site Reliability Engineer</dd>
@@ -26,7 +25,7 @@ export default function Home() {
           <dt>Favorite</dt>
           <dd>Terraform / Kubernetes / Go / AWS</dd>
         </dl>
-        <h2 className={utilsStyles.headingLg}>Experience</h2>
+        <h2 className="">Experience</h2>
         <dl>
           <dt>GLOBIS Corporation</dt>
           <dd>Site Reliability Engineer</dd>
@@ -41,7 +40,7 @@ export default function Home() {
           <dd>System Engineer</dd>
           <dd>Apr 2011 - May 2015</dd>
         </dl>
-        <h2 className={utilsStyles.headingLg}>Education</h2>
+        <h2 className="">Education</h2>
         <dl>
           <dt>Bachelor of Science in Information Technology</dt>
           <dd>Teikyo University (Distance Learning)</dd>
@@ -51,7 +50,7 @@ export default function Home() {
           <dd>Hitotsubashi University</dd>
           <dd>Apr 2007 - Mar 2011</dd>
         </dl>
-        <h2 className={utilsStyles.headingLg}>Blog</h2>
+        <h2 className="">Blog</h2>
         <ul>
           <li><a href="./blog">the world as code</a> (about tech)</li>
           <li><a href="https://chroju.hatenablog.jp">the world was not enough</a> (about culture)</li>

@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Layout from '../../../components/layout'
-import utilsStyles from '../../../styles/utils.module.css'
 import Link from 'next/link'
 import Fa from '../../../components/fontawesome'
 
@@ -31,10 +30,10 @@ export default function TagIndex({
                 <meta name="og:title" content={pageTitle} />
                 <meta name="og:url" content="https://chroju.dev/blog/tags" />
             </Head>
-            <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
-                <ul className={utilsStyles.list}>
-                    {Object.keys(allTags).map((tag: any) => <li className={utilsStyles.listItem} key={tag}>
-                        <Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span>
+            <section className="">
+                <ul className="">
+                    {Object.keys(allTags).map((tag: any) => <li className="" key={tag}>
+                        <Fa iconPrefix="fas" iconName="tags" /><span className="">tag</span>
                         <Link href={`/blog/tags/${tag}`}>
                             <a>{decodeURI(tag)} ({allTags[tag]})</a>
                         </Link>

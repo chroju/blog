@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Menu from './menu'
 import Fa from './fontawesome'
@@ -15,7 +13,7 @@ export default function Layout({
     footer = true
 }: any): JSX.Element {
     return (
-        <div className={styles.container}>
+        <div className="md:container md:mx-auto px-10 my-10">
             <Head>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -32,16 +30,16 @@ export default function Layout({
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             {home ? (
-                <header className={styles.header}>
+                <header className="">
                     <img
                         src="/images/profile.webp"
-                        className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                        className=""
                         alt={name}
                     />
-                    <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                    <h1 className="">{name}</h1>
                 </header>
             ) : (
-                <header className={styles.headerBlog}>
+                <header className="">
                     <h1>
                         <Link href="/blog">
                             <a className="font-extrabold text-lg">{siteTitle}</a>
@@ -58,24 +56,24 @@ export default function Layout({
             <main>{children}</main>
             {
                 footer && (
-                    <div className={styles.backToHome}>
-                        <section className={styles.footerSection}>
+                    <div className="">
+                        <section className="">
                             <Link href="/blog"><a>Articles</a></Link>
                         </section>
-                        <section className={styles.footerSection}>
+                        <section className="">
                             <Link href="/">
                                 <a>
                                     <img
                                         src="/images/profile.webp"
-                                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                                        className=""
                                         alt={name}
                                     />
                                 </a>
                             </Link>
                             <Menu />
                         </section>
-                        <section className={styles.footerSection}>
-                            <small className={utilStyles.lightText}>This site created by <Link href="/"><a>chroju</a></Link>. See <Link href="/policy"><a>our policy</a></Link>. </small>
+                        <section className="">
+                            <small className="">This site created by <Link href="/"><a>chroju</a></Link>. See <Link href="/policy"><a>our policy</a></Link>. </small>
                         </section>
                     </div>
                 )

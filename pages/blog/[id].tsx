@@ -6,7 +6,6 @@ import Date from '../../components/date'
 import Tags from '../../components/tags'
 import Fa from '../../components/fontawesome'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import utilsStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
 import Link from 'next/link'
@@ -64,9 +63,9 @@ export default function Post({
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>
             <hr />
-            <footer className={utilsStyles.lightText}>
-                <section className={utilsStyles.verticalMiddle}><Fa iconName="github" /><Link href={editURL}>Edit this article</Link></section>
-                <section className={utilsStyles.verticalMiddle}><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className={utilsStyles.faText}>show history</span><Link href={historyURL}>Show history</Link></section>
+            <footer className="">
+                <section className=""><Fa iconName="github" /><Link href={editURL}>Edit this article</Link></section>
+                <section className=""><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="">show history</span><Link href={historyURL}>Show history</Link></section>
             </footer>
             <hr />
         </Layout>
