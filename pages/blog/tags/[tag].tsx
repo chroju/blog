@@ -1,9 +1,7 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../../../components/layout'
-import utilsStyles from '../../../styles/utils.module.css'
-import Link from 'next/link'
-import Date from '../../../components/date'
+import PostList from '../../../components/postList'
 import Fa from '../../../components/fontawesome'
 
 import { getAllTags, getPostsWithTag } from '../../../lib/posts'
@@ -56,25 +54,7 @@ export default function TagHome({
                 <meta name="og:url" content={pageURL} />
             </Head>
             <h2><Fa iconPrefix="fas" iconName="tags" /><span className="fa-text">tag</span> {tag}</h2>
-            <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
-                <ul className={utilsStyles.list}>
-                    {tagPostsData.map(({
-                        id,
-                        date,
-                        title
-                    }: any) => (
-                        <li className={utilsStyles.listItem} key={id}>
-                            <Link href={`/blog/${id}`}>
-                                <a>{title}</a>
-                            </Link>
-                            <br />
-                            <small className={utilsStyles.lightText}>
-                                <Date dateString={date} />
-                            </small>
-                        </li>
-                    ))}
-                </ul>
-            </section>
+            <PostList posts={tagPostsData} />
         </Layout>
     );
 }
