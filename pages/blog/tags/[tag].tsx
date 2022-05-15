@@ -55,7 +55,7 @@ export default function TagHome({
                 <meta name="og:title" content={pageTitle} />
                 <meta name="og:url" content={pageURL} />
             </Head>
-            <h2><Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span> {tag}</h2>
+            <h2><Fa iconPrefix="fas" iconName="tags" /><span className="fa-text">tag</span> {tag}</h2>
             <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
                 <ul className={utilsStyles.list}>
                     {tagPostsData.map(({

@@ -35,14 +35,14 @@ export default function Home({
       </Head>
       <h2>Articles</h2>
       <section className={`${utilsStyles.headingMd} ${utilsStyles.padding1px}`}>
-        <ul className={utilsStyles.list}>
+        <ul className="space-y-2">
           {allPostsData.map(({
             id,
             date,
             title,
             firstOfYear
           }: any) => (
-            <li className={utilsStyles.listItem} key={id}>
+            <li className="list-none font-semibold" key={id}>
               <Year year={firstOfYear} />
               <Link href={`/blog/${id}`}>
                 <a>{title}</a>
