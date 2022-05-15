@@ -1,128 +1,36 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, Hiragino Sans, Meiryo, Helvetica Neue, Arial, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-  color: #4e4e4e
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h2 {
+    @apply font-bold text-2xl mb-3 mt-20;
+  }
+  h3 {
+    @apply font-bold text-lg my-3;
+  }
+  p {
+    @apply my-5 leading-relaxed;
+  }
+  a {
+    @apply underline hover:no-underline;
+  }
+  ul {
+    @apply my-5 px-5;
+  }
+  li {
+    @apply list-disc;
+  }
+  dt {
+    @apply font-bold;
+  }
+  p > code {
+    @apply px-1 outline rounded outline-slate-300 bg-slate-100 text-slate-500;
+  }
 }
 
-h1 {
-  margin: 3px auto;
-}
-
-h2 {
-  margin-top: 120px;
-}
-
-h3 {
-  margin-top: 50px;
-}
-
-div>p {
-  line-height: 2.3;
-  font-weight: 300;
-  margin-bottom: 38px;
-}
-
-p>code, li>code {
-  font-family: Ubuntu;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 3px;
-  background-color: #eee;
-}
-
-svg {
-  vertical-align: middle;
-}
-
-blockquote {
-  font-style: italic;
-  border-left: 8px solid #ddd;
-  color: #666;
-  margin-left: 10px;
-  padding: 0.2em 2em;
-  position: relative;
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: #605959;
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-img {
-  border: 1px solid #999999;
-  max-width: 100%;
-  display: block;
-}
-
-table {
-  border: solid 1px #999;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: solid 1px #999;
-  padding: 3px 6px;
-}
-
-
-dl {
-  font-size: 21px;
-}
-
-dd {
-  font-weight: 200;
-  margin-bottom: 5px;
-}
-
-ul, ol {
-  margin: 40px auto;
-  font-weight: 300;
-}
-
-li {
-  line-height: 1.8em;
-  margin: 8px 0;
-}
-
-code[class*="language-"], pre[class*="language-"] {
-  font-size: 14px !important;
-}
-
-hr {
-  height: 0.5px;
-  border-color: #ccc;
-  border-style: dashed;
-}
-
-/* TODO */
-.svg-inline--fa {
-  padding: 0 10px;
-  color: #999;
-}
-
-.svg-inline--fa.fa-square-rss {
-  padding: 0;
-  color: #999;
-}
-
-section[class*="tagSection"]>.svg-inline--fa {
-  padding: 0 10px 0 0;
-}
-
-.fa-rss-square {
-  padding: 12px 24px 12px 0;
+@layer components {
+  .fa-text {
+    @apply hidden
+  }
 }
