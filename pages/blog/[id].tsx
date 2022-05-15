@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Helmet from 'react-helmet'
-import Layout, { siteTitle } from '../../components/layout'
+import Layout, { blogTitle } from '../../components/layout'
 import Date from '../../components/date'
 import Tags from '../../components/tags'
 import Fa from '../../components/fontawesome'
@@ -35,7 +35,7 @@ export default function Post({
     useEffect(() => {
         Prism.highlightAll()
     }, [])
-    const pageTitle = postData.title + " - " + siteTitle
+    const pageTitle = postData.title + " - " + blogTitle
     const pageURL = "https://chroju.dev/blog/" + postData.title
     const editURL = "https://github.com/chroju/blog/blob/main/posts/" + postData.id + ".md"
     const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + postData.id + ".md"

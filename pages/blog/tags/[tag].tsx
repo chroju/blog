@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
-import Layout, { siteTitle } from '../../../components/layout'
+import Layout, { blogTitle } from '../../../components/layout'
 import PostList from '../../../components/postList'
 import Fa from '../../../components/fontawesome'
 
@@ -39,7 +39,7 @@ export default function TagHome({
     tag
 }: any) {
     const pageURL = "https://chroju.dev/blog/tags/" + tag
-    const pageTitle = "tag: " + tag + " - " + siteTitle
+    const pageTitle = "tag: " + tag + " - " + blogTitle
     return (
         <Layout>
             <Head>

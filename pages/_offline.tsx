@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { blogTitle } from '../components/layout'
 import Fa from '../components/fontawesome'
 
 export default function Home() {
-    const pageTitle = siteTitle
+    const pageTitle = blogTitle
     return (
         <Layout footer={false}>
             <Head>

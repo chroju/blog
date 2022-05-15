@@ -2,20 +2,22 @@ import Head from 'next/head'
 import Menu from '../components/menu'
 import Layout from '../components/layout'
 
+
 export default function Home() {
+  const siteTitle = "chroju.dev"
   return (
-    <Layout home footer={false}>
+    <Layout siteTitle={siteTitle} footer={false}>
       <Head>
-        <title>chroju</title>
+        <title>{siteTitle}</title>
         <meta
           property="og:image"
-          content={`https://og-image.chroju.dev/chroju.png?theme=dark&md=0&fontSize=75px`}
+          content={`https://og-image.chroju.dev/chroju.dev.png?theme=dark&md=0&fontSize=75px`}
         />
-        <meta name="og:title" content="chroju" />
+        <meta name="og:title" content={siteTitle} />
         <meta name="og:url" content="https://chroju.dev" />
       </Head>
       <Menu />
-      <section className="">
+      <article>
         <h2 className="">Who?</h2>
         <dl>
           <dt>Job</dt>
@@ -55,7 +57,7 @@ export default function Home() {
           <li><a href="./blog">the world as code</a> (about tech)</li>
           <li><a href="https://chroju.hatenablog.jp">the world was not enough</a> (about culture)</li>
         </ul>
-      </section>
+      </article>
     </Layout>
   )
 }

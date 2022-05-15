@@ -4,14 +4,15 @@ import Menu from './menu'
 import Fa from './fontawesome'
 
 const name = 'chroju'
-export const siteTitle = 'chroju.dev/blog'
-export const siteSubTitle = 'the world as code'
+export const blogTitle = "chroju.dev/blog"
+export const blogSubTitle = 'the world as code'
 
 export default function Layout({
     children,
-    home,
+    siteTitle = blogTitle,
     footer = true
 }: any): JSX.Element {
+    const headerLink = "/" + siteTitle.split('/')[1]
     return (
         <div className="md:container md:mx-auto px-10 my-10">
             <Head>
@@ -29,30 +30,21 @@ export default function Layout({
                 <meta name="og:description" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            {home ? (
-                <header className="">
-                    <img
-                        src="/images/profile.webp"
-                        className=""
-                        alt={name}
-                    />
-                    <h1 className="">{name}</h1>
-                </header>
-            ) : (
-                <header className="">
-                    <h1>
-                        <Link href="/blog">
-                            <a className="font-extrabold text-lg">{siteTitle}</a>
-                        </Link>
-                    </h1>
-                    <section>
-                        <small>{siteSubTitle}</small>
-                    </section>
-                    <Link href="/feed.xml">
-                        <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="2x" /></a>
+            <header className="mb-10">
+                <h1>
+                    <Link href={headerLink}>
+                        <a className="font-extrabold text-lg">{siteTitle}</a>
                     </Link>
-                </header>
-            )}
+                </h1>
+                {siteTitle == "chroju.dev/blog" && (
+                    <section>
+                        <small className="block">{blogSubTitle}</small>
+                        <Link href="/feed.xml">
+                            <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="lg" /></a>
+                        </Link>
+                    </section>
+                )}
+            </header>
             <main>{children}</main>
             {
                 footer && (
