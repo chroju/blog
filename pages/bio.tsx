@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import Menu from '../components/menu'
+import Link from 'next/link'
 import Layout from '../components/layout'
+import Fa from '../components/fontawesome'
 
 
 export default function Home() {
@@ -23,7 +24,23 @@ export default function Home() {
           className='my-10 w-20 rounded-full'
           alt="chroju"
         />
-        <Menu />
+        <nav className="mb-10 space-x-2">
+          <Link href="https://github.com/chroju">
+            <a className="text-slate-500"><Fa iconName="github" title="GitHub" size="2x" /></a>
+          </Link>
+          <Link href="https://keybase.io/chroju">
+            <a className="text-slate-500"><Fa iconName="keybase" title="keybase" size="2x" /></a>
+          </Link>
+          <Link href="https://speakerdeck.com/chroju">
+            <a className="text-slate-500"><Fa iconName="speaker-deck" title="Speaker Deck" size="2x" /></a>
+          </Link>
+          <Link href="https://twitter.com/chroju">
+            <a className="text-slate-500"><Fa iconName="twitter" title="Twitter" size="2x" /></a>
+          </Link>
+          <Link href="https://instagram.com/chroju">
+            <a className="text-slate-500"><Fa iconName="instagram" title="Instagram" size="2x" /></a>
+          </Link>
+        </nav>
         <dl>
           <dt>Job</dt>
           <dd>Site Reliability Engineer</dd>
