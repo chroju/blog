@@ -1,62 +1,28 @@
 import Head from 'next/head'
-import Menu from '../components/menu'
+import Link from 'next/link'
 import Layout from '../components/layout'
-import utilsStyles from '../styles/utils.module.css'
+
 
 export default function Home() {
+  const siteTitle = "chroju.dev"
   return (
-    <Layout home footer={false}>
+    <Layout siteTitle={siteTitle} footer={false}>
       <Head>
-        <title>chroju</title>
+        <title>{siteTitle}</title>
         <meta
           property="og:image"
-          content={`https://og-image.chroju.dev/chroju.png?theme=dark&md=0&fontSize=75px`}
+          content={`https://og-image.chroju.dev/chroju.dev.png?theme=dark&md=0&fontSize=75px`}
         />
-        <meta name="og:title" content="chroju" />
+        <meta name="og:title" content={siteTitle} />
         <meta name="og:url" content="https://chroju.dev" />
       </Head>
-      <Menu />
-      <section className={utilsStyles.headingMd}>
-        <h2 className={utilsStyles.headingLg}>Who?</h2>
-        <dl>
-          <dt>Job</dt>
-          <dd>Site Reliability Engineer</dd>
-          <dt>Location</dt>
-          <dd>Kanagawa, Japan</dd>
-          <dt>Favorite</dt>
-          <dd>Terraform / Kubernetes / Go / AWS</dd>
-        </dl>
-        <h2 className={utilsStyles.headingLg}>Experience</h2>
-        <dl>
-          <dt>GLOBIS Corporation</dt>
-          <dd>Site Reliability Engineer</dd>
-          <dd>Apr 2020 - current</dd>
-          <dt>Freelancer</dt>
-          <dd>Site Reliability Engineer</dd>
-          <dd>Jun 2019 - Mar 2020</dd>
-          <dt>Quants Research Inc.</dt>
-          <dd>Web Operation Engineer</dd>
-          <dd>Jun 2015 - May 2019</dd>
-          <dt>TIS Inc.</dt>
-          <dd>System Engineer</dd>
-          <dd>Apr 2011 - May 2015</dd>
-        </dl>
-        <h2 className={utilsStyles.headingLg}>Education</h2>
-        <dl>
-          <dt>Bachelor of Science in Information Technology</dt>
-          <dd>Teikyo University (Distance Learning)</dd>
-          <dd>Apr 2019 - current</dd>
-
-          <dt>Bachelor of Social Science</dt>
-          <dd>Hitotsubashi University</dd>
-          <dd>Apr 2007 - Mar 2011</dd>
-        </dl>
-        <h2 className={utilsStyles.headingLg}>Blog</h2>
+      <article>
         <ul>
-          <li><a href="./blog">the world as code</a> (about tech)</li>
-          <li><a href="https://chroju.hatenablog.jp">the world was not enough</a> (about culture)</li>
+          <li className='list-none my-2'><Link href="/blog"><a className="text-2xl font-extrabold">/blog</a></Link></li>
+          <li className='list-none my-2'><Link href="/bio"><a className="text-2xl font-extrabold">/bio</a></Link></li>
+          <li className='list-none my-2'><Link href="/policy"><a className="text-2xl font-extrabold">/policy</a></Link></li>
         </ul>
-      </section>
+      </article>
     </Layout>
   )
 }

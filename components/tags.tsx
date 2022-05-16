@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import utilStyles from '../styles/utils.module.css'
 
 export default function Tags({
     tags
@@ -7,6 +6,6 @@ export default function Tags({
     return tags === undefined
         ? null
         : tags.map((tag: any) => {
-            return <Link href={`tags/${tag}`}><a className={utilStyles.tag}>#{tag}</a></Link>
+            return <Link href={`tags/${tag}`}><a className="no-underline text-blue-500 font-semibold hover:underline">#{tag}</a></Link>
         });
 }

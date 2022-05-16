@@ -1,12 +1,11 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Helmet from 'react-helmet'
-import Layout, { siteTitle } from '../../components/layout'
+import Layout, { blogTitle } from '../../components/layout'
 import Date from '../../components/date'
 import Tags from '../../components/tags'
 import Fa from '../../components/fontawesome'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import utilsStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
 import Link from 'next/link'
@@ -36,13 +35,11 @@ export default function Post({
     useEffect(() => {
         Prism.highlightAll()
     }, [])
-    const pageTitle = postData.title + " - " + siteTitle
+    const pageTitle = postData.title + " - " + blogTitle
     const pageURL = "https://chroju.dev/blog/" + postData.title
-    const editURL = "https://github.com/chroju/blog/blob/main/posts/" + postData.id + ".md"
-    const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + postData.id + ".md"
 
     return (
-        <Layout>
+        <Layout blogArticleId={postData.id}>
             <Head>
                 <title>{pageTitle}</title>
                 <meta
@@ -56,19 +53,13 @@ export default function Post({
                 <script async src="//cdn.iframe.ly/embed.js" charSet="utf-8"></script>
             </Helmet>
             <article>
-                <h1 className={utilsStyles.headingXl}>{postData.title}</h1>
-                <div className={utilsStyles.lightText}>
+                <h1 className="text-2xl font-extrabold mb-2">{postData.title}</h1>
+                <div className="mb-10">
                     <section><Date dateString={postData.date} /></section>
-                    <section className={utilsStyles.verticalMiddle}><Fa iconPrefix="fas" iconName="tags" /><span className={utilsStyles.faText}>tag</span><Tags tags={postData.tags} /></section>
+                    <section className="space-x-2 text-slate-500"><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span><Tags tags={postData.tags} /></section>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>
-            <hr />
-            <footer className={utilsStyles.lightText}>
-                <section className={utilsStyles.verticalMiddle}><Fa iconName="github" /><Link href={editURL}>Edit this article</Link></section>
-                <section className={utilsStyles.verticalMiddle}><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className={utilsStyles.faText}>show history</span><Link href={historyURL}>Show history</Link></section>
-            </footer>
-            <hr />
         </Layout>
     )
 }

@@ -1,21 +1,24 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Menu from './menu'
 import Fa from './fontawesome'
 
 const name = 'chroju'
-export const siteTitle = 'chroju.dev/blog'
-export const siteSubTitle = 'the world as code'
+export const blogTitle = "chroju.dev/blog"
+export const blogSubTitle = 'the world as code'
 
 export default function Layout({
     children,
-    home,
+    siteTitle = blogTitle,
+    blogArticleId = '',
     footer = true
 }: any): JSX.Element {
+    const headerLink = "/" + siteTitle.split('/')[1]
+    const isBlog = siteTitle == "chroju.dev/blog"
+    const editURL = "https://github.com/chroju/blog/blob/main/posts/" + blogArticleId + ".md"
+    const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + blogArticleId + ".md"
     return (
-        <div className={styles.container}>
+        <div className="md:container md:mx-auto md:w-4/6 px-5 my-10">
             <Head>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -23,61 +26,60 @@ export default function Layout({
                 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
-                <link rel="alternate" type="application/rss+xml" href="https://chroju.dev/feed.xml" title="RSS2.0" />
                 <meta
                     name="description"
                     content="chroju's blog"
                 />
                 <meta name="og:description" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
+                {isBlog && (
+                    <link rel="alternate" type="application/rss+xml" href="https://chroju.dev/feed.xml" title="RSS2.0" />
+                )}
             </Head>
-            {home ? (
-                <header className={styles.header}>
-                    <img
-                        src="/images/profile.webp"
-                        className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                        alt={name}
-                    />
-                    <h1 className={utilStyles.heading2Xl}>{name}</h1>
-                </header>
-            ) : (
-                <header className={styles.headerBlog}>
-                    <h1 className={utilStyles.headingMd}>
-                        <Link href="/blog">
-                            <a className={utilStyles.colorInherit}>{siteTitle}</a>
-                        </Link>
-                    </h1>
-                    <section>
-                        <small>{siteSubTitle}</small>
-                    </section>
-                    <Link href="/feed.xml">
-                        <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="2x" /></a>
+            <header className="mb-10">
+                <h1>
+                    <Link href={headerLink}>
+                        <a className="font-extrabold text-lg">{siteTitle}</a>
                     </Link>
-                </header>
-            )}
+                </h1>
+                {isBlog && (
+                    <section>
+                        <small className="block">{blogSubTitle}</small>
+                        <Link href="/feed.xml">
+                            <a className="hidden md:block"><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="xl" /></a>
+                        </Link>
+                    </section>
+                )}
+            </header>
             <main>{children}</main>
             {
                 footer && (
-                    <div className={styles.backToHome}>
-                        <section className={styles.footerSection}>
-                            <Link href="/blog"><a>Articles</a></Link>
-                        </section>
-                        <section className={styles.footerSection}>
-                            <Link href="/">
-                                <a>
-                                    <img
-                                        src="/images/profile.webp"
-                                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                                        alt={name}
-                                    />
-                                </a>
-                            </Link>
-                            <Menu />
-                        </section>
-                        <section className={styles.footerSection}>
-                            <small className={utilStyles.lightText}>This site created by <Link href="/"><a>chroju</a></Link>. See <Link href="/policy"><a>our policy</a></Link>. </small>
-                        </section>
-                    </div>
+                    <footer className="mt-20 p-3 border-t-2">
+                        {
+                            blogArticleId != '' && (
+                                <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center mb-10">
+                                    <Link href="/blog"><a className="no-underline hover:underline text-blue-500 font-semibold">Read more articles →</a></Link>
+                                    <nav className="md:flex flex-wrap justify-center hidden md:ml-auto space-x-8 text-slate-500">
+                                        <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
+                                        <li className="list-none"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
+                                    </nav>
+                                </div>
+                            )
+                        }
+                        <div className="my-5 flex flex-col md:flex-row items-center">
+                            <img
+                                src="/images/profile.webp"
+                                className='w-10 rounded-full'
+                                alt={name}
+                            />
+                            <div className="my-4"><Link href="/"><a className="md:text-sm font-semibold no-underline hover:underline md:ml-4">chroju.dev</a></Link></div>
+                            <nav className="md:ml-8 md:pl-8 md:border-l-2 border-gray-200 flex md:space-x-8 space-x-4">
+                                <li className="list-none"><Link href="/blog"><a className="md:text-sm no-underline hover:underline">/blog</a></Link></li>
+                                <li className="list-none"><Link href="/bio"><a className="md:text-sm no-underline hover:underline">/bio</a></Link></li>
+                                <li className="list-none"><Link href="/policy"><a className="md:text-sm no-underline hover:underline">/policy</a></Link></li>
+                            </nav>
+                        </div>
+                    </footer>
                 )
             }
         </div >

@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import Fa from './fontawesome'
-import utilsStyles from '../styles/utils.module.css'
 
 export default function Menu() {
     return (
-        <section className={utilsStyles.menu}>
+        <section className="">
             <Link href="https://github.com/chroju">
                 <a><Fa iconName="github" title="GitHub" size="2x" /></a>
             </Link>
