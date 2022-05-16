@@ -56,7 +56,7 @@ export default function Post({
                 <h1 className="text-2xl font-black mb-2">{postData.title}</h1>
                 <div className="mb-5">
                     <section><Date dateString={postData.date} /></section>
-                    <section className="space-x-2"><Fa iconPrefix="fas" iconName="tags" /><span className="fa-text">tag</span><Tags tags={postData.tags} /></section>
+                    <section className="space-x-2"><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span><Tags tags={postData.tags} /></section>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>

@@ -14,6 +14,7 @@ export default function Layout({
     footer = true
 }: any): JSX.Element {
     const headerLink = "/" + siteTitle.split('/')[1]
+    const isBlog = siteTitle == "chroju.dev/blog"
     const editURL = "https://github.com/chroju/blog/blob/main/posts/" + blogArticleId + ".md"
     const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + blogArticleId + ".md"
     return (
@@ -25,13 +26,15 @@ export default function Layout({
                 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
-                <link rel="alternate" type="application/rss+xml" href="https://chroju.dev/feed.xml" title="RSS2.0" />
                 <meta
                     name="description"
                     content="chroju's blog"
                 />
                 <meta name="og:description" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
+                {isBlog && (
+                    <link rel="alternate" type="application/rss+xml" href="https://chroju.dev/feed.xml" title="RSS2.0" />
+                )}
             </Head>
             <header className="mb-10">
                 <h1>
@@ -39,7 +42,7 @@ export default function Layout({
                         <a className="font-extrabold text-lg">{siteTitle}</a>
                     </Link>
                 </h1>
-                {siteTitle == "chroju.dev/blog" && (
+                {isBlog && (
                     <section>
                         <small className="block">{blogSubTitle}</small>
                         <Link href="/feed.xml">
@@ -51,27 +54,31 @@ export default function Layout({
             <main>{children}</main>
             {
                 footer && (
-                    <footer className="mt-20 pt-3 border-t-2">
+                    <footer className="mt-20 p-3 border-t-2">
                         {
                             blogArticleId != '' && (
-                                <div>
-                                    <section className=""><Fa iconName="github" /><Link href={editURL}><a className="pl-3 text-sm no-underline hover:underline">Edit this article</a></Link></section>
-                                    <section className=""><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="pl-3 text-sm no-underline hover:underline">Show history</a></Link></section>
-                                    <section className="mt-5 mb-10"><Link href="/blog"><a>Read more articles</a></Link></section>
+                                <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center mt-5 mb-10">
+                                    <Link href="/blog"><a className="no-underline text-blue-500 font-semibold">Read more articles →</a></Link>
+                                    <nav className="md:flex flex-wrap justify-center hidden md:ml-auto space-x-8 text-slate-500">
+                                        <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
+                                        <li className="list-none"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
+                                    </nav>
                                 </div>
                             )
                         }
-                        <section className="my-5 flex space-x-8 items-center">
+                        <div className="my-5 flex flex-col sm:flex-row items-center">
                             <img
                                 src="/images/profile.webp"
                                 className='w-10 rounded-full'
                                 alt={name}
                             />
-                            <div><Link href="/"><a className="font-extralight no-underline hover:underline">chroju.dev</a></Link></div>
-                            <div><Link href="/blog"><a className="font-extralight no-underline hover:underline">/blog</a></Link></div>
-                            <div><Link href="/bio"><a className="font-extralight no-underline hover:underline">/bio</a></Link></div>
-                            <div><Link href="/policy"><a className="font-extralight no-underline hover:underline">/policy</a></Link></div>
-                        </section>
+                            <div className="my-4"><Link href="/"><a className="sm:text-sm font-semibold no-underline hover:underline sm:ml-4">chroju.dev</a></Link></div>
+                            <nav className="sm:ml-8 sm:pl-8 sm:border-l-2 border-gray-200 flex sm:space-x-8 space-x-4">
+                                <li className="list-none"><Link href="/blog"><a className="sm:text-sm no-underline hover:underline">/blog</a></Link></li>
+                                <li className="list-none"><Link href="/bio"><a className="sm:text-sm no-underline hover:underline">/bio</a></Link></li>
+                                <li className="list-none"><Link href="/policy"><a className="sm:text-sm no-underline hover:underline">/policy</a></Link></li>
+                            </nav>
+                        </div>
                     </footer>
                 )
             }

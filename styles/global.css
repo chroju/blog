@@ -24,16 +24,13 @@
   dt {
     @apply font-bold;
   }
+  img {
+    @apply inline;
+  }
   p > code {
     @apply px-2 text-slate-900 after:content-['`'] before:content-['`'];
   }
   blockquote > p {
-    @apply rounded bg-slate-100 p-5 italic;
-  }
-}
-
-@layer components {
-  .fa-text {
-    @apply hidden
+    @apply rounded bg-slate-100 p-8 italic;
   }
 }

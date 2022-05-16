@@ -53,7 +53,7 @@ export default function TagHome({
                 <meta name="og:title" content={pageTitle} />
                 <meta name="og:url" content={pageURL} />
             </Head>
-            <h2><Fa iconPrefix="fas" iconName="tags" /><span className="fa-text">tag</span> {tag}</h2>
+            <h2><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span> {tag}</h2>
             <PostList posts={tagPostsData} />
         </Layout>
     );
