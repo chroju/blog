@@ -30,7 +30,9 @@ export default function Home() {
             <section>
                 <h2>LICENSE</h2>
                 <ul>
-                    <p>このサイト内の文章、ソースコードは断りがない限り <Link href="https://github.com/chroju/blog/blob/main/LICENSE"><a>MIT License</a></Link> で公開しています。</p>
+                    <p><Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><a rel="license"><img alt="クリエイティブ・コモンズ・ライセンス" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></Link></p>
+                    <p>このサイトは <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><a rel="license">Creative Commons 表示 - 非営利 - 継承 4.0 国際 ライセンス</a></Link>の下に提供されています。</p>
+                    <p>またサイト内のソースコードは断りがない限り <Link href="https://github.com/chroju/blog/blob/main/LICENSE"><a>MIT License</a></Link> で公開しています。</p>
                 </ul>
             </section>
         </Layout>
