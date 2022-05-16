@@ -53,7 +53,7 @@ export default function Post({
                 <script async src="//cdn.iframe.ly/embed.js" charSet="utf-8"></script>
             </Helmet>
             <article>
-                <h1 className="text-2xl font-black mb-2">{postData.title}</h1>
+                <h1 className="text-2xl font-extrabold mb-2">{postData.title}</h1>
                 <div className="mb-5">
                     <section><Date dateString={postData.date} /></section>
                     <section className="space-x-2"><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span><Tags tags={postData.tags} /></section>

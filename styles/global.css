@@ -3,14 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  h1 {
+    @apply text-slate-900;
+  }
   h2 {
-    @apply font-bold text-2xl mb-3 mt-20;
+    @apply font-bold text-2xl mb-3 mt-20 text-slate-900;
   }
   h3 {
-    @apply font-bold text-lg mb-3 mt-5;
+    @apply font-bold text-lg mb-3 mt-5 text-slate-900;
   }
   p {
-    @apply my-5 leading-relaxed text-slate-600 font-light;
+    @apply my-5 leading-relaxed text-slate-600 font-normal;
   }
   a {
     @apply underline hover:no-underline text-slate-900 font-normal;
