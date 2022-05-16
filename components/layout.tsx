@@ -18,7 +18,7 @@ export default function Layout({
     const editURL = "https://github.com/chroju/blog/blob/main/posts/" + blogArticleId + ".md"
     const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + blogArticleId + ".md"
     return (
-        <div className="md:container md:mx-auto max-w-screen-md px-10 my-10">
+        <div className="md:container md:mx-auto md:w-4/6 px-5 my-10">
             <Head>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -46,7 +46,7 @@ export default function Layout({
                     <section>
                         <small className="block">{blogSubTitle}</small>
                         <Link href="/feed.xml">
-                            <a><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="lg" /></a>
+                            <a className="hidden md:block"><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="xl" /></a>
                         </Link>
                     </section>
                 )}
@@ -57,7 +57,7 @@ export default function Layout({
                     <footer className="mt-20 p-3 border-t-2">
                         {
                             blogArticleId != '' && (
-                                <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center mt-5 mb-10">
+                                <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center mb-10">
                                     <Link href="/blog"><a className="no-underline hover:underline text-blue-500 font-semibold">Read more articles →</a></Link>
                                     <nav className="md:flex flex-wrap justify-center hidden md:ml-auto space-x-8 text-slate-500">
                                         <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
@@ -66,17 +66,17 @@ export default function Layout({
                                 </div>
                             )
                         }
-                        <div className="my-5 flex flex-col sm:flex-row items-center">
+                        <div className="my-5 flex flex-col md:flex-row items-center">
                             <img
                                 src="/images/profile.webp"
                                 className='w-10 rounded-full'
                                 alt={name}
                             />
-                            <div className="my-4"><Link href="/"><a className="sm:text-sm font-semibold no-underline hover:underline sm:ml-4">chroju.dev</a></Link></div>
-                            <nav className="sm:ml-8 sm:pl-8 sm:border-l-2 border-gray-200 flex sm:space-x-8 space-x-4">
-                                <li className="list-none"><Link href="/blog"><a className="sm:text-sm no-underline hover:underline">/blog</a></Link></li>
-                                <li className="list-none"><Link href="/bio"><a className="sm:text-sm no-underline hover:underline">/bio</a></Link></li>
-                                <li className="list-none"><Link href="/policy"><a className="sm:text-sm no-underline hover:underline">/policy</a></Link></li>
+                            <div className="my-4"><Link href="/"><a className="md:text-sm font-semibold no-underline hover:underline md:ml-4">chroju.dev</a></Link></div>
+                            <nav className="md:ml-8 md:pl-8 md:border-l-2 border-gray-200 flex md:space-x-8 space-x-4">
+                                <li className="list-none"><Link href="/blog"><a className="md:text-sm no-underline hover:underline">/blog</a></Link></li>
+                                <li className="list-none"><Link href="/bio"><a className="md:text-sm no-underline hover:underline">/bio</a></Link></li>
+                                <li className="list-none"><Link href="/policy"><a className="md:text-sm no-underline hover:underline">/policy</a></Link></li>
                             </nav>
                         </div>
                     </footer>

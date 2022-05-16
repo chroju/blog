@@ -11,10 +11,10 @@ export default function PostList({
                 <li className="list-none" key={post.id}>
                     <Year year={post.firstOfYear} />
                     <Link href={`/blog/${post.id}`}>
-                        <a className="font-semibold no-underline hover:underline">{post.title}</a>
+                        <a className="font-semibold text-lg no-underline hover:underline">{post.title}</a>
                     </Link>
                     <br />
-                    <small className="">
+                    <small className="text-sm">
                         <Date dateString={post.date} />
                     </small>
                 </li>

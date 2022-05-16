@@ -28,12 +28,27 @@
     @apply font-bold;
   }
   img {
-    @apply inline;
+    @apply inline drop-shadow-lg rounded md:max-w-lg max-w-sm;
+  }
+  table {
+    @apply border-slate-200 border-2;
+  }
+  th {
+    @apply bg-slate-100 border-slate-200 border-y-2 py-2 px-5 font-semibold;
+  }
+  td {
+    @apply border-slate-200 border-y-2 py-2 px-5 font-normal;
   }
   p > code {
     @apply px-2 text-slate-900 after:content-['`'] before:content-['`'];
   }
   blockquote > p {
     @apply rounded bg-slate-100 p-8 italic;
+  }
+}
+
+@layer components {
+  code[class*="language-"], pre[class*="language-"] {
+    @apply text-sm !important;
   }
 }
