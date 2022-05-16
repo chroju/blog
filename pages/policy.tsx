@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Home() {
     const siteTitle = "chroju.dev/policy"
     return (
-        <Layout siteTitle={siteTitle} footer={false}>
+        <Layout siteTitle={siteTitle}>
             <Head>
                 <title>{siteTitle}</title>
                 <meta

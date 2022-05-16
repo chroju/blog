@@ -10,9 +10,12 @@ export const blogSubTitle = 'the world as code'
 export default function Layout({
     children,
     siteTitle = blogTitle,
+    blogArticleId = '',
     footer = true
 }: any): JSX.Element {
     const headerLink = "/" + siteTitle.split('/')[1]
+    const editURL = "https://github.com/chroju/blog/blob/main/posts/" + blogArticleId + ".md"
+    const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + blogArticleId + ".md"
     return (
         <div className="md:container md:mx-auto px-10 my-10">
             <Head>
@@ -48,26 +51,28 @@ export default function Layout({
             <main>{children}</main>
             {
                 footer && (
-                    <div className="">
-                        <section className="">
-                            <Link href="/blog"><a>Articles</a></Link>
+                    <footer className="mt-20 pt-3 border-t-2">
+                        {
+                            blogArticleId != '' && (
+                                <div>
+                                    <section className=""><Fa iconName="github" /><Link href={editURL}><a className="pl-3 text-sm no-underline hover:underline">Edit this article</a></Link></section>
+                                    <section className=""><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="pl-3 text-sm no-underline hover:underline">Show history</a></Link></section>
+                                    <section className="mt-5 mb-10"><Link href="/blog"><a>Read more articles</a></Link></section>
+                                </div>
+                            )
+                        }
+                        <section className="my-5 flex space-x-8 items-center">
+                            <img
+                                src="/images/profile.webp"
+                                className='w-10 rounded-full'
+                                alt={name}
+                            />
+                            <div><Link href="/"><a className="font-extralight no-underline hover:underline">chroju.dev</a></Link></div>
+                            <div><Link href="/blog"><a className="font-extralight no-underline hover:underline">/blog</a></Link></div>
+                            <div><Link href="/bio"><a className="font-extralight no-underline hover:underline">/bio</a></Link></div>
+                            <div><Link href="/policy"><a className="font-extralight no-underline hover:underline">/policy</a></Link></div>
                         </section>
-                        <section className="">
-                            <Link href="/">
-                                <a>
-                                    <img
-                                        src="/images/profile.webp"
-                                        className=""
-                                        alt={name}
-                                    />
-                                </a>
-                            </Link>
-                            <Menu />
-                        </section>
-                        <section className="">
-                            <small className="">This site created by <Link href="/"><a>chroju</a></Link>. See <Link href="/policy"><a>our policy</a></Link>. </small>
-                        </section>
-                    </div>
+                    </footer>
                 )
             }
         </div >
