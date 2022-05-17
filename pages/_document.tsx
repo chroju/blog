@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 import { GA_TRACKING_ID } from '../lib/gtag'
 
@@ -34,6 +35,7 @@ class MyDocument extends Document {
                 <body className="line-numbers">
                     <Main />
                     <NextScript />
+                    <Script strategy="beforeInteractive" src="https://cdn.iframe.ly/embed.js" charSet="utf-8" />
                 </body>
             </Html>
         )

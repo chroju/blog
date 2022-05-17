@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Layout from '../components/layout'
 import Fa from '../components/fontawesome'
 
@@ -17,14 +18,16 @@ export default function Home() {
         <meta name="og:title" content={siteTitle} />
         <meta name="og:url" content="https://chroju.dev/bio" />
       </Head>
+      <h2>chroju</h2>
+      <Image
+        src="/images/profile.webp"
+        className='my-10 w-20 rounded-full'
+        width={"80px"}
+        height={"80px"}
+        alt="chroju"
+      />
       <article>
-        <h2>chroju</h2>
-        <img
-          src="/images/profile.webp"
-          className='my-10 w-20 rounded-full'
-          alt="chroju"
-        />
-        <nav className="mb-10 space-x-2">
+        <nav className="my-10 space-x-2">
           <Link href="https://github.com/chroju">
             <a className="text-slate-500"><Fa iconName="github" title="GitHub" size="2x" /></a>
           </Link>

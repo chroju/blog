@@ -1,6 +1,5 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
-import Helmet from 'react-helmet'
 import Layout, { blogTitle } from '../../components/layout'
 import Date from '../../components/date'
 import Tags from '../../components/tags'
@@ -8,7 +7,6 @@ import Fa from '../../components/fontawesome'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
-import Link from 'next/link'
 
 export async function getStaticProps({
     params
@@ -49,9 +47,6 @@ export default function Post({
                 <meta name="og:title" content={pageTitle} />
                 <meta name="og:url" content={pageURL} />
             </Head>
-            <Helmet>
-                <script async src="//cdn.iframe.ly/embed.js" charSet="utf-8"></script>
-            </Helmet>
             <article>
                 <h1 className="text-2xl font-extrabold mb-2">{postData.title}</h1>
                 <div className="mb-10">
