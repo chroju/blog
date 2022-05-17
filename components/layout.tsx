@@ -60,7 +60,7 @@ export default function Layout({
                                 <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center mb-10">
                                     <Link href="/blog"><a className="no-underline hover:underline text-blue-500 font-semibold">Read more articles →</a></Link>
                                     <nav className="md:flex flex-wrap justify-center hidden md:ml-auto space-x-8 text-slate-500">
-                                        <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
+                                        <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Request to edit this article</a></Link></li>
                                         <li className="list-none"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
                                     </nav>
                                 </div>
