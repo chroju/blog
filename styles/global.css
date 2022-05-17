@@ -28,7 +28,7 @@
     @apply font-bold;
   }
   img {
-    @apply inline drop-shadow-lg rounded md:max-w-lg max-w-sm;
+    @apply inline drop-shadow-lg rounded md:max-w-lg sm:max-w-md max-w-xs;
   }
   table {
     @apply border-slate-200 border-2;
