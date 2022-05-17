@@ -27,7 +27,7 @@
   dt {
     @apply font-bold;
   }
-  img {
+  article img {
     @apply inline drop-shadow-lg rounded md:max-w-lg sm:max-w-md max-w-xs;
   }
   table {

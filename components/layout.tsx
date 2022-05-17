@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Menu from './menu'
+import Image from 'next/image'
 import Fa from './fontawesome'
 
 const name = 'chroju'
@@ -67,9 +67,11 @@ export default function Layout({
                             )
                         }
                         <div className="my-5 flex flex-col md:flex-row items-center">
-                            <img
+                            <Image
                                 src="/images/profile.webp"
                                 className='w-10 rounded-full'
+                                width={"40px"}
+                                height={"40px"}
                                 alt={name}
                             />
                             <div className="my-4"><Link href="/"><a className="md:text-sm font-semibold no-underline hover:underline md:ml-4">chroju.dev</a></Link></div>
