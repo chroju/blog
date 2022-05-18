@@ -20,7 +20,7 @@ tags: ["best-buy", "subscription"]
 
 ### MOONBAT urawaza
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/-/ja/Moonbat-Urawaza-Folding-Umbrella-Seconds/dp/B085PW4BDM" data-iframely-url="//cdn.iframe.ly/3zSYsDz?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/-/ja/Moonbat-Urawaza-Folding-Umbrella-Seconds/dp/B085PW4BDM
 
 『マツコの知らない世界』で紹介されていた折り畳み傘。定期的に見るテレビ番組ができた、というのもコロナ禍の結構大きな変化。
 
@@ -40,7 +40,7 @@ tags: ["best-buy", "subscription"]
 
 ### Bellroy Classic Backpack
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://ja.bellroy.com/products/classic-backpack" data-iframely-url="//cdn.iframe.ly/GGX3S7T?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://ja.bellroy.com/products/classic-backpack
 
 ベストなバックパックってずっとわからずにいる。 PC を持ち運ぶには絶対バックパックを使いたいマンなんだけど、かと言って大きすぎるのは嫌だったり、でも薄マチすぎてペットボトルも入らないようだとさすがに辛かったり、一方で腰に優しい感じのがいいなぁとか、ああでもこうでもないという感じで1〜2年おきに買い替えている。
 
@@ -48,7 +48,7 @@ tags: ["best-buy", "subscription"]
 
 ### ジップロック ごはん保存容器 一膳用
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/-/en/Ziploc-Container-Storage-Pieces-Packs/dp/B07KWGYRMJ" data-iframely-url="//cdn.iframe.ly/URNSvdh?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/-/en/Ziploc-Container-Storage-Pieces-Packs/dp/B07KWGYRMJ
 
 地味なところで。冷凍ごはんは生まれてこのかたラップで適当に包むだけだったのだが、これを買ったところだいーぶ体験が改善した。一包みの分量が一定に保てるし、水分が適度に保たれるようで味も良くなった。
 

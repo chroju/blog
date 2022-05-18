@@ -18,7 +18,7 @@ draft: false
 
 ## Dynalist
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://dynalist.io/" data-iframely-url="//cdn.iframe.ly/84oZoTY"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://dynalist.io/
 
 アウトライナー。アウトライナー自体それほど知られたツールでもない気がするのだが、文を並べて階層構造をつくったり、並び順を入れ替えたりして整理できるツール、と言えばいいんだろうか。エンジニア界隈で一番有名なアウトライナーは Emacs org-mode な気がする。
 

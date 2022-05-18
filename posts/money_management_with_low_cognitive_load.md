@@ -16,7 +16,7 @@ tags: ["money"]
 
 ### 住信 SBI ネット銀行をハブにする
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.netbk.co.jp/contents/" data-iframely-url="//cdn.iframe.ly/XY5tUBB?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.netbk.co.jp/contents/
 
 ハブとして使っている銀行。すべてのお金はここに入ってきてから、いろんなところへ流れていく。
 
@@ -52,7 +52,7 @@ tags: ["money"]
 
 ### Kyash で支払いを集約する
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.kyash.co/" data-iframely-url="//cdn.iframe.ly/h36ex0i?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.kyash.co/
 
 SBI 銀が入金側のハブなら、支払い側は Kyash がハブになっている。 Kyash で Kyash Card と呼ばれるリアルカードを発行し、 QUICPay に紐つけてそちらをメイン決済手段に。カードのほうも持ち歩いて、 FeliCa / NFC 決済が使えないときの代替に。入金手段は SBI デビット。これで Kyash から支払えば、その場で銀行口座から引き落とされるようになる。
 
@@ -74,7 +74,7 @@ Kyash もまたサービス変更でいろいろ言われているが、当初�
 
 ## 集計は MoneyForward
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://moneyforward.com/" data-iframely-url="//cdn.iframe.ly/m1g51zQ?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://moneyforward.com/
 
 最後に、集計には MoneyForward 。昔はパスワードを渡すことを忌避していた時期もあったけど、現在は API 連携できる銀行も多いし、便利に使っている。そして一度使うと手放せない。現金を使う機会は月間で先月が5回、先々月が3回だったので、ほぼ全自動ですべてのお金の履歴がここに蓄積されている。
 

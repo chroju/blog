@@ -6,7 +6,7 @@ isCJKLanguage: true
 draft: false
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/parade" data-iframely-url="//cdn.iframe.ly/v9brQHK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/parade
 
 [AWS Systems Manager のパラメータストア](https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/systems-manager-parameter-store.html) をよく使っている。例えば Git で管理ができない秘匿情報を SecureString の形で保存しておいたり、 Infrastructure as Code を実行する際、 Terraform で構築したリソースの設定値を Ansible に橋渡しをするために使ったり、各種ツールやアプリケーションで参照したい設定値の保管場所として便利に使うことができる。
 
@@ -87,7 +87,7 @@ func (m *mockSSMClient) GetParameter(i *ssm.GetParameterInput) (*ssm.GetParamete
 
 ### spf13/cobra
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/spf13/cobra" data-iframely-url="//cdn.iframe.ly/htWhmVD"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/spf13/cobra
 
 Go のコマンドラインツールを作るためのパッケージの1つ。競合として [urfave/cli](https://github.com/urfave/cli) や [mitchellh/cli](https://github.com/mitchellh/cli) もあるが、 cobra が現時点で最もスター数が多く、用例も多いのかなと勝手に思っている。作成者が Docker, Google, MongoDB あたりに関わっているゲキヤバな人であることもあってか、 [kubectl](https://kubernetes.io/docs/reference/kubectl/) や [Istio](https://istio.io/) などでも使われている。
 
@@ -122,5 +122,5 @@ Pull Request を発行したときの `golint` やテストの実行と、 tag �
 
 GitHub Release へのバイナリ添付には [goreleaser](https://github.com/goreleaser/goreleaser) を使った。すでに GitHub Actions で使うための Action を公開してくれているので、めちゃくちゃ便利に扱えて感動した。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/marketplace/actions/goreleaser-action" data-iframely-url="//cdn.iframe.ly/ETQo0Jh"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/marketplace/actions/goreleaser-action
 

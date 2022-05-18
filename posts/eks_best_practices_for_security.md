@@ -8,7 +8,7 @@ draft: false
 
 [Amazon EKS Best Practices Guide for Security](https://aws.github.io/aws-eks-best-practices/) を読んだ。今年5月に公開された比較的新しい文書で、いわゆる docs.aws.amazon.com の中に収録されておらず、単独で github.io にホストされている。ともすると、 UI からは AWS official な文書なのかわかりにくいのだが、以下の通り、 official でアナウンスされている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/about-aws/whats-new/2020/05/introducing-amazon-eks-best-practices-guide-for-security/" data-iframely-url="//cdn.iframe.ly/2Hf1Mhp?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/about-aws/whats-new/2020/05/introducing-amazon-eks-best-practices-guide-for-security/
 
 EKS と銘打たれている通り、 Kubernetes ではなく EKS にフォーカスした記述は少なくない。例えば暗号化についての項では、 [Nitro](https://aws.amazon.com/jp/about-aws/whats-new/2020/02/announcing-36-percent-faster-ebs-optimized-performance-on-additional-aws-nitro-system-based-amazon-ec2-instances/) におけるトラフィックのデフォルト暗号化に触れていたりする。しかし大半は Kubernetes あるいは Docker そのもののプラクティスになっていて、 EKS に限らずとも、 Kubernetes 使用者にとって学べることは多い。内容は Identity and Access Management に始まり、 Pod や Network 、 Runtime といった各要素のセキュリティプラクティスを俯瞰し、 PCI DSS のようなコンプライアンス関係についても少し記述を割いている、かなり包括的な内容となっている。
 

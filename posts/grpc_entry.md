@@ -26,9 +26,9 @@ gRPC とは何か、などとここで改めてまとめても仕方ない感が
 
 当該号の特集では、 gRPC の4種類の通信方式（Unary, Server streaming, Client streaming, Bidirectional streaming）それぞれの簡単な実装サンプルと、実践例として gRPC を用いたタスク管理サービスの作り方が掲載されており、これを適宜写経しながら進めた。コードはいずれも GitHub で公開されている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/vvatanabe/go-grpc-basics" data-iframely-url="//cdn.iframe.ly/DAemZsu"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/vvatanabe/go-grpc-basics
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/vvatanabe/go-grpc-microservices" data-iframely-url="//cdn.iframe.ly/3VubC7c"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/vvatanabe/go-grpc-microservices
 
 ### Ruby での再実装
 
@@ -36,7 +36,7 @@ gRPC とは何か、などとここで改めてまとめても仕方ない感が
 
 対象にしたのは Server streaming gRPC のサンプルコード。主に公式の [Ruby 向け Tutorial](https://grpc.io/docs/quickstart/ruby/) を見つつ、先の examples 内の実際のコードも見ながら進めたが、以下の記事も参考にした。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/yururit/items/bc7c0eda63d5fa30289a" data-iframely-url="//cdn.iframe.ly/NJ6kcAY"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://qiita.com/yururit/items/bc7c0eda63d5fa30289a
 
 まず、必要な gRPC 関連の gem をインストール。
 

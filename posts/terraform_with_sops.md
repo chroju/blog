@@ -12,7 +12,7 @@ Terraform を使う上での長年の悩みとして、秘匿情報 (secrets) �
 
 ## SOPS
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/mozilla/sops" data-iframely-url="//cdn.iframe.ly/Uy7gztd"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/mozilla/sops
 
 Secrets OPerationS の略らしい。 YAML や JSON など Key/Value 形式の設定ファイルにおいて、 Value の箇所だけを暗号化できるコマンドラインツールである。 homebrew でインストールできる。
 
@@ -82,7 +82,7 @@ sops:
 
 本題の sops を使った Terraform での秘匿値管理だが、残念ながら HCL を直接暗号化することには対応していない。しかし community provider として terraform-provider-sops がありがたいことに存在している。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/carlpett/terraform-provider-sops" data-iframely-url="//cdn.iframe.ly/6WxGX58"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/carlpett/terraform-provider-sops
 
 これは data source として、 sops で暗号化されたファイルからの値読み込みを提供してくれる provider だ。先の `db_user` と `db_password` を書き入れた `secrets.yaml` を作成した状態で、同じディレクトリに以下のような `sample.tf` を作成してみる。
 

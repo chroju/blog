@@ -70,7 +70,7 @@ tags: ["university"]
 
 内容としては『アンダースタンディングコンピュテーション』に近い。以前から興味のある分野ではあったものの、自主学習となるとなかなか腰が重く、大学で改めてさらえたのは良い機会だった。僕らの根幹に位置するような分野と捉えている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.oreilly.co.jp//books/9784873116976/" data-iframely-url="//cdn.iframe.ly/HekKj9R"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.oreilly.co.jp//books/9784873116976/
 
 ### 情報理論
 

@@ -6,7 +6,7 @@ isCJKLanguage: true
 draft: false
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://qiita.com/chroju/items/ddf6266b704fe26b5d7c" data-iframely-url="//cdn.iframe.ly/pSJDBS9"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://qiita.com/chroju/items/ddf6266b704fe26b5d7c
 
 昨年末に Qiita のほうでこのようなエントリーを出した。このときは Organizations には触れていなかったのだが、その後年明けから Organizations はじめ「マルチアカウント管理のためのサービス」に触れてきたので、改めてまとめたい次第。
 
@@ -36,7 +36,7 @@ draft: false
 
 ## AWS Organizations はほぼ必須
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://aws.amazon.com/jp/organizations/" data-iframely-url="//cdn.iframe.ly/HCZOIxM"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/organizations/
 
 Organizations はどんな場合であれ、マルチアカウントを使うのであれば有効化してよい。というのはコストメリットが大きくなるため。1つには Reserved Instance を複数アカウントで共有する機能を利用できるようになるので、柔軟な RI 購入が実現できるようになる。もう1つは「[ボリューム割引](https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/useconsolidatedbilling-discounts.html)」の考え方があり、複数アカウントを Organizations で一括請求にまとめることで、価格が低くなる可能性が高まる。
 
@@ -44,7 +44,7 @@ Organizations はどんな場合であれ、マルチアカウントを使うの
 
 ## Control Tower を使う場面はかなり限られる
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://aws.amazon.com/jp/controltower/" data-iframely-url="//cdn.iframe.ly/eAp8hll"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/controltower/
 
 Control Tower はそもそも何者なのかすごくわかりにくいのだが、以下の機能を持つ Organizations のメタ管理サービスみたいなものと捉えている。
 
@@ -55,7 +55,7 @@ Control Tower はそもそも何者なのかすごくわかりにくいのだが
 
 Landing Zone とは AWS が提唱するマルチアカウント構成のベストプラクティスを指す。以下のページに構成図が載っているので、あわせて見てもらうとわかりやすいのだが、つまるところ監査専用アカウント、ログ集約専用アカウントを設けて、それらの間を AWS SSO を使って行き来するというようなものである。 Control Tower はボタン1つでこの構成を用意してくれるというものだ。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://aws.amazon.com/solutions/aws-landing-zone/" data-iframely-url="//cdn.iframe.ly/pg79dZ7"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/solutions/aws-landing-zone/
 
 自動でいい感じにやってくれるなら最高じゃないか、と思いたくなるところなのだが、曲者なのがこれに付随する Account Factory という機能である。 Landing Zone で生成されたログ集約用アカウントや監査用アカウントで管理してくれるのは、この Account Factory を使って新規作成したアカウントに限られる。したがってすでに Organizations を利用済みだったり、 AWS アカウントを準備している場合に、それを Landing Zone へ組み込むということができない。そのため Control Tower を有効活用できるのは、これから AWS を使い始るような場合に限られる。
 
@@ -77,7 +77,7 @@ switch role であれば単なる IAM の活用に過ぎないので、 Terrafor
 
 マルチアカウントを管理していると、各アカウントで設定を揃えたい部分が出てくる。例えばよく使う IAM Policy を全アカウント作っておきたいとか、そういうもの。これに関しては残念ながら万能な解決策は今のところ存在しない。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 50%; padding-top: 120px;"><a href="https://aws.amazon.com/jp/blogs/news/new-use-aws-cloudformation-stacksets-for-multiple-accounts-in-an-aws-organization/" data-iframely-url="//cdn.iframe.ly/gN1Pl6C"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/blogs/news/new-use-aws-cloudformation-stacksets-for-multiple-accounts-in-an-aws-organization/
 
 最も「万能な解決策」に近いのが CloudFormation StackSets だろう。もともとマルチアカウントに設定展開する機能を持っていた StackSets だが、先日 Organizations と連携して、新たに Organization へ追加されたアカウントへ自動展開が可能になった。アカウント作成時の初期設定をこれに全部任せてしまえるわけである。
 

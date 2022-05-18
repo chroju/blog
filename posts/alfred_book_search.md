@@ -61,4 +61,4 @@ tags: ["alfred"]
 
 それはそれとして、Alfred Workflow をサッと作れるようになっておくとやはり便利だな、ということを改めて感じた。この Workflow は完全に個人的なものなので、以下のリンク先で公開してはいるが、 PR などを受け付けるつもりはない。 ISBN で URL を開けるようなサイトなら、 Amazon やブクログ以外にも応用可能と思うので、もし自分なりに使いたいという方がいたら fork してみてほしい。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/alfred-book-search" data-iframely-url="//cdn.iframe.ly/xtD41Bg?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/alfred-book-search

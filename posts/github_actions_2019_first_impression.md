@@ -12,9 +12,9 @@ GitHub Actions が新しくなって2か月ほど経つが、遅ればせなが�
 
 Actions を書いたのは以下の2レポジトリ。前者はこのブログを支える hugo の自動化で、 `source` ブランチに `push` するとビルド結果を `master` へ `push` してくれる。後者は Go の一般的なビルドで、タグを切るとテストしてビルドしてバイナリを GitHub Release に貼ってくれる。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/chroju.github.io" data-iframely-url="//cdn.iframe.ly/3Dsuyap"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/chroju.github.io
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/parade" data-iframely-url="//cdn.iframe.ly/v9brQHK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/parade
 
 ## 何が変わったのか
 
@@ -32,7 +32,7 @@ GitHub Actions 旧版については昨年末に公開されて早々に触り�
 
 つまり、レポジトリに直接紐付けられた FaaS に近いものを作ろうとしていたように見える。しかし実際のところユーザーが旧版でやろうとしたことの多くは CI/CD の範囲であり、今回の新版では、 CI/CD に軸足を置いた旨が明確に示されている。 
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 66.5%; padding-top: 120px;"><a href="https://cloud.watch.impress.co.jp/docs/news/1205405.html" data-iframely-url="//cdn.iframe.ly/XRWDJwi"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://cloud.watch.impress.co.jp/docs/news/1205405.html
 
 ## Impression
 
@@ -48,7 +48,7 @@ YAML を書いて push すればそれだけでジョブが始まるのは体験
 
 すでに GitHub が公開する Action が https://github.com/actions にいくつか設けられており、これらは例えば Go や node.js といった言語環境構築といった、広く使われうるものが準備されている。その他 OSS などが Action を公開している場合ももちろんあって、例えば GitHub Release に Go のバイナリを添付してくれる goreleaser という CI で絶対使いたい超便利ツールがあるが、すでに Action を公開しており、簡単に導入できる。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/marketplace/actions/goreleaser-action" data-iframely-url="//cdn.iframe.ly/ETQo0Jh"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/marketplace/actions/goreleaser-action
 
 ### Trigger が豊富
 

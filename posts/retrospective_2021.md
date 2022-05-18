@@ -30,9 +30,9 @@ tags: ["retrospective"]
 
 何冊か本は読んでいて、このあたり面白かった。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/-/en/Heather-Adkins/dp/1492083127" data-iframely-url="//cdn.iframe.ly/lPmFYUB?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/-/en/Heather-Adkins/dp/1492083127
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/-/en/%E7%94%B0%E4%B8%AD-%E7%A5%A5%E5%B9%B3/dp/4297119250" data-iframely-url="//cdn.iframe.ly/EgAHn1Y?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/-/en/%E7%94%B0%E4%B8%AD-%E7%A5%A5%E5%B9%B3/dp/4297119250
 
 ### SRE / DevOps
 
@@ -40,9 +40,9 @@ SRE としては、常に「何をするべきか」を考えながらずっと�
 
 SRE としての活動を定量的に計測、評価していくことへの関心が今は高くて、本としてはこのへんを読んでいた。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.hanmoto.com/bd/isbn/4295004901" data-iframely-url="//cdn.iframe.ly/vXiwBoZ"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.hanmoto.com/bd/isbn/4295004901
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/-/en/Alex-Hidalgo/dp/1492076813" data-iframely-url="//cdn.iframe.ly/2vVEdtq?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/-/en/Alex-Hidalgo/dp/1492076813
 
 ### ソフトスキル
 

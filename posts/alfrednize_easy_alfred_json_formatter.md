@@ -29,7 +29,7 @@ Alfred での検索画面というと下図の形でお馴染みだと思うが�
 
 Alfred をきちんと使うのであれば、こういった各項目を設定していく必要が出るが、時に複数行文字列を渡せばイイ感じに検索させてほしいなと思うときがある。となると bash でシュッとスクリプトを書きたくなるのだが、 JSON の生成をシェルスクリプトで扱うのはかなり難しい。そこで、複数行文字列を渡せばざっくりと Alfred JSON Format に変換してくれるツールを作った。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 50%; padding-top: 120px;"><a href="https://github.com/chroju/alfrednize" data-iframely-url="//cdn.iframe.ly/6SA5o8y"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/alfrednize
 
 例えばローカルで Git レポジトリ管理を行うツールである [x-motemen/ghq](https://github.com/x-motemen/ghq) と組み合わせてみると、以下のような出力を得られる。
 

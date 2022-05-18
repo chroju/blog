@@ -4,7 +4,7 @@ date: "2022-01-16T01:00:14+0900"
 tags: ["book", "team", "sre"]
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.hanmoto.com/bd/isbn/4820729632" data-iframely-url="//cdn.iframe.ly/2xuinOs"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.hanmoto.com/bd/isbn/4820729632
 
 原著の[『Team Topoligies』](https://www.amazon.co.jp/dp/1942788819)を昨年、 Twitter のタイムラインで何度か見かけていて、読もうかなと興味を惹かれていたのだが、ありがたいことにそのタイミングでちょうどよく翻訳版が出てくれたのでそちらを読んだ。
 
@@ -12,7 +12,7 @@ tags: ["book", "team", "sre"]
 
 ### 追記（2022-01-16 11:05）
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.tc3.co.jp/state-of-devops-report-2021-team-topologies/" data-iframely-url="//cdn.iframe.ly/ppDyILx?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.tc3.co.jp/state-of-devops-report-2021-team-topologies/
 
 昨年、原著を Twitter 上で見かけていた背景として、 State of DevOps Report 2021 で言及されていたというのが大きかったのかもしれない。
 

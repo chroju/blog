@@ -12,7 +12,7 @@ Terraform などで使われる、 JSON 互換の HCL (Hashicorp Configuration L
 
 事の発端としては tfmodule という CLI ツールを作ったことによる。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/tfmodule" data-iframely-url="//cdn.iframe.ly/j7JrQh7"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/tfmodule
 
 Terraform module を使うときは、 README などを読んで必要な変数を確認し、それに応じて設定を書いていく流れが一般的である。しかし何分これが面倒だったので、一発で module の構造をパースして、テンプレートを吐き出してくれるようなものを作れないかと考えた。
 
@@ -251,10 +251,10 @@ for _, block := range body.Blocks() {
 
 長々書いてきたが、正直まだきちんと hashicorp/hcl を理解できたとは思っておらず、もう少し楽な実装がありそうな気がしている。ただ、なかなか実装例を見かけることが少ない。 [shuaibiyy/awesome-terraform](https://github.com/shuaibiyy/awesome-terraform) で Terraform 関連のツールをいくつか見てみたりもしたのだが、特に hclwrite を使っているものは見つけられなかった。今のところ参考になりそうなのは2つほど。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/apparentlymart/terraform-clean-syntax" data-iframely-url="//cdn.iframe.ly/DbBZSM2"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/apparentlymart/terraform-clean-syntax
 
 Terraform の開発に関わっている apparentlymart 氏の個人レポジトリ。 `terraform fmt` のように、 HCL を Terraform 0.12 の書式で整形し直してくれるコマンドラインツールで、がっつり hclwrite を使っている。 tfmodule での実装は、かなりこれを参考にさせてもらった。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/hashicorp/terraform-config-inspect" data-iframely-url="//cdn.iframe.ly/6Cg0Jow"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/hashicorp/terraform-config-inspect
 
 この記事を書く中で見つけた、 tfmodule と似た terraform module の解析ツール。 Hashicorp の org 内にあるのだが、今まで気付いていなかった。 hclwrite は使っていないが、 terraform module をどのように解析しているか、という点で学べる点がありそうだった。

@@ -12,7 +12,7 @@ draft: false
 
 従来の仕組みは以下の Qiita のエントリーにまとめていた。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/chroju/items/827dbb9e820f41820e14" data-iframely-url="//cdn.iframe.ly/XTWFfEE"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://qiita.com/chroju/items/827dbb9e820f41820e14
 
 やりたかったのは、プロフィールの中に自分のブログの最新記事リストを自動的に埋め込むこと。紆余曲折を経て、あらかじめ jinja2 でテンプレートを作っておき、ブログの更新を RSS と IFTTT 経由で hook して Lambda を叩いて、その Lambda がテンプレートから html を生成して S3 に設置、という形をこのときは取っている。つまり動的チックだが、実際にアクセスが来るのは静的な HTML ではある。ページ内に書いてある通り、各サービスの仕様がその後変わっているので、現時点でこのメカニズムを採用するのはモダンではなくなっている。
 
@@ -113,7 +113,7 @@ SNS のアイコンを表示するために何年かぶりに Font Awesome を�
 
 chroju.dev は Google Domains で取得したが、 Netlify Functions を使うにあたって Netlify の Managed DNS を使うと CDN を噛ませて速くしてくれるみたいな話だったので、名前解決は Netlify にまかせている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 53.5714%; padding-top: 120px;"><a href="https://www.netlify.com/docs/dns/" data-iframely-url="//cdn.iframe.ly/CpY94NE"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.netlify.com/docs/dns/
 
 残念ながら API がまだ無いようで、 chroju.net の時代は Route53 に乗せて API 経由でゴニョゴニョしていたことが出来なくなってしまったのでどうしようかな、という課題が残された。まだ Beta 扱いのようではあり、今後に期待したい。
 

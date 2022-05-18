@@ -38,7 +38,7 @@ tags: ["university"]
 
 手で自分の氏名と住所を書く機会がとにかく多い。レポートを出すときは返信用封筒と送信用封筒のそれぞれに書かねばならず、さらにレポートに貼り付ける課題票という紙にも氏名が要る。さらに昨年度からはコロナ禍で試験の自宅受験が多くなり、試験答案も封筒で送らねばならなくなった。些細な機会ではあるもののどう考えてもToilであり、自動化は大事ということでテプラを買った。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.kingjim.co.jp/sp/lr30/" data-iframely-url="//iframely.net/LrAMba0?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://www.kingjim.co.jp/sp/lr30/
 
 テプラLiteはスマートフォンアプリからBLEで通信して使うテプラで、とても手軽に扱えてちょうどいい。最初のうちは通信がうまくいかなかったり、日本語入力のバグっぽいものに捕まったりもしたが、慣れてきたらスムーズに使えるようになった。ついでに家の中のちょっとしたラベルなども作れるようになり、買ってよかったと思う。
 

@@ -16,7 +16,7 @@ Zenn についてはだいぶ話題になったのでご存知の方も多いで
 
 で、ここに読んだ記事を週単位でまとめることを始めてみた。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/chroju/scraps/2cf62108a159be" data-iframely-url="//cdn.iframe.ly/g1sleKj"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://zenn.dev/chroju/scraps/2cf62108a159be
 
 <a href="https://gyazo.com/b9d3ef92ae2edb6612c1a1156b185844"><img src="https://i.gyazo.com/b9d3ef92ae2edb6612c1a1156b185844.png" alt="Image from Gyazo" width="600"/></a>
 

@@ -47,13 +47,13 @@ Selenium を使うときはライブラリのインポートだけではなく�
 
 Headless Chrome を使いたいところなのだが、そのまま AWS Lambda のランタイム上で使えるわけではない。各種 FaaS ランタイム向けに Headless Chromium をビルドした serverless-chrome というプロジェクトがあるので、これを使わせてもらう。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/adieuadieu/serverless-chrome" data-iframely-url="//cdn.iframe.ly/J2IgAjY"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/adieuadieu/serverless-chrome
 
 WebDriver には Chrome (Chromium) 向けの ChromeDriver を [Downloads - ChromeDriver - WebDriver for Chrome](https://chromedriver.chromium.org/downloads) からダウンロードして使う。
 
 注意しなければならないのは、 Selenium, serverless-chrome, ChromeDriver の三者で compatible な version の組み合わせが決まっているということ。任意のバージョンを好きに組み合わせて動くわけではない。現状 serverless-chrome のドキュメントがこれをアップデートしきれていないようで、以下の issue に有志が稼働確認した組み合わせを書き込んでいるのが見受けられるので参考にしている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/adieuadieu/serverless-chrome/issues/133" data-iframely-url="//cdn.iframe.ly/ycgUfPu"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/adieuadieu/serverless-chrome/issues/133
 
 本記事執筆時点において、最新の serverless-chrome を使った Selenium for Python との compatible な組み合わせが検証済みになっていない。そのため新し目の API が使えない、ということがしばしばある。例えば自分が経験したものとしては、 `element.screenshot_as_png()` が利用できず、要素単位でのスクリーンショットが取得できなかった。代替策として、 [Can't get the screenshot of the current element · Issue #2898 · SeleniumHQ/selenium](https://github.com/SeleniumHQ/selenium/issues/2898) に記載のある、要素の座標から PIL でページスクリーンショットを切り取る方式を使っている。
 

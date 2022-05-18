@@ -8,7 +8,7 @@ draft: false
 
 ブラウザをキーボードだけで操作するツールが好きだ。かつては Vim like なキーバインドをもたらしてくれる Firefox 向けの Vimperator を愛用していたが、その開発停止後は Chromium 拡張機能の「cVim」を Vivaldi 上で長らく使っていた。しかし残念ながらこちらも開発が停滞しており、先日 Chromium の仕様変更に伴い、ついに看過できない動作上の不具合が起きてしまった。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/1995eaton/chromium-vim/issues/726" data-iframely-url="//cdn.iframe.ly/ZsDRvm3"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/1995eaton/chromium-vim/issues/726
 
 `Hint-a-Hint` と呼ばれるコア機能がある。 `f` を押下するとページ内の各リンクにユニークなアルファベットが割り振られ、そのアルファベットを押下するとそのリンク先へ遷移できる（下図参照）。キーボードだけでのブラウジングを行う上で欠かせない機能なのだが、これが使えなくなってしまった。
 
@@ -18,11 +18,11 @@ draft: false
 
 ## SurfingKeys
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc" data-iframely-url="//cdn.iframe.ly/7o3UxEU"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc
 
 名前に「Vim」と入っていないためか今までノーマークだった。 cVim の開発停滞を危惧する以下の issue の中で代替候補として挙げられており、それで初めて知った。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/1995eaton/chromium-vim/issues/723" data-iframely-url="//cdn.iframe.ly/sjGRH1V"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/1995eaton/chromium-vim/issues/723
 
 知名度の高い代替としては [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) なども存在するが、自分の中でキラーとなっていた以下機能をいずれも搭載していなかった。逆に言えば、探した中では SurfingKeys がこれらの機能を唯一網羅していた。
 
@@ -98,7 +98,7 @@ mapkey('P', 'Open clipboard URL in new tab', function() {
 
 これは実装されている方のブログがあったので、それをそのまま使わせていただいた。ただ最近はよく使うウェブサービスを全部 [Station](https://getstation.com/) に載せるようにしているため、ブックマーク的によく行くページというのが GitHub ぐらいしかない状況にはなっていると今回改めて気付いた（ GitHub は複数のページを同時に開きたい場合が多く、1サービス1タブが基本の Station 上だと不便）。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 75%; padding-top: 120px;"><a href="https://fewlight.net/20200225/" data-iframely-url="//cdn.iframe.ly/pDLSUTj"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://fewlight.net/20200225/
 
 ### ブックマークレット
 

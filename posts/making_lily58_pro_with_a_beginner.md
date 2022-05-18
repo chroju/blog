@@ -24,7 +24,7 @@ Lily58 Pro は必要なものがキットになった状態で売られていま
 
 キースイッチは、現在遊舎工房さんに取り扱いがあるのは赤軸（リニア）、茶軸（タクタイル）、白軸（クリッキー）の3種類で、私が行ったときには赤軸が在庫切れになっており、白軸はオフィスで使うには適さないため茶軸としました。結果的に快適に使えているので、他の軸に替える必要もなさそうです。荷重はいずれも 50g ですが、もっと重いものが欲しい場合には海外通販になりますが、 NovelKeys などで購入できます。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://novelkeys.xyz/products/novelkeys-x-kailh-low-profile-heavys" data-iframely-url="//cdn.iframe.ly/ZiLjTit?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://novelkeys.xyz/products/novelkeys-x-kailh-low-profile-heavys
 
 ## 工具
 

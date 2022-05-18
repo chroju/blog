@@ -71,30 +71,30 @@ tags: ["coaching", "book"]
 
 ### 新版 コーチングの基本
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 56.25%;"><a href="https://www.hanmoto.com/bd/isbn/4534056591" data-iframely-url="//cdn.iframe.ly/jWLJVEw"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.hanmoto.com/bd/isbn/4534056591
 
 コーチングとはそもそも何なのか、定義付けする上ではこの本が一番よかった。先述の通り、かなり捉えどころのない概念なので、まずはこの本である程度コーチング像を固めてしまうと良いように思う。後半は組織論などになるので、前半だけでも。
 
 ### 新 コーチングが人を活かす
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4799326104%0A" data-iframely-url="//cdn.iframe.ly/I3nvoWZ?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/4799326104%0A
 
 コーチングを実践する上での tips が多く書かれている本。具体的にコーチングをどう進めるべきなのか、実践イメージがつかみやすい。
 
 ### エンジニアリング組織論への招待
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4774196053%0A" data-iframely-url="//cdn.iframe.ly/5SYthNk?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/4774196053%0A
 
 再読。先述の通り、一部の記述がコーチングに近い話になっており、 Chapter1「思考のリファクタリング」と Chapter2「メンタリングの技術」が特に参考になった。
 
 ### トリガー 自分を変えるコーチングの極意
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4532320496" data-iframely-url="//cdn.iframe.ly/dYQvT21?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/4532320496
 
 コーチングにおける「行動の変化」をどう促すべきかにフォーカスした本であり、コーチング自体の方法論ではない。人間の行動は「環境」というトリガーに大きく左右されているとし、習慣や行動を変えるための仕組み化を行うことを述べている。コーチングの如何を問わず、行動変容という点ではとても参考になった。
 
 ### 人生改造宣言
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4419067845" data-iframely-url="//cdn.iframe.ly/XmR9nEZ?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/4419067845
 
 これもコーチング自体の方法論の本ではなく、コーチングにおいて行われるアドバイスが tips のようにまとめられた本という趣が強い。ライフハック本に近いかもしれない。

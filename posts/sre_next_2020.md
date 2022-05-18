@@ -6,7 +6,7 @@ isCJKLanguage: true
 draft: false
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://sre-next.dev" data-iframely-url="//cdn.iframe.ly/uyH2l2H"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://sre-next.dev
 
 SRE NEXT 2020 に行ってきた。
 
@@ -35,7 +35,7 @@ SRE という職種が国内で広まったきっかけは [インフラチー�
 
 ## 40000 コンテナを動かす SRE チームに至るまでの道
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://techblog.yahoo.co.jp/entry/20191222793763/" data-iframely-url="//cdn.iframe.ly/ypciDNM"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://techblog.yahoo.co.jp/entry/20191222793763/
 
 Yahoo! のような大規模なサービス企業になると、インフラチームは Private PaaS を動かして社内の開発者へ「サービス提供」する形になる。それが 40000 のコンテナで提供されているとのこと。
 

@@ -18,7 +18,7 @@ draft: false
 
 terraformer というツールをご存知でしょうか。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/GoogleCloudPlatform/terraformer" data-iframely-url="//cdn.iframe.ly/xqCkI2w"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/GoogleCloudPlatform/terraformer
 
 既存のクラウドリソースの状態を読み解き、 tf ファイルと tfstate ファイルを生成してくれるツールです。同様のツールとしては [dtan4/terraforming](https://github.com/dtan4/terraforming) が著名で、 terraformer の README.md 内でも言及があるほどですが、この2つにはそこそこ差異が見られます。
 
@@ -42,7 +42,7 @@ $ tree
 
 本題に入りますが、 先日 Route53 Records の `import` を terraformer で行ったところ、エイリアスレコードに関してちょっとした問題が起きたため、 issue を上げました。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/GoogleCloudPlatform/terraformer/issues/65" data-iframely-url="//cdn.iframe.ly/sGSrfal"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/GoogleCloudPlatform/terraformer/issues/65
 
 何を言っているかというと、 Route53 の DNS Record には当然ながら TTL の設定ができるのですが、そのレコードがエイリアスレコードである場合は TTL の設定ができない（Terraform 的な言い方をすると、2つの要素が競合 = Confilict した状態）はずなのに、 terraformer は `ttl = "0"` として設定を入れてしまっている、という話です。この状態で `terraform plan` を実行すると、競合する要素が定義されているよ、というエラーになります。
 
