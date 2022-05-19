@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import Ga from '../components/ga';
 config.autoAddCss = false
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -21,5 +22,8 @@ export default function App({ Component, pageProps }: AppProps) {
         }
     }, [router.events])
 
-    return <Component {...pageProps} />
+    return <>
+        <Ga />
+        <Component {...pageProps} />
+    </>
 }
