@@ -70,6 +70,6 @@
     @apply flex md:basis-1/3 h-fit w-full overflow-hidden place-content-center;
   }
   img[class*="rlc-image"] {
-    @apply object-fill md:object-cover max-w-none w-full shadow-none rounded-none;
+    @apply object-fill md:object-cover max-w-none w-full shadow-none rounded-none my-0;
   }
 }
