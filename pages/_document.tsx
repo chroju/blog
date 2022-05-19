@@ -35,7 +35,6 @@ class MyDocument extends Document {
                 <body className="line-numbers">
                     <Main />
                     <NextScript />
-                    <Script strategy="beforeInteractive" src="https://cdn.iframe.ly/embed.js" charSet="utf-8" />
                 </body>
             </Html>
         )
