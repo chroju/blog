@@ -31,7 +31,7 @@ Alfred には有料版 (Powerpack) 限定で、 workflow という拡張機能�
 
 以下のレポジトリの Releases から、最新の `.alfredworkflow` ファイルをダウンロードして、 Alfred へインポートしてください。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/alfred-tfcloud-workflow" data-iframely-url="//cdn.iframe.ly/kjEYjpm"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/alfred-tfcloud-workflow
 
 インポート後に変数の設定が必要です。 Alfred の Preferences を開き、 `organization` に検索対象とする organization を設定してください。 organization はここで決め打ちとなるため、複数の organization を動的に切り替えて検索することには現在対応していません。
 
@@ -49,7 +49,7 @@ Alfred には有料版 (Powerpack) 限定で、 workflow という拡張機能�
 
 とはいえ、ここで Alfred workflow の作り方を長々説明するのはアドカレの趣旨に反すると思いますので、その点は割愛します。ざっくり説明すると、 Alfred が定めるフォーマットで JSON を食わせると、あのインクリメンタル検索の候補として流れるという、それだけです。従って原始的な実装であれば、 curl で Terraform Cloud の API をたたき、結果を jq で整形するような形でも workflow は作成可能です。ただそれでは面白くないなという思いもあり、今回は go で Terraform Cloud の CLI ツール `tfcloud` を作って中で実行しています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/tfcloud" data-iframely-url="//cdn.iframe.ly/uAA4Sjs"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/tfcloud
 
 この CLI ツールは単独でももちろん利用可能です。普通に使う分には出力も human readable な形ですが、一部コマンドについて、隠れオプションを渡すことで Alfred に適合した JSON 形式で出力するようになっており、この仕組みを workflow 内部で呼び出しています。先ほど掲載した workflow は `tfcloud` のバイナリを内包した形で配布しているので、別途インストールは不要になっています。依存関係をあまり気にせず、ワンバイナリで配布できる Go は、こういう場面で便利ですね。
 

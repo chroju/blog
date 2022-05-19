@@ -4,7 +4,7 @@ date: "2022-01-10T14:57:05+0900"
 tags: ["philosophy", "book"]
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/-/en/John-Ousterhout/dp/1732102201" data-iframely-url="//cdn.iframe.ly/Vndgjaf?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/-/en/John-Ousterhout/dp/1732102201
 
 [ソフトウェアの複雑さに立ち向かう1つの哲学 :『A Philosophy of Software Design』 を読んだ - こまぶろ](https://ky-yk-d.hatenablog.com/entry/2022/01/04/100000) という非常に優れた感想エントリーがバズった直後なのだが、同じ書籍の感想を上げさせていただく。あの解像度の記事はちょっと書けないが。
 
@@ -60,7 +60,7 @@ AWS を商用利用する場合、その組織内での規約に従い、いく�
 
 ただ、これだけでは単にインターフェースが減っただけであり、 **Deep** とは言い難いかもしれない。複数の AWS リソースを組み合わせて作成することで、何か1つの目的に供するような場合に、それらのリソースを1つの module で作成できるようになっていれば、より Deep と言えるものになる。例えば EKS Cluster はクラスターを作成し、権限管理用の IRSA を設定し、ログ出力先となる CloudWatch Log Group を作成し……と非常に手数の多い作業なのだが、これを一括して管理できる module が存在する。これは Deep な Terrform module の1つと言えそうだ。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 50%; padding-top: 120px;"><a href="https://github.com/terraform-aws-modules/terraform-aws-eks" data-iframely-url="//cdn.iframe.ly/gg04cbc"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/terraform-aws-modules/terraform-aws-eks
 
 注意が必要なのは、 module の中に複数のリソースを含めたとき、その一方だけを更新したり、別の用途で使用したりするのは困難になる可能性がある点だ。先の EC2 インスタンスを作成するとき、セキュリティグループも同じ module に含めて作成したとして、そのセキュリティグループを他の用途にも使い回そうとすると、不要な依存関係が発生してしまう。セキュリティグループはあるインスタンス専用に作るというよりは、ウェブサーバー用、RDS 用など汎用的に作る場合が多いと考えられるので、インスタンスの module からは切り離し、外から渡せるようにしたほうが複雑性は抑制できる。こういったことは、本書でも general purpose と special purpose を1つの module にするべきではない、という観点で書かれている。
 

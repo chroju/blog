@@ -17,7 +17,7 @@ draft: false
 tmux
 ----
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/tmux/tmux" data-iframely-url="//cdn.iframe.ly/grp31K2"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/tmux/tmux
 
 4年ぐらい前に一度入門したものの、 iTerm2 のタブと画面分割があれば別にいいかなという感じで使わなくなっていたのを改めて使い始めた。きっかけになった理由は実はだいぶ些細で、 macOS の全画面表示ってメニューバーを隠してしまうので時間がわからないのが困って、ステータスバーに時刻を表示したくなったというところ。実際使い始めてみるとセッションを作って長くかかるコマンドを裏で実行させたままデタッチして別のことやる、みたいなのがなかなか便利で手放せなくなりつつはある。
 
@@ -28,7 +28,7 @@ tmux
 fzf + ghq
 ---------
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/junegunn/fzf" data-iframely-url="//cdn.iframe.ly/6Emgp7l"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/junegunn/fzf
 
 fzf は以前から興味はあったけど使ってなくて、というか動作原理がよくわかっていなかったのだが、ちゃんと使ってみたらすごく便利だった。
 
@@ -38,7 +38,7 @@ fzf は以前から興味はあったけど使ってなくて、というか動�
 
 こういう感じ。ただ、手でこういう風に `fzf` コマンドをわざわざ打つのではなくて、基本的な使い方としてはよく使うコマンドを関数として定義して `.zshrc` などに書いておいて、必要に応じて呼び出すという形を取る。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/motemen/ghq" data-iframely-url="//cdn.iframe.ly/kzGagrT"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/motemen/ghq
 
 これと組み合わせて使うとすごく良いのが ghq 。ローカルに置く git レポジトリを管理してくれるツールで、 `.gitconfig` に以下のように root となる場所を書いた上で `ghq get chroju/chroju.github.io`  と打つと root 配下に `git clone` してくれる。そして `ghq list` で、 root 配下に置かれた git レポジトリの一覧をずらっと出力してくれる。つまり fzf と組み合わせるとこういう関数が書けるということ。これがだいぶ快適で1日100回ぐらい打ってる。
 
@@ -61,12 +61,12 @@ Go とそれ以外のコードでレポジトリの置き場が替わるのも�
 
 このあたりは以下のエントリにインスパイアされている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 75%; padding-top: 120px;"><a href="https://songmu.jp/riji/entry/2019-03-28-go-modules.html" data-iframely-url="//cdn.iframe.ly/K36hOoI"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://songmu.jp/riji/entry/2019-03-28-go-modules.html
 
 Starship
 --------
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="http://starship.rs/" data-iframely-url="//cdn.iframe.ly/bxOEBO2"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+http://starship.rs/
 
 プロンプトをいい感じにしてくれる Rust 製のツール。スクショは tmux のときに貼ったものを参照。
 
@@ -79,7 +79,7 @@ powerline font を求められることだけ面倒なんだけど、たぶん�
 aws-vault
 ---------
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/99designs/aws-vault" data-iframely-url="//cdn.iframe.ly/o7Vzpd3"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/99designs/aws-vault
 
 macOS の Keychain と連携して AWS API のアクセスキーを管理してくれるツール。別の AWS アカウントへ switch する `assume role` 操作がすごく楽になるのでそれで使っている。以下は README からの引用だけど、 `~/.aws/config` をこんな風に書いて `aws-vault exec prod-readonly -- aws ec2 describe-instances` という具合に実行すると、これで switch ができる。
 
@@ -98,7 +98,7 @@ source_profile = jonsmith
 Conclusion
 ----------
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/chroju/dotfiles" data-iframely-url="//cdn.iframe.ly/NGvxAWO"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/chroju/dotfiles
 
 今書いたような設定は全部 dotfiles としてレポジトリにまとめているので、コードで見てもらったほうが早いのかも知れないです。 Ansible 流して会社 macOS の設定が数分で終わったときにはやるやんけ自分ってちょっと思いました。
 

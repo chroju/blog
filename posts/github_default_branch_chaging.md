@@ -6,7 +6,7 @@ isCJKLanguage: true
 draft: false
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5095%; padding-top: 120px;"><a href="https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/" data-iframely-url="//cdn.iframe.ly/yt7u8pA"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/
 
 10月1日より、 GitHub で新規レポジトリの default branch が `main` に変更される。この設定はオプトアウト可能であり、ユーザーや organization それぞれで必要に応じてあらかじめ設定しておく必要があるわけだが、みなさま確認はお済みだろうか。
 
@@ -75,4 +75,4 @@ $ git remote set-head origin --auto
 
 default branch 変更に関しては、 github/renaming で guidance が公開されているので、こちらも合わせて参照したい。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/github/renaming" data-iframely-url="//cdn.iframe.ly/GDo9Tyb"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/github/renaming

@@ -4,7 +4,7 @@ date: "2021-07-26T16:48:45+0900"
 tags: ["book", "sre", "security"]
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.oreilly.com/library/view/building-secure-and/9781492083115/" data-iframely-url="//cdn.iframe.ly/ZEaktWo"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.oreilly.com/library/view/building-secure-and/9781492083115/
 
 『Building Secure & Reliable Systems』は Google による [SRE Books](https://sre.google/books/) の3冊目に位置づけられており、タイトル通りセキュリティにフォーカスされている。 SRE とセキュリティの関わり方について問題意識があったので、軽くではあるが読んでみた。
 

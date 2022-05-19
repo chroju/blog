@@ -16,7 +16,7 @@ draft: false
 QMK Firmware
 ----
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/qmk/qmk_firmware" data-iframely-url="//cdn.iframe.ly/jAEMAC5"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/qmk/qmk_firmware
 
 例の Ergodox 含め、多くの自作キーボードがファームウェアとして QMK Firmware という OSS を活用している。自作キーボード制作者は自身のキーボードを作成したら、そのキーマップ設定を追加して Pull Request を送ることで QMK Firmware 本体のレポジトリに merge されるようで、現在買えるような自作キーボードであれば、基本的には上記レポジトリから clone すれば、すぐにデフォルトキーマップを焼き込めるようになっている。もちろん、そこから自分でキーマップを変えていくこともできる。
 

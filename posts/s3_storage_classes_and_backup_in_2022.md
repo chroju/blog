@@ -10,7 +10,7 @@ Amazon S3 のストレージクラスがどんどん増えるなぁとぼんや�
 
 先述の通り、現状は8種類が存在している。 re:Invent 2021 で発表された Glacier Instant Retrieval が追加されたのが最後となっている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://dev.classmethod.jp/articles/reinvent2021-amazon-s3-glacier-instant-retrieval-storage-class/" data-iframely-url="//iframely.net/O66p3JY?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://dev.classmethod.jp/articles/reinvent2021-amazon-s3-glacier-instant-retrieval-storage-class/
 
 本記事執筆時点だと、[日本語版の S3 ドキュメント](https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/storage-class-intro.html#sc-compare) は最新の状態にはなく、まだ7種類のストレージクラスしか表記されていない。以下、 [英語版](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-compare) を参考にすることとする。
 
@@ -30,7 +30,7 @@ Amazon S3 のストレージクラスがどんどん増えるなぁとぼんや�
 
 ### クラス移行の前提条件
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html" data-iframely-url="//iframely.net/6pqgwC5"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html
 
 IA については、ストレージクラスを移行する前に、「標準」ストレージクラスで30日保存されている必要がある。 IA は標準と同じく数ミリ秒でデータが取り出せるので、取り出し頻度が多少低ければ取りあえず IA 、としたくなるところだが、ある程度長期間保存されるデータでなければ、 IA は利用できない。
 
@@ -58,7 +58,7 @@ IA については、ストレージクラスを移行する前に、「標準�
 
 ## AWS Backup の S3 対応
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/blogs/news/preview-aws-backup-adds-support-for-amazon-s3/" data-iframely-url="//iframely.net/NPBl9fM?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/blogs/news/preview-aws-backup-adds-support-for-amazon-s3/
 
 S3 のバックアップ機能として、 AWS Backup が S3 をサポートすることが re:Invent 2021 で発表された。ただし、現状 preview の状態であり、 Oregon でしか利用することはできない。
 
@@ -76,7 +76,7 @@ S3 のデータ回復という点では、従来からバージョニングの�
 
 ## ACL の無効化
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/blogs/news/new-simplify-access-management-for-data-stored-in-amazon-s3/" data-iframely-url="//iframely.net/is1xvPD"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/blogs/news/new-simplify-access-management-for-data-stored-in-amazon-s3/
 
 re:Invent 2021 での大きな発表からもう1つ、 ACL の無効化も取り上げる。S3 のアクセス制御は、オブジェクトポリシーと ACL の2つを利用することができるために非常に複雑であったが、このうち ACL に関しては、バケット単位で機能を無効化することができるようになった。
 

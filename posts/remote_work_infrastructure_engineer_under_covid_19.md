@@ -36,7 +36,7 @@ COVID-19 の影響で僕も絶賛リモートワーク中なのだが、せっ�
 
 ### 椅子 / イトーキ サリダ YL8
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.amazon.co.jp/%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AD-%25E3%2582%25AA%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B9%25E3%2583%2581%25E3%2582%25A7%25E3%2582%25A2-YL8-GRBL-AEL-%25E3%2582%25A2%25E3%2582%25B8%25E3%2583%25A3%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB%25E8%2582%2598%25E4%25BB%2598-%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25C3%2597%25E3%2583%2596%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25AF/dp/B07FCYCXDF" data-iframely-url="//cdn.iframe.ly/26BKYbq"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AD-%25E3%2582%25AA%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B9%25E3%2583%2581%25E3%2582%25A7%25E3%2582%25A2-YL8-GRBL-AEL-%25E3%2582%25A2%25E3%2582%25B8%25E3%2583%25A3%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB%25E8%2582%2598%25E4%25BB%2598-%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25C3%2597%25E3%2583%2596%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25AF/dp/B07FCYCXDF
 
 コストパフォーマンスに優れた椅子。3万円ぐらいだが、ランバーサポート、可動式のアームレスト、固定リクライニング、背もたれのメッシュなどが付いていて悪くない。ただあくまでコストパフォーマンスというところで、座面の硬さだとか、ヘッドレストが頭に合わないだとか、気になるところもある。フルリモート前提ならもっと高いのを選ぶと思う。
 
@@ -44,7 +44,7 @@ COVID-19 の影響で僕も絶賛リモートワーク中なのだが、せっ�
 
 ### 充電器 / Anker PowerPort I PD
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.amazon.co.jp/Anker-PowerPort-PowerIQ%25E3%2580%2590Power-Plus%25E3%2580%2581MacBook%25E3%2580%2581Galaxy-XZ1%25E3%2580%2581%25E3%2581%259D%25E3%2581%25AE%25E4%25BB%2596Android%25E5%2590%2584%25E7%25A8%25AE%25E5%25AF%25BE%25E5%25BF%259C/dp/B072KBG9W4" data-iframely-url="//cdn.iframe.ly/6WvO411"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/Anker-PowerPort-PowerIQ%25E3%2580%2590Power-Plus%25E3%2580%2581MacBook%25E3%2580%2581Galaxy-XZ1%25E3%2580%2581%25E3%2581%259D%25E3%2581%25AE%25E4%25BB%2596Android%25E5%2590%2584%25E7%25A8%25AE%25E5%25AF%25BE%25E5%25BF%259C/dp/B072KBG9W4
 
 最大30W供給する USB Type-C 1ポートと Type-A 4ポート搭載の充電器。これに Type-C 2本と micro USB 1本、ライトニング 1本、Fitbit Versa 2 の独自充電ケーブル1本繋いで使っている。充電は1箇所でまとめてできるようにしておくとやっぱり便利。
 

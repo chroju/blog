@@ -10,7 +10,7 @@ Terraform はずっとほぼ AWS でしか使っていなくて、最近 GCP で
 
 ## Terraform modules for Google Cloud
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/terraform-google-modules" data-iframely-url="//cdn.iframe.ly/l2qMnlK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/terraform-google-modules
 
 上記 GitHub Organization にて、現時点で 64 の module が公開されている。 Organization のメンバーを見ると GCP に属している方が多いので、どうも Google 公認で提供されているものらしい。 AWS にも [Terraform AWS modules](https://github.com/terraform-aws-modules) という Organization があるが、こちらは見る限り AWS 関係者ではなく有志による提供となっている。昨今のアレじゃないけど、 Google のほうが OSS コミュニティと良い関係を築こうという意思が見て取れるなぁという気がしなくもない。
 

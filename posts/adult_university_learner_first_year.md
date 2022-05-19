@@ -70,7 +70,7 @@ draft: false
 
 ### Anki
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/ankitects/anki" data-iframely-url="//cdn.iframe.ly/rZsBgkg"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/ankitects/anki
 
 いわゆる暗記カードをデジタルで作って学習できるアプリケーション。カードに LaTeX や HTML 、画像ファイルなどを埋め込める高機能な点が嬉しい。またカードを実際にめくっていく学習モードは [忘却曲線](https://ja.wikipedia.org/wiki/%E5%BF%98%E5%8D%B4%E6%9B%B2%E7%B7%9A) などを踏まえて実装されていて、覚えが悪いカードは数分後、すでに覚えたと判断したカードは忘れている可能性のある数日後に再出題してくれて、効率的な暗記ができる。
 
@@ -84,7 +84,7 @@ draft: false
 
 ### Scrapbox
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://scrapbox.io/" data-iframely-url="//cdn.iframe.ly/dMf89rG"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://scrapbox.io/
 
 説明が難しいが、すごく簡単に使える Wiki のようなもの。最終的に授業全体で得た知識をまとめておくのに使っている。
 

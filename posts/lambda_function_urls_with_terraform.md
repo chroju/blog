@@ -4,7 +4,7 @@ date: "2022-04-16T14:03:05+0900"
 tags: ["lambda", "terraform", "aws"]
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/about-aws/whats-new/2022/04/aws-lambda-function-urls-built-in-https-endpoints/" data-iframely-url="//iframely.net/g8CWksM?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/about-aws/whats-new/2022/04/aws-lambda-function-urls-built-in-https-endpoints/
 
 AWS LambdaでHTTPSエンドポイントがデフォルト利用できるようになり、API Gatewayを付与する必要がなくなった。早いもので、すでにServerless FrameworkもTerraformも対応しているのだが、せっかくなのでLambdaのデプロイには使ったことがない、Terraformで試してみた。
 
@@ -110,7 +110,7 @@ output "function_url" {
 
 ## Lambda Function URLsでできること
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://docs.aws.amazon.com/lambda/latest/dg/urls-invocation.html" data-iframely-url="//iframely.net/deIkthf"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://docs.aws.amazon.com/lambda/latest/dg/urls-invocation.html
 
 リクエストからのヘッダー、body、query stringなどの読み取りは一通りできるし、レスポンスにもヘッダー、bodyなどは含められるので、簡単なAPIを作りたい場合などはこれで事足りそうに感じた。
 

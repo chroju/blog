@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
+import rlc from 'remark-link-card'
 import html from 'remark-html'
 import gfm from 'remark-gfm'
 
@@ -82,6 +83,7 @@ export async function getPostData(id: any) {
     const processedContent = await remark()
         .use(html, { sanitize: false })
         .use(gfm)
+        .use(rlc)
         .process(matterResult.content)
     const contentHtml = processedContent.toString()
 

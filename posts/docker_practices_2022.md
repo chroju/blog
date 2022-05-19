@@ -16,7 +16,7 @@ export cache には `gha` の他に、 `inline` 、 `registry` 、 `local` の3�
 
 そのため `registry` でmax modeを使うほうがよいのだが、これについてはコンテナレジストリによってはcache manifestに対応していない場合がある。例えばAmazon ECRは対応していない。ECRを使っていて `registry` を使いたい場合、cache manifestに対応した、例えばGitHub Container Registryへcacheだけを送る、という荒技もあるようではある。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/aws/containers-roadmap/issues/876" data-iframely-url="//iframely.net/m9sHpS1?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://github.com/aws/containers-roadmap/issues/876
 
 GitHub Actionsでキャッシュするなら、わりと何も考えずに使える `gha` が便利。ただし、現段階ではexperimentalであることは念頭に置いたほうが良さそう。その点を懸念するのであれば、 `type=local` を [actions/cache](https://github.com/actions/cache) と一緒に使うのが穏当か。
 
@@ -24,7 +24,7 @@ GitHub Actionsでキャッシュするなら、わりと何も考えずに使え
 
 Dockerfile内で `apt-get upgrade` など、 base imageに含まれるパッケージを一括でアップグレードする書き方は従来非推奨になっていたが、これは現在非推奨ではなくなった。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 50%; padding-top: 120px;"><a href="https://github.com/docker/docker.github.io/pull/12571" data-iframely-url="//iframely.net/KhSQgxY"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://github.com/docker/docker.github.io/pull/12571
 
 非推奨ではなくなっただけで、推奨になったというわけではない。Dockerfileで `apt-get upgrade` を書くかどうかは是非が分かれるところだと思う。base imageのパッケージに脆弱性があった場合、それに対処できる可能性があるが、一方でコンテナビルドの冪等性は失われることになる。
 

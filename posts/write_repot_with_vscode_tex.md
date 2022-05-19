@@ -57,7 +57,7 @@ $ ptex2pdf -l example.tex
 
 拡張機能 LaTeX Workshop を使う。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/James-Yu/LaTeX-Workshop" data-iframely-url="//cdn.iframe.ly/Wze91sK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/James-Yu/LaTeX-Workshop
 
 デフォルトの状態でもシンタックスハイライトやサジェストの機能が使えるが、 VSCode 内でコンパイルしたりするには `settings.json` にコンパイル用のコマンドを記入したりする必要がある。自分の場合は以下のように設定している。
 

@@ -30,7 +30,7 @@ terraform {
 
 ## terraform-cloud-updater
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/marketplace/actions/terraform-cloud-workspace-auto-update" data-iframely-url="//cdn.iframe.ly/s3PFvW5"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/marketplace/actions/terraform-cloud-workspace-auto-update
 
 input として最低限、対象の Terraform ファイルが保存された `working_dir` を指定し、環境変数 `TFE_TOKEN` で Terraform Cloud の API トークンを渡してあげれば動作する。
 
@@ -67,7 +67,7 @@ input の `auto_update` を `true` にすることで、自動的に更新まで
 
 ### go-tfe
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/hashicorp/go-tfe" data-iframely-url="//cdn.iframe.ly/CxCwopM"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/hashicorp/go-tfe
 
 Terraform Cloud の API ライブラリは hashicorp が公開している。名前が `tfe` になっているが、これは Terraform Enterprise と Cloud の共通 API ライブラリだからであって、 Cloud で特に問題なく使えた。
 
@@ -88,7 +88,7 @@ Available commands are:
 
 と、いろいろ書いた末に「セマンティックバージョニングをよろしくやってくれるライブラリあるんでは？」と思って探してみたら当の hashicorp から公開されていたわけなのだが。勉強になったのでいいか、と思いつつ、こちらも比較で見てみようと思っている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/hashicorp/go-version" data-iframely-url="//cdn.iframe.ly/xFgS2MK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/hashicorp/go-version
 
 ### 初めての GitHub Actions
 

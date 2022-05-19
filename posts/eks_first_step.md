@@ -78,7 +78,7 @@ Kubernetes 自体のプラクティスについては、やはり Google のほ�
 
 いずれも [O'Reilly online learning](https://www.oreilly.com/online-learning/) で読んでいる。全部通読したわけではなくて、何か調べたいことがあったときに逐次辞書のように引いている。特に1番目の『Cloud Native 〜』は Kubernetes の初歩から始まり、 Kubernetes cluster をどのように運用していくのか、カオスエンジニアリングやシークレット管理の話、デプロイまわりなどかなり幅広くまとまっていておすすめ。1つのベンダーにとらわれることなく、各種 OSS や SaaS に少しずつ触れているので、cluster 運用に活用するツールの比較検討を進める端緒として使いやすい。最近日本語版も出ている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.oreilly.co.jp//books/9784873119014/" data-iframely-url="//cdn.iframe.ly/0P3neqA"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.oreilly.co.jp//books/9784873119014/
 
 あとデプロイ（CI/CD）まわりもいろいろ読んだと思うのだけど、どれを読んだかちょっと思い出せなくなってしまった。
 

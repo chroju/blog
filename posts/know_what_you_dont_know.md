@@ -6,7 +6,7 @@ isCJKLanguage: true
 draft: false
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.amazon.co.jp/dp/B01E3R0VX6" data-iframely-url="//cdn.iframe.ly/t7uYaMG"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/B01E3R0VX6
 
 「問題発見」の技術、メソッドを知りたくて、 Michael A. Roberto の『なぜ危機に気づけなかったのか（原題 : Know What You Don't Know ）』を読んだ。
 
@@ -16,7 +16,7 @@ draft: false
 
 ところが長年、この分野に関してあまり良い本に巡り会えなかった。真っ先に名前が挙がるのは『ライト、ついてますか』だと思うのだが、この本はどちらかと言えば、何かトラブルが顕在化した後で、では解決するべき問題は具体的になんなのか、それをどう捉えて解決していくべきなのかという、「正しい問題定義」の本に近い。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.amazon.co.jp/dp/4320023684" data-iframely-url="//cdn.iframe.ly/AdIMm4f"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/4320023684
 
 僕が求めている「問題発見」の技術はそうではなくて、可視化されていない問題、あるいは見過ごされていたり、自覚されていない問題を如何にあぶり出すか、という技術のことだ。ラムズフェルド元アメリカ国務長官の [Unknown unknowns](https://ja.wikipedia.org/wiki/%E7%9F%A5%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8%E7%9F%A5%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B) という言葉が近い。そしてこの本は原題を見ればわかる通り、僕の求めていたことにドンピシャな本だった。
 

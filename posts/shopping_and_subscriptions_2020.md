@@ -14,7 +14,7 @@ WFH 関連の物品については、 [WFH を始めて半年が過ぎ、調え�
 
 ### デンタルフロス
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B07B5CD8NY" data-iframely-url="//cdn.iframe.ly/BPGz1F7?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/B07B5CD8NY
 
 地味だが今年一番買ってよかったかもしれない。
 
@@ -36,7 +36,7 @@ WFH 関連の物品については、 [WFH を始めて半年が過ぎ、調え�
 
 ### H&F BELX のノンカフェインティー
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.handfbelx.com/stores/" data-iframely-url="//cdn.iframe.ly/yTAFw95?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.handfbelx.com/stores/
 
 家で仕事をするときに飲むものはコーヒー、炭酸水、ノンカフェイン or 低カフェインのお茶の3種類。コーヒーはカフェイン摂取量の都合上、1日2杯と決めているし、炭酸水はお金がかかるのでお茶が一番飲む機会が多く、いろいろと探した1年だった。
 
@@ -46,13 +46,13 @@ WFH 関連の物品については、 [WFH を始めて半年が過ぎ、調え�
 
 ### ネスレ アールグレイポーション
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B01C44IV78" data-iframely-url="//cdn.iframe.ly/JYRHL2l?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/B01C44IV78
 
 お茶絡みでもうひとつ。水や氷で割るとアイスティーになる、濃縮紅茶のポーション。昔からティーソーダが好きなのだが、あれはあんまり売っているものではないので、夏場はこれをウィルキンソンの炭酸で割って飲んでいた。人工甘味料が入っているし、そこまで香りがいいわけではないのだが、僕には十分。
 
 ### 極 お米保存袋
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B07X5FSBDP" data-iframely-url="//cdn.iframe.ly/Vqs3OAa?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/B07X5FSBDP
 
 お米を冷蔵庫で保存したいけれど、大きな容器を入れられるほど冷蔵庫に容量がないんだよな、という長年の課題が解決した雑貨。ジッパーと空気弁が付いていて、最小限の容積でお米を冷蔵庫に保存できる。レビューを見ると「すぐに破れた」「ジッパーが閉めにくい」といった声もあるけど、特に問題なくもう半年以上使っている。破れたら買い換えるのも、この価格ならいいかな、と思っている。
 

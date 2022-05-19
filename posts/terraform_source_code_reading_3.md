@@ -6,7 +6,7 @@ isCJKLanguage: true
 draft: false
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://terraform-jp.connpass.com/event/150359/" data-iframely-url="//cdn.iframe.ly/L6QnitY"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://terraform-jp.connpass.com/event/150359/
 
 先週開催されたこちらのイベントに参加しました。
 
@@ -38,7 +38,7 @@ Terraform のコードはとにかく膨大なので、なかなか contribute �
 
 ### validators.go に関する知見
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/terraform-providers/terraform-provider-aws/issues/9445" data-iframely-url="//cdn.iframe.ly/vTwY8Q0"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/terraform-providers/terraform-provider-aws/issues/9445
 
 これは個人的な話ですが、以前上記 issue にハマったことがありました。 `aws_route` resource には、ルーティング先に各種ゲートウェイを指定する `nat_gateway_id` や `transit_gateway_id` といった argument があります。本来であればゲートウェイの種類ごとに異なる argument を遣うべきところ、 `gateway_id` という argument が NAT ゲートウェイとインターネットゲートウェイのどっちも受け付けちゃうんですね。なので値のバリデーションをして、 NAT ゲートウェイは受け付けないようにするべきというのがこの issue です。
 
@@ -54,4 +54,4 @@ Terraform のコードはとにかく膨大なので、なかなか contribute �
 
 ちなみに読んだだけで終わるのもアレだったので、後日ですが issue 1個解決を図ってみました。定期的に issue を覗いてやれそうなものにチャレンジしていくのも勉強としては良さそうです。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/terraform-providers/terraform-provider-aws/pull/10819" data-iframely-url="//cdn.iframe.ly/X4pbFvR"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://github.com/terraform-providers/terraform-provider-aws/pull/10819

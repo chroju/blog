@@ -23,7 +23,7 @@ AWS のセキュリティサービスってひたすらに数が多くて訳が�
 
 ### 要点整理から攻略する『AWS認定 セキュリティ-専門知識』
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B08DCLRHC7" data-iframely-url="//cdn.iframe.ly/7kIJ5ub?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/B08DCLRHC7
 
 NRIネットコムのエンジニアの方々が書いている試験対策本。試験範囲を網羅的に押さえる上で良いと思う。一番最初にこの書籍をざっくりと読み通してから、あまり詳しくない部分を個別に補う形で学習を進めた。試験に出そうなところは詳しく、あまり出題されないサービスなどはさらっとした解説になっていて、どこを重点的に学べばいいかわかりやすい。
 
@@ -37,7 +37,7 @@ NRIネットコムのエンジニアの方々が書いている試験対策本�
 
 ### AWS Black Belt & Developeres.IO
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/aws-jp-introduction/aws-jp-webinar-service-cut/" data-iframely-url="//cdn.iframe.ly/lzgIhHn?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://aws.amazon.com/jp/aws-jp-introduction/aws-jp-webinar-service-cut/
 
 名前も知らないようなサービスは Black Belt のスライドで要点を掴むようにした。いわゆるドキュメントを読むよりはわかりやすく、短時間で読めるのでおすすめ。具体的な使い方のイメージを掴みたい場合は Developers.IO でハンズオン記事を探していた。
 

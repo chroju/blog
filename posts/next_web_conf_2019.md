@@ -6,7 +6,7 @@ isCJKLanguage: true
 draft: false
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://blog.jxck.io/entries/2018-09-15/next-web-conf-2019.html" data-iframely-url="//cdn.iframe.ly/oB1MXZm"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://blog.jxck.io/entries/2018-09-15/next-web-conf-2019.html
 
 Web の今とこれからについて、スライドによる発表ではなくて、複数の登壇者による議論をするという体裁のイベントです。本当にその場でリアルタイムに喋ってる、筋書きどこまで作ってるかはセッションにもよる気がしますが資料というものは存在しません。録画は公開されるみたいです。カンファレンスの中でパネルディスカッションが数セッション用意されることは珍しくないですが、朝から夜まで全部議論という場は初めてでとても刺激的でした。どんな話が出てくるかわからないし、登壇されてるのは一線で活躍されている方々なので、多くの情報も様々な思いもお持ちでいろんな話がどんどん飛び出してくる。ハッシュタグはセッション別に用意されているので、 Twitter でも並行して様々な話が進んでだいぶインプット過多な感じで最後のほうはちょっとぽわっとしてました。
 

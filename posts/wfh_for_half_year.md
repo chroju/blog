@@ -34,7 +34,7 @@ Baron の決め手は結構細かいところで、アームレストが内側60
 
 以下の記事にも、この「正しい座り方」が解説されている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.itmedia.co.jp/bizid/articles/0902/19/news115.html" data-iframely-url="//cdn.iframe.ly/mAemhSf?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.itmedia.co.jp/bizid/articles/0902/19/news115.html
 
 ## 通勤時間による脳の GC
 
@@ -64,7 +64,7 @@ WFH は好きなのだけど、会社でやっていたことを全部置き換�
 
 ## 『リモートワークの達人』
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4150505608" data-iframely-url="//cdn.iframe.ly/9AciCmu?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.amazon.co.jp/dp/4150505608
 
 [「リモートワークの達人」を読んだ、そして悔しい思いをした - Magnolia Tech](https://blog.magnolia.tech/entry/2020/11/09/004356) で話題になっていたので、僕もこの本を読んでみた。たしかにリモートワークに必要なことは全部書いてある、って言いたくなるような本だった。
 

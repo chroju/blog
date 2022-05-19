@@ -59,7 +59,7 @@ SRE book では両者をほぼイコールのように書いているが、 work
 
 とはいえ、つまらない作業は誰だってやりたくないし、なるべくなら減らしたいと考えるのが自然だろう。その関連で少し触れたいのだが、都内に NoOps Meetup という勉強会がある。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.publickey1.jp/blog/18/noopsnoopsnoops_meetup_tokyo_1.html" data-iframely-url="//cdn.iframe.ly/t5s8un0?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://www.publickey1.jp/blog/18/noopsnoopsnoops_meetup_tokyo_1.html
 
 名前だけ聞くとかなり過激というか、思い切ったことのようにも聞こえるが、実際には「No Uncomfortable Ops」を掲げており、システム運用作業における「嬉しくない」ことを削減することを目的としている。これは単に「やっていて嬉しくない」というだけではなく、障害のようなユーザーにとっての「嬉しくない」こと、コスト的に「嬉しくない」ことも含まれる。
 

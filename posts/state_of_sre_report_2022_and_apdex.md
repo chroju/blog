@@ -4,7 +4,7 @@ date: "2022-05-02T10:44:58+0900"
 tags: ["sre", "slo"]
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.dynatrace.com/info/sre-report/" data-iframely-url="//iframely.net/o6SsSSH"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://www.dynatrace.com/info/sre-report/
 
 APMなどを提供する [Dynatrace](https://www.dynatrace.com/ja/) が公開している、State of SRE Report 2022を読んだ。Dynatraceがグローバルに450社に対して調査を行った結果をまとめている。なおグローバルとはいえ調査対象の33%がアメリカでほとんどが欧米、日本は対象に入っておらず、偏りはあると考えたほうが良さそうではあった。企業規模でもグローバル企業が中心のためか、3000人未満の会社は1割程度で、3割の会社が20000人を超えており、大企業がほとんどとなっている。
 

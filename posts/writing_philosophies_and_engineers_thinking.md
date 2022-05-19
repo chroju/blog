@@ -4,7 +4,7 @@ date: "2022-03-11T22:37:07+0900"
 tags: ["book","tool","thinking"]
 ---
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.hanmoto.com/bd/isbn/4065243270" data-iframely-url="//iframely.net/L7tYH4B"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+https://www.hanmoto.com/bd/isbn/4065243270
 
 『ライティングの哲学』は、「書くこと」を職業とする学者やライター4人が集まって、如何に工夫していつも書いているのか、あるいは如何に書けていないのかということを座談会で赤裸々に語る本だ。IT系のエンジニアは別に書くことが飯の種というわけでもないので、一見関係ない本ではありそうなのだけれど、存外に参考になることが多かった。
 

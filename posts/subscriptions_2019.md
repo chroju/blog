@@ -69,7 +69,7 @@ Todoist をはじめ、タスク管理用のサービスってほとんどが「
 
 ### メールマガジン「読書日記／フヅクエラジオ」 (¥800 / month)
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 62.375%; padding-top: 120px;"><a href="http://fuzkue.com/entries/595" data-iframely-url="//cdn.iframe.ly/hOEJq9q"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+http://fuzkue.com/entries/595
 
 行きつけのカフェの店主が出してるメルマガ。 fuzkue という新宿・初台にちょっと変わったカフェがあって。本の読める店を標榜していて、私語や PC 厳禁で長時間居座り OK でガンガン本を読んでくれっていう場所で、店主さんも読書が好きな方でずっと読書日記をウェブサイトに載せていて、それがまとめられて出版されたりもしていてというおもしろい話。カフェにはそう頻繁に行けるわけでもないのでカンパの意味も込めて購読している。本当に読書の話と、店の話が主になった日記なので、匿名だけどその日のお客さんの様子なども出てきて、一度明らかにこれ俺やんけってのが出てきたときには小躍りしたりしました。
 

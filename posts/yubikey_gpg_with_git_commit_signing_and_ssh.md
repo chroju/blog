@@ -85,7 +85,7 @@ YubiKey にキーを import したら、ローカルマシン内の master key �
 
 [Keybase](https://keybase.io/) は公開鍵基盤を提供するサービスであり、ここに公開鍵を登録した。公開鍵基盤では、その鍵が誰のものであるか保証する必要があるわけだが、 Keybase は SNS などを用いて本人であることを保証できる点が特徴となっている。僕のアイデンティティはこちら。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://keybase.io/chroju" data-iframely-url="//cdn.iframe.ly/LyMJiFF"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://keybase.io/chroju
 
 Keybase には秘密鍵も登録可能で、その鍵を用いて Keybase の UI 上で暗号化サービスや、秘匿ファイルの共有なども行うことができる。
 

@@ -57,7 +57,7 @@ Lily58 Pro と同じく遊舎工房さんの実店舗で購入して組み立て
 
 キーキャップは monksoffunk 氏が DMM.make で販売しているものを買ってみた。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://make.dmm.com/item/1009205/" data-iframely-url="//cdn.iframe.ly/Ac1er9N"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+https://make.dmm.com/item/1009205/
 
 DMM.make では3Dプリント用のデータをアップロードして出品することができる。ユーザーがそのデータに対して注文をかけると、 DMM で実際にプリントして物品を送ってきてくれる仕組み。3Dプリントされた物品を手に持ったことがないのでどんなものかと思ったけど、手触りはさらさらしているものの程よいざらつきもあって、とても打ち心地のいいキーキャップだった。Kailh Choc 用のキーキャップは、[遊舎工房にも置かれている Kailh 自身が販売しているもの](https://yushakobo.jp/shop/pg1350cap-blank/)ぐらいしか出回っていないと思うのだけど、それと比べても見た目、打ち心地ともに上回って満足している。
 
