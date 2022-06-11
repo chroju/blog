@@ -45,8 +45,8 @@ export default function Layout({
                 {isBlog && (
                     <section>
                         <small className="block">{blogSubTitle}</small>
-                        <Link href="/feed.xml">
-                            <a className="hidden md:block"><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="xl" /></a>
+                        <Link href="/feed.xml" className='hidden md:block'>
+                            <a><span className="hidden md:block"><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="xl" /></span></a>
                         </Link>
                     </section>
                 )}
