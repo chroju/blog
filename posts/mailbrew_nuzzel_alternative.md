@@ -1,5 +1,5 @@
 ---
-title: "Twitterでの話題はMailbrewで収集する"
+title: "Twitterの話題はMailbrewで収集する"
 date: "2022-06-11T10:24:22+0900"
 tags: ["productivity"]
 ---
