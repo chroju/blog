@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import Fa from './fontawesome'
+import Tags from './tags'
 
 const name = 'chroju'
 export const blogTitle = "chroju.dev/blog"
@@ -11,6 +12,7 @@ export default function Layout({
     children,
     siteTitle = blogTitle,
     blogArticleId = '',
+    PostTags,
     footer = true
 }: any): JSX.Element {
     const headerLink = "/" + siteTitle.split('/')[1]
@@ -57,12 +59,21 @@ export default function Layout({
                     <footer className="mt-20 p-3 border-t-2">
                         {
                             blogArticleId != '' && (
-                                <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center mb-10">
-                                    <Link href="/blog"><a className="no-underline hover:underline text-blue-500 font-semibold">Read more articles →</a></Link>
-                                    <nav className="md:flex flex-wrap justify-center hidden md:ml-auto space-x-8 text-slate-500">
-                                        <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
-                                        <li className="list-none"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
-                                    </nav>
+                                <div className="mb-10">
+
+
+                                    <div className="container mx-auto flex flex-wrap flex-row items-center mb-5">
+                                        <section className="space-x-2 text-slate-500"><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span><Tags tags={PostTags} /></section>
+                                        <nav className="lg:flex flex-wrap justify-center hidden lg:ml-auto space-x-8 text-slate-500">
+                                            <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
+                                            <li className="list-none"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
+                                        </nav>
+                                    </div>
+                                    <div className='my-12 flex justify-center md:justify-start'>
+                                        <Link href="/blog"><a className="no-underline py-2 px-8 bg-blue-500 hover:bg-blue-700 transition text-white rounded">Read more articles →</a></Link>
+                                    </div>
+
+
                                 </div>
                             )
                         }
