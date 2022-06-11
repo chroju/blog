@@ -1,9 +1,9 @@
-const fs = require("fs");
-const RSS = require("rss");
-const path = require('path');
-const matter = require('gray-matter');
-const remark = require('remark')
-const html = require('remark-html')
+import fs from 'fs';
+import RSS from 'rss';
+import path from 'path';
+import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 const siteURL = 'https://chroju.dev'
