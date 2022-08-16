@@ -29,3 +29,7 @@ https://zenn.dev/chroju/scraps/2cf62108a159be
 <a href="https://gyazo.com/cbdd7702cc3858a3e99b10011b5ca4a2"><img src="https://i.gyazo.com/cbdd7702cc3858a3e99b10011b5ca4a2.gif" alt="Image from Gyazo" width="600"/></a>
 
 まだ始めたばかりで、今後どうなるかはわからないが、わりとイイ感じに work しそうな気はしている。
+
+## 追記
+
+続き→ [読んだ記事などを「週報」として notion にまとめ始めた - chroju.dev/blog](https://chroju.dev/blog/journal_with_notion)
