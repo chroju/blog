@@ -48,7 +48,7 @@ export default function Post({
                 <meta name="og:url" content={pageURL} />
             </Head>
             <article>
-                <h1 className="text-2xl font-extrabold mb-2">{postData.title}</h1>
+                <h1 className="text-3xl font-bold mb-2">{postData.title}</h1>
                 <div className="mb-10">
                     <section><Date dateString={postData.date} /></section>
                 </div>
