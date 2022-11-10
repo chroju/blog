@@ -19,7 +19,7 @@
     "babel-plugin-prismjs": "2.1.0",
     "date-fns": "2.29.3",
     "gray-matter": "4.0.3",
-    "next": "12.3.1",
+    "next": "12.3.3",
     "next-pwa": "5.5.5",
     "prismjs": "1.29.0",
     "react": "18.2.0",
