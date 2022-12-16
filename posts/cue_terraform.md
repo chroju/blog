@@ -17,7 +17,7 @@ CUE とは何か、レポジトリの README から引用すると以下のよ�
 
 ポイントとしては JSON のスーパーセットであることと、データの定義や利用をシンプルにすることを目的としているという点だと理解している。昨今、Kubernetes の隆盛などにより、JSON やそれと互換性を持つ YAML を用いる機会が多くなったが、これら言語の機能だけではスキーマを定義したり、制約を書いたりすることは難しい。CUE はこれを解消する機能を持っているようである。
 
-CUE が JSON のスーパーセットであるということは、JSON と互換性を持つ HCL のスーパーセットとしても使えるはずである。今回は CUE で Terraform の定義をどのように書けばよいのか探ってみた。
+CUE が JSON のスーパーセットであるということは、JSON と互換性を持つ HCL のスーパーセットとしても使えるはずである。筆者はそもそも CUE に触ったこと自体がなかったので、今回は CUE で Terraform の定義をどのように書けばよいのか探りながら CUE に入門してみた。
 
 ## HCL と JSON の互換性
 
@@ -82,9 +82,11 @@ resource: aws_ebs_volume: this: {
 
 JSON への変換は `cue` コマンドを使って行う。コマンドのインストール方法は [ドキュメント](https://cuelang.org/docs/install/) では `brew install cue-lang/tap/cue` となっているが、12 月の現時点では homebrew-core にも入っているようである。 `cue eval sample.cue` でバリデーション、 `cue export sample.cue` で JSON への変換が行える。
 
-これだけだと key はクォーティングしなくて良くてちょっと楽ですねとか、それぐらいなものではある。
+これだけだと key はクォーティングしなくて良くてちょっと楽ですねとか、それぐらいなものではあり、特に魅力を感じられる気はしてこない。
 
 ## スキーマ定義とバリデーション
+
+ここからが本領、CUE でスキーマを定義したり、値のバリデーションをかけたりするフェーズに入っていく。
 
 CUE では「[型は値である](https://cuelang.org/docs/concepts/logic/#types-are-values)」と言われる。これはあるフィールドを定義するものとして、型や制約と、具体的な値とが同じように評価されるということを意味する。数学的には [Lattice](https://cuelang.org/docs/concepts/logic/#the-value-lattice)、日本語で「[束（そく）](<https://ja.wikipedia.org/wiki/%E6%9D%9F_(%E6%9D%9F%E8%AB%96)>)」の概念を取り入れている。
 
