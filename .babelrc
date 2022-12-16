@@ -8,6 +8,7 @@
             {
                 "languages": [
                     "javascript",
+                    "cue",
                     "c",
                     "css",
                     "bash",
@@ -15,6 +16,7 @@
                     "docker",
                     "go",
                     "hcl",
+                    "jinja2",
                     "json",
                     "markdown",
                     "nginx",
