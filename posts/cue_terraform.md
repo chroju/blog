@@ -68,6 +68,11 @@ resource: {
             size: 50
         }
     }
+    aws_s3_bucket: {
+        this: {
+            bucket: "example"
+	}
+    }
 }
 ```
 
@@ -103,13 +108,13 @@ resource: aws_ebs_volume: this: {
 }
 ```
 
-上記の CUE は成り立つ。まず、CUE では同じフィールドに対する定義を複数回書けるので、 `resource: aws_ebs_volume: this:` が複数存在していてもエラーにはならない。複数回記述されたフィールドは、その論理積が取られるような形になる。 `availability_zone` は `string` かつ `"ap-northeast-1a"` であり、 `size` は `<100` かつ `50` 、という具合である。ここにさらに `size: >100` や `availability_zone: "us-east-1"` といった記述を追加すると矛盾が発生するため、CUE の評価は失敗する。また 2 回の定義の双方で、フィールドの過不足があっても問題ない。最終的には `encrypted: true` が存在する形になる。
+上記の CUE は成り立つ。まず、CUE では同じフィールドに対する定義を複数回書けるので、 `resource: aws_ebs_volume: this:` が複数存在していてもエラーにはならない。複数回記述されたフィールドは、その論理積が取られるような形になる。 `availability_zone` は `string` かつ `"ap-northeast-1a"` であり、 `size` は `<100` かつ `50` 、という具合である。ここにさらに `size: >100` や `availability_zone: "us-east-1"` といった記述を追加すると論理積は空集合となってしまい、CUE の評価は失敗する。また 2 つの定義の双方で、フィールドの過不足があっても問題ない。上記の例の場合、最終的には `encrypted: true` が存在する形になる。
 
 バリデーションは多様な書き方ができる。string に対しては正規表現も書けるし、論理和 `|` のオペランドが備わっていて、 enums のように `availability_zone: "ap-northeast-1a" | "ap-northeast-1c"` といった書き方もできる。また同様に論理和を使った書き方として、アスタリスクを付けるとデフォルト値を指定でき、 `size: <100 | *50` とすれば、具体的に size の指定がなければ 50 として評価される。
 
 ## Definition
 
-CUE で記述されたデータを JSON に変換するには、当然ではあるが最終的に具体的な値を持つ必要がある。様々な AWS リソースのスキーマだけを書いたファイルを取りあえず用意して、このうち一部のリソースしか実際には定義しない、ということもあるだろうが、スキーマだけの状態だと `cue export` は失敗する。
+CUE で記述されたデータを JSON に変換するには、当然ではあるが最終的に具体的な値を持つ必要がある。様々な AWS リソースのスキーマだけを書いたファイルを取りあえず用意して、このうち一部のリソースしか実際には定義しない、ということもあるだろうが、スキーマだけの状態だと値が確定できず、 `cue export` は失敗する。
 
 ```bash
 $ cat <<EOF > sample.cue
@@ -194,9 +199,9 @@ Terraform resource の定義は JSON だと深いネストを必要とするの�
 
 ## Package / Modules の分離
 
-Definition による型や制約は、何らかの形で切り出して、複数のプロダクトなどで使い回したくなってくる。CUE にも Package / Modules の概念が存在している。
+Definition による型や制約は、何らかの形で切り出して、複数のプロダクトなどで使い回したくなってくる。コードの再利用を進める仕組みとして、 CUE にも Package / Modules の概念が存在している。
 
-CUE で Modules を使うには、 `module: "example.com/pkg"` と記したファイルを `./cue.mod/module.cue` に配置する必要がある。手動で作ってもよいが、 `cue mod init example.com/pkg` コマンドで自動生成もしてくれる。このあたりは Go の設計に影響を受けており、モジュール名も `github.com/user/repo` 形式が [原則とされている](https://cuelang.org/docs/concepts/packages/#creating-a-module) 。 `cue mod init` により、Go を彷彿とさせる `cue.mod/{pkg,usr}` といったディレクトリも作成されるのだが、現時点では CUE 自体の Package Management の仕組みがなく、あまり活用する機会がないように思えている。
+CUE で Modules を使うには、 `module: "example.com/pkg"` と記したファイルを `./cue.mod/module.cue` に配置する必要がある。手動で作ってもよいが、 `cue mod init example.com/pkg` コマンドで自動生成もしてくれる。このあたりは Go の設計に影響を受けており、モジュール名も `github.com/user/repo` 形式が [原則とされている](https://cuelang.org/docs/concepts/packages/#creating-a-module) 。 `cue mod init` により、Go での外部パッケージ管理を彷彿とさせる `cue.mod/{pkg,usr}` といったディレクトリも作成されるのだが、現時点では CUE 自体の Package Management の仕組みがなく、あまり活用する機会がないように思えている。
 
 https://github.com/cue-lang/cue/issues/851
 
@@ -243,7 +248,7 @@ ebs.#aws_ebs_volume & {
 CUE で Terraform を扱う場合、Terraform コマンドの実行前に CUE から JSON への変換などを行う必要があるので、これをスクリプトにまとめると便利になる。詳細は割愛するが、以下のような CUE を書いて、 `cue cmd plan` と実行することにより、変換から `terraform plan` の実行、変換後 JSON の削除までを一発で完了させることができた。
 
 ```cue
-package terraform
+package main
 
 import (
 	"tool/cli"
@@ -287,7 +292,7 @@ command: plan: {
 
 ## Impression
 
-ざっくりと型定義、バリデーションなども行いつつ、CUE を使って Terraform を実行するまでを眺めてみた。率直な感想としてはわりと使えそうかもしれないと感じた。どちらかの方向への依存関係が発生するわけではなく、複数の定義を掛け合わせて最終的なデータを作って行くという形式は柔軟性が高い。Terraform 標準の機能では module の中で module を使ったりするとかなり複雑化してくるが、CUE であれば後からパラメータを追加するといったことも簡単にできる。
+ざっくりと型定義、バリデーションなども行いつつ、CUE を使って Terraform を実行するまでを眺めてみた。率直な感想としてはわりと使えそうかもしれないと感じた。どちらかの方向への依存関係が発生するわけではなく、複数の定義を掛け合わせて最終的なデータを作って行くという形式は柔軟性が高い。Terraform 標準の機能では module の中で module を使ったりするとかなり複雑化してくるが、CUE であれば後からパラメータを追加するといったことも簡単にできる。かなり高機能なバリデーションを、 Sentinel や OPA/Rego といった別のツールを使わず、 CUE の中で完結できるのも良い。
 
 一方、注意点も少なくない。当然ながら HCL の機能は使えないため、 `bucket = aws_s3_bucket.this.id` のようなリテラルは利用できず、懐かしい `"${aws_s3_bucket.this.id}"` 形式を使う必要がある。また先述したとおり、Package management の仕組みがないのは少々想定外だった。個人的にはスキーマだけを切り出した Module を 1 つのレポジトリで共有して、各プロダクトでそれを import するような使い方を想定していたからだ。インポートの機能としては `cue get go` コマンドによって Go Module の struct を CUE の struct として読めるという機能はあるので、そう遠くないうちに CUE Module もインポートできるようになるだろうとは思う（Kubernetes のリソースは Go の struct で定義されているため、これが結構便利らしい。残念ながら Terraform resource のスキーマ自体は [struct ではない](https://pkg.go.dev/github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema#Resource)）。VSCode Extension などの入力支援もまだ乏しく、良くも悪くもまだまだ発展途上にあると感じてもいる。
 
