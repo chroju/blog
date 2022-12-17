@@ -71,7 +71,7 @@ resource: {
     aws_s3_bucket: {
         this: {
             bucket: "example"
-	}
+        }
     }
 }
 ```
@@ -79,9 +79,14 @@ resource: {
 あるいは、 [フィールドが 1 つだけの場合はブラケットを省略できる](https://cuelang.org/docs/tutorials/tour/intro/fold/) ので、以下も同義になる。
 
 ```cue
-resource: aws_ebs_volume: this: {
-    availability_zone: "ap-northeast-1a"
-    size: 50
+resource: {
+    aws_ebs_volume: this: {
+        availability_zone: "ap-northeast-1a"
+        size: 50
+    }
+    aws_s3_bucket: this: {
+        bucket: "example"
+    }
 }
 ```
 
