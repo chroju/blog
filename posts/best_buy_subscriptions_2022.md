@@ -23,7 +23,7 @@ E-ink Androidで、電子書籍端末専用で使っている。スタイラス�
 
 ## KAT Iron
 
-<a href="https://gyazo.com/3c89a014d525a944289aee5d4447c664"><img src="https://i.gyazo.com/3c89a014d525a944289aee5d4447c664.jpg" alt="Image from Gyazo" width="100"/></a>
+<a href="https://gyazo.com/3c89a014d525a944289aee5d4447c664"><img src="https://i.gyazo.com/3c89a014d525a944289aee5d4447c664.jpg" alt="Image from Gyazo" width="1000"/></a>
 
 買ったのはだいぶ前なのだが、Group Buyに申し込んで今年届いたキーキャップ。名前通り「鉄」をコンセプトにした渋めのカラーリングも、フェニキア文字のレジェンドも、少し厚めの素材でできているため、コトコトと気持ちのよい音をさせてくれるところもすべてが良い。これで僕のキーボードは完璧になった。
 
