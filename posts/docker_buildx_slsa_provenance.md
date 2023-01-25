@@ -1,7 +1,7 @@
 ---
 title: "docker/build-push-action v3.3.0で導入されたprovenanceオプションにまつわる問題"
 date: "2023-01-25T12:50:17+0900"
-tags: []
+tags: ["docker", "github actions"]
 ---
 
 [docker/build-push-actionのv3.3.0](https://github.com/docker/build-push-action/releases/tag/v3.3.0) で、 `provenance` というオプションが入り、デフォルトで有効化された。このオプションについては、
