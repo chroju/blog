@@ -12,6 +12,14 @@ tags: ["docker", "github actions"]
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@GitHub</a> Actions runner bumped <a href="https://twitter.com/Docker?ref_src=twsrc%5Etfw">@Docker</a> buildx today, which has default provenance on. It&#39;s a nice feature, but many registries do not support it including google container registry.<br><br>All builds broke, and had to disable provenance.<a href="https://t.co/wp0TsgAJi8">https://t.co/wp0TsgAJi8</a> <a href="https://t.co/eH0uv3fkZp">pic.twitter.com/eH0uv3fkZp</a></p>&mdash; Sigurd Fosseng (@fosseng) <a href="https://twitter.com/fosseng/status/1616227805125025792?ref_src=twsrc%5Etfw">January 20, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+### （2023-01-31 追記）
+
+その後v3.3.1で、 `provenance` オプションはデフォルト無効化に切り替えられ、改めてデフォルト有効化はv4.0.0でメジャーバージョンアップとして取り入れられた。
+
+参考 : [Disable provenance by default if not set by crazy-max · Pull Request #781 · docker/build-push-action](https://github.com/docker/build-push-action/pull/781)
+
+（追記ここまで）
+
 ## SLSA Provenanceとは何か
 
 `provenance: true` を設定すると、Provenance attestationなるものが出力されるようになる、と書かれている。ドキュメントとしては [Provenance attestations | Docker Documentation](https://docs.docker.com/build/attestations/slsa-provenance/) に記載があり、ここでは [SLSA Provenance schema, version 0.2](https://slsa.dev/provenance/v0.2#schema) に従ったものが出力されるのだとされている。
@@ -77,6 +85,6 @@ https://github.com/docker/build-push-action/pull/746#issuecomment-1377806123
 
 表層的には「面倒なものが追加されたな」という思いもあるが、SLSA自体の有効性は理解できる。ソフトウェアのサプライチェーンをめぐるセキュリティについては、アメリカの大統領令に盛り込まれたSBOM (Software Bill of Materials)の話題を聞くことも多くなってきているし、長期的にはより大きなトレンドになってくる可能性は小さくない。将来的には多くのコンテナレジストリや実行環境が対応し、特に気にせずデフォルトでProvenanceを生成するようになるのかもしれない。
 
-また今回の事例はdocker/build-push-actionの3.3.0における「破壊的な」変更がきっかけになったが、一部の環境で問題を引き起こしかねないことが事前に予見されていたのであれば、これはメジャーバージョンアップが妥当だったのではないか、という思いもある。Dockerとしては生成物が追加されるだけで後方互換性を壊すわけではないので、これはマイナーバージョンアップ相当であり、レジストリなどの対応状況については知らんよ、という言い分なのかもしれないし、それも理解できるところではあるのだが……。
+~また今回の事例はdocker/build-push-actionの3.3.0における「破壊的な」変更がきっかけになったが、一部の環境で問題を引き起こしかねないことが事前に予見されていたのであれば、これはメジャーバージョンアップが妥当だったのではないか、という思いもある。Dockerとしては生成物が追加されるだけで後方互換性を壊すわけではないので、これはマイナーバージョンアップ相当であり、レジストリなどの対応状況については知らんよ、という言い分なのかもしれないし、それも理解できるところではあるのだが……。~ （先述した追記の通り、その後改めてこの変更はメジャーバージョンアップとして扱われることになった）
 
 まぁGitHub Actionsを使う側としては `@v3` 指定で不意にアップデートされてしまった、というのはやはりよろしくないので、推奨されているcommit hashでのバージョン指定か、パッチバージョンまで固定するべきなのだろうな、とは思う。
