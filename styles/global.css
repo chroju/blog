@@ -19,10 +19,10 @@
     @apply underline hover:no-underline text-slate-900 font-normal;
   }
   ul, ol {
-    @apply my-5 px-5;
+    @apply my-10 px-10 text-slate-600;
   }
-  li {
-    @apply list-disc;
+  li, li > ul {
+    @apply my-3 list-disc text-slate-600;
   }
   dt {
     @apply font-bold;
