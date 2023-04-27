@@ -56,17 +56,17 @@ export default function Layout({
             <main>{children}</main>
             {
                 footer && (
-                    <footer className="mt-20 p-3 border-t-2">
+                    <footer className="mt-20 border-t-2">
                         {
                             blogArticleId != '' && (
                                 <div className="mb-10">
 
 
-                                    <div className="container mx-auto flex flex-wrap flex-row items-center mb-5">
-                                        <section className="space-x-2 text-slate-500"><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span><Tags tags={PostTags} /></section>
+                                    <div className="container mx-auto flex items-center mb-5">
+                                        <section className="space-x-2 text-slate-500 items-center flex"><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span><Tags tags={PostTags} /></section>
                                         <nav className="lg:flex flex-wrap justify-center hidden lg:ml-auto space-x-8 text-slate-500">
-                                            <li className="list-none"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
-                                            <li className="list-none"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
+                                            <li className="list-none flex items-center"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
+                                            <li className="list-none flex items-center"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
                                         </nav>
                                     </div>
                                     <div className='my-12 flex justify-center md:justify-start'>
