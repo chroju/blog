@@ -20,7 +20,7 @@ export default function Layout({
     const editURL = "https://github.com/chroju/blog/edit/main/posts/" + blogArticleId + ".md"
     const historyURL = "https://github.com/chroju/blog/commits/main/posts/" + blogArticleId + ".md"
     return (
-        <div className="md:container md:mx-auto md:w-4/6 px-5 my-10">
+        <div className="md:container md:mx-auto md:w-1/2 px-5 my-10">
             <Head>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
