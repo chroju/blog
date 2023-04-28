@@ -10,9 +10,9 @@ https://read.readwise.io
 
 Readwise Readerではエントリーを溜め込む場所として **「Feed」** と **「Library」** の2つが用意されている。前者がRSS Readerの役割を果たすものであり、後者がRead it later的な場所となっている。FeedにはRSS以外にも、専用のメルアドを通してメルマガを送り込んだり、TwitterのPublic List経由でツイートを送り込んだりもできる。
 
-[![Image from Gyazo](https://i.gyazo.com/709cfc841491ff446b357f17fa2fa34e.png)](https://gyazo.com/709cfc841491ff446b357f17fa2fa34e)
+[![Image from Gyazo](https://i.gyazo.com/2d31e079165cdfaa95bb32a9ed7ddfe0.png)](https://gyazo.com/2d31e079165cdfaa95bb32a9ed7ddfe0)
 
-特に面白いのがLibraryのほう。Feedから「あとで読みたい」ものを送れたり、Pocketのようにブラウザ拡張から今開いているURLを送れるのは基本。それ以外にファイルも登録して読むことができる。エンジニアをしているとホワイトペーパーなどのPDFを読む機会も少なくないが、なかなか未読管理まではできていなかったりする。これをRead it later的なワークフローで管理できるようになるのはなかなかに便利だ。アップロードできるファイル形式には他にePub、CSVなどがある。ePubについては目次が設定されていれば、ちゃんとそれも読み込んで使えるようになる。
+特に面白いのがLibraryのほう。Feedから「あとで読みたい」ものを送れたり、Pocketのようにブラウザ拡張から今開いているURLを送れるのは基本。それ以外にファイルも登録して読むことができる。エンジニアをしているとホワイトペーパーなどのPDFを読む機会も少なくないが、なかなか未読管理まではできていなかったりする。これをRead it later的なワークフローで管理できるようになるのが便利だ。アップロードできるファイル形式には他にePub、CSVなどがある。ePubについては目次が設定されていれば、ちゃんとそれも読み込んで使えるようになる。
 
 [![Image from Gyazo](https://i.gyazo.com/8c15846c4c28c2a5d116b2f872f986f5.png)](https://gyazo.com/8c15846c4c28c2a5d116b2f872f986f5)
 
@@ -24,7 +24,7 @@ YouTubeのURLを登録した場合も面白くて、字幕をすべて取り込�
 
 https://readwise.io
 
-Readwise ReaderはReadwiseというサービスの派生サービスのようなものであり、親にあたるのはReadwiseだ。ではReadwiseはどのようなサービスかというと、PocketやKindleなどと連携させ、それらのハイライトを取り込んで集約できるというもの。取り込んだハイライトはReadwise上でタグを使って整理したり、反復学習の理論に則った間隔でリマインドメールを送らせたりして、記憶の定着を図ったりすることができる。Readwiseはこのような「読んだあと」にフォーカスしたサービスだったのが、最初に「読む」フェーズまで取り込もうとしているのがReadwise Readerだと言える。
+Readwise ReaderはReadwiseというサービスの派生サービスのようなものであり、親にあたるのはReadwiseだ。ではReadwiseはどのようなサービスかというと、PocketやKindleなどと連携させ、それらのハイライトを取り込んで集約できるというもの。取り込んだハイライトはReadwise上でタグを使って整理したり、反復学習の理論に則った間隔でリマインドメールを送らせたりして、記憶の定着を図ったりすることができる。Readwiseはこのような「読んだあと」にフォーカスしたサービスだったのが、「読む」フェーズまで取り込もうとしているのがReadwise Readerだと言える。
 
 このような成り立ちもあり、Readwise Reader上でもあらゆる記事は当然ながらハイライトしたり、メモを書いたりすることができ、Readwise側へも自動的に取り込まれる。PDFでもePubでも、形式は問わない。YouTubeの字幕にもハイライトできる。
 
