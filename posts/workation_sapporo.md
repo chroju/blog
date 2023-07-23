@@ -63,7 +63,7 @@ https://www.moftjapan.com/collections/pc/products/moft-pc-stand?variant=42378051
 
 結果として、こういうスタイルで働いていた。
 
-<a href="https://gyazo.com/2fdf2aadac6b242ddb5279929a13e438"><img src="https://i.gyazo.com/2fdf2aadac6b242ddb5279929a13e438.jpg" alt="Image from Gyazo" width="2560"/></a>
+<a href="https://gyazo.com/45ee9188c2abbe22db3594adb7ec2937"><img src="https://i.gyazo.com/45ee9188c2abbe22db3594adb7ec2937.jpg" alt="Image from Gyazo" width="2560"/></a>
 
 ## よかった店
 
