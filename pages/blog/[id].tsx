@@ -1,9 +1,7 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
-import Layout, { blogTitle } from '../../components/layout'
+import Layout from '../../components/layout'
 import Date from '../../components/date'
-import Tags from '../../components/tags'
-import Fa from '../../components/fontawesome'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { useEffect } from 'react'
 import Prism from 'prismjs'
@@ -33,7 +31,7 @@ export default function Post({
     useEffect(() => {
         Prism.highlightAll()
     }, [])
-    const pageTitle = postData.title + " - " + blogTitle
+    const pageTitle = postData.title + " - " + "chroju.dev"
     const pageURL = "https://chroju.dev/blog/" + postData.title
 
     return (
