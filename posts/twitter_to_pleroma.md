@@ -4,7 +4,7 @@ date: "2023-10-23T10:01:57+0900"
 tags: ["activitypub", "pleroma", "twitter"]
 ---
 
-最近X（旧Twitter）からの避難先として [@chroju@pleroma.chroju.dev](https://pleroma.chroju.dev/users/chroju) を使い始めたので、そのあたりの背景などを書く。
+最近X（旧Twitter）からの避難先として [@chroju@pleroma.chroju.dev](https://pleroma.chroju.dev/users/chroju) を使い始めたので、そのあたりの背景などを書く。 [Pleroma](https://pleroma.social/) はMastodonのようなFediverseを実現するソフトウェアの1つで、ActivityPubに対応している。
 
 ちなみにX（旧Twitter）を緩やかに離れたいな、みたいな気持ちは別ブログのほうに以前したためた。わりとPleromaを使っていけそうなので、今後の投稿メインはゆるゆるとPleromaのほうに移していきたいと考えている。Mastodonやmisskeyをやっていたらフォローを是非。
 
