@@ -8,9 +8,9 @@ tags: ["terraform"]
 
 https://www.hashicorp.com/blog/terraform-cloud-updates-plans-with-an-enhanced-free-tier-and-more-flexibility
 
-2023年5月より、Terraform Cloudで新しい料金体系が導入された。多くの人が使うであろう、Free tierと真ん中のStandard tierはリソース数に応じた課金（Freeはリソース数500までの制限）、という説明になっているが、パッと見だと何のリソースのことかよくわからない。
+2023年5月より、Terraform Cloudで新しい料金体系が導入された。多くの人が使うであろう、Free tierと真ん中のStandard tierはリソース数に応じた課金（Freeはリソース数500までの制限）、という説明になっているが、パッと見では、何のリソースのことかよくわからない。
 
-結論としては、Terraform Cloudに保存しているState上に記録されたリソース数の合計ということになる。要するに `terraform state list` で出てくるリソースの数ということになるのだが、 `null_resource` や `data` は含まないということで、ただそのまま数えればいいというわけではない。
+結論から言うと、Terraform Cloudに保存しているState上に記録されたリソース数の合計ということになる。要するに `terraform state list` で出てくるリソースの数ということになるのだが、 `null_resource` や `data` は含まないということで、ただそのまま数えればいいというわけではない。
 
 https://dev.classmethod.jp/articles/tfc-pricing-resource/
 
@@ -39,4 +39,4 @@ $ tfcloud workspace list chroju --format json | jq '[.[].resource_count] | add'
 122
 ```
 
-tfcloud、ローカルからTerraform Cloudの情報を取るのには結構便利で、自分用のツールとしてちまちまと使い続けている。最近 [tfc-workflows-tooling](https://github.com/hashicorp/tfc-workflows-tooling) という、Terraform CloudのAPIを実行する公式のツールも出てきたので、tfcloudはお役御免になるかなと期待もしているが、こちらは `plan` や `discard` を実行する、本当にワークフロー周りのAPIしか実装しないようで、しばらくはtfcloudが必要そうだ。OpenTofuの顛末を見ていると、これも名前変えたほうがいいのかなとは、ちょっと思っている。
+tfcloud、ローカルからTerraform Cloudの情報を取るのには結構便利で、自分用のツールとしてちまちまと使い続けている。最近 [tfc-workflows-tooling](https://github.com/hashicorp/tfc-workflows-tooling) という、Terraform CloudのAPIを実行する公式のツールも出てきたので、tfcloudはお役御免になるかなと期待もしているが、こちらは `plan` や `discard` を実行する、本当にワークフロー周りのAPIしか実装しないようで、しばらくはtfcloudが必要そうだ。OpenTofuの顛末を見ていると、これも名前を変えたほうがいいのかな、とちょっと思っている。
