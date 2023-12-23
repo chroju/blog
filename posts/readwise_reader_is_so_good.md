@@ -4,7 +4,7 @@ date: "2023-12-22T22:27:10+0900"
 tags: ["readwise"]
 ---
 
-以前、 [RSSもPDFもYouTubeも、全部Readwise Readerで「読む」 - chroju.dev](https://chroju.dev/blog/readwise_reader) というエントリを書いた。それから半年以上、ずっと [Readwise Reader](https://read.readwise.io) を使っており、インプットが効率化されてきて改めて良いな〜とおもうので，どんな感じで使っているかをちょっと書いておく。先に書いておくが、ここで書く機能を使うには$7.99の契約が要る。
+以前、 [RSSもPDFもYouTubeも、全部Readwise Readerで「読む」 - chroju.dev](https://chroju.dev/blog/readwise_reader) というエントリを書いた。それから半年以上、ずっと [Readwise Reader](https://read.readwise.io) を使っており、インプットが効率化されてきて改めて良いな〜とおもうので，どんな感じで使っているかをちょっと書いておく。先に書いておくが、ここで書く機能を使うには$7.99/月の契約が要る。
 
 そもそもReadwise Readerって何？という点は先のエントリを……というところではあるのだが、ウェブページを中心として様々なものを「読む・読み返す」ためのサービスであり、以下のようなサイクルで読んでいくことになる。
 
@@ -53,7 +53,7 @@ PDFはファイルそのままの体裁で読むこともできるが、文字�
 
 具体的には以下のようなフィルタを使っている。Readwise Readerは各記事の「読んでいる位置」を記録しており、 `progress__lt:1` でフィルタとすると、まったく読み進めていない記事を抽出できる。これと `saved__before:"1 month ago"` のAND条件とすることで、1か月以上前に保存したがまったく読んでいない記事がフィルタされる。
 
-```
+```bash
 progress__lt:1 AND saved__before:"1 month ago" AND in:later
 ```
 
