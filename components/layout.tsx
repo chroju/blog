@@ -45,12 +45,12 @@ export default function Layout({
                     </Link>
                 </h1>
                 {isBlog && (
-                    <section>
+                    <div>
                         <small className="block">{blogSubTitle}</small>
                         <Link href="/feed.xml" className='hidden md:block'>
-                            <a><span className="hidden md:block"><Fa iconPrefix="fas" iconName="rss-square" title="rss" size="xl" /></span></a>
+                            <a><Fa className="hidden md:block" iconPrefix="fas" iconName="rss-square" title="rss" size="xl" /></a>
                         </Link>
-                    </section>
+                    </div>
                 )}
             </header>
             <main>{children}</main>
