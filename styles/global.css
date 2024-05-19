@@ -13,16 +13,16 @@
     @apply font-bold text-lg mb-3 mt-5 text-slate-900;
   }
   p {
-    @apply my-5 leading-relaxed text-slate-600 font-normal;
+    @apply my-8 leading-relaxed text-slate-700 font-normal;
   }
   a {
-    @apply underline hover:no-underline text-slate-900 font-normal;
+    @apply underline hover:no-underline text-slate-700 font-normal;
   }
   ul, ol {
-    @apply my-10 px-10 text-slate-600;
+    @apply my-10 px-10 text-slate-700;
   }
   li, li > ul {
-    @apply my-3 list-disc text-slate-600;
+    @apply my-3 list-disc text-slate-700;
   }
   dt {
     @apply font-bold;
