@@ -25,7 +25,7 @@
     @apply my-3 list-disc text-slate-700;
   }
   dt {
-    @apply font-bold;
+    @apply font-bold mt-3;
   }
   article p img {
     @apply inline-block mx-auto rounded md:max-w-xl max-w-xs my-8 border-2;
