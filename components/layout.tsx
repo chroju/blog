@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Fa from './fontawesome'
 import Tags from './tags'
+import { SiGithub, SiActivitypub, SiX, SiBluesky  } from '@icons-pack/react-simple-icons'
 
 const name = 'chroju'
 export const blogTitle = "chroju.dev/blog"
@@ -90,6 +91,13 @@ export default function Layout({
                                 <li className="list-none"><Link href="/blog"><a className="md:text-sm no-underline hover:underline">/blog</a></Link></li>
                                 <li className="list-none"><Link href="/bio"><a className="md:text-sm no-underline hover:underline">/bio</a></Link></li>
                                 <li className="list-none"><Link href="/policy"><a className="md:text-sm no-underline hover:underline">/policy</a></Link></li>
+                            </nav>
+                            <nav className="md:ml-8 md:pl-8 md:border-l-2 border-gray-200 flex md:space-x-4 space-x-4">
+
+            <li className='list-none'><Link href="https://github.com/chroju"><SiGithub className='sns-icon' /></Link></li>
+            <li className='list-none'><Link href="https://pleroma.chroju.dev/users/chroju"><SiActivitypub className='sns-icon' /></Link></li>
+            <li className='list-none'><Link href="https://bsky.app/profile/chroju.dev"><SiBluesky className='sns-icon' /></Link></li>
+            <li className='list-none'><Link href="https://x.com/chroju"><SiX className='sns-icon' /></Link></li>
                             </nav>
                         </div>
                     </footer>
