@@ -51,9 +51,9 @@ export default function Home() {
         </dl>
         <h2 className="">Education</h2>
         <dl>
-          <dt>Bachelor of Science in Information Technology</dt>
+          <dt>Bachelor of Engineering</dt>
           <dd>Teikyo University (Distance Learning)</dd>
-          <dd>Apr 2019 - current</dd>
+          <dd>Apr 2019 - Mar 2025</dd>
 
           <dt>Bachelor of Social Science</dt>
           <dd>Hitotsubashi University</dd>
