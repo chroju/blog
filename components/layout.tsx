@@ -41,15 +41,15 @@ export default function Layout({
             </Head>
             <header className="mb-10">
                 <h1>
-                    <Link href={headerLink}>
-                        <a className="font-extrabold text-lg">{siteTitle}</a>
+                    <Link href={headerLink} className="font-extrabold text-lg">
+                        {siteTitle}
                     </Link>
                 </h1>
                 {isBlog && (
                     <div>
                         <small className="block">{blogSubTitle}</small>
                         <Link href="/feed.xml" className='hidden md:block'>
-                            <a><Fa className="hidden md:block" iconPrefix="fas" iconName="rss-square" title="rss" size="xl" /></a>
+                            <Fa className="hidden md:block" iconPrefix="fas" iconName="rss-square" title="rss" size="xl" />
                         </Link>
                     </div>
                 )}
@@ -66,12 +66,12 @@ export default function Layout({
                                     <div className="container mx-auto flex items-center mb-5">
                                         <section className="space-x-2 text-slate-500 items-center flex"><Fa iconPrefix="fas" iconName="tags" /><span className="hidden">tag</span><Tags tags={PostTags} /></section>
                                         <nav className="lg:flex flex-wrap justify-center hidden lg:ml-auto space-x-8 text-slate-500">
-                                            <li className="list-none flex items-center"><Fa iconName="github" /><Link href={editURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</a></Link></li>
-                                            <li className="list-none flex items-center"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL}><a className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</a></Link></li>
+                                            <li className="list-none flex items-center"><Fa iconName="github" /><Link href={editURL} className="text-slate-500 pl-2 text-sm no-underline hover:underline">Edit this article</Link></li>
+                                            <li className="list-none flex items-center"><Fa iconPrefix="fa-solid" iconName="clock-rotate-left" /><span className="hidden">show history</span><Link href={historyURL} className="text-slate-500 pl-2 text-sm no-underline hover:underline">Show history</Link></li>
                                         </nav>
                                     </div>
                                     <div className='my-12 flex justify-center md:justify-start'>
-                                        <Link href="/blog"><a className="no-underline py-2 px-8 bg-blue-500 hover:bg-blue-700 transition text-white rounded">Read more articles →</a></Link>
+                                        <Link href="/blog" className="no-underline py-2 px-8 bg-blue-500 hover:bg-blue-700 transition text-white rounded">Read more articles →</Link>
                                     </div>
 
 
@@ -82,15 +82,15 @@ export default function Layout({
                             <Image
                                 src="/images/profile.webp"
                                 className='w-10 rounded-full'
-                                width={"40px"}
-                                height={"40px"}
+                                width={40}
+                                height={40}
                                 alt={name}
                             />
-                            <div className="my-4"><Link href="/"><a className="md:text-sm font-semibold no-underline hover:underline md:ml-4">chroju.dev</a></Link></div>
+                            <div className="my-4"><Link href="/" className="md:text-sm font-semibold no-underline hover:underline md:ml-4">chroju.dev</Link></div>
                             <nav className="md:ml-8 md:pl-8 md:border-l-2 border-gray-200 flex md:space-x-8 space-x-4">
-                                <li className="list-none"><Link href="/blog"><a className="md:text-sm no-underline hover:underline">/blog</a></Link></li>
-                                <li className="list-none"><Link href="/bio"><a className="md:text-sm no-underline hover:underline">/bio</a></Link></li>
-                                <li className="list-none"><Link href="/policy"><a className="md:text-sm no-underline hover:underline">/policy</a></Link></li>
+                                <li className="list-none"><Link href="/blog" className="md:text-sm no-underline hover:underline">/blog</Link></li>
+                                <li className="list-none"><Link href="/bio" className="md:text-sm no-underline hover:underline">/bio</Link></li>
+                                <li className="list-none"><Link href="/policy" className="md:text-sm no-underline hover:underline">/policy</Link></li>
                             </nav>
                             <nav className="md:ml-8 md:pl-8 md:border-l-2 border-gray-200 flex md:space-x-4 space-x-4">
 
