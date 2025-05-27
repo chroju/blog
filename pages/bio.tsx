@@ -21,8 +21,8 @@ export default function Home() {
       <Image
         src="/images/profile.webp"
         className='my-10 w-20 rounded-full'
-        width={"80px"}
-        height={"80px"}
+        width={80}
+        height={80}
         alt="chroju"
       />
       <article className="bio">

@@ -18,9 +18,9 @@ export default function Home() {
       </Head>
       <article>
         <ul>
-          <li className='list-none my-2'><Link href="/blog"><a className="text-2xl font-extrabold">/blog</a></Link></li>
-          <li className='list-none my-2'><Link href="/bio"><a className="text-2xl font-extrabold">/bio</a></Link></li>
-          <li className='list-none my-2'><Link href="/policy"><a className="text-2xl font-extrabold">/policy</a></Link></li>
+          <li className='list-none my-2'><Link href="/blog" className="text-2xl font-extrabold">/blog</Link></li>
+          <li className='list-none my-2'><Link href="/bio" className="text-2xl font-extrabold">/bio</Link></li>
+          <li className='list-none my-2'><Link href="/policy" className="text-2xl font-extrabold">/policy</Link></li>
         </ul>
       </article>
     </Layout>
