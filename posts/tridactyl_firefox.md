@@ -1,7 +1,7 @@
 ---
 title: "Firefoxとtridactylを使い始めた"
 date: "2025-06-12T12:41:43+0900"
-tags: ["Firefox", "Vivaldi", "Browser"]
+tags: ["firefox", "vivaldi", "browser"]
 ---
 
 最近、メインのブラウザをVivaldiからFirefoxへと移した。メインブラウザを替えるのは [VimperatorからVivaldi + Vimiumへ乗り換える - chroju.dev](https://chroju.dev/blog/vimperator_to_vivaldi) のとき以来で、実に8年ぶりにVivaldiから離れたことになる。Vivaldiはカスタマイズ性も高くて好きだったのだが、今年の春頃に「[ページ内検索を複数回繰り返すとフリーズする](https://forum.vivaldi.net/topic/105671/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E7%89%88-%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%85%E6%A4%9C%E7%B4%A2%E3%82%92%E8%A1%8C%E3%81%86%E3%81%A8%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%81%99%E3%82%8B%E4%BA%8B%E3%81%8C%E3%81%82%E3%82%8B)」という不具合が数か月直らず、さすがに使うのが辛くなってしまった。
