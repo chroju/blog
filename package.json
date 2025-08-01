@@ -51,6 +51,6 @@
     "textlint-rule-preset-ja-spacing": "2.4.3",
     "textlint-rule-preset-jtf-style": "3.0.2",
     "ts-migrate": "0.1.35",
-    "typescript": "5.8.3"
+    "typescript": "5.9.2"
   }
 }
