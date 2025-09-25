@@ -49,7 +49,7 @@
     "textlint-rule-ja-no-successive-word": "2.0.1",
     "textlint-rule-no-doubled-conjunction": "3.0.0",
     "textlint-rule-preset-ja-spacing": "2.4.3",
-    "textlint-rule-preset-jtf-style": "3.0.2",
+    "textlint-rule-preset-jtf-style": "3.0.3",
     "ts-migrate": "0.1.35",
     "typescript": "5.9.2"
   }
