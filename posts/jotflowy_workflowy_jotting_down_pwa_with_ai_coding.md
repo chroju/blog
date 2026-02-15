@@ -1,7 +1,7 @@
 ---
-title: "Jotflowy"
+title: "Workflowyにすばやくメモを書き入れるためのアプリをPWAで作った"
 date: "2026-02-14T18:16:09+0900"
-tags: []
+tags: ["AI", "workflowy", "Cloudflare"]
 ---
 
 https://github.com/chroju/jotflowy
