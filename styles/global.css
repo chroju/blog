@@ -88,4 +88,15 @@
   pre[class*='language-'] {
     white-space: pre-wrap !important;
   }
+  .shiki {
+    @apply my-6 p-4 rounded-lg overflow-x-auto text-sm;
+  }
+  .shiki code {
+    counter-reset: line;
+  }
+  .shiki code .line::before {
+    counter-increment: line;
+    content: counter(line);
+    @apply inline-block w-6 mr-4 text-right text-slate-500 select-none;
+  }
 }
