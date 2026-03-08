@@ -3,9 +3,11 @@ import path from 'path'
 import { execSync } from 'child_process'
 import matter from 'gray-matter'
 import { remark } from 'remark'
-import html from 'remark-html'
 import gfm from 'remark-gfm'
 import rlc from 'remark-link-card'
+import remarkRehype from 'remark-rehype'
+import rehypeShiki from '@shikijs/rehype'
+import rehypeStringify from 'rehype-stringify'
 import { format, parseISO } from 'date-fns'
 
 const SITE_URL = 'https://chroju.dev'
@@ -65,9 +67,11 @@ async function getPost(id: string): Promise<Post> {
   const raw = fs.readFileSync(path.join(POSTS_DIR, `${id}.md`), 'utf8')
   const { data, content } = matter(raw)
   const processed = await remark()
-    .use(html, { sanitize: false })
     .use(gfm)
     .use(rlc)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeShiki, { theme: 'dark-plus', ignoreMissing: true })
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content)
   return {
     id,
@@ -192,7 +196,6 @@ function baseLayout({ title, description = "chroju's blog", ogImage, ogUrl, rss 
   <meta name="theme-color" content="#ffffff" />
   ${rss ? `<link rel="alternate" type="application/rss+xml" href="${SITE_URL}/feed.xml" title="RSS2.0" />` : ''}
   <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/prism.css" />
   ${gaScript()}
 </head>
 <body>
@@ -419,8 +422,6 @@ async function main(): Promise<void> {
   fs.mkdirSync(OUT_DIR, { recursive: true })
 
   // copy static assets
-  const prismCss = path.join(process.cwd(), 'node_modules/prismjs/themes/prism-tomorrow.css')
-  fs.copyFileSync(prismCss, path.join(OUT_DIR, 'prism.css'))
 
   // copy public directory contents (images, favicons, etc.)
   copyDir(path.join(process.cwd(), 'public'), OUT_DIR)
