@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "npm run build:rss && next build",
     "build:rss": "node ./scripts/generate-rss.mjs",
-    "start": "next start"
+    "start": "next start",
+    "build:static": "tsx scripts/build.ts"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",
@@ -51,6 +52,7 @@
     "textlint-rule-preset-ja-spacing": "2.4.3",
     "textlint-rule-preset-jtf-style": "3.0.3",
     "ts-migrate": "0.1.35",
+    "tsx": "^4.21.0",
     "typescript": "5.9.3"
   }
 }
