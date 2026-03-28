@@ -1,0 +1,6 @@
+name = "chroju-blog"
+compatibility_date = "2024-01-01"
+
+[pages]
+build_command = "npm run build"
+output_directory = "dist"
