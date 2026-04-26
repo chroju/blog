@@ -28,7 +28,7 @@
     @apply font-bold mt-3;
   }
   article p img {
-    @apply inline-block mx-auto rounded md:max-w-xl max-w-xs my-8 border-2;
+    @apply inline-block mx-auto rounded md:max-w-xl max-w-xs my-8 border-2 cursor-zoom-in;
   }
   table {
     @apply border-slate-200 border-2;
