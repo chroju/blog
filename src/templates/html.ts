@@ -60,9 +60,6 @@ const icons = {
   rss: raw(
     '<svg class="icon" viewBox="0 0 24 24" aria-label="RSS" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>'
   ),
-  tag: raw(
-    '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>'
-  ),
   history: raw(
     '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6a7 7 0 1 1 7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.96 8.96 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>'
   ),
@@ -88,7 +85,6 @@ export interface PageMeta {
   isBlog?: boolean
   /** 記事ページの場合の記事ID（フッターのEdit/Historyリンクに使用） */
   articleId?: string
-  tags?: string[]
   footer?: boolean
   /** 追加で読み込むスクリプト（記事ページのlightbox等） */
   scripts?: string[]
@@ -104,20 +100,6 @@ function gaSnippet(): string {
   )
 }
 
-function tagLinks(tags: string[] | undefined): Raw {
-  if (!tags || tags.length === 0) return raw('')
-  return raw(
-    tags
-      .map(
-        (tag) =>
-          html`<a class="post-tag" href="/blog/tags/${raw(
-            encodeURI(tag.toLowerCase())
-          )}">#${tag}</a>`
-      )
-      .join(' ')
-  )
-}
-
 export function layout(meta: PageMeta, body: string): string {
   const siteTitle = meta.siteTitle ?? site.blogTitle
   const segment = siteTitle.split('/')[1]
@@ -128,16 +110,15 @@ export function layout(meta: PageMeta, body: string): string {
     meta.articleId !== undefined && meta.articleId !== ''
       ? html`
           <div class="article-footer">
-            <section class="article-tags">${icons.tag}${tagLinks(meta.tags)}</section>
+            <a class="read-more" href="/blog">Read more articles →</a>
             <nav class="article-meta-links">
               <a href="${site.repoURL}/edit/main/posts/${meta.articleId}.md"
-                >${icons.github} Edit this article</a
+                >${icons.github} Edit</a
               >
               <a href="${site.repoURL}/commits/main/posts/${meta.articleId}.md"
-                >${icons.history} Show history</a
+                >${icons.history} History</a
               >
             </nav>
-            <div class="read-more"><a href="/blog">Read more articles →</a></div>
           </div>
         `
       : ''
@@ -174,16 +155,14 @@ ${raw(meta.extraHead ?? '')}
 <div class="container">
 <header class="site-header">
 <div class="site-header-row">
-<p class="site-title"><a href="${raw(headerLink)}">${siteTitle}</a></p>
+<p class="site-title"><a href="${raw(headerLink)}">${siteTitle}</a>${
+    isBlog ? raw(html`<span class="site-subtitle">${site.subTitle}</span>`) : ''
+  }</p>
+<div class="site-header-actions">
+${isBlog ? raw(html`<a class="rss-link" href="/feed.xml">${icons.rss}</a>`) : ''}
 <button class="theme-toggle" type="button" aria-label="ライト/ダークテーマを切り替える">${icons.sun}${icons.moon}</button>
 </div>
-${
-  isBlog
-    ? raw(
-        html`<div class="site-subtitle"><small>${site.subTitle}</small><a class="rss-link" href="/feed.xml">${icons.rss}</a></div>`
-      )
-    : ''
-}
+</div>
 </header>
 <main id="main">${raw(body)}</main>
 ${

@@ -95,12 +95,34 @@ function tocBlock(headings: Heading[]): string {
   `
 }
 
+// 記事メタを実際のfrontmatter風に表示する（このブログの記事は本当にfrontmatter付きMarkdown）
+function frontmatterBlock(post: Post): string {
+  const tags = post.tags
+    .map(
+      (tag) =>
+        html`<a href="/blog/tags/${raw(encodeURI(tag.toLowerCase()))}">${tag}</a>`
+    )
+    .join('<span class="fm-punct">, </span>')
+  return html`
+    <div class="post-frontmatter">
+      <span class="fm-delim">---</span>
+      <span class="fm-line"><span class="fm-key">date:</span> <time datetime="${post.date}">${formatDate(post.date)}</time></span>
+      ${post.tags.length > 0
+        ? raw(
+            html`<span class="fm-line"><span class="fm-key">tags:</span> <span class="fm-punct">[</span>${raw(tags)}<span class="fm-punct">]</span></span>`
+          )
+        : ''}
+      <span class="fm-delim">---</span>
+    </div>
+  `
+}
+
 export function postPage(post: Post, contentHtml: string, headings: Heading[] = []): string {
   const pageTitle = `${post.title} - ${site.name}`
   const body = html`
     <article>
       <h1 class="post-title">${post.title}</h1>
-      <div class="post-date"><time datetime="${post.date}">${formatDate(post.date)}</time></div>
+      ${raw(frontmatterBlock(post))}
       ${raw(tocBlock(headings))}
       <div class="post-body">${raw(contentHtml)}</div>
     </article>
@@ -111,7 +133,6 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
       url: `${site.url}/blog/${encodeURI(post.id)}`,
       ogImage: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
       articleId: post.id,
-      tags: post.tags,
       scripts: ['/js/lightbox.js', '/js/code.js'],
       extraHead: blogPostingJsonLd(post),
     },
