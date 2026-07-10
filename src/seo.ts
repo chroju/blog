@@ -50,6 +50,33 @@ export function generateLlmsTxt(posts: Post[]): string {
   return lines.join('\n')
 }
 
+/** 記事本文から description メタタグ用のプレーンテキスト抜粋を作る */
+export function postDescription(post: Post, maxLength = 120): string {
+  const text = post.content
+    .replace(/```[\s\S]*?```/g, ' ')
+    // 引用（ツイート埋め込み等のHTML引用・Markdown引用）は本人の文章ではないので除く
+    .replace(/<blockquote[\s\S]*?<\/blockquote>/gi, ' ')
+    .replace(/^>.*$/gm, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    // 行全体が裸のURL（リンクカード記法）の行は除く
+    .replace(/^https?:\/\/\S+$/gm, ' ')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/[*_`~]/g, '')
+    // 埋め込みHTML由来のエンティティを実体に戻す（出力時に再エスケープされる）
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&#x27;/gi, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim()
+  if (text === '') return site.description
+  return text.length > maxLength ? `${text.slice(0, maxLength)}…` : text
+}
+
 /** 記事ページ用の JSON-LD (BlogPosting) */
 export function blogPostingJsonLd(post: Post): string {
   const data = {

@@ -82,6 +82,8 @@ export interface PageMeta {
   siteTitle?: string
   /** 正規URL（絶対URL） */
   url: string
+  /** meta description / og:description（省略時はサイト共通の説明文） */
+  description?: string
   /** og:image の絶対URL */
   ogImage: string
   /** ブログ系ページか（RSS alternateとサブタイトルの表示） */
@@ -139,9 +141,9 @@ ${raw(
 )}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${meta.title}</title>
-<meta name="description" content="${site.description}">
+<meta name="description" content="${meta.description ?? site.description}">
 <meta property="og:title" content="${meta.title}">
-<meta property="og:description" content="${siteTitle}">
+<meta property="og:description" content="${meta.description ?? site.description}">
 <meta property="og:url" content="${meta.url}">
 <meta property="og:image" content="${meta.ogImage}">
 <meta name="twitter:card" content="summary_large_image">
