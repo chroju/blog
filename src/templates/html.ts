@@ -92,6 +92,8 @@ export interface PageMeta {
   footer?: boolean
   /** 追加で読み込むスクリプト（記事ページのlightbox等） */
   scripts?: string[]
+  /** <head> 末尾に挿入する追加HTML（JSON-LD等） */
+  extraHead?: string
 }
 
 function gaSnippet(): string {
@@ -165,6 +167,7 @@ ${raw(
 ${isBlog ? raw(`<link rel="alternate" type="application/rss+xml" href="${site.url}/feed.xml" title="RSS2.0">`) : ''}
 <link rel="stylesheet" href="/css/site.css">
 ${raw(gaSnippet())}
+${raw(meta.extraHead ?? '')}
 </head>
 <body>
 <div class="container">

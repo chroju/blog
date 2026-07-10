@@ -3,7 +3,8 @@ import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { site } from './config.ts'
 import { loadAllPosts, loadPublishedPosts, getAllTags, getPostsWithTag, type Post } from './posts.ts'
-import { renderMarkdown } from './markdown.ts'
+import { renderMarkdown, type RenderedMarkdown } from './markdown.ts'
+import { generateSitemap, generateLlmsTxt } from './seo.ts'
 import { saveLinkCardCache } from './linkcard.ts'
 import { generateRSS } from './rss.ts'
 import { generateOgImage } from './ogimage.ts'
@@ -59,21 +60,21 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
 }
 
 // devサーバでの再ビルド時、本文が変わっていない記事のHTMLを使い回す
-const renderCache = new Map<string, { source: string; html: string }>()
+const renderCache = new Map<string, { source: string; rendered: RenderedMarkdown }>()
 
-export async function renderAllPosts(posts: Post[]): Promise<Map<string, string>> {
-  const contentHtmlById = new Map<string, string>()
+export async function renderAllPosts(posts: Post[]): Promise<Map<string, RenderedMarkdown>> {
+  const renderedById = new Map<string, RenderedMarkdown>()
   await mapLimit(posts, 8, async (post) => {
     const cached = renderCache.get(post.id)
     if (cached && cached.source === post.content) {
-      contentHtmlById.set(post.id, cached.html)
+      renderedById.set(post.id, cached.rendered)
       return
     }
-    const html = await renderMarkdown(post.content)
-    renderCache.set(post.id, { source: post.content, html })
-    contentHtmlById.set(post.id, html)
+    const rendered = await renderMarkdown(post.content)
+    renderCache.set(post.id, { source: post.content, rendered })
+    renderedById.set(post.id, rendered)
   })
-  return contentHtmlById
+  return renderedById
 }
 
 export async function buildAll(options: BuildOptions = {}): Promise<void> {
@@ -90,15 +91,16 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
   const tagCounts = getAllTags()
 
   // 記事本文のHTML（draft含む: draftもページ自体は出力しパーマリンクを維持する）
-  const contentHtmlById = await renderAllPosts(allPosts)
+  const renderedById = await renderAllPosts(allPosts)
 
   // 記事ページ
   for (const post of allPosts) {
-    write(`blog/${post.id}.html`, postPage(post, contentHtmlById.get(post.id)!))
+    const rendered = renderedById.get(post.id)!
+    write(`blog/${post.id}.html`, postPage(post, rendered.html, rendered.headings))
   }
 
   // 固定ページ・一覧
-  write('index.html', homePage())
+  write('index.html', homePage(publishedPosts.slice(0, 5)))
   write('bio.html', bioPage())
   write('policy.html', policyPage())
   write('blog.html', blogIndexPage(publishedPosts))
@@ -110,8 +112,10 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
   }
   write('404.html', notFoundPage())
 
-  // RSS（draft除外・全文）
-  write('feed.xml', generateRSS(publishedPosts, contentHtmlById))
+  // RSS（draft除外・全文）・sitemap・llms.txt
+  write('feed.xml', generateRSS(publishedPosts, renderedById))
+  write('sitemap.xml', generateSitemap(publishedPosts, Object.keys(tagCounts)))
+  write('llms.txt', generateLlmsTxt(publishedPosts))
 
   // OGP画像
   if (!options.skipOgImages) {

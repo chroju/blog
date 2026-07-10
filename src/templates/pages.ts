@@ -1,12 +1,14 @@
 import { site } from '../config.ts'
 import type { Post } from '../posts.ts'
-import { html, raw, layout, formatDate, escapeHtml } from './html.ts'
+import type { Heading } from '../markdown.ts'
+import { blogPostingJsonLd } from '../seo.ts'
+import { html, raw, layout, formatDate } from './html.ts'
 
 function ogImageURL(name: string): string {
   return `${site.url}/og/${encodeURIComponent(name)}.png`
 }
 
-function postList(posts: Post[]): string {
+function postList(posts: Post[], showYear = true): string {
   return html`
     <section>
       <ul class="post-list">
@@ -15,10 +17,13 @@ function postList(posts: Post[]): string {
             .map(
               (post) => html`
                 <li>
-                  ${post.firstOfYear ? raw(html`<h3 class="post-year">${post.firstOfYear}</h3>`) : ''}
-                  <a class="post-list-title" href="/blog/${raw(encodeURI(post.id))}">${post.title}</a>
-                  <br>
-                  <small><time datetime="${post.date}">${formatDate(post.date)}</time></small>
+                  ${showYear && post.firstOfYear
+                    ? raw(html`<h3 class="post-year">${post.firstOfYear}</h3>`)
+                    : ''}
+                  <div class="post-row">
+                    <a class="post-list-title" href="/blog/${raw(encodeURI(post.id))}">${post.title}</a>
+                    <time datetime="${post.date}">${post.date.slice(0, 10)}</time>
+                  </div>
                 </li>
               `
             )
@@ -29,7 +34,7 @@ function postList(posts: Post[]): string {
   `
 }
 
-export function homePage(): string {
+export function homePage(recentPosts: Post[]): string {
   const body = html`
     <article>
       <ul class="home-nav">
@@ -37,6 +42,11 @@ export function homePage(): string {
         <li><a href="/bio">/bio</a></li>
         <li><a href="/policy">/policy</a></li>
       </ul>
+      <section class="home-recent">
+        <h2>Recent posts</h2>
+        ${raw(postList(recentPosts, false))}
+        <p class="home-more"><a href="/blog">すべての記事 →</a></p>
+      </section>
     </article>
   `
   return layout(
@@ -64,12 +74,34 @@ export function blogIndexPage(posts: Post[]): string {
   )
 }
 
-export function postPage(post: Post, contentHtml: string): string {
+function tocBlock(headings: Heading[]): string {
+  if (headings.length < 3) return ''
+  return html`
+    <details class="toc">
+      <summary>目次</summary>
+      <ol>
+        ${raw(
+          headings
+            .map(
+              (h) =>
+                html`<li class="${h.depth === 3 ? 'toc-h3' : 'toc-h2'}"><a href="#${raw(
+                  encodeURI(h.id)
+                )}">${h.text}</a></li>`
+            )
+            .join('')
+        )}
+      </ol>
+    </details>
+  `
+}
+
+export function postPage(post: Post, contentHtml: string, headings: Heading[] = []): string {
   const pageTitle = `${post.title} - ${site.name}`
   const body = html`
     <article>
       <h1 class="post-title">${post.title}</h1>
       <div class="post-date"><time datetime="${post.date}">${formatDate(post.date)}</time></div>
+      ${raw(tocBlock(headings))}
       <div class="post-body">${raw(contentHtml)}</div>
     </article>
   `
@@ -80,7 +112,8 @@ export function postPage(post: Post, contentHtml: string): string {
       ogImage: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
       articleId: post.id,
       tags: post.tags,
-      scripts: ['/js/lightbox.js'],
+      scripts: ['/js/lightbox.js', '/js/code.js'],
+      extraHead: blogPostingJsonLd(post),
     },
     body
   )
