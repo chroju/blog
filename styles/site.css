@@ -940,7 +940,7 @@ article p img {
 
 .article-meta-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .article-meta-links a {

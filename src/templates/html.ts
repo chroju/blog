@@ -60,6 +60,9 @@ const icons = {
   rss: raw(
     '<svg class="icon" viewBox="0 0 24 24" aria-label="RSS" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>'
   ),
+  file: raw(
+    '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>'
+  ),
   history: raw(
     '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6a7 7 0 1 1 7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.96 8.96 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>'
   ),
@@ -112,6 +115,9 @@ export function layout(meta: PageMeta, body: string): string {
           <div class="article-footer">
             <a class="read-more" href="/blog">Read more articles →</a>
             <nav class="article-meta-links">
+              <a href="/blog/${raw(encodeURI(meta.articleId))}.md"
+                >${icons.file} Raw</a
+              >
               <a href="${site.repoURL}/edit/main/posts/${meta.articleId}.md"
                 >${icons.github} Edit</a
               >

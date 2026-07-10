@@ -41,8 +41,9 @@ export function generateLlmsTxt(posts: Post[]): string {
     '',
     '## Posts',
     '',
+    // LLMが直接読めるようMarkdownソース（.md）のURLを載せる
     ...posts.map(
-      (p) => `- [${p.title}](${site.url}/blog/${encodeURI(p.id)}): ${p.date.slice(0, 10)}`
+      (p) => `- [${p.title}](${site.url}/blog/${encodeURI(p.id)}.md): ${p.date.slice(0, 10)}`
     ),
     '',
   ]

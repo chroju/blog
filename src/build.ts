@@ -93,11 +93,25 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
   // 記事本文のHTML（draft含む: draftもページ自体は出力しパーマリンクを維持する）
   const renderedById = await renderAllPosts(allPosts)
 
-  // 記事ページ
+  // 記事ページ + Markdownソース（/blog/{slug}.md）
+  const mdSlugPosts: string[] = []
   for (const post of allPosts) {
     const rendered = renderedById.get(post.id)!
     write(`blog/${post.id}.html`, postPage(post, rendered.html, rendered.headings))
+    fs.copyFileSync(
+      path.join(root, 'posts', `${post.id}.md`),
+      path.join(distDir, 'blog', `${post.id}.md`)
+    )
+    if (post.id.endsWith('.md')) mdSlugPosts.push(post.id)
   }
+
+  // .md はブラウザでインライン表示できるよう text/plain で配信する。
+  // slug自体が .md で終わる記事のHTMLページはグロブに巻き込まれるため個別に戻す
+  const headerRules = ['/blog/*.md', '  Content-Type: text/plain; charset=utf-8']
+  for (const id of mdSlugPosts) {
+    headerRules.push('', `/blog/${encodeURI(id)}`, '  !Content-Type', '  Content-Type: text/html; charset=utf-8')
+  }
+  write('_headers', headerRules.join('\n') + '\n')
 
   // 固定ページ・一覧
   write('index.html', homePage(publishedPosts.slice(0, 5)))
