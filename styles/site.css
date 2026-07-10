@@ -10,9 +10,9 @@
 :root {
   --bg: #faf9f7;
   --bg-subtle: #f1efeb;
-  --text: #2a2e33;
-  --text-muted: #71767d;
-  --accent: #3d6fa5;
+  --text: #26292e;
+  --text-muted: #5d636b;
+  --accent: #38669a;
   --border: #e5e2dc;
   --shadow: rgba(30, 30, 30, 0.08);
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
@@ -23,7 +23,7 @@
   --bg: #15171a;
   --bg-subtle: #1f2328;
   --text: #d6dade;
-  --text-muted: #8b929c;
+  --text-muted: #99a1ac;
   --accent: #82aede;
   --border: #33383f;
   --shadow: rgba(0, 0, 0, 0.4);
@@ -34,7 +34,7 @@
     --bg: #15171a;
     --bg-subtle: #1f2328;
     --text: #d6dade;
-    --text-muted: #8b929c;
+    --text-muted: #99a1ac;
     --accent: #82aede;
     --border: #33383f;
     --shadow: rgba(0, 0, 0, 0.4);
@@ -48,6 +48,8 @@
 }
 
 html {
+  /* ルートを18pxにし、rem指定の全要素（一覧・見出し・日付等）を連動して拡大する */
+  font-size: 112.5%;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -57,16 +59,50 @@ body {
   color: var(--text);
   font-family: "Helvetica Neue", Arial, "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   line-height: 1.9;
   letter-spacing: 0.02em;
   overflow-wrap: anywhere;
 }
 
+/* キーボード操作時のフォーカスを明示する */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* 視差・アニメーションを避けたい設定を尊重する */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* スキップリンク: フォーカス時のみ表示 */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 .container {
   /* 左右マージンは画面幅に応じて 1.1rem〜2rem で可変 */
   --pad: clamp(1.1rem, 4vw, 2rem);
-  max-width: calc(48rem + var(--pad) * 2);
+  /* 44rem × 18px ≒ 792px（1行 約44文字） */
+  max-width: calc(44rem + var(--pad) * 2);
   margin-inline: auto;
   padding: clamp(1.75rem, 5vw, 2.5rem) var(--pad) 2rem;
 }
@@ -353,7 +389,7 @@ pre.shiki code {
   top: 0.6rem;
   right: 2.6rem;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   pointer-events: none;
 }
@@ -504,7 +540,7 @@ article p img {
 
 .post-list-title {
   color: var(--text);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
   min-width: 0;
 }
@@ -516,7 +552,7 @@ article p img {
 .post-list time {
   color: var(--text-muted);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -649,7 +685,7 @@ article p img {
   align-items: center;
   gap: 0.4rem;
   margin-top: 0.35rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   white-space: nowrap;
   overflow: hidden;
@@ -784,7 +820,7 @@ article p img {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .article-meta-links a:hover {
@@ -865,8 +901,9 @@ a:hover .sns-icon {
 /* ---------- narrow screens ---------- */
 
 @media (max-width: 639px) {
-  body {
-    font-size: 1rem;
+  html {
+    /* モバイルはルート17px */
+    font-size: 106.25%;
   }
 
   h2 {

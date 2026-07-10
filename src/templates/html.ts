@@ -170,6 +170,7 @@ ${raw(gaSnippet())}
 ${raw(meta.extraHead ?? '')}
 </head>
 <body>
+<a class="skip-link" href="#main">本文へスキップ</a>
 <div class="container">
 <header class="site-header">
 <div class="site-header-row">
@@ -184,7 +185,7 @@ ${
     : ''
 }
 </header>
-<main>${raw(body)}</main>
+<main id="main">${raw(body)}</main>
 ${
   showFooter
     ? raw(html`
