@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { site } from './config.ts'
-import { loadAllPosts, loadPublishedPosts, getAllTags, getPostsWithTag, type Post } from './posts.ts'
+import { loadPublishedPosts, getAllTags, getPostsWithTag, type Post } from './posts.ts'
 import { renderMarkdown, type RenderedMarkdown } from './markdown.ts'
 import { generateSitemap, generateLlmsTxt } from './seo.ts'
 import { saveLinkCardCache } from './linkcard.ts'
@@ -86,16 +86,15 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
   fs.mkdirSync(distDir, { recursive: true })
   copyStatic()
 
-  const allPosts = loadAllPosts()
+  // draft: true の記事はビルド対象外（ページ・.mdソース・OGP画像とも生成しない）
   const publishedPosts = loadPublishedPosts()
   const tagCounts = getAllTags()
 
-  // 記事本文のHTML（draft含む: draftもページ自体は出力しパーマリンクを維持する）
-  const renderedById = await renderAllPosts(allPosts)
+  const renderedById = await renderAllPosts(publishedPosts)
 
   // 記事ページ + Markdownソース（/blog/{slug}.md）
   const mdSlugPosts: string[] = []
-  for (const post of allPosts) {
+  for (const post of publishedPosts) {
     const rendered = renderedById.get(post.id)!
     write(`blog/${post.id}.html`, postPage(post, rendered.html, rendered.headings))
     fs.copyFileSync(
@@ -133,7 +132,7 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
 
   // OGP画像
   if (!options.skipOgImages) {
-    await mapLimit(allPosts, 4, (post) =>
+    await mapLimit(publishedPosts, 4, (post) =>
       generateOgImage(post.title, path.join(distDir, 'og', `${post.id}.png`))
     )
     const fixedPages: [string, string][] = [
@@ -150,7 +149,7 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
 
   saveLinkCardCache()
 
-  const pages = allPosts.length + Object.keys(tagCounts).length + 6
+  const pages = publishedPosts.length + Object.keys(tagCounts).length + 6
   console.log(`built ${pages} pages in ${((Date.now() - started) / 1000).toFixed(1)}s`)
 }
 

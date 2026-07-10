@@ -18,12 +18,20 @@ function exists(relPath: string): boolean {
 
 const allPosts = loadAllPosts()
 const publishedPosts = loadPublishedPosts()
+const draftPosts = allPosts.filter((p) => p.draft)
 const tags = Object.keys(getAllTags())
 
-// 1. 全記事のHTMLページとMarkdownソースが存在するか
-for (const post of allPosts) {
+// 1. 公開記事のHTMLページとMarkdownソースが存在するか
+for (const post of publishedPosts) {
   check(exists(`blog/${post.id}.html`), `missing page: blog/${post.id}.html`)
   check(exists(`blog/${post.id}.md`), `missing markdown: blog/${post.id}.md`)
+}
+
+// 1b. draft記事はビルドされていないこと
+for (const post of draftPosts) {
+  check(!exists(`blog/${post.id}.html`), `draft must not be built: blog/${post.id}.html`)
+  check(!exists(`blog/${post.id}.md`), `draft must not be built: blog/${post.id}.md`)
+  check(!exists(`og/${post.id}.png`), `draft must not be built: og/${post.id}.png`)
 }
 
 // 2. 固定ページ・主要ファイル
@@ -71,8 +79,10 @@ check(
 )
 
 // 6. HTMLの欠損チェック（生成が途切れていないか）
-for (const post of allPosts) {
-  const html = fs.readFileSync(path.join(distDir, 'blog', `${post.id}.html`), 'utf8')
+for (const post of publishedPosts) {
+  const htmlPath = path.join(distDir, 'blog', `${post.id}.html`)
+  if (!fs.existsSync(htmlPath)) continue // 存在チェックは1.で報告済み
+  const html = fs.readFileSync(htmlPath, 'utf8')
   check(html.includes('</html>'), `truncated html: blog/${post.id}.html`)
 }
 
@@ -84,5 +94,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `check OK: ${allPosts.length} posts, ${tags.length} tags, ${itemCount} feed items`
+  `check OK: ${publishedPosts.length} published posts (${draftPosts.length} drafts excluded), ${tags.length} tags, ${itemCount} feed items`
 )
