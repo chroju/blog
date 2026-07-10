@@ -223,11 +223,27 @@ img {
   font-weight: 400;
 }
 
+/* テーマ切替ボタンと同じ円形ボーダーで揃える */
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.rss-link:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
 .rss-link .icon {
   width: 1rem;
   height: 1rem;
   fill: var(--text-muted);
-  vertical-align: middle;
 }
 
 .rss-link:hover .icon {
@@ -1087,7 +1103,8 @@ a:hover .sns-icon {
 /* タッチ操作（または狭幅）ではタップ領域を44px前後まで広げる */
 
 @media (pointer: coarse), (max-width: 639px) {
-  .theme-toggle {
+  .theme-toggle,
+  .rss-link {
     width: 2.75rem;
     height: 2.75rem;
   }
