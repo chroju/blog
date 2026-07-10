@@ -35,13 +35,18 @@ function postList(posts: Post[], showYear = true): string {
 }
 
 export function homePage(recentPosts: Post[]): string {
+  const branch = raw('<span class="tree-branch" aria-hidden="true">├── </span>')
+  const branchLast = raw('<span class="tree-branch" aria-hidden="true">└── </span>')
   const body = html`
     <article>
-      <ul class="home-nav">
-        <li><a href="/blog">/blog</a></li>
-        <li><a href="/bio">/bio</a></li>
-        <li><a href="/policy">/policy</a></li>
-      </ul>
+      <nav class="home-tree" aria-label="サイト内ページ">
+        <p class="tree-root">chroju.dev</p>
+        <ul class="tree">
+          <li>${branch}<a href="/blog">blog/</a></li>
+          <li>${branch}<a href="/bio">bio</a></li>
+          <li>${branchLast}<a href="/policy">policy</a></li>
+        </ul>
+      </nav>
       <section class="home-recent">
         <h2>Recent posts</h2>
         ${raw(postList(recentPosts, false))}
@@ -183,46 +188,61 @@ export function tagPage(encodedTag: string, posts: Post[]): string {
 
 export function bioPage(): string {
   const body = html`
-    <h2>chroju</h2>
-    <img class="bio-profile" src="/images/profile.webp" width="80" height="80" alt="chroju">
     <article class="bio">
-      <dl>
-        <dt>Job</dt>
-        <dd>Site Reliability Engineer</dd>
-        <dt>Location</dt>
+      <div class="bio-header">
+        <img class="bio-profile" src="/images/profile.webp" width="80" height="80" alt="chroju">
+        <div>
+          <h1 class="bio-name">chroju</h1>
+          <p class="bio-role">Site Reliability Engineer</p>
+        </div>
+      </div>
+      <dl class="bio-facts">
+        <dt>location</dt>
         <dd>Kanagawa, Japan</dd>
-        <dt>Favorite</dt>
+        <dt>favorite</dt>
         <dd>Terraform / Kubernetes / Go / AWS</dd>
       </dl>
-      <h2>Experience</h2>
-      <dl>
-        <dt>GLOBIS Corporation</dt>
-        <dd>Site Reliability Engineer</dd>
-        <dd>Apr 2020 - current</dd>
-        <dt>Freelancer</dt>
-        <dd>Site Reliability Engineer</dd>
-        <dd>Jun 2019 - Mar 2020</dd>
-        <dt>Quants Research Inc.</dt>
-        <dd>Web Operation Engineer</dd>
-        <dd>Jun 2015 - May 2019</dd>
-        <dt>TIS Inc.</dt>
-        <dd>System Engineer</dd>
-        <dd>Apr 2011 - May 2015</dd>
-      </dl>
-      <h2>Education</h2>
-      <dl>
-        <dt>Bachelor of Engineering</dt>
-        <dd>Teikyo University (Distance Learning)</dd>
-        <dd>Apr 2019 - Mar 2025</dd>
-        <dt>Bachelor of Social Science</dt>
-        <dd>Hitotsubashi University</dd>
-        <dd>Apr 2007 - Mar 2011</dd>
-      </dl>
-      <h2>Blog</h2>
-      <ul>
-        <li><a href="/blog">the world as code</a> (about tech)</li>
-        <li><a href="https://chroju.hatenablog.jp">the world was not enough</a> (about culture)</li>
-      </ul>
+      <section>
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-period">Apr 2020 — current</span>
+            <span class="timeline-body"><strong>GLOBIS Corporation</strong><br>Site Reliability Engineer</span>
+          </li>
+          <li>
+            <span class="timeline-period">Jun 2019 — Mar 2020</span>
+            <span class="timeline-body"><strong>Freelancer</strong><br>Site Reliability Engineer</span>
+          </li>
+          <li>
+            <span class="timeline-period">Jun 2015 — May 2019</span>
+            <span class="timeline-body"><strong>Quants Research Inc.</strong><br>Web Operation Engineer</span>
+          </li>
+          <li>
+            <span class="timeline-period">Apr 2011 — May 2015</span>
+            <span class="timeline-body"><strong>TIS Inc.</strong><br>System Engineer</span>
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-period">Apr 2019 — Mar 2025</span>
+            <span class="timeline-body"><strong>Teikyo University (Distance Learning)</strong><br>Bachelor of Engineering</span>
+          </li>
+          <li>
+            <span class="timeline-period">Apr 2007 — Mar 2011</span>
+            <span class="timeline-body"><strong>Hitotsubashi University</strong><br>Bachelor of Social Science</span>
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2>Blog</h2>
+        <ul>
+          <li><a href="/blog">the world as code</a> (about tech)</li>
+          <li><a href="https://chroju.hatenablog.jp">the world was not enough</a> (about culture)</li>
+        </ul>
+      </section>
     </article>
   `
   return layout(
@@ -273,7 +293,8 @@ export function policyPage(): string {
 
 export function notFoundPage(): string {
   const body = html`
-    <h2>404 Not Found</h2>
+    <p class="error-code" aria-hidden="true">404</p>
+    <h1 class="error-title">Not Found</h1>
     <p>お探しのページは見つかりませんでした。</p>
     <p><a href="/blog">記事一覧へ →</a></p>
   `

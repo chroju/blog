@@ -663,7 +663,8 @@ article p img {
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 0.15rem 0.9rem;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
   color: var(--text);
 }
 
@@ -774,22 +775,39 @@ article p img {
 
 /* ---------- home ---------- */
 
-.home-nav {
+/* サイト構造を tree コマンド出力風に */
+.home-tree {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.tree-root {
+  font-weight: 700;
+  margin: 0;
+}
+
+.tree {
   list-style: none;
   padding: 0 !important;
+  margin: 0.25rem 0 0;
 }
 
-.home-nav li {
-  margin: 1rem 0;
+.tree li {
+  margin: 0.4rem 0;
 }
 
-.home-nav a {
-  font-size: 1.5rem;
-  font-weight: 800;
+.tree-branch {
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.tree a {
   color: var(--text);
+  font-weight: 600;
 }
 
-.home-nav a:hover {
+.tree a:hover {
   color: var(--accent);
 }
 
@@ -805,9 +823,96 @@ article p img {
 
 /* ---------- bio ---------- */
 
+.bio-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1rem 0 2.5rem;
+}
+
 .bio-profile {
   border-radius: 50%;
+}
+
+.bio-name {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.bio-role {
+  margin: 0.15rem 0 0;
+  color: var(--text-muted);
+}
+
+/* 事実リスト: キーをfrontmatter風の等幅で */
+.bio-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.bio-facts dt {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.bio-facts dt::after {
+  content: ":";
+}
+
+.bio-facts dd {
+  margin: 0;
+}
+
+/* 経歴タイムライン: 等幅の期間 + 内容の2カラム */
+.timeline {
+  list-style: none;
+  padding: 0 !important;
   margin: 1.5rem 0;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  gap: 0.25rem 1.5rem;
+  padding-block: 0.7rem;
+  margin: 0;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-top: 0.2rem;
+}
+
+.timeline-body {
+  line-height: 1.6;
+}
+
+@media (max-width: 639px) {
+  .timeline li {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 404 ---------- */
+
+.error-code {
+  font-family: var(--font-mono);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1;
+  margin: 2rem 0 0.5rem;
+}
+
+.error-title {
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem;
 }
 
 /* ---------- policy ---------- */
@@ -1014,7 +1119,7 @@ a:hover .sns-icon {
     height: 1.5rem;
   }
 
-  .home-nav a {
+  .tree a {
     display: inline-block;
     padding-block: 0.3rem;
   }
