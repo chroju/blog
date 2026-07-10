@@ -109,7 +109,7 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
   // slug自体が .md で終わる記事のHTMLページはグロブに巻き込まれるため個別に戻す
   const headerRules = ['/blog/*.md', '  Content-Type: text/plain; charset=utf-8']
   for (const id of mdSlugPosts) {
-    headerRules.push('', `/blog/${encodeURI(id)}`, '  !Content-Type', '  Content-Type: text/html; charset=utf-8')
+    headerRules.push('', `/blog/${encodeURI(id)}`, '  ! Content-Type', '  Content-Type: text/html; charset=utf-8')
   }
   write('_headers', headerRules.join('\n') + '\n')
 
