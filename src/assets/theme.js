@@ -11,6 +11,15 @@
     return forced || (mq.matches ? 'dark' : 'light');
   }
 
+  // ブラウザUIの色（meta theme-color）を実際の背景色に合わせる。
+  // media属性付きのmetaはOS設定にしか追従しないため、手動切替時はJSで上書きする
+  function syncThemeColor() {
+    var bg = getComputedStyle(document.body).backgroundColor;
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+      m.setAttribute('content', bg);
+    });
+  }
+
   btn.addEventListener('click', function () {
     var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
     var system = mq.matches ? 'dark' : 'light';
@@ -25,5 +34,9 @@
     } catch (e) {
       document.documentElement.setAttribute('data-theme', next);
     }
+    syncThemeColor();
   });
+
+  mq.addEventListener('change', syncThemeColor);
+  syncThemeColor();
 })();
