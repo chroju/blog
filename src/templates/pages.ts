@@ -1,7 +1,7 @@
 import { site } from '../config.ts'
 import type { Post } from '../posts.ts'
 import type { Heading } from '../markdown.ts'
-import { blogPostingJsonLd } from '../seo.ts'
+import { blogPostingJsonLd, postDescription } from '../seo.ts'
 import { html, raw, layout, formatDate } from './html.ts'
 
 function ogImageURL(name: string): string {
@@ -40,7 +40,7 @@ export function homePage(recentPosts: Post[]): string {
   const body = html`
     <article>
       <nav class="home-tree" aria-label="サイト内ページ">
-        <p class="tree-root">chroju.dev</p>
+        <h1 class="tree-root">chroju.dev</h1>
         <ul class="tree">
           <li>${branch}<a href="/blog">blog/</a></li>
           <li>${branch}<a href="/bio">bio</a></li>
@@ -50,7 +50,7 @@ export function homePage(recentPosts: Post[]): string {
       <section class="home-recent">
         <h2>Recent posts</h2>
         ${raw(postList(recentPosts, false))}
-        <p class="home-more"><a href="/blog">すべての記事 →</a></p>
+        <p class="home-more"><a href="/blog">All articles →</a></p>
       </section>
     </article>
   `
@@ -68,7 +68,7 @@ export function homePage(recentPosts: Post[]): string {
 }
 
 export function blogIndexPage(posts: Post[]): string {
-  const body = html`<h2>Articles</h2>${raw(postList(posts))}`
+  const body = html`<h1 class="page-title">Articles</h1>${raw(postList(posts))}`
   return layout(
     {
       title: site.blogTitle,
@@ -79,11 +79,12 @@ export function blogIndexPage(posts: Post[]): string {
   )
 }
 
-function tocBlock(headings: Heading[]): string {
+// 目次はfrontmatterの toc: キーとして畳み込む。展開するとYAMLのリスト記法になる
+function fmTocBlock(headings: Heading[]): string {
   if (headings.length < 3) return ''
   return html`
-    <details class="toc">
-      <summary>目次</summary>
+    <details class="fm-toc">
+      <summary><span class="fm-key">toc:</span> <span class="fm-toc-hint">[...]</span></summary>
       <ol>
         ${raw(
           headings
@@ -101,7 +102,7 @@ function tocBlock(headings: Heading[]): string {
 }
 
 // 記事メタを実際のfrontmatter風に表示する（このブログの記事は本当にfrontmatter付きMarkdown）
-function frontmatterBlock(post: Post): string {
+function frontmatterBlock(post: Post, headings: Heading[] = []): string {
   const tags = post.tags
     .map(
       (tag) =>
@@ -110,14 +111,15 @@ function frontmatterBlock(post: Post): string {
     .join('<span class="fm-punct">, </span>')
   return html`
     <div class="post-frontmatter">
-      <span class="fm-delim">---</span>
+      <span class="fm-delim" aria-hidden="true">---</span>
       <span class="fm-line"><span class="fm-key">date:</span> <time datetime="${post.date}">${formatDate(post.date)}</time></span>
       ${post.tags.length > 0
         ? raw(
             html`<span class="fm-line"><span class="fm-key">tags:</span> <span class="fm-punct">[</span>${raw(tags)}<span class="fm-punct">]</span></span>`
           )
         : ''}
-      <span class="fm-delim">---</span>
+      ${raw(fmTocBlock(headings))}
+      <span class="fm-delim" aria-hidden="true">---</span>
     </div>
   `
 }
@@ -127,8 +129,7 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
   const body = html`
     <article>
       <h1 class="post-title">${post.title}</h1>
-      ${raw(frontmatterBlock(post))}
-      ${raw(tocBlock(headings))}
+      ${raw(frontmatterBlock(post, headings))}
       <div class="post-body">${raw(contentHtml)}</div>
     </article>
   `
@@ -136,6 +137,7 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
     {
       title: pageTitle,
       url: `${site.url}/blog/${encodeURI(post.id)}`,
+      description: postDescription(post),
       ogImage: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
       articleId: post.id,
       scripts: ['/js/lightbox.js', '/js/code.js'],
@@ -148,14 +150,14 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
 export function tagsIndexPage(tagCounts: Record<string, number>): string {
   const tags = Object.keys(tagCounts).sort()
   const body = html`
-    <h2>Tags</h2>
+    <h1 class="page-title">Tags</h1>
     <section>
       <ul class="tag-list">
         ${raw(
           tags
             .map(
               (tag) =>
-                html`<li><a href="/blog/tags/${raw(tag)}">${decodeURI(tag)} (${tagCounts[tag]})</a></li>`
+                html`<li><a href="/blog/tags/${raw(tag)}"><span class="tag-hash">#</span>${decodeURI(tag)} <span class="tag-count">(${tagCounts[tag]})</span></a></li>`
             )
             .join('')
         )}
@@ -175,7 +177,7 @@ export function tagsIndexPage(tagCounts: Record<string, number>): string {
 export function tagPage(encodedTag: string, posts: Post[]): string {
   const tag = decodeURI(encodedTag)
   const pageTitle = `tag: ${tag} - ${site.blogTitle}`
-  const body = html`<h2 class="tag-page-title">#${tag}</h2>${raw(postList(posts))}`
+  const body = html`<h1 class="page-title tag-page-title">#${tag}</h1>${raw(postList(posts))}`
   return layout(
     {
       title: pageTitle,
@@ -259,6 +261,7 @@ export function bioPage(): string {
 
 export function policyPage(): string {
   const body = html`
+    <h1 class="visually-hidden">chroju.dev/policy</h1>
     <section>
       <h2>Notice</h2>
       <p>このサイトで公開している文書は、著者 chroju 個人の調査、研究、考察に基づくものであり、著者が所属する各団体、企業の意見を代表するものではありません。</p>

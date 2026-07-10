@@ -98,13 +98,25 @@ body {
   left: 0;
 }
 
+/* スクリーンリーダーにのみ読ませる要素（policyページのh1等） */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .container {
   /* 左右マージンは画面幅に応じて 1.1rem〜2rem で可変 */
   --pad: clamp(1.1rem, 4vw, 2rem);
   /* 44rem × 18px ≒ 792px（1行 約44文字） */
   max-width: calc(44rem + var(--pad) * 2);
   margin-inline: auto;
-  padding: clamp(1.25rem, 3.5vw, 1.75rem) var(--pad) 2rem;
+  padding: clamp(1.1rem, 3vw, 1.4rem) var(--pad) 2rem;
 }
 
 a {
@@ -130,8 +142,8 @@ img {
 
 .site-header {
   border-bottom: 1px solid var(--border);
-  padding-bottom: 0.85rem;
-  margin-bottom: 2.5rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 2rem;
 }
 
 .site-header-actions {
@@ -148,12 +160,13 @@ img {
   gap: 1rem;
 }
 
-/* サイトタイトルは実質パス（chroju.dev/blog）なので等幅で */
+/* サイトタイトルは実質パス（chroju.dev/blog）なので等幅・通常ウェイトで
+ * さりげなく置く（コンテンツの見出しより目立たせない） */
 .site-title {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 400;
   letter-spacing: -0.02em;
 }
 
@@ -163,8 +176,8 @@ img {
   background: none;
   border: 1px solid var(--border);
   border-radius: 999px;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2rem;
+  height: 2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -228,8 +241,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2rem;
+  height: 2rem;
   border: 1px solid var(--border);
   border-radius: 999px;
   flex-shrink: 0;
@@ -263,12 +276,23 @@ h4 {
   font-feature-settings: "palt";
 }
 
-h2 {
+h2,
+.page-title {
   font-size: 1.6rem;
   font-weight: 800;
   margin: 4rem 0 1rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
+}
+
+/* 記事本文外のセクション見出し（一覧・bio・policy等）は
+ * サイト構造の一部なのでヘッダーと同じ等幅で組む */
+main h2:not(.post-body *),
+.page-title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
 }
 
 h3 {
@@ -524,9 +548,9 @@ section[data-footnotes] h2 {
 .post-frontmatter {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  line-height: 1.8;
+  line-height: 1.6;
   color: var(--text-muted);
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
 }
 
 .post-frontmatter .fm-delim,
@@ -535,7 +559,8 @@ section[data-footnotes] h2 {
 }
 
 .post-frontmatter .fm-delim {
-  color: var(--border);
+  /* 「見えない空行」にならないよう、区切り記号として読める程度の薄さにする */
+  color: color-mix(in srgb, var(--text-muted) 50%, transparent);
   user-select: none;
 }
 
@@ -622,51 +647,74 @@ article p img {
 
 
 /* ---------- table of contents ---------- */
+/* 目次はfrontmatterの toc: キー。閉じているときは toc: [...] の1行、
+ * 開くとYAMLのリスト記法（ハイフン + ネストインデント）で並ぶ */
 
-.toc {
-  margin: 2.5rem 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-subtle);
-  font-size: 0.95rem;
-}
-
-.toc summary {
+.fm-toc summary {
   cursor: pointer;
-  padding: 0.6rem 1.1rem;
-  font-weight: 600;
+  /* 開閉は三角マーカーではなく [...] で示す */
+  list-style: none;
 }
 
-.toc ol {
+.fm-toc summary::-webkit-details-marker {
+  display: none;
+}
+
+/* クリックできる値はtagsのリンクと同じくアクセント色で示す */
+.fm-toc .fm-toc-hint {
+  color: var(--accent);
+}
+
+.fm-toc summary:hover .fm-toc-hint {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.fm-toc[open] .fm-toc-hint {
+  display: none;
+}
+
+.fm-toc ol {
   list-style: none;
   margin: 0;
-  padding: 0.25rem 1.25rem 1rem !important;
+  padding: 0 !important;
 }
 
-.toc li {
-  margin: 0.4rem 0;
+.fm-toc li {
+  margin: 0;
 }
 
-.toc .toc-h3 {
-  padding-inline-start: 1.25rem;
+.fm-toc li::before {
+  content: "- ";
+  color: var(--text-muted);
 }
 
-.toc a {
+.fm-toc .toc-h2 {
+  padding-inline-start: 1.2em;
+}
+
+.fm-toc .toc-h3 {
+  padding-inline-start: 2.4em;
+}
+
+.fm-toc a {
   color: var(--text);
 }
 
-.toc a:hover {
+.fm-toc a:hover {
   color: var(--accent);
 }
 
 /* ---------- tags ---------- */
 
+/* タグは frontmatter の tags: [...] やタグページの #tag と同じ
+ * コード語彙（等幅トークン）で並べる */
 .tag-list {
   list-style: none;
   padding: 0 !important;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 0.75rem;
+  gap: 0.6rem 1.5rem;
 }
 
 .tag-list li {
@@ -675,17 +723,21 @@ article p img {
 
 .tag-list a {
   display: inline-block;
-  background: var(--bg-subtle);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.15rem 0.9rem;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text);
 }
 
+.tag-list .tag-hash {
+  color: var(--accent);
+}
+
+.tag-list .tag-count {
+  color: var(--text-muted);
+  font-size: 0.85em;
+}
+
 .tag-list a:hover {
-  border-color: var(--accent);
   color: var(--accent);
   text-decoration: none;
 }
@@ -798,7 +850,9 @@ article p img {
   margin-top: 1rem;
 }
 
+/* h1だがtree出力の1行目としてナビ本文と同じ大きさで組む */
 .tree-root {
+  font-size: inherit;
   font-weight: 700;
   margin: 0;
 }
@@ -827,7 +881,7 @@ article p img {
   color: var(--accent);
 }
 
-.home-recent h2 {
+main .home-recent h2 {
   margin-top: 3.5rem;
   font-size: 1.2rem;
 }
@@ -1010,10 +1064,14 @@ article p img {
 }
 
 @media (min-width: 640px) {
-  .footer-nav,
-  .footer-sns {
+  .footer-nav {
     border-inline-start: 1px solid var(--border);
     padding-inline-start: 1.5rem;
+  }
+
+  /* SNSアイコンはヘッダーのアクション群と同じく右端に寄せる */
+  .footer-sns {
+    margin-inline-start: auto;
   }
 }
 
@@ -1049,10 +1107,6 @@ a:hover .sns-icon {
 
   .post-title {
     font-size: 1.4rem;
-  }
-
-  .post-frontmatter {
-    margin-bottom: 2rem;
   }
 
   /* コードブロックは画面幅いっぱいに広げる（JSラップ有無の両対応） */
@@ -1120,7 +1174,7 @@ a:hover .sns-icon {
   }
 
   .tag-list a {
-    padding: 0.45rem 1.1rem;
+    padding-block: 0.45rem;
   }
 
   .post-frontmatter a {
