@@ -1,0 +1,927 @@
+{
+  "http://fuzkue.com/entries/595": {
+    "title": "フヅクエの日々 | メールマガジン「読書日記／フヅクエラジオ」 | 本の読める店 fuzkue",
+    "image": "https://fuzkue-s3.s3.amazonaws.com/uploads/entry/APC_0336-58f47b9ac-9d94-4362-8086-d10a91352d1d.jpg",
+    "fetchedAt": "2026-07-10T03:59:30.073Z"
+  },
+  "http://starship.rs/": {
+    "title": "Starship: Cross-Shell Prompt",
+    "description": "Starship is the minimal, blazing fast, and extremely customizable prompt for any shell! Shows the information you need, while staying sleek and minimal. Quick installation available for Bash, Fish, ZSH, Ion, Tcsh, Elvish, Nu, Xonsh, Cmd, and Powershell.",
+    "image": "https://starship.rs/icon.png",
+    "fetchedAt": "2026-07-10T03:59:30.156Z"
+  },
+  "http://swagger.nature.global/": {
+    "title": "Swagger UI",
+    "fetchedAt": "2026-07-10T03:59:31.775Z"
+  },
+  "http://www.chroju.net/": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:32.118Z"
+  },
+  "http://www.vagrantup.com/": {
+    "title": "Vagrant | HashiCorp Developer",
+    "description": "Explore Vagrant product documentation, tutorials, and examples.",
+    "image": "https://developer.hashicorp.com/og-image/vagrant.jpg",
+    "fetchedAt": "2026-07-10T03:59:32.176Z"
+  },
+  "https://ascii.jp/elem/000/004/157/4157089/": {
+    "title": "プラットフォームエンジニアリングがわからない",
+    "description": "先週、エーピーコミュケーションズによるプラットフォームエンジニアリングについての勉強会に参加したのだが、全然理解できなかった。理解した前提のレポート記事は無理なので、せめて解説のどこで詰まって、なにがわからなかったのかくらいは理解しておきたい。勉強会の模様を追いながら、自身の思考を追いかけていくことにする。",
+    "image": "https://ascii.jp/img/2023/09/19/3605295/xl/32bbca189939a795.jpg?20200122",
+    "fetchedAt": "2026-07-10T03:59:24.099Z"
+  },
+  "https://aws.amazon.com/jp/about-aws/whats-new/2020/05/introducing-amazon-eks-best-practices-guide-for-security/": {
+    "title": "セキュリティ目的の Amazon EKS 推奨事項ガイドの紹介",
+    "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+    "fetchedAt": "2026-07-10T03:59:27.826Z"
+  },
+  "https://aws.amazon.com/jp/about-aws/whats-new/2022/04/aws-lambda-function-urls-built-in-https-endpoints/": {
+    "title": "About AWS",
+    "fetchedAt": "2026-07-10T03:59:24.882Z"
+  },
+  "https://aws.amazon.com/jp/aws-jp-introduction/aws-jp-webinar-service-cut/": {
+    "title": "AWS サービス別資料",
+    "description": "アマゾン ウェブ サービス (AWS) は安全なクラウドサービスプラットフォームで、ビジネスのスケールと成長をサポートする処理能力、データベースストレージ、およびその他多種多様な機能を提供します。それらを活用するために役立つ日本語資料、動画コンテンツを多数ご提供しております。",
+    "fetchedAt": "2026-07-10T03:59:26.206Z"
+  },
+  "https://aws.amazon.com/jp/blogs/news/new-simplify-access-management-for-data-stored-in-amazon-s3/": {
+    "title": "新機能 — Amazon S3 に保存されているデータのアクセス管理を簡素化 | Amazon Web Services",
+    "description": "2021 年 11 月 30 日（米国時間）、Amazon Simple Storage Service (A […]",
+    "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2021/12/03/Site-Merch_Amazon-S3-Object-Ownership_Blog.png",
+    "fetchedAt": "2026-07-10T03:59:25.429Z"
+  },
+  "https://aws.amazon.com/jp/blogs/news/new-use-aws-cloudformation-stacksets-for-multiple-accounts-in-an-aws-organization/": {
+    "title": "新機能: AWS CloudFormation StackSets が AWS Organization のマルチアカウントで利用可能に | Amazon Web Services",
+    "description": "﻿ Infrastructure-as-code とは、JSON 形式や YAML 形式などの機械可読テキスト […]",
+    "image": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+    "fetchedAt": "2026-07-10T03:59:29.562Z"
+  },
+  "https://aws.amazon.com/jp/blogs/news/preview-aws-backup-adds-support-for-amazon-s3/": {
+    "title": "プレビュー – AWS Backupに Amazon S3 のサポートを追加 | Amazon Web Services",
+    "description": "2021 年 11 月 30 日（米国時間）より、AWS Backup for Amazon Simple S […]",
+    "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2021/12/03/Site-Merch_AWS-Backup-for-S3_Blog.png",
+    "fetchedAt": "2026-07-10T03:59:25.429Z"
+  },
+  "https://aws.amazon.com/jp/controltower/": {
+    "title": "クラウドセキュリティガバナンス - AWS Control Tower - AWS",
+    "description": "AWS Control Tower は、セキュリティ、オペレーション、およびコンプライアンスのルールを使用して AWS ワークロードを管理する、優れた設計のマルチアカウント環境を設定するための単一の場所を提供します。",
+    "fetchedAt": "2026-07-10T03:59:29.562Z"
+  },
+  "https://aws.amazon.com/jp/organizations/": {
+    "title": "ポリシーベースの管理 - AWS Organizations - AWS",
+    "description": "AWS Organizations は、AWS リソースの増加とスケールに合わせて、一元化されたクラウドアカウント管理を可能にします。",
+    "fetchedAt": "2026-07-10T03:59:29.562Z"
+  },
+  "https://aws.amazon.com/solutions/aws-landing-zone/": {
+    "title": "Customize your AWS Control Tower landing zone - AWS Control Tower",
+    "description": "This chapter links to a guide with procedures so you can customize your landing zone in AWS Control Tower.",
+    "fetchedAt": "2026-07-10T03:59:29.562Z"
+  },
+  "https://bitwarden.com/": {
+    "title": "Best Password Manager for Business, Enterprise & Personal | Bitwarden",
+    "description": "Bitwarden is the most trusted password manager for passwords and passkeys at home or at work, on any browser or device. Start with a free trial.",
+    "image": "https://bitwarden.com/assets/7fzQJmr0qt5ggGZp3t66Y/7bf59a6a2379d49fc580ff49e8510efb/bitwarden.com_og_image.png",
+    "fetchedAt": "2026-07-10T03:59:30.669Z"
+  },
+  "https://blog.jxck.io/entries/2018-09-15/next-web-conf-2019.html": {
+    "title": "次世代 Web カンファレンス 2019 開催告知 | blog.jxck.io",
+    "fetchedAt": "2026-07-10T03:59:31.673Z"
+  },
+  "https://blog.serverworks.co.jp/aws-services-to-be-omitted": {
+    "title": "大事だけど AWS 構成図では省略してしまうことが多いサービスについて - サーバーワークスエンジニアブログ",
+    "description": "コーヒーが好きな木谷映見です。 今回は小ネタです。AWS 構成図を書く際、省略してしまうことが多いサービスについて思いを馳せました。 よくある？構成図 リージョン アベイラビリティゾーン ルートテーブル AWS IAM インスタンスプロファイル Amazon EBS Elastic IP Elastic network interface（ENI） セキュリティグループ セッションマネージャーする時のエンドポイント 最終構成図 終わりに よくある？構成図 よくあると思われる構成図を描いてみました。 AWS になじみがある方から見ると、 「ふむ、パブリックサブネットとプライベートサブネットに 1…",
+    "image": "https://cdn.image.st-hatena.com/image/scale/2d3d30aaafabc4259b30adbc017407e8982d213a/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fdefault_entry_og_image%2F155681015%2F1782273580258620",
+    "fetchedAt": "2026-07-10T03:59:24.186Z"
+  },
+  "https://brutus.jp/sapporo_coffee1/?heading=1": {
+    "title": "全国から注目される自家焙煎の聖地。札幌の深煎りコーヒー文化を編集者・森末忍が紐解く | ブルータス| BRUTUS.jp",
+    "description": "自家焙煎、純喫茶、ニューウェーブまでコーヒー文化には事欠かないが、札幌といえば“深煎り”、といわれているのはご存じか。全国的にその名を知られる〈斎藤珈琲〉を軸に、札幌の深煎りコーヒー文化を紹介する。",
+    "image": "https://media.brutus.jp/wp-content/uploads/2022/01/70d-3.jpg",
+    "fetchedAt": "2026-07-10T03:59:24.129Z"
+  },
+  "https://chroju-profile.s3-ap-northeast-1.amazonaws.com/index.html": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:31.271Z"
+  },
+  "https://chroju.dev/blog/how_to_be_a_stoic": {
+    "title": "『迷いを断つためのストア哲学』と認知行動療法 - chroju.dev",
+    "description": "chroju.dev/blog",
+    "image": "https://og-image.chroju.dev/%E3%80%8E%E8%BF%B7%E3%81%84%E3%82%92%E6%96%AD%E3%81%A4%E3%81%9F%E3%82%81%E3%81%AE%E3%82%B9%E3%83%88%E3%82%A2%E5%93%B2%E5%AD%A6%E3%80%8F%E3%81%A8%E8%AA%8D%E7%9F%A5%E8%A1%8C%E5%8B%95%E7%99%82%E6%B3%95.png?theme=dark&md=0&fontSize=96px",
+    "fetchedAt": "2026-07-10T03:59:23.890Z"
+  },
+  "https://chroju.dev/blog/readwise_reader_is_so_good": {
+    "title": "Readwise Readerで効率的にインプットする - chroju.dev",
+    "description": "chroju.dev/blog",
+    "image": "https://og-image.chroju.dev/Readwise%20Reader%E3%81%A7%E5%8A%B9%E7%8E%87%E7%9A%84%E3%81%AB%E3%82%A4%E3%83%B3%E3%83%97%E3%83%83%E3%83%88%E3%81%99%E3%82%8B.png?theme=dark&md=0&fontSize=96px",
+    "fetchedAt": "2026-07-10T03:59:23.904Z"
+  },
+  "https://chroju.dev/blog/twitter_to_pleroma": {
+    "title": "Twitter (X) からの避難先としてPleromaを建てた - chroju.dev",
+    "description": "chroju.dev/blog",
+    "image": "https://og-image.chroju.dev/Twitter%20(X)%20%E3%81%8B%E3%82%89%E3%81%AE%E9%81%BF%E9%9B%A3%E5%85%88%E3%81%A8%E3%81%97%E3%81%A6Pleroma%E3%82%92%E5%BB%BA%E3%81%A6%E3%81%9F.png?theme=dark&md=0&fontSize=96px",
+    "fetchedAt": "2026-07-10T03:59:23.280Z"
+  },
+  "https://chroju.hatenablog.jp/entry/20230709/without_twitter": {
+    "title": "Twitterはウェブ上での「居場所」だった - the world was not enough",
+    "description": "13年選手です。 「ほかいま」という単語はもうほぼ死語だと思うが、初期のTwitterの空気感をよく表している気がして。今でも使われているかもしれないが。一応意味を説明しておくと「ほかほか」と「ただいま」のかばん語であり、風呂から上がったことをツイートするときに使われていた。風呂に入ってからもう一度TLに現れることは「ただいま」なのよね、というのと、ほんの30分か1時間そこらの時間、TLから離れて戻ってきたことをわざわざ報告するんだな、というのと。 自分もそうだったが、家にいるときはPCをほぼ付けっぱなしにして常にネットと繋がっているような人々がいた。スマホが全盛期を迎える前の時代。スマホで簡…",
+    "image": "https://cdn.image.st-hatena.com/image/scale/eef4e40c3bfca3808c715e02c247a301d3941242/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fi.gyazo.com%2Fec733d43d78eaeb6b4638e5e38cd4501.jpg",
+    "fetchedAt": "2026-07-10T03:59:23.960Z"
+  },
+  "https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc": {
+    "fetchedAt": "2026-07-10T03:59:29.394Z"
+  },
+  "https://cloud.watch.impress.co.jp/docs/news/1205405.html": {
+    "title": "GitHub、フルセットのCI/CDに対応した「GitHub Actions」新版を11月にリリース、ワークフローの記述形式もYAMLに",
+    "description": "　米GitHubは8月8日（米国時間）、ワークフロー自動化ツール「GitHub Actions」の新版を発表した。“フルセットのCI/CD（継続的インテグレーション／継続的デリバリー）”に対応したことを特徴としている。",
+    "image": "https://cloud.watch.impress.co.jp/img/clw/list/1205/405/github00.jpg",
+    "fetchedAt": "2026-07-10T03:59:30.595Z"
+  },
+  "https://code.claude.com/docs/ja/devcontainer": {
+    "title": "開発コンテナ - Claude Code Docs",
+    "description": "チーム全体で一貫した分離環境を実現するため、開発コンテナ内で Claude Code を実行します。",
+    "image": "https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3D%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%26appearance%3Dsystem%26title%3D%25E9%2596%258B%25E7%2599%25BA%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%26description%3D%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E5%2585%25A8%25E4%25BD%2593%25E3%2581%25A7%25E4%25B8%2580%25E8%25B2%25AB%25E3%2581%2597%25E3%2581%259F%25E5%2588%2586%25E9%259B%25A2%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2580%2581%25E9%2596%258B%25E7%2599%25BA%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E5%2586%2585%25E3%2581%25A7%2BClaude%2BCode%2B%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2599%25E3%2580%2582%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26darkColor%3D%25230E0E0E%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&w=1200&q=100",
+    "fetchedAt": "2026-07-10T03:59:21.139Z"
+  },
+  "https://dev.classmethod.jp/articles/reinvent2021-amazon-s3-glacier-instant-retrieval-storage-class/": {
+    "title": "[新機能] Amazon S3 Glacier Instant Retrievalストレージクラスが追加されました #reinvent | DevelopersIO",
+    "description": "こんにちは。サービスグループの武田です。Amazon S3のストレージクラスに新顔Glacier Instant Retrievalが登場しました！",
+    "image": "https://devio2023-media.developers.io/wp-content/uploads/2021/11/eyecatch_reinvent2021_breakingnews.jpg",
+    "fetchedAt": "2026-07-10T03:59:25.429Z"
+  },
+  "https://dev.classmethod.jp/articles/tfc-pricing-resource/": {
+    "title": "Terraform Cloudの課金単位のResourceについて説明してみる | DevelopersIO",
+    "image": "https://devio2023-media.developers.io/wp-content/uploads/2023/02/terraformcloud_1200x630-2.jpg",
+    "fetchedAt": "2026-07-10T03:59:23.927Z"
+  },
+  "https://dev.classmethod.jp/cloud/aws/session-manager-launches-tunneling-support-for-ssh-and-scp/": {
+    "title": "AWS Systems Manager セッションマネージャーでSSH・SCPできるようになりました | DevelopersIO",
+    "image": "https://devio2023-media.developers.io/wp-content/uploads/2019/05/aws-systems-manager-ssm.png",
+    "fetchedAt": "2026-07-10T03:59:30.670Z"
+  },
+  "https://developer.hashicorp.com/terraform/language/syntax/json": {
+    "title": "JSON Configuration Syntax - Configuration Language | Terraform | HashiCorp Developer",
+    "description": "Learn about the JSON-compatible language syntax, including file structure, expression mapping, block mapping, and block-type-specific exceptions.",
+    "image": "https://developer.hashicorp.com/og-image/terraform.jpg",
+    "fetchedAt": "2026-07-10T03:59:24.702Z"
+  },
+  "https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html": {
+    "title": "Amazon S3 ライフサイクルを使用したオブジェクトの移行 - Amazon Simple Storage Service",
+    "description": "S3 ライフサイクル設定を使用してオブジェクトを移行します。",
+    "fetchedAt": "2026-07-10T03:59:25.429Z"
+  },
+  "https://docs.aws.amazon.com/lambda/latest/dg/urls-invocation.html": {
+    "title": "Invoking Lambda function URLs - AWS Lambda",
+    "description": "Invoke your Lambda function through a dedicated HTTP(S) endpoint using a web browser, curl, Postman, or any HTTP client.",
+    "fetchedAt": "2026-07-10T03:59:24.883Z"
+  },
+  "https://dynalist.io/": {
+    "title": "Home - Dynalist",
+    "description": "Dynalist lets you organize your ideas and tasks in simple lists. It",
+    "fetchedAt": "2026-07-10T03:59:28.487Z"
+  },
+  "https://fewlight.net/20200225/": {
+    "title": "Surfingkeys カスタマイズ",
+    "description": "Vimぽい操作で動かせる拡張機能です。前は、cVimをカスタマイズして使っていましたが、一部の機能が使えなくなったので乗り換えました。前に試しに使ったことがあるんですが、",
+    "image": "https://res.cloudinary.com/drjfjgenq/image/upload/f_auto/w_523/v1582590418/2020/200225_02.png",
+    "fetchedAt": "2026-07-10T03:59:29.394Z"
+  },
+  "https://gist.github.com/emraher/2c071182ce0f04f3c69f6680de335029": {
+    "title": "Surfingkeys Dracula Theme Attempt",
+    "description": "Surfingkeys Dracula Theme Attempt. GitHub Gist: instantly share code, notes, and snippets.",
+    "image": "https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png",
+    "fetchedAt": "2026-07-10T03:59:29.395Z"
+  },
+  "https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/": {
+    "title": "Set the default branch for newly-created repositories - GitHub Changelog",
+    "description": "You can now set the default branch name for newly-created repositories under your username. This setting does not impact any of your existing repositories. Existing repositories will continue to have&hellip;",
+    "image": "https://github.blog/wp-content/themes/github-2021-child/dist/img/social-v3-improvements.jpg",
+    "fetchedAt": "2026-07-10T03:59:28.241Z"
+  },
+  "https://github.com/1995eaton/chromium-vim/issues/723": {
+    "title": "Is this project abandoned? · Issue #723 · 1995eaton/chromium-vim",
+    "description": "Has this project effectively been abandoned? No source code updates since November 2017. More bugs are starting to crop up and issues and PRs on GitHub have been open for years with no answers.",
+    "image": "https://opengraph.githubassets.com/21cc9a164b186786d565ac0e5a0d2204ce0f5ea775eafa3b849fbe2bbcb3fea0/1995eaton/chromium-vim/issues/723",
+    "fetchedAt": "2026-07-10T03:59:29.394Z"
+  },
+  "https://github.com/1995eaton/chromium-vim/issues/726": {
+    "title": "'f' stopped working in most recent versions of Chrome · Issue #726 · 1995eaton/chromium-vim",
+    "description": "After recent updates of Chrome 'f' key stopped working. Links don't get highlighted and numerated after pressing the key. My current version is: Version 80.0.3987.100 (Official Build) (64-bit)",
+    "image": "https://opengraph.githubassets.com/cf00e989ccec60cdcb923fa47be920fca2f1ee680c43738dc9df1ee207a8a9a1/1995eaton/chromium-vim/issues/726",
+    "fetchedAt": "2026-07-10T03:59:29.394Z"
+  },
+  "https://github.com/99designs/aws-vault": {
+    "title": "GitHub - 99designs/aws-vault: A vault for securely storing and accessing AWS credentials in development environments",
+    "description": "A vault for securely storing and accessing AWS credentials in development environments - 99designs/aws-vault",
+    "image": "https://opengraph.githubassets.com/628109c116bca7cc697c57eaae20a6e7fbddafdaeed86ca85a3c68ed1203018a/99designs/aws-vault",
+    "fetchedAt": "2026-07-10T03:59:30.156Z"
+  },
+  "https://github.com/GoogleCloudPlatform/terraformer": {
+    "title": "GitHub - GoogleCloudPlatform/terraformer: CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code",
+    "description": "CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code - GoogleCloudPlatform/terraformer",
+    "image": "https://opengraph.githubassets.com/3d992b31f08589546a9acc7deb75d51ce9eb97f1de38004c8e089e1ce00278a9/GoogleCloudPlatform/terraformer",
+    "fetchedAt": "2026-07-10T03:59:31.406Z"
+  },
+  "https://github.com/GoogleCloudPlatform/terraformer/issues/65": {
+    "title": "AWS Route53 alias record will be imported with TTL · Issue #65 · GoogleCloudPlatform/terraformer",
+    "description": "AWS Route53 alias record will be imported to route53_record.tf like below. resource \"aws_route53_record\" \"AAAAAAAAA_example-net-_A\" { alias { evaluate_target_health = false name = \"example.net\" zon...",
+    "image": "https://opengraph.githubassets.com/3f9efa0eba107206dd880cd88e66461dc304639f4628f873526cec12dab42ef1/GoogleCloudPlatform/terraformer/issues/65",
+    "fetchedAt": "2026-07-10T03:59:31.406Z"
+  },
+  "https://github.com/James-Yu/LaTeX-Workshop": {
+    "title": "GitHub - James-Yu/LaTeX-Workshop: Boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.",
+    "description": "Boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more. - James-Yu/LaTeX-Workshop",
+    "image": "https://opengraph.githubassets.com/820e4d15958b77359f7ede4c4a73f5fc1be89783737e8ed91cf3573acd9e2f9a/James-Yu/LaTeX-Workshop",
+    "fetchedAt": "2026-07-10T03:59:30.881Z"
+  },
+  "https://github.com/adieuadieu/serverless-chrome": {
+    "title": "GitHub - adieuadieu/serverless-chrome: 🌐 Run headless Chrome/Chromium on AWS Lambda",
+    "description": "🌐 Run headless Chrome/Chromium on AWS Lambda. Contribute to adieuadieu/serverless-chrome development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/8f128855dfcfeb258b0101102cc3bc2d247351ef0f2baf05952b0b9a1da38d64/adieuadieu/serverless-chrome",
+    "fetchedAt": "2026-07-10T03:59:29.598Z"
+  },
+  "https://github.com/adieuadieu/serverless-chrome/issues/133": {
+    "title": "Chrome not reachable with Selenium Python · Issue #133 · adieuadieu/serverless-chrome",
+    "description": "I'm using serverless-chrome with Python in Lambda, following this repo's instructions. It works great locally in a Docker container, but not when deployed to Lambda. This error comes up. It seems t...",
+    "image": "https://opengraph.githubassets.com/bcd85c15a47d36e20386f219f2dedee72c7a89d5b271a58681b813978900c2be/adieuadieu/serverless-chrome/issues/133",
+    "fetchedAt": "2026-07-10T03:59:29.599Z"
+  },
+  "https://github.com/ankitects/anki": {
+    "title": "GitHub - ankitects/anki: Anki is a smart spaced repetition flashcard program",
+    "description": "Anki is a smart spaced repetition flashcard program - ankitects/anki",
+    "image": "https://opengraph.githubassets.com/c8ee47b2f400bae02c54f6d83bb9f47f61dd493673a396b35b0741011354426e/ankitects/anki",
+    "fetchedAt": "2026-07-10T03:59:29.388Z"
+  },
+  "https://github.com/anthropics/claude-code/issues/19976": {
+    "title": "[FEATURE] Support terminal notifications when running inside tmux · Issue #19976 · anthropics/claude-code",
+    "description": "Problem Statement Claude Code's desktop notifications don't work when running inside tmux. This is because tmux requires applications to wrap OSC sequences in DCS passthrough format, but Claude Cod...",
+    "image": "https://opengraph.githubassets.com/704ec7f5d10214aadc2cadc3ea7c680ee223e00adc6aa216ce5145311b31e1fe/anthropics/claude-code/issues/19976",
+    "fetchedAt": "2026-07-10T03:59:21.142Z"
+  },
+  "https://github.com/anthropics/claude-code/issues/23416": {
+    "title": "[BUG] macOS sandbox blocks Security.framework TLS verification, breaking Go binaries (gh, terraform, etc.) · Issue #23416 · anthropics/claude-code",
+    "description": "Preflight Checklist I have searched existing issues and this hasn't been reported yet This is a single bug report (please file separate reports for different bugs) I am using the latest version of ...",
+    "image": "https://opengraph.githubassets.com/edb59a09cacf7384888c000cd316c3479fecad33eba0089a70b9d8d88bb4c299/anthropics/claude-code/issues/23416",
+    "fetchedAt": "2026-07-10T03:59:21.102Z"
+  },
+  "https://github.com/apparentlymart/terraform-clean-syntax": {
+    "title": "GitHub - apparentlymart/terraform-clean-syntax: A simple tool for Terraform language syntax cleanup, extending terraform fmt",
+    "description": "A simple tool for Terraform language syntax cleanup, extending terraform fmt - apparentlymart/terraform-clean-syntax",
+    "image": "https://opengraph.githubassets.com/38a8825ee3d6d2cad3c3fd2a2def0e1ccc7676e0f045105c4ba064abc78a61ce/apparentlymart/terraform-clean-syntax",
+    "fetchedAt": "2026-07-10T03:59:28.845Z"
+  },
+  "https://github.com/aws/containers-roadmap/issues/1596": {
+    "title": "[ECR] [console multi-arch support]: Support viewing multi-architecture images in the ECR Console UI correctly · Issue #1596 · aws/containers-roadmap",
+    "description": "Community Note Please vote on this issue by adding a 👍 reaction to the original issue to help the community and maintainers prioritize this request Please do not leave \"+1\" or \"me too\" comments, th...",
+    "image": "https://opengraph.githubassets.com/de4c44d8237cee775011bfd25d7f804dd25243fb2fc219dd2942cd56790c617d/aws/containers-roadmap/issues/1596",
+    "fetchedAt": "2026-07-10T03:59:24.302Z"
+  },
+  "https://github.com/aws/containers-roadmap/issues/876": {
+    "title": "[ECR] [request]: support cache manifest · Issue #876 · aws/containers-roadmap",
+    "description": "Would be great if ECR could support cache-manifest (see: https://medium.com/titansoft-engineering/docker-build-cache-sharing-on-multi-hosts-with-buildkit-and-buildx-eb8f7005918e) NOTE FROM AWS: We ...",
+    "image": "https://opengraph.githubassets.com/3f4dee30e6b2643dce9ca915f12d98f074600537ca9b9dee5a974364e5d00568/aws/containers-roadmap/issues/876",
+    "fetchedAt": "2026-07-10T03:59:25.201Z"
+  },
+  "https://github.com/carlpett/terraform-provider-sops": {
+    "title": "GitHub - carlpett/terraform-provider-sops: A Terraform provider for reading Mozilla sops files",
+    "description": "A Terraform provider for reading Mozilla sops files - carlpett/terraform-provider-sops",
+    "image": "https://opengraph.githubassets.com/5436bc372fa54e7255cf2ac7c8ff2073d5717fdd5a7547f80a4c87afb7e2ca6c/carlpett/terraform-provider-sops",
+    "fetchedAt": "2026-07-10T03:59:29.907Z"
+  },
+  "https://github.com/chroju/alfred-book-search": {
+    "title": "GitHub - chroju/alfred-book-search: Book search workflow for Alfred 4",
+    "description": "Book search workflow for Alfred 4. Contribute to chroju/alfred-book-search development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/28bf8f3876024513552774913ef2d12edc740d7641b6ca6dda168d8cef654421/chroju/alfred-book-search",
+    "fetchedAt": "2026-07-10T03:59:25.940Z"
+  },
+  "https://github.com/chroju/alfred-tfcloud-workflow": {
+    "title": "GitHub - chroju/alfred-tfcloud-workflow: Terraform Cloud interface for Alfred",
+    "description": "Terraform Cloud interface for Alfred. Contribute to chroju/alfred-tfcloud-workflow development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/1c2cdaded6a265267f24baf11d6e4a38f961206385f3c421acaceb35273342e3/chroju/alfred-tfcloud-workflow",
+    "fetchedAt": "2026-07-10T03:59:27.707Z"
+  },
+  "https://github.com/chroju/alfrednize": {
+    "title": "GitHub - chroju/alfrednize: alfrednize is a so simple command to generate JSON for Alfred.",
+    "description": "alfrednize is a so simple command to generate JSON for Alfred. - chroju/alfrednize",
+    "image": "https://opengraph.githubassets.com/487bdc33aa6599507741046bd6adf076ebcdad89910685383e8df040050b06d5/chroju/alfrednize",
+    "fetchedAt": "2026-07-10T03:59:27.089Z"
+  },
+  "https://github.com/chroju/chef_web_server": {
+    "title": "GitHub - chroju/chef_web_server",
+    "description": "Contribute to chroju/chef_web_server development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/1736ee8e90d679effd3277bc95734352cdb42156ce1250b2a4708bc77c44e28b/chroju/chef_web_server",
+    "fetchedAt": "2026-07-10T03:59:32.131Z"
+  },
+  "https://github.com/chroju/chroju.github.io": {
+    "title": "GitHub - chroju/chroju.github.io",
+    "description": "Contribute to chroju/chroju.github.io development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/f6ff444ebe43429f4210df48a2c02ee38f483df4f41626b26a581fff0be51c02/chroju/chroju.github.io",
+    "fetchedAt": "2026-07-10T03:59:30.595Z"
+  },
+  "https://github.com/chroju/dotfiles": {
+    "title": "GitHub - chroju/dotfiles: my dotfiles",
+    "description": "my dotfiles. Contribute to chroju/dotfiles development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/b257473f24e59e2f7987dbbdf1dbe496042b4ad24740e3a1acd1bae57d56d912/chroju/dotfiles",
+    "fetchedAt": "2026-07-10T03:59:30.156Z"
+  },
+  "https://github.com/chroju/dotfiles/blob/main/dotfiles/HOME/.config/tridactyl/tridactylrc": {
+    "title": "dotfiles/dotfiles/HOME/.config/tridactyl/tridactylrc at main · chroju/dotfiles",
+    "description": "my dotfiles. Contribute to chroju/dotfiles development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/b257473f24e59e2f7987dbbdf1dbe496042b4ad24740e3a1acd1bae57d56d912/chroju/dotfiles",
+    "fetchedAt": "2026-07-10T03:59:21.155Z"
+  },
+  "https://github.com/chroju/jotflowy": {
+    "title": "GitHub - chroju/jotflowy",
+    "description": "Contribute to chroju/jotflowy development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/b5505d44b73beedc7805131546fe4985044eb6f89998607b79b7572df497f3dc/chroju/jotflowy",
+    "fetchedAt": "2026-07-10T03:59:21.147Z"
+  },
+  "https://github.com/chroju/parade": {
+    "title": "GitHub - chroju/parade: Parade is a simple CLI tool for AWS SSM parameter store. Easy to read and write key values in your parameter store.",
+    "description": "Parade is a simple CLI tool for AWS SSM parameter store. Easy to read and write key values in your parameter store. - chroju/parade",
+    "image": "https://opengraph.githubassets.com/199daf3ff0b981d046ac7a21babf15055084957f31b33610cb44081c33c08561/chroju/parade",
+    "fetchedAt": "2026-07-10T03:59:30.600Z"
+  },
+  "https://github.com/chroju/raycast-extensions": {
+    "title": "GitHub - chroju/raycast-extensions",
+    "description": "Contribute to chroju/raycast-extensions development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/532f819dd8e5879f93e244ca0b8e652733c3082fbb0967a4607d49cc1e6931bc/chroju/raycast-extensions",
+    "fetchedAt": "2026-07-10T03:59:23.640Z"
+  },
+  "https://github.com/chroju/skills": {
+    "title": "GitHub - chroju/skills",
+    "description": "Contribute to chroju/skills development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/f20cd3174218c3b8b9542dc49c6c52b4fd0a37eb60b79d407f5047a3765d0863/chroju/skills",
+    "fetchedAt": "2026-07-10T03:59:21.140Z"
+  },
+  "https://github.com/chroju/tfcloud": {
+    "title": "GitHub - chroju/tfcloud: Terraform Cloud CLI tool",
+    "description": "Terraform Cloud CLI tool. Contribute to chroju/tfcloud development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/defe74c6861cc8f75d729c3bfbaade9bb9db564e25dabed88756471b5dc98633/chroju/tfcloud",
+    "fetchedAt": "2026-07-10T03:59:27.708Z"
+  },
+  "https://github.com/chroju/tfmodule": {
+    "title": "GitHub - chroju/tfmodule: tfmodule is a CLI tool for managing Terraform modules",
+    "description": "tfmodule is a CLI tool for managing Terraform modules - chroju/tfmodule",
+    "image": "https://opengraph.githubassets.com/457058b5597a877a0e49a9b2391e874d0f67d47d0efaea42cf15cfe50f6f2e2b/chroju/tfmodule",
+    "fetchedAt": "2026-07-10T03:59:28.845Z"
+  },
+  "https://github.com/cue-lang/cue/issues/851": {
+    "title": "Proposal: package management · Issue #851 · cue-lang/cue",
+    "description": "Originally opened by @myitcv in cuelang/cue#851 With extensive inputs from @mpvl. Proposal summary We propose adding package management to CUE, using an approach analogous to Go using Minimum Versi...",
+    "image": "https://opengraph.githubassets.com/f5af6c8a1bf18da0aaaa5b6337bc10cc314c54c6e3f4fd87aded1f66c4abece8/cue-lang/cue/issues/851",
+    "fetchedAt": "2026-07-10T03:59:24.703Z"
+  },
+  "https://github.com/docker/build-push-action/pull/746#issuecomment-1377806123": {
+    "title": "add attests, provenance and sbom inputs by crazy-max · Pull Request #746 · docker/build-push-action",
+    "description": "GitHub Action to build and push Docker images with Buildx - add attests, provenance and sbom inputs by crazy-max · Pull Request #746 · docker/build-push-action",
+    "image": "https://opengraph.githubassets.com/f999e63a97c3975b75a330834ba764ba2e088ffad787736155cc63539b2d6f17/docker/build-push-action/pull/746",
+    "fetchedAt": "2026-07-10T03:59:24.302Z"
+  },
+  "https://github.com/docker/buildx/issues/1533": {
+    "title": "Default image output from buildx v0.10 cannot run on Google Cloud Run or AWS Lambda · Issue #1533 · docker/buildx",
+    "description": "As of Buildx 0.10, images are built with provenance -- this behavior is opt-out, and can be disabled with --provenance=false if using the buildx build cli, or provenance: false if using docker/buil...",
+    "image": "https://opengraph.githubassets.com/4c7abf87a5f151efb0ab911783486c3557bcbde9a5388faf4fa7e4d6e02a7323/docker/buildx/issues/1533",
+    "fetchedAt": "2026-07-10T03:59:24.302Z"
+  },
+  "https://github.com/docker/docker.github.io/pull/12571": {
+    "title": "Stop telling people not to install security updates by itamarst · Pull Request #12571 · docker/docs",
+    "description": "Proposed changes\nGet rid of terrible advice to not install security updates.\nSee https://pythonspeed.com/articles/security-updates-in-docker/ for detailed explanation of why this is bad advice, deb...",
+    "image": "https://opengraph.githubassets.com/02dc8f51f1208932e5ce161dc80e8d59c8fe2da6b1b039e14f15d71fdbed1553/docker/docs/pull/12571",
+    "fetchedAt": "2026-07-10T03:59:25.201Z"
+  },
+  "https://github.com/github/renaming": {
+    "title": "GitHub - github/renaming: Guidance for changing the default branch name for GitHub repositories",
+    "description": "Guidance for changing the default branch name for GitHub repositories - github/renaming",
+    "image": "https://opengraph.githubassets.com/f4e2456a1f1c5b340c49bb57c9034b6e38d7553efb79c468a93cb0250c39d5eb/github/renaming",
+    "fetchedAt": "2026-07-10T03:59:28.242Z"
+  },
+  "https://github.com/hashicorp/go-tfe": {
+    "title": "GitHub - hashicorp/go-tfe: HCP Terraform/Enterprise API Client/SDK in Golang",
+    "description": "HCP Terraform/Enterprise API Client/SDK in Golang. Contribute to hashicorp/go-tfe development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/a003a24627cc1b48053904549e322f8ec3814f54c02b0d4806f94d64f581b520/hashicorp/go-tfe",
+    "fetchedAt": "2026-07-10T03:59:28.500Z"
+  },
+  "https://github.com/hashicorp/go-version": {
+    "title": "GitHub - hashicorp/go-version: A Go (golang) library for parsing and verifying versions and version constraints.",
+    "description": "A Go (golang) library for parsing and verifying versions and version constraints. - hashicorp/go-version",
+    "image": "https://opengraph.githubassets.com/467e7334454325ce2f6255ea00d5e08807abbd6b4ba35a17a6109cb24b71771e/hashicorp/go-version",
+    "fetchedAt": "2026-07-10T03:59:28.500Z"
+  },
+  "https://github.com/hashicorp/terraform-config-inspect": {
+    "title": "GitHub - hashicorp/terraform-config-inspect: A helper library for shallow inspection of Terraform configurations",
+    "description": "A helper library for shallow inspection of Terraform configurations - hashicorp/terraform-config-inspect",
+    "image": "https://opengraph.githubassets.com/fe86c95c6794bac028345cbff03eadfadc4ec7e9217c68838d2e60451a56da33/hashicorp/terraform-config-inspect",
+    "fetchedAt": "2026-07-10T03:59:28.845Z"
+  },
+  "https://github.com/junegunn/fzf": {
+    "title": "GitHub - junegunn/fzf: :cherry_blossom: A command-line fuzzy finder",
+    "description": ":cherry_blossom: A command-line fuzzy finder. Contribute to junegunn/fzf development by creating an account on GitHub.",
+    "image": "https://repository-images.githubusercontent.com/13807606/b261cfc9-ec9c-4842-a7dd-366e6674cb50",
+    "fetchedAt": "2026-07-10T03:59:30.155Z"
+  },
+  "https://github.com/marketplace/actions/goreleaser-action": {
+    "title": "GoReleaser Action - GitHub Marketplace",
+    "description": "GitHub Action for GoReleaser, a release automation tool for Go projects",
+    "image": "https://repository-images.githubusercontent.com/209873006/9d248500-92df-11ea-8bd1-181160d06c8e",
+    "fetchedAt": "2026-07-10T03:59:30.600Z"
+  },
+  "https://github.com/marketplace/actions/terraform-cloud-workspace-auto-update": {
+    "title": "Terraform Cloud Workspace Auto Update - GitHub Marketplace",
+    "description": "Automates the terraform version update of your Terraform cloud workspace",
+    "image": "https://avatars.githubusercontent.com/u/4526869?s=400&v=4",
+    "fetchedAt": "2026-07-10T03:59:28.500Z"
+  },
+  "https://github.com/motemen/ghq": {
+    "title": "GitHub - x-motemen/ghq: Remote repository management made easy",
+    "description": "Remote repository management made easy. Contribute to x-motemen/ghq development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/104a2174139650f79adb660ee830354c26dc604a33253cab03c0627a85f7588c/x-motemen/ghq",
+    "fetchedAt": "2026-07-10T03:59:30.155Z"
+  },
+  "https://github.com/mozilla/sops": {
+    "title": "GitHub - getsops/sops: Simple and flexible tool for managing secrets",
+    "description": "Simple and flexible tool for managing secrets. Contribute to getsops/sops development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/f57110da66dab540ab1c569f5228d9f1c147ece29073eaceff355448d2a8d99c/getsops/sops",
+    "fetchedAt": "2026-07-10T03:59:29.907Z"
+  },
+  "https://github.com/qmk/qmk_firmware": {
+    "title": "GitHub - qmk/qmk_firmware: Open-source keyboard firmware for Atmel AVR and Arm USB families",
+    "description": "Open-source keyboard firmware for Atmel AVR and Arm USB families - qmk/qmk_firmware",
+    "image": "https://opengraph.githubassets.com/da2e2b1ad111d6e38af2b214041918c497c12c01d6a5aa5919c8b1b58fc4d5fb/qmk/qmk_firmware",
+    "fetchedAt": "2026-07-10T03:59:31.382Z"
+  },
+  "https://github.com/spf13/cobra": {
+    "title": "GitHub - spf13/cobra: A Commander for modern Go CLI interactions",
+    "description": "A Commander for modern Go CLI interactions. Contribute to spf13/cobra development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/07831ec6ab46fba6e33c5da23f12f99b60d15f590c4046325d15b4778f5ed355/spf13/cobra",
+    "fetchedAt": "2026-07-10T03:59:30.600Z"
+  },
+  "https://github.com/terraform-aws-modules/terraform-aws-eks": {
+    "title": "GitHub - terraform-aws-modules/terraform-aws-eks: Terraform module to create Amazon Elastic Kubernetes (EKS) resources 🇺🇦",
+    "description": "Terraform module to create Amazon Elastic Kubernetes (EKS) resources 🇺🇦 - terraform-aws-modules/terraform-aws-eks",
+    "image": "https://opengraph.githubassets.com/24b65055ce98c3ebf651efbdffb7bdd52cecfc4fef90eac97343909ce0daf1c7/terraform-aws-modules/terraform-aws-eks",
+    "fetchedAt": "2026-07-10T03:59:25.666Z"
+  },
+  "https://github.com/terraform-google-modules": {
+    "title": "Google Cloud and HashiCorp",
+    "description": "Terraform modules for Google Cloud. Google Cloud and HashiCorp has 65 repositories available. Follow their code on GitHub.",
+    "image": "https://avatars.githubusercontent.com/u/37194493?s=280&v=4",
+    "fetchedAt": "2026-07-10T03:59:29.955Z"
+  },
+  "https://github.com/terraform-providers/terraform-provider-aws/issues/9445": {
+    "title": "aws_route should validate which type of gateway is passed · Issue #9445 · hashicorp/terraform-provider-aws",
+    "description": "The aws_route resource has a number of *_gateway_id properties which are documented as reflecting the AWS API for the type of gateway to which a route is being constructed. For example, an Internet...",
+    "image": "https://opengraph.githubassets.com/da60e9f5e69359f915873623e449d18a634d8e86d07b64bd284227d293dc0423/hashicorp/terraform-provider-aws/issues/9445",
+    "fetchedAt": "2026-07-10T03:59:30.276Z"
+  },
+  "https://github.com/terraform-providers/terraform-provider-aws/pull/10819": {
+    "title": "resource/aws_ssm_parameter: Enable to change type from SecureString to String by chroju · Pull Request #10819 · hashicorp/terraform-provider-aws",
+    "description": "Fix #9843. Enable to change ssm parameter type from SecureString to String .\n\n\nCommunity Note\n\nPlease vote on this pull request by adding a 👍 reaction to the original pull request comment to help t...",
+    "image": "https://opengraph.githubassets.com/afbca58bbf437c79af275db2519fcc27b1a908ee20627a125f2de50a6cf1bc8d/hashicorp/terraform-provider-aws/pull/10819",
+    "fetchedAt": "2026-07-10T03:59:30.276Z"
+  },
+  "https://github.com/tmux/tmux": {
+    "title": "GitHub - tmux/tmux: tmux source code",
+    "description": "tmux source code. Contribute to tmux/tmux development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/252150784ad6fd1f12acfcc26141b8252acfcb0ab0a803060c3fd5f01f9f8851/tmux/tmux",
+    "fetchedAt": "2026-07-10T03:59:30.155Z"
+  },
+  "https://github.com/vial-kb/vial-gui/issues/108": {
+    "title": "QMK Settings -> Tap Hold -> Permissive Hold not working · Issue #108 · vial-kb/vial-gui",
+    "description": "Hi and first of all: Thanks for a great app! I'm trying to configure my Contra so when I hold Enter and tap another key it will act as a Shift modifier. I was under the impression that Permissive H...",
+    "image": "https://opengraph.githubassets.com/9dcaf6770592d43c31467d645bb9cd750b750b37960718a0f2f1f497eacf9391/vial-kb/vial-gui/issues/108",
+    "fetchedAt": "2026-07-10T03:59:23.291Z"
+  },
+  "https://github.com/vvatanabe/go-grpc-basics": {
+    "title": "GitHub - vvatanabe/go-grpc-basics: WEB+DB PRESS Vol.110 特集2「［速習］gRPC」サンプルコード",
+    "description": "WEB+DB PRESS Vol.110 特集2「［速習］gRPC」サンプルコード. Contribute to vvatanabe/go-grpc-basics development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/3e45c5d596a453525791687af1437031aa1e4d1f4fa126c02755f68c9a66276c/vvatanabe/go-grpc-basics",
+    "fetchedAt": "2026-07-10T03:59:31.142Z"
+  },
+  "https://github.com/vvatanabe/go-grpc-microservices": {
+    "title": "GitHub - vvatanabe/go-grpc-microservices: WEB+DB PRESS Vol.110 特集2「［速習］gRPC」",
+    "description": "WEB+DB PRESS Vol.110 特集2「［速習］gRPC」. Contribute to vvatanabe/go-grpc-microservices development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/4d3f187832e2499eb238e2954a93ce375285b9d99e74adf82ec111a2821234eb/vvatanabe/go-grpc-microservices",
+    "fetchedAt": "2026-07-10T03:59:31.142Z"
+  },
+  "https://help.bitwarden.com/article/install-on-premise/": {
+    "title": "Linux Standard Deployment | Bitwarden",
+    "description": "This article guides you through the process of installing and deploying the Bitwarden password manager to a Linux server.",
+    "image": "https://bitwarden.com/assets/5DdRqgetal8HRpQlM2hofZ/962909c889c42f53f0948044db3b7998/help-install-on-premise-linux-og.png",
+    "fetchedAt": "2026-07-10T03:59:30.670Z"
+  },
+  "https://honz.jp/articles/-/45269": {
+    "title": "『迷いを断つためのストア哲学』現代人が共感しやすい「普通」の感覚の哲学 - HONZ",
+    "description": "『迷いを断つためのストア哲学』現代人が共感しやすい「普通」の感覚の哲学 HONZ",
+    "image": "https://images-fe.ssl-images-amazon.com/images/I/31T2LM-8EBL.jpg",
+    "fetchedAt": "2026-07-10T03:59:24.318Z"
+  },
+  "https://ja.bellroy.com/products/classic-backpack": {
+    "title": "Classic Backpack | 容量20Lの通勤リュック | ベルロイ",
+    "description": "日常使いに最適な頼れるリュック。ノートPC用のパッド入りスリーブや心地よく体にフィットするバックパネル、使い勝手抜群のポケットが、スマートな持ち運びを叶えます。",
+    "image": "https://bellroy-product-images.imgix.net//bellroy_dot_com_gallery_image/USD/BCBD-BLK-244/0",
+    "fetchedAt": "2026-07-10T03:59:25.897Z"
+  },
+  "https://k3s.io/": {
+    "title": "K3s",
+    "fetchedAt": "2026-07-10T03:59:24.847Z"
+  },
+  "https://kamiyakenkyujo.hatenablog.com/entry/2020/11/13/002402": {
+    "title": "大きな枠組みに目を向けさせないようにする - 紙屋研究所",
+    "description": "なぜ「自分のできること」の範囲に限定するのか 娘（中１）が「環境新聞」というのを学校の宿題で作っていて、横から眺めていた。 温暖化について書いている。 「結論は自分ができることを書かないといけないんだ」と言って、ムダな電気を消すとかそういうことを書いていた。 その後授業参観で、クラスの壁に貼られた、クラスの生徒たちがそれぞれつくった「新聞」を見る機会があったが、温暖化だけでなく、ごみの減量とか、プラスチックごみの縮減とか、さまざまな環境問題についてまさに「自分ができること」で締めくくられていた。例外なく全て。徹底した指示・指導なのであろう。 なぜ「自分のできること」の範囲に限定するのだろうか。…",
+    "image": "https://ogimage.blog.st-hatena.com/10257846132616941320/26006613651317709/1605195316",
+    "fetchedAt": "2026-07-10T03:59:24.825Z"
+  },
+  "https://keybase.io/chroju": {
+    "title": "chroju | Keybase",
+    "description": "chroju is now on Keybase, an open source app for encryption and cryptography.",
+    "image": "https://s3.amazonaws.com/keybase_processed_uploads/ba7996905a1fd65746f0bfaaf0242b05_360_360.jpg",
+    "fetchedAt": "2026-07-10T03:59:27.496Z"
+  },
+  "https://kubernetes.io/docs/concepts/policy/pod-security-policy/": {
+    "title": "Pod Security Policies",
+    "description": "Removed feature PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25. Instead of using PodSecurityPolicy, you can enforce similar restrictions on Pods using either or both:\nPod Security Admission a 3rd party admission plugin, that you deploy and configure yourself For a migration guide, see Migrate from PodSecurityPolicy to the Built-In PodSecurity Admission Controller. For more information on the removal of this API, see PodSecurityPolicy Deprecation: Past, Present, and Future.",
+    "image": "/images/kubernetes-open-graph.png",
+    "fetchedAt": "2026-07-10T03:59:27.827Z"
+  },
+  "https://learning.oreilly.com/library/view/97-things-every/9781492081487/": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:24.136Z"
+  },
+  "https://lifehacking.jp/2024/08/buffer-threads/": {
+    "title": "BufferがThreadsにもBlueskyにも対応して便利に",
+    "description": "個別に投稿をカスタマイズし連続投稿もできるものの&hellip;",
+    "image": "https://lifehacking.jp/2024/08/buffer-threads/buffer-threads.png",
+    "fetchedAt": "2026-07-10T03:59:23.281Z"
+  },
+  "https://make.dmm.com/item/1009205/": {
+    "title": "Kailh Chocスイッチ用キーキャップRSX：Corne Chocolateセット - DMM.make クリエイターズマーケット",
+    "description": "RSXはKailh Chocスイッチ専用のキーキャップです。\r\n\r\nコルネのKailh Chocスイッチ用キットであるCorne Chocolateのために必要なキーキャップをそろえたセットをご用意しました。\r\n\r\n【RSXとは？】\r\nロープロファイルのスイッチとして人気のKailh Chocには、いままでメーカー純正のキーキャップしかありませんでした。\r\nまた、純正品は挟ピッチ用にデザインされているため、通常ピッチのキーボードではキーとキーの間に隙間が出来てしまいます。\r\n\r\n新キーキャップRSXは、フルピッチ用に設計したキーキャップになります。\r\nロープロファイルのメリットを活かし、純正と同等の高さに抑えつつ、ディップを作ってボリューム感を出したデザインとなっています。\r\n\r\n【Corne Chocolate用セットの内容】\r\nKailh Choc用Corneに必要なキーキャップを網羅。破損する可能性を考慮して、各キーキャップとも多めに設定しています。\r\n1u通常キー：44キー\r\n1uダンプキー（ＦＪなどホームポジションを示すでっぱりのあるキー）：4キー\r\n1uスペースキー（親指キー）：9キー\r\n1.5uスペースキー（親指キー）：4キー\r\n\r\n【注意】\r\n造形に際してDMM様の磨き仕様の規定を下回るところがあります。\r\nこのため、注文後にDMM様から破損の恐れがあるためキャンセルを促される連絡があるかもしれません。その際には、破損の可能性を受け入れることで出力をお願いすることが出来ます。ただし、規定外となりますので正しく造形されるかどうかは保証出来ません。\r\n\r\n実際、稀に軸部分の破損があります（まったく破損がない場合がほとんどで、現在のところ破損があった場合でも50個中2個が最大でした）。\r\n\r\nなお、強制的にキャンセルされる場合もありますが、その際にはサポートに相談して破損時の扱いについて合意すれば出力してもらうことが出来ます。\r\n\r\nまた、出力を確認しているのは、MJFブラック磨き・グラファイト磨きとナイロンパープル（磨き）です。\r\n\r\n※Corneはfoostan氏によって開発されたキーボードです（https://github.com/foostan/crkbd）。\r\n※写真中の基板やケースなどは本出品のものではありません。",
+    "image": "https://img.make.dmm.com/images/item/1009205/枯山水_20190116182557468.jpg",
+    "fetchedAt": "2026-07-10T03:59:31.281Z"
+  },
+  "https://moneyforward.com/": {
+    "title": "マネーフォワード｜家計簿アプリやクラウド会計ソフト",
+    "description": "すべての人のお金のプラットフォーム MoneyForward - お金・資産管理なら家計簿アプリ「マネーフォワード ME (ミー)」を今すぐダウンロード！法人・個人事業主向け「マネーフォワード クラウド」で会計ソフトなどバックオフィス効率化も",
+    "image": "https://moneyforward.com/assets/home/ogp_corporate_image.png",
+    "fetchedAt": "2026-07-10T03:59:26.584Z"
+  },
+  "https://novelkeys.xyz/products/novelkeys-x-kailh-low-profile-heavys": {
+    "title": "Kailh Switches",
+    "description": "Experience an elevated standard in typing and gaming with our premium selection of custom keyboards as well as GMK ABS Double Shot and our own PBT dyesub keycaps. We stock switches from Cherry, Gateron, TTC, KTT, and more. We also offer artisans and deskpads.",
+    "image": "http://novelkeys.com/cdn/shop/products/Kailh_Speed_Bronze_1200x1200.jpg?v=1628272318",
+    "fetchedAt": "2026-07-10T03:59:31.638Z"
+  },
+  "https://qiita.com/chroju/items/827dbb9e820f41820e14": {
+    "title": "個人でサーバーレスっぽいことやろうとしてピタゴラスイッチになった話 - Qiita",
+    "description": "※追記アリ： サービス仕様の変更により、すでにこの話は古くなっています。 長年独自ドメインの下でプロフィールサイトをVPSに置いていたのですけど、いまどき静的サイトを返すのに自力でnginx動かす必要もなさそうだし、VPSの料金もかかってるし、AWSでなんとかしようと考えま...",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGMTk0NjUlMkZwcm9maWxlLWltYWdlcyUyRjE0NzM2ODI3MTk_aXhsaWI9cmItNC4xLjEmYXI9MSUzQTEmZml0PWNyb3AmbWFzaz1lbGxpcHNlJmJnPUZGRkZGRiZmbT1wbmczMiZzPTQzYjc2NDVmZTgxYTVmNGM0MDkzZmQ2NWRmNDM2ZDFi%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3Dc67c13d3a096559d499ebf1e6818908b?ixlib=rb-4.1.1&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9JUU1JTgwJThCJUU0JUJBJUJBJUUzJTgxJUE3JUUzJTgyJUI1JUUzJTgzJUJDJUUzJTgzJTkwJUUzJTgzJUJDJUUzJTgzJUFDJUUzJTgyJUI5JUUzJTgxJUEzJUUzJTgxJUJEJUUzJTgxJTg0JUUzJTgxJTkzJUUzJTgxJUE4JUUzJTgyJTg0JUUzJTgyJThEJUUzJTgxJTg2JUUzJTgxJUE4JUUzJTgxJTk3JUUzJTgxJUE2JUUzJTgzJTk0JUUzJTgyJUJGJUUzJTgyJUI0JUUzJTgzJUE5JUUzJTgyJUI5JUUzJTgyJUE0JUUzJTgzJTgzJUUzJTgzJTgxJUUzJTgxJUFCJUUzJTgxJUFBJUUzJTgxJUEzJUUzJTgxJTlGJUU4JUE5JUIxJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9YmFkMDM1Yjg3NGNmM2QzM2UyMzc5ZDEyZmNiZTQyZDc&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBjaHJvanUmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1kYjQ3ZDhhZWQ2NDcxODExMmU5YjI4NmNjYjhmMTQyMQ&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=cd41ac85513145de4184a54b34e3b911",
+    "fetchedAt": "2026-07-10T03:59:31.271Z"
+  },
+  "https://qiita.com/chroju/items/ddf6266b704fe26b5d7c": {
+    "title": "AWS マルチアカウントの管理を Toil にしないために - Qiita",
+    "description": "この記事は GLOBIS Advent Calendar 2019 - Qiita の9日目です。 7月に GLOBIS へ SRE として参画してから、集中的に取り組んできたことの1つである「AWSマルチアカウントの構成や運用効率化」に関して書いていきます。 AWS マ...",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Fadvent-calendar-ogp-background-7940cd1c8db80a7ec40711d90f43539e.jpg%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGMTk0NjUlMkZwcm9maWxlLWltYWdlcyUyRjE0NzM2ODI3MTk_aXhsaWI9cmItNC4xLjEmYXI9MSUzQTEmZml0PWNyb3AmbWFzaz1lbGxpcHNlJmJnPUZGRkZGRiZmbT1wbmczMiZzPTQzYjc2NDVmZTgxYTVmNGM0MDkzZmQ2NWRmNDM2ZDFi%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY3ZTUyODM3OWI2ZmUzMTNjYzA1YWFjM2FmZWY4MmM3ZWFjOGFkYWY5JTJGb3JpZ2luYWwuanBnJTNGMTczNTAxNDQ5OD9peGxpYj1yYi00LjEuMSZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz00ZGI0MzViMGIwNWZhZDEwY2YzMTU3ZjU5MzcxNmJhOA%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D74104ac2276b7b45ece8b07f7cfe7424?ixlib=rb-4.1.1&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9QVdTJTIwJUUzJTgzJTlFJUUzJTgzJUFCJUUzJTgzJTgxJUUzJTgyJUEyJUUzJTgyJUFCJUUzJTgyJUE2JUUzJTgzJUIzJUUzJTgzJTg4JUUzJTgxJUFFJUU3JUFFJUExJUU3JTkwJTg2JUUzJTgyJTkyJTIwVG9pbCUyMCVFMyU4MSVBQiVFMyU4MSU5NyVFMyU4MSVBQSVFMyU4MSU4NCVFMyU4MSU5RiVFMyU4MiU4MSVFMyU4MSVBQiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzM0EzQzNDJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPWJiODBhYTU1ODQ2MGI2M2M5Zjg5YzVlOGM5NTgzNTM5&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBjaHJvanUmdHh0LWNvbG9yPSUyMzNBM0MzQyZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1kMWRmOGI3NzUyNjM1MmU1MWEyNGMzYTFlZWU5ODFmYw&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=5qCq5byP5Lya56S-44Kw44Ot44O844OT44K5&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%233A3C3C&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=891fcd5a00f2947d32470631e59e7970",
+    "fetchedAt": "2026-07-10T03:59:29.562Z"
+  },
+  "https://qiita.com/yururit/items/bc7c0eda63d5fa30289a": {
+    "title": "RubyでgRPCのストリーミング - Qiita",
+    "description": "概要 gRPCの双方向なストリーミング機能をRubyで利用する方法 前提 以下でgRPC用のgemをインストール gem install grpc-tools 方法 protoファイル service定義で、パラ...",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGNDg0NSUyRnByb2ZpbGUtaW1hZ2VzJTJGMTQ3MzY4MDk1MD9peGxpYj1yYi00LjEuMSZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9OWMzMDNlY2ZlOWE0YzQ0NTEyNDFmYzJkNDVkZGVjOGU%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D461336302a9ef09297be8c586c6e24a7?ixlib=rb-4.1.1&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9UnVieSVFMyU4MSVBN2dSUEMlRTMlODElQUUlRTMlODIlQjklRTMlODMlODglRTMlODMlQUElRTMlODMlQkMlRTMlODMlOUYlRTMlODMlQjMlRTMlODIlQjAmdHh0LWFsaWduPWxlZnQlMkN0b3AmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtcGFkPTAmcz0yYTJiOGExMzExMDhjNmM3ODliNzljZDViMGYxM2RkNQ&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDB5dXJ1cml0JnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9NmE5MjM1ZTQ5NDBjZjE1MzBiZGMxMjZkMzUyZDNjYjU&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=11293627facd76b8c412338f6caa2d7e",
+    "fetchedAt": "2026-07-10T03:59:31.142Z"
+  },
+  "https://rancher.com/docs/k3s/latest/en/helm/": {
+    "fetchedAt": "2026-07-10T03:59:24.848Z"
+  },
+  "https://read.readwise.io": {
+    "title": "Reader",
+    "description": "Read and highlight anything",
+    "fetchedAt": "2026-07-10T03:59:24.146Z"
+  },
+  "https://readwise.io": {
+    "title": "Readwise",
+    "description": "Grow wiser and retain books better: Readwise sends you a daily email resurfacing your best highlights from Kindle, Instapaper, iBooks, and more.",
+    "image": "https://readwise-assets.s3.amazonaws.com/static/images/readwisecard.058019f9f4b1.jpg",
+    "fetchedAt": "2026-07-10T03:59:24.146Z"
+  },
+  "https://scrapbox.io/": {
+    "title": "Cosense - Share Experience, Make Co-sense, and Go！",
+    "description": "The key to productivity is knowledge. The more experience you accumulate, the more you can do. And you grow faster when you fight together. Now you can share experience and compound knowledge in your organization easily.",
+    "image": "https://scrapbox.io/assets/landing/img/social.jpg",
+    "fetchedAt": "2026-07-10T03:59:29.388Z"
+  },
+  "https://scrapbox.io/nishio/%E9%80%A3%E6%83%B3%E3%81%AE%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF": {
+    "title": "連想のストック - 西尾泰和の外部脳",
+    "description": "2019-02-14 書き出し法は、思考を小さい断片として書き出していく 書き出したものは消えなくなる 書き出したものを見ながらさらに考えることができる KJ法のボトムアップのグループ編成は、情報の関係を物理的な近さによって表現する 言葉にしにくい感覚を言葉ではない方法でアウトプットする アウトプットしたものは消えなくなるし、思考の対象にできる これによって構造の発見を支援する Scrapboxは",
+    "image": "https://gyazo.com/24df596bb9879ec4519427145bc8ff28/max_size/2000",
+    "fetchedAt": "2026-07-10T03:59:24.826Z"
+  },
+  "https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-framework.html": {
+    "title": "Introducing SLSA, an End-to-End Framework for Supply Chain Integrity",
+    "description": "Posted Kim Lewandowski, Google Open Source Security Team & Mark Lodato, Binary Authorization for Borg Team  Supply chain integrity attacks—u...",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYIUyQJtaAY06QUHFJwNJq_G2-GyovxH4kqwBEFS_WweUghi5Qkid_Mrt9Qa65XBQ254P_EMWHpRQWIV17U_oQgEyStBSHWel9v8hHlWeP4ncr9BBtfD6QUhjhPlcISln2jWWNWgf2Ol-P/s1600/googlelogo_color_200x200.png",
+    "fetchedAt": "2026-07-10T03:59:24.301Z"
+  },
+  "https://shop.yushakobo.jp/products/8961": {
+    "title": "Corne V4 Cherry",
+    "description": "40％のコンパクトな設計のキーボードです。実装済み基板にファームウェアも書き込み済みのため、ドライバー1本で簡単に作成できます。RemapによるWebブラウザからの簡単なキーマップのカスタム、ホットスワップ可能、フルキーバックライト対応など豊富な機能を備えています。",
+    "image": "http://shop.yushakobo.jp/cdn/shop/files/IMG_20240316_192316.jpg?v=1710584862",
+    "fetchedAt": "2026-07-10T03:59:23.290Z"
+  },
+  "https://songmu.jp/riji/entry/2019-03-28-go-modules.html": {
+    "title": "最近のGo Modulesプラクティス ~ ghqユーザーの場合も添えて | おそらくはそれさえも平凡な日々",
+    "description": "  最近Go Modulesを使っていて、だいたいプラクティスが定まってきたのでまとめてみる。  個人的な結論   Go Modulesは積極的に使っていけばいい   幾つか課題はある   $GOPATH から出る必要もない   $GO111MODULE を適宜設定すればよい どうせ次のGo 1.13からはどこに置こう…",
+    "image": "https://songmu.jp/riji/static/img/songmu-ogp.jpg",
+    "fetchedAt": "2026-07-10T03:59:30.155Z"
+  },
+  "https://sre-next.dev": {
+    "fetchedAt": "2026-07-10T03:59:29.719Z"
+  },
+  "https://techblog.yahoo.co.jp/entry/20191222793763/": {
+    "title": "40,000コンテナのPrivate PaaSを実現するために必要だったこと",
+    "description": "ヤフーのPaaSチームがどのように数万コンテナのシステムを本番環境で稼働させる仕組みを作ったのか",
+    "image": "https://s.yimg.jp/images/tecblog/2019-H2/paas/ogp_20191219T151705.png",
+    "fetchedAt": "2026-07-10T03:59:29.719Z"
+  },
+  "https://terraform-jp.connpass.com/event/150359/": {
+    "title": "Terraform Source Code Reading#3 (2019/11/05 19:00〜)",
+    "description": "## Terraform Source Code Reading  Terraform, aws-providerにcontributionするために、まずはソースコードを読んでみよう！という会です。 Contributionに挑戦したいひと、あるいはすでにコミッターとして活躍しているひとなど、いろんなひとの参加を歓迎します。  ## コンテンツ  雑談、相談をしつつ、グループにわかれてもくもく読んで、成果共有みたいなことをしたいと思っています。  直近のPRの解説なんかもできるといいですね。  slack（#codereading / Terraform-jp slack)での意見も歓...",
+    "image": "https://media.connpass.com/thumbs/ce/dc/cedc14eb3b04ba4e67acb3fe6300873e.png",
+    "fetchedAt": "2026-07-10T03:59:30.276Z"
+  },
+  "https://www.amazon.co.jp/%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AD-%25E3%2582%25AA%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B9%25E3%2583%2581%25E3%2582%25A7%25E3%2582%25A2-YL8-GRBL-AEL-%25E3%2582%25A2%25E3%2582%25B8%25E3%2583%25A3%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB%25E8%2582%2598%25E4%25BB%2598-%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25C3%2597%25E3%2583%2596%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25AF/dp/B07FCYCXDF": {
+    "title": "Amazon.co.jp: イトーキ サリダ YL8 グレー オフィスチェア【全身を支えるハイバック / 通気性・メッシュ素材 / 腰への負担を軽減 ランバーサポート / 高機能ヘッドレスト / こだわりの座面 / 快適な1Dアームレスト / 体重感応式シンクロロッキング / 360度回転 / 90mm座面上下昇降 / イトーキ品質 】 ゲーミングチェア デスクチェア YL8-GRBL-AEL : ホーム＆キッチン",
+    "description": "Amazon.co.jp: イトーキ サリダ YL8 グレー オフィスチェア【全身を支えるハイバック / 通気性・メッシュ素材 / 腰への負担を軽減 ランバーサポート / 高機能ヘッドレスト / こだわりの座面 / 快適な1Dアームレスト / 体重感応式シンクロロッキング / 360度回転 / 90mm座面上下昇降 / イトーキ品質 】 ゲーミングチェア デスクチェア YL8-GRBL-AEL : ホーム＆キッチン",
+    "fetchedAt": "2026-07-10T03:59:28.703Z"
+  },
+  "https://www.amazon.co.jp/%25E8%2589%25AF%25E3%2581%2584%25E6%2588%25A6%25E7%2595%25A5%25E3%2580%2581%25E6%2582%25AA%25E3%2581%2584%25E6%2588%25A6%25E7%2595%25A5-%25E6%2597%25A5%25E6%259C%25AC%25E7%25B5%258C%25E6%25B8%2588%25E6%2596%25B0%25E8%2581%259E%25E5%2587%25BA%25E7%2589%2588-%25E3%2583%25AA%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25BC%25E3%2583%2589%25E3%2583%25BB%25EF%25BC%25B0%25E3%2583%25BB%25E3%2583%25AB%25E3%2583%25A1%25E3%2583%25AB%25E3%2583%2588-ebook/dp/B087X4WJLR": {
+    "title": "Amazon.co.jp: 良い戦略、悪い戦略 (日本経済新聞出版) eBook : リチャード・Ｐ・ルメルト, 村井章子: Kindleストア",
+    "description": "Amazon.co.jp: 良い戦略、悪い戦略 (日本経済新聞出版) eBook : リチャード・Ｐ・ルメルト, 村井章子: Kindleストア",
+    "fetchedAt": "2026-07-10T03:59:28.230Z"
+  },
+  "https://www.amazon.co.jp/-/en/%E7%94%B0%E4%B8%AD-%E7%A5%A5%E5%B9%B3/dp/4297119250": {
+    "title": "Amazon.co.jp: Web配信の技術―HTTPキャッシュ・リバースプロキシ・CDNを活用する : 田中 祥平: Japanese Books",
+    "description": "Amazon.co.jp: Web配信の技術―HTTPキャッシュ・リバースプロキシ・CDNを活用する : 田中 祥平: Japanese Books",
+    "fetchedAt": "2026-07-10T03:59:25.888Z"
+  },
+  "https://www.amazon.co.jp/-/en/Alex-Hidalgo/dp/1492076813": {
+    "title": "Amazon.co.jp: Implementing Service Level Objectives: A Practical Guide to Slis, Slos, and Error Budgets : Hidalgo, Alex: Foreign Language Books",
+    "description": "Amazon.co.jp: Implementing Service Level Objectives: A Practical Guide to Slis, Slos, and Error Budgets : Hidalgo, Alex: Foreign Language Books",
+    "fetchedAt": "2026-07-10T03:59:25.889Z"
+  },
+  "https://www.amazon.co.jp/-/en/Heather-Adkins/dp/1492083127": {
+    "title": "Amazon.co.jp: Building Secure and Reliable Systems: Best Practices for Designing, Implementing, and Maintaining Systems : Adkins, Heather, Beyer, Betsy, Blankinship, Paul, Lewandowski, Piotr, Oprea, Ana, Stubblefield, Adam: Foreign Language Books",
+    "description": "Amazon.co.jp: Building Secure and Reliable Systems: Best Practices for Designing, Implementing, and Maintaining Systems : Adkins, Heather, Beyer, Betsy, Blankinship, Paul, Lewandowski, Piotr, Oprea, Ana, Stubblefield, Adam: Foreign Language Books",
+    "fetchedAt": "2026-07-10T03:59:25.887Z"
+  },
+  "https://www.amazon.co.jp/-/en/John-Ousterhout/dp/1732102201": {
+    "title": "Amazon.co.jp: A Philosophy of Software Design : Ousterhout, John: Foreign Language Books",
+    "description": "Amazon.co.jp: A Philosophy of Software Design : Ousterhout, John: Foreign Language Books",
+    "fetchedAt": "2026-07-10T03:59:25.665Z"
+  },
+  "https://www.amazon.co.jp/-/en/Ziploc-Container-Storage-Pieces-Packs/dp/B07KWGYRMJ": {
+    "title": "Amazon.co.jp: Ziploc [Bulk Purchase] Ziploc Container, Rice Storage Container, Thin (Pack of 2) x 4 : Home & Kitchen",
+    "description": "Amazon.co.jp: Ziploc [Bulk Purchase] Ziploc Container, Rice Storage Container, Thin (Pack of 2) x 4 : Home & Kitchen",
+    "fetchedAt": "2026-07-10T03:59:25.898Z"
+  },
+  "https://www.amazon.co.jp/-/ja/Moonbat-Urawaza-Folding-Umbrella-Seconds/dp/B085PW4BDM": {
+    "title": "Amazon | 3秒でたためる傘 ウラワザ 折りたたみ傘 形状記憶 形状安定 大きい 直径97cm 約230g urawaza 雨傘 手開き 簡単開閉 無地 高撥水 テフロン加工 防汚効果 UVカット 晴雨兼用 メンズ 親骨55cm 折り畳み傘 畳みやすい 10263 オレンジ | 折りたたみ傘 通販",
+    "description": "折りたたみ傘（メンズ）ストアで3秒でたためる傘 ウラワザ 折りたたみ傘 形状記憶 形状安定 大きい 直径97cm 約230g urawaza 雨傘 手開き 簡単開閉 無地 高撥水 テフロン加工 防汚効果 UVカット 晴雨兼用 メンズ 親骨55cm 折り畳み傘 畳みやすい 10263 オレンジなどがいつでもお買い得。当日お急ぎ便対象商品は、当日お届け可能です。アマゾン配送商品は、通常配送無料（一部除く）。",
+    "fetchedAt": "2026-07-10T03:59:25.897Z"
+  },
+  "https://www.amazon.co.jp/Anker-PowerPort-PowerIQ%25E3%2580%2590Power-Plus%25E3%2580%2581MacBook%25E3%2580%2581Galaxy-XZ1%25E3%2580%2581%25E3%2581%259D%25E3%2581%25AE%25E4%25BB%2596Android%25E5%2590%2584%25E7%25A8%25AE%25E5%25AF%25BE%25E5%25BF%259C/dp/B072KBG9W4": {
+    "title": "Amazon | Anker PowerPort I PD - 1 PD & 4 PowerIQ(60WUSB-C急速充電器) (ブラック) | Anker | AC式充電器",
+    "description": "Anker PowerPort I PD - 1 PD & 4 PowerIQ(60WUSB-C急速充電器) (ブラック)がAC式充電器ストアでいつでもお買い得。当日お急ぎ便対象商品は、当日お届け可能です。アマゾン配送商品は、通常配送無料（一部除く）。",
+    "fetchedAt": "2026-07-10T03:59:28.703Z"
+  },
+  "https://www.amazon.co.jp/SOFT-SKILLS-%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A2%25E9%2596%258B%25E7%2599%25BA%25E8%2580%2585%25E3%2581%25AE%25E4%25BA%25BA%25E7%2594%259F%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A5%25E3%2582%25A2%25E3%2583%25AB-%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%25E3%2583%25BB%25E3%2582%25BD%25E3%2583%25B3%25E3%2583%25A1%25E3%2582%25BA-ebook/dp/B01GDS0994": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:28.230Z"
+  },
+  "https://www.amazon.co.jp/dp/4150505608": {
+    "title": "リモートワークの達人 (ハヤカワ文庫NF) | ジェイソン・フリード, デイヴィッド・ハイネマイヤー・ハンソン, 横石 崇, 高橋 璃子 |本 | 通販 | Amazon",
+    "description": "Amazonでジェイソン・フリード, デイヴィッド・ハイネマイヤー・ハンソン, 横石 崇, 高橋 璃子のリモートワークの達人 (ハヤカワ文庫NF)。アマゾンならポイント還元本が多数。ジェイソン・フリード, デイヴィッド・ハイネマイヤー・ハンソン, 横石 崇, 高橋 璃子作品ほか、お急ぎ便対象商品は当日お届けも可能。またリモートワークの達人 (ハヤカワ文庫NF)もアマゾン配送商品なら通常配送無料。",
+    "fetchedAt": "2026-07-10T03:59:27.764Z"
+  },
+  "https://www.amazon.co.jp/dp/4320023684": {
+    "title": "ライト,ついてますか: 問題発見の人間学 | ドナルド・C・ゴース, G.M.ワインバーグ, 木村 泉 |本 | 通販 | Amazon",
+    "description": "Amazonでドナルド・C・ゴース, G.M.ワインバーグ, 木村 泉のライト,ついてますか: 問題発見の人間学。アマゾンならポイント還元本が多数。ドナルド・C・ゴース, G.M.ワインバーグ, 木村 泉作品ほか、お急ぎ便対象商品は当日お届けも可能。またライト,ついてますか: 問題発見の人間学もアマゾン配送商品なら通常配送無料。",
+    "fetchedAt": "2026-07-10T03:59:27.688Z"
+  },
+  "https://www.amazon.co.jp/dp/4419067845": {
+    "title": "人生改造宣言〔新装版〕 成功するためのセルフコーチングプログラム | タレン・ミーダナー, 近藤三峰 |本 | 通販 | Amazon",
+    "description": "Amazonでタレン・ミーダナー, 近藤三峰の人生改造宣言〔新装版〕 成功するためのセルフコーチングプログラム。アマゾンならポイント還元本が多数。タレン・ミーダナー, 近藤三峰作品ほか、お急ぎ便対象商品は当日お届けも可能。また人生改造宣言〔新装版〕 成功するためのセルフコーチングプログラムもアマゾン配送商品なら通常配送無料。",
+    "fetchedAt": "2026-07-10T03:59:25.973Z"
+  },
+  "https://www.amazon.co.jp/dp/4532320496": {
+    "title": "トリガー 自分を変えるコーチングの極意 | マーシャル ゴールドスミス, マーク ライター, 斎藤 聖美 |本 | 通販 | Amazon",
+    "description": "Amazonでマーシャル ゴールドスミス, マーク ライター, 斎藤 聖美のトリガー 自分を変えるコーチングの極意。アマゾンならポイント還元本が多数。マーシャル ゴールドスミス, マーク ライター, 斎藤 聖美作品ほか、お急ぎ便対象商品は当日お届けも可能。またトリガー 自分を変えるコーチングの極意もアマゾン配送商品なら通常配送無料。",
+    "fetchedAt": "2026-07-10T03:59:25.973Z"
+  },
+  "https://www.amazon.co.jp/dp/4774196053%0A": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:25.972Z"
+  },
+  "https://www.amazon.co.jp/dp/4799326104%0A": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:25.972Z"
+  },
+  "https://www.amazon.co.jp/dp/B01C44IV78": {
+    "title": "Amazon.co.jp: ネスレ ネスティー ポーション アールグレイ 7個×6袋 : 食品・飲料・お酒",
+    "description": "Amazon.co.jp: ネスレ ネスティー ポーション アールグレイ 7個×6袋 : 食品・飲料・お酒",
+    "fetchedAt": "2026-07-10T03:59:27.597Z"
+  },
+  "https://www.amazon.co.jp/dp/B01E3R0VX6": {
+    "title": "なぜ危機に気づけなかったのか ― 組織を救うリーダーの問題発見力 | マイケル・Ａ・ロベルト, 飯田恒夫 | ビジネス教育 | Kindleストア | Amazon",
+    "description": "Amazonでマイケル・Ａ・ロベルト, 飯田恒夫のなぜ危機に気づけなかったのか ― 組織を救うリーダーの問題発見力。アマゾンならポイント還元本が多数。一度購入いただいた電子書籍は、KindleおよびFire端末、スマートフォンやタブレットなど、様々な端末でもお楽しみいただけます。",
+    "fetchedAt": "2026-07-10T03:59:27.687Z"
+  },
+  "https://www.amazon.co.jp/dp/B07B5CD8NY": {
+    "title": "Amazon | クリニカ アドバンテージ デンタルフロス Y字タイプ 18本入×3個 | クリニカ | 歯間クリーナー 通販",
+    "description": "クリニカ アドバンテージ デンタルフロス Y字タイプ 18本入×3個が歯間クリーナーストアでいつでもお買い得。当日お急ぎ便対象商品は、当日お届け可能です。アマゾン配送商品は、通常配送無料（一部除く）。",
+    "fetchedAt": "2026-07-10T03:59:27.596Z"
+  },
+  "https://www.amazon.co.jp/dp/B07X5FSBDP": {
+    "title": "Amazon｜マーナ (marna) 極 お米保存袋 (3kg / 2枚入り) 酸化防止 冷蔵庫保存 (アルミ袋/ジッパー付き袋) お米 保存容器 米びつ 米 保存袋 米袋 ホワイト K737W｜保存容器・キャニスター オンライン通販",
+    "description": "マーナ (marna) 極 お米保存袋 (3kg / 2枚入り) 酸化防止 冷蔵庫保存 (アルミ袋/ジッパー付き袋) お米 保存容器 米びつ 米 保存袋 米袋 ホワイト K737Wが保存容器・キャニスターストアでいつでもお買い得。お急ぎ便対象商品は当日お届けも可能。アマゾン配送商品は通常配送無料（一部除く）。",
+    "fetchedAt": "2026-07-10T03:59:27.597Z"
+  },
+  "https://www.amazon.co.jp/dp/B08DCLRHC7": {
+    "title": "Amazon.co.jp: 要点整理から攻略する『AWS認定 セキュリティ-専門知識』 (Compass Booksシリーズ) eBook : NRIネットコム株式会社、佐々木 拓郎、上野 史瑛、小林 恭平: Kindleストア",
+    "description": "Amazon.co.jp: 要点整理から攻略する『AWS認定 セキュリティ-専門知識』 (Compass Booksシリーズ) eBook : NRIネットコム株式会社、佐々木 拓郎、上野 史瑛、小林 恭平: Kindleストア",
+    "fetchedAt": "2026-07-10T03:59:26.205Z"
+  },
+  "https://www.awarefy.app/": {
+    "title": "毎日に寄りそい 気づきを増やす。 - AIメンタルパートナー「Awarefy（アウェアファイ）」",
+    "description": "心理学×AIのアプリ。認知行動療法やマインドフルネスなど心理学の知見に基づくセルフワークや学習コンテンツにAIの先端技術を掛け合わせ、感情の可視化やストレスケア、心理学の学習など、心の健康と成長にやさしくより添います。",
+    "image": "https://storage.googleapis.com/production-os-assets/assets/27d8b820-30a6-41e5-9c7b-2ce121d746e1",
+    "fetchedAt": "2026-07-10T03:59:24.318Z"
+  },
+  "https://www.docker.com/blog/highlights-buildkit-v0-11-release/": {
+    "title": "Highlights from the BuildKit v0.11 Release | Docker",
+    "description": "Docker BuildKit v0.11 is now available with new features, bug fixes, performance improvements, and more!",
+    "image": "https://www.docker.com/app/uploads/2023/01/buildkit-0.11-featured-1024x1024.png",
+    "fetchedAt": "2026-07-10T03:59:24.301Z"
+  },
+  "https://www.dynatrace.com/info/sre-report/": {
+    "title": "State of SRE Report",
+    "description": "Download this free SRE Report to uncover the challenges SREs must overcome, and what the future of SRE looks like.",
+    "image": "https://cdn.dm.dynatrace.com/assets/_1200x630_crop_center-center_82_none/dynatrace-thumbnail.png?mtime=1764841435",
+    "fetchedAt": "2026-07-10T03:59:24.878Z"
+  },
+  "https://www.hakuyo-sha.co.jp/science/security/": {
+    "title": "情報セキュリティの敗北史｜白揚社 -Hakuyosha-",
+    "fetchedAt": "2026-07-10T03:59:23.289Z"
+  },
+  "https://www.handfbelx.com/stores/": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:27.596Z"
+  },
+  "https://www.hanmoto.com/bd/isbn/4003360818": {
+    "title": "人生談義　上 エピクテートス(著) - 岩波書店",
+    "description": "",
+    "image": "https://img.hanmoto.com/bd/img/9784003360811_600.jpg?lastupdated=2016-03-08T16%3A52%3A30%2B09%3A00",
+    "fetchedAt": "2026-07-10T03:59:24.318Z"
+  },
+  "https://www.hanmoto.com/bd/isbn/4065243270": {
+    "title": "ライティングの哲学　書けない悩みのための執筆論 千葉 雅也(著) - 星海社",
+    "description": "書くのが苦しい4人と一緒に「書けない」悩みを哲学しよう！ 「書き出しが決まらない」「キーボードに向き合う気力さえ湧いてこない」「何を書いてもダメな文章な気がする」……何かを書きたいと思いつ… - 引用：版元ドットコム",
+    "image": "https://img.hanmoto.com/bd/img/9784065243275_600.jpg?lastupdated=2025-09-03T11%3A18%3A18%2B09%3A00",
+    "fetchedAt": "2026-07-10T03:59:24.953Z"
+  },
+  "https://www.hanmoto.com/bd/isbn/4295004901": {
+    "title": "LeanとDevOpsの科学 : テクノロジーの戦略的活用が組織変革を加速する  - インプレス",
+    "description": "",
+    "image": "https://img.hanmoto.com/bd/img/9784295004905_600.jpg?lastupdated=2019-12-05T10%3A39%3A14%2B09%3A00",
+    "fetchedAt": "2026-07-10T03:59:25.888Z"
+  },
+  "https://www.hanmoto.com/bd/isbn/4534056591": {
+    "title": "新版　コーチングの基本 鈴木義幸(監修) - 日本実業出版社",
+    "description": "コーチングは「人材開発」から「組織開発」へ。ベストセラーが最新事例を盛り込んで新版化。 - 引用：版元ドットコム",
+    "image": "https://img.hanmoto.com/bd/img/9784534056597_600.jpg?lastupdated=2018-12-20T16%3A06%3A08%2B09%3A00",
+    "fetchedAt": "2026-07-10T03:59:25.972Z"
+  },
+  "https://www.hanmoto.com/bd/isbn/4820729632": {
+    "title": "チームトポロジー マシュー・スケルトン(著) - 日本能率協会マネジメントセンター",
+    "description": "DXが進み、ビジネスはIT・オンラインを基準に変化が加速している。この大きな流れを受けるのがソフトウェア開発である。またソフトウェア業界としては、アジャイルやDevOpsなどの手法を開発して、時… - 引用：版元ドットコム",
+    "image": "https://img.hanmoto.com/bd/img/9784820729631_600.jpg?lastupdated=2021-11-10T10%3A12%3A03%2B09%3A00",
+    "fetchedAt": "2026-07-10T03:59:25.489Z"
+  },
+  "https://www.hashicorp.com/blog/terraform-cloud-updates-plans-with-an-enhanced-free-tier-and-more-flexibility": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:23.927Z"
+  },
+  "https://www.instagram.com/marumi_coffee/": {
+    "title": "Instagram",
+    "description": "Create an account or log in to Instagram - Share what you're into with the people who get you.",
+    "image": "https://static.cdninstagram.com/rsrc.php/v4/yD/r/R0fBIMurK8v.png",
+    "fetchedAt": "2026-07-10T03:59:24.129Z"
+  },
+  "https://www.itmedia.co.jp/bizid/articles/0902/19/news115.html": {
+    "title": "��X�H�@�O�X�H�@��Ƃɂ��������[�L���O�`�F�A���l����",
+    "description": "�f�X�N�g�b�vPC�ƃm�[�gPC�ō�Ƃ̎p�����قȂ�܂��\\�\\�B�������쏊�́u�����̔����فv�ō�Ƃɂ��������[�L���O�`�F�A���l���Ă݂��B",
+    "image": "https://image.itmedia.co.jp/bizid/articles/0902/19/l_st_oka03.jpg",
+    "fetchedAt": "2026-07-10T03:59:27.763Z"
+  },
+  "https://www.kingjim.co.jp/sp/lr30/": {
+    "title": "「テプラ」Lite　LR30",
+    "description": "スマホで簡単操作、手のひらサイズ「テプラ」Lite　LR30",
+    "image": "https://www.kingjim.co.jp/sp/lr30/common/img/ogp.jpg",
+    "fetchedAt": "2026-07-10T03:59:24.917Z"
+  },
+  "https://www.kingjim.co.jp/sp/spot/toolstand/": {
+    "title": "畳めて運べる「TOOL STAND（ツールスタンド）」 | KING JIM - キングジム",
+    "description": "いつでも取り出しやすく、収納を快適にする「ツールスタンド」。株式会社キングジムの公式ウェブサイトです。",
+    "image": "https://www.kingjim.co.jp/sp/spot/assets/images/common/toolstand.jpg",
+    "fetchedAt": "2026-07-10T03:59:24.426Z"
+  },
+  "https://www.kyash.co/": {
+    "title": "Kyash - お支払いもお金の管理もかんたんに",
+    "description": "年会費無料でどこでも使える、Visaプリペイドカードでお支払い。履歴はアプリにすぐ反映、自動で分類されて使いすぎを防止。最大1%のポイント還元も。カードの利用停止もアプリからできて安全です。",
+    "image": "https://cdn.prod.website-files.com/5db15c3bca3871afff172c17/5fc44f4c1c29733404f9d3b4_ogimage-blue.jpg",
+    "fetchedAt": "2026-07-10T03:59:26.584Z"
+  },
+  "https://www.lifehacker.jp/2014/10/141030strategy.html": {
+    "title": "5年後の自分が描けないなら知っておきたい「キャリア戦略」の作り方 | ライフハッカー・ジャパン",
+    "description": "私は成功した知人に会うと、必ずこう聞くようにしていました。「あなたのキャリア戦略は？」できるだけ気軽な感じで聞きます。彼らの素の反応を見たいからです。",
+    "image": "https://media.loom-app.com/lifehacker/dist/images/2014/10/141030strategy.jpg?w=1200&h=630&f=jpg",
+    "fetchedAt": "2026-07-10T03:59:28.230Z"
+  },
+  "https://www.lifehacker.jp/article/226273book_to_read-666/": {
+    "title": "逆境に勝つ。「ストア哲学」をよい人生を送るために生かすコツ | ライフハッカー・ジャパン",
+    "description": "『ストイック・チャレンジ: 逆境を「最高の喜び」に変える心の技法』（ウィリアム・B. アーヴァイン 著、月沢 李歌子 訳、NHK出版）より、「ストア哲学」を逆境に負けず、よい人生を送るために生かすコツを解説します。",
+    "image": "https://media.loom-app.com/lifehacker/dist/images/2020/12/16/book_to_read-666.jpg?w=1200&h=630&f=jpg",
+    "fetchedAt": "2026-07-10T03:59:24.329Z"
+  },
+  "https://www.moftjapan.com/collections/pc/products/moft-pc-stand?variant=42378051354881": {
+    "title": "超薄型ノートパソコンスタンド",
+    "description": "『MOFT超薄型ノートパソコンスタンド』は常に快適な作業環境を作り出すノートPCスタンドです。わずか3ミリのスタンドをノートPCの底に貼り付けて展開するだけで姿勢を自然に改善し、長時間作業の負担を軽減します。スタンドは2段階の角度に調整可能で、座った状態でもや立った状態でも使えます。",
+    "image": "http://www.moftjapan.com/cdn/shop/files/MS006IF_1200x1200.png?v=1773933222",
+    "fetchedAt": "2026-07-10T03:59:24.129Z"
+  },
+  "https://www.netbk.co.jp/contents/": {
+    "title": "NEOBANK 住信SBIネット銀行",
+    "description": "住信SBIネット銀行へようこそ。定期預金、外貨預金、住宅ローン、カードローンなどのサービスやキャンペーンが充実した、初心者にもおすすめできるネット銀行です。",
+    "image": "https://www.netbk.co.jp/contents/cdn-img/common/sns/img_ogp_d.png",
+    "fetchedAt": "2026-07-10T03:59:26.583Z"
+  },
+  "https://www.netlify.com/docs/dns/": {
+    "title": "Set up Netlify DNS",
+    "description": "Set up Netlify DNS for your new or existing domain.",
+    "image": "https://docs.netlify.com/images/netlify-docs-hero-card.png/?v=1",
+    "fetchedAt": "2026-07-10T03:59:31.271Z"
+  },
+  "https://www.notion.so/Journal-5a988ea052794b88b84d5d06e3b9d6e8": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:26.781Z"
+  },
+  "https://www.oreilly.co.jp//books/9784873116976/": {
+    "title": "アンダースタンディング コンピュテーション",
+    "description": "本書は計算理論をRubyでわかりやすく紹介する書籍です。コンピュータサイエンスの主要なテーマである「計算とは何か」という問いに対して、難しい数学の知識を利用をせず、Rubyを使って実際にプログラムを作りながら解説します。さらに、なぜこれらのアイデアが大切なのか、そしてそのアイデアは我々の日常的なプログラミングにどう関係していくのかを解き明かしていきます。日本語版ではまつもとゆきひろさんによる「日本語版まえがき」を収録。プログラミングの根底にある理論を学ぶことで、より広く深くプログラミングを考えたいプログラマ必携の一冊です。監訳者によるサポートページ",
+    "image": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-697-6.jpeg",
+    "fetchedAt": "2026-07-10T03:59:27.273Z"
+  },
+  "https://www.oreilly.co.jp//books/9784873119014/": {
+    "title": "Kubernetesで実践するクラウドネイティブDevOps",
+    "description": "Kubernetesが標準プラットフォームであるクラウドネイティブの世界でアプリケーションを開発し運用する方法を解説する書籍です。\r\nはじめに、Kubernetesの概要と背景、ソフトウェアの開発と運用にKubernetesがもたらす変化、コンテナの動作原理、コンテナの構築および管理方法、クラウドネイティブなサービスおよびインフラの設計方法などの基礎を紹介します。\r\nそしてKubernetesアプリケーションの作成とデプロイ、Kubernetesクラスタの設定と運用、クラウドインフラの自動化、Helmなどのツールを用いたデプロイについてサンプルコードを使って学習します。ロールベースのアクセス制御（RBAC）をはじめとした、セキュリティ、認証、パーミッションなどに対するKubernetesのサポートや、本番でコンテナとKubernetesの安全性を確保するためのベストプラクティスについても学びます。\r\nさらにKubernetesで継続的インテグレーションと継続的デプロイをセットアップする方法、データをバックアップおよび復元する方法、クラスタの適合性や信頼性をテストする方法、監視・トレーシング・ロギング・メトリクスを集約する方法、Kubernetesインフラの拡張性・耐障害性・費用対効果を高める方法を解説します。\r\nKubernetesの基本から、継続的デプロイ、機密情報管理、オブザーバビリティなどの高度なトピックを扱う本書は、サーバ、アプリケーション、サービスを管理するIT運用者、クラウドネイティブサービスの構築や移行を行う開発者必携の一冊です。",
+    "image": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-901-4.jpeg",
+    "fetchedAt": "2026-07-10T03:59:29.530Z"
+  },
+  "https://www.oreilly.co.jp/books/9784873119946/": {
+    "title": "エンジニアリングマネージャーのしごと",
+    "description": "本書は、エンジニアリングチームのマネジメントの仕事全般を紹介し、エンジニアリングマネージャーに必要な考え方やスキルを解説します。はじめに、自分の役割と組織のさまざまな部分がどう関係するかを理解し、習慣を整えることで自分自身を管理することを学びます。そして、日々のマネジメント業務で必要なツールとプロセスを紹介し、スタッフとの関係性の構築、モチベーションの理解、評価や採用などを解説します。さらに社内政治や難しい状況での判断、その後のキャリアについて説明します。\r\nマネジメントのさまざまな段階に沿って、日々の仕事に取り入れられる実践的なアドバイスを紹介する本書は、エンジニアリングチームのマネージャーに必携の一冊です。",
+    "image": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-994-6.jpeg",
+    "fetchedAt": "2026-07-10T03:59:24.824Z"
+  },
+  "https://www.oreilly.com/library/view/building-secure-and/9781492083115/": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:26.639Z"
+  },
+  "https://www.oreilly.com/library/view/implementing-service-level/9781492076803/": {
+    "error": true,
+    "fetchedAt": "2026-07-10T03:59:27.338Z"
+  },
+  "https://www.publickey1.jp/blog/18/noopsnoopsnoops_meetup_tokyo_1.html": {
+    "title": "NoOpsを実現できる時が来た。「NoOps」とは運用の“嬉しくない”ことをなくすこと。NoOps Meetup Tokyo ＃1",
+    "description": "9月12日に都内で「NoOps Meetup Tokyo」の第一回が開催されました。 この「NoOps」は運用そのものをなくしてしまう「No Ops」ではなく、運用の嬉しくないことをなくす「No ",
+    "image": "https://www.publickey1.jp/2018/noops02.gif",
+    "fetchedAt": "2026-07-10T03:59:26.777Z"
+  },
+  "https://www.tc3.co.jp/state-of-devops-report-2021-team-topologies/": {
+    "title": "State of DevOps Report 2021を日本語で解説 ーTeam Topologies Model、プラットフォームが重要な要素ー - TC3株式会社｜GIG INNOVATED.",
+    "description": "\rはじめに\rState of DevOps ReportはDevOpsの成熟度についてアンケート形式で調査しているレポート資料です。毎年アップデートされているので、直近の動向などを理解し、かつ課題解決の活路を見出すのに良いレポートです。2021版が先日リリースされていました(もとのレポートはこちら)",
+    "image": "https://www.tc3.co.jp/wp-content/uploads/2021/07/24b0af8d7434b53a222545ca0dd02b9e.jpg",
+    "fetchedAt": "2026-07-10T03:59:25.490Z"
+  },
+  "https://www.warp.dev/": {
+    "title": "Warp — The Agentic Development Environment",
+    "description": "A modern AI terminal for coding with agents. Run Oz, Claude Code, Codex, and Gemini CLI with fine-grained control — locally or in the cloud. Free download.",
+    "image": "https://www.warp.dev/og/default.png",
+    "fetchedAt": "2026-07-10T03:59:23.296Z"
+  },
+  "https://zenn.dev/chroju/scraps/2cf62108a159be": {
+    "title": "2021-05-03 週の情報収集",
+    "description": "chrojuさんのスクラップ",
+    "image": "https://static.zenn.studio/user-upload/avatar/1a690b74d7.jpeg",
+    "fetchedAt": "2026-07-10T03:59:27.015Z"
+  }
+}
