@@ -1,0 +1,1245 @@
+/* chroju.dev — design tokens & site styles
+ * ライト: オフホワイト背景 + ウォームな濃灰テキスト
+ * ダーク: prefers-color-scheme で自動切替
+ */
+
+/* テーマ切替: デフォルトは prefers-color-scheme に追従（auto）。
+ * ヘッダーのボタンで明示指定すると html[data-theme] が付き、そちらが優先される。
+ * ダークのトークン定義は「強制ダーク」と「auto + OSダーク」の2箇所で重複する点に注意。 */
+
+:root {
+  --bg: #faf9f7;
+  --bg-subtle: #f1efeb;
+  --text: #26292e;
+  --text-muted: #5d636b;
+  --accent: #38669a;
+  --border: #e5e2dc;
+  --shadow: rgba(30, 30, 30, 0.08);
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+    "BIZ UDGothic", monospace;
+}
+
+:root[data-theme="dark"] {
+  --bg: #15171a;
+  --bg-subtle: #1f2328;
+  --text: #d6dade;
+  --text-muted: #99a1ac;
+  --accent: #82aede;
+  --border: #33383f;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171a;
+    --bg-subtle: #1f2328;
+    --text: #d6dade;
+    --text-muted: #99a1ac;
+    --accent: #82aede;
+    --border: #33383f;
+    --shadow: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ---------- base ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* ルートを18pxにし、rem指定の全要素（一覧・見出し・日付等）を連動して拡大する */
+  font-size: 112.5%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+}
+
+/* キーボード操作時のフォーカスを明示する */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* 視差・アニメーションを避けたい設定を尊重する */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* スキップリンク: フォーカス時のみ表示 */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* スクリーンリーダーにのみ読ませる要素（policyページのh1等） */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.container {
+  /* 左右マージンは画面幅に応じて 1.1rem〜2rem で可変 */
+  --pad: clamp(1.1rem, 4vw, 2rem);
+  /* 44rem × 18px ≒ 792px（1行 約44文字） */
+  max-width: calc(44rem + var(--pad) * 2);
+  margin-inline: auto;
+  padding: clamp(1.1rem, 3vw, 1.4rem) var(--pad) 2rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.site-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* サイトタイトルは実質パス（chroju.dev/blog）なので等幅・通常ウェイトで
+ * さりげなく置く（コンテンツの見出しより目立たせない） */
+.site-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- theme toggle ---------- */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+.theme-toggle .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: var(--text-muted);
+}
+
+.theme-toggle:hover .icon {
+  fill: var(--accent);
+}
+
+/* ライト時は月（→ダークへ）、ダーク時は太陽（→ライトへ）を表示 */
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+    display: none;
+  }
+}
+
+.site-title a {
+  color: var(--text);
+}
+
+/* サブタイトルはタイトルと同一行に */
+.site-subtitle {
+  margin-inline-start: 1rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* テーマ切替ボタンと同じ円形ボーダーで揃える */
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.rss-link:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.rss-link .icon {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--text-muted);
+}
+
+.rss-link:hover .icon {
+  fill: var(--accent);
+}
+
+/* ---------- article typography ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  /* 日本語見出しのカーニング詰め */
+  font-feature-settings: "palt";
+}
+
+h2,
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 4rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* 記事本文外のセクション見出し（一覧・bio・policy等）は
+ * サイト構造の一部なのでヘッダーと同じ等幅で組む */
+main h2:not(.post-body *),
+.page-title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.75rem;
+}
+
+/* 見出しアンカー: Markdown準拠の ## / ### を左マージンにぶら下げ、hover時のみ表示 */
+:where(h1, h2, h3, h4)[id] {
+  scroll-margin-top: 1.5rem;
+}
+
+.post-body :where(h2, h3) {
+  position: relative;
+}
+
+.heading-anchor {
+  position: absolute;
+  right: 100%;
+  padding-inline-end: 0.4em;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.post-body :where(h2, h3):hover .heading-anchor,
+.heading-anchor:focus-visible {
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* タッチデバイス・狭幅では表示しない */
+@media (pointer: coarse), (max-width: 639px) {
+  .heading-anchor {
+    display: none;
+  }
+}
+
+p {
+  margin: 1.75rem 0;
+}
+
+main ul,
+main ol {
+  margin: 1.75rem 0;
+  padding-inline-start: 1.75rem;
+}
+
+main li {
+  margin: 0.5rem 0;
+}
+
+main li > ul,
+main li > ol {
+  margin: 0.5rem 0;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+dd {
+  margin-inline-start: 1.5rem;
+  color: var(--text);
+}
+
+blockquote {
+  margin: 2.5rem 0;
+  padding: 0.25rem 1.5rem;
+  border-inline-start: 3px solid var(--border);
+  background: var(--bg-subtle);
+  border-radius: 0 6px 6px 0;
+  color: var(--text-muted);
+}
+
+blockquote p {
+  margin: 1rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3rem 0;
+}
+
+/* 本文中のリンクは常時下線（薄色）で示す */
+.post-body a:not(.rlc-container):not(.heading-anchor) {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.post-body a:not(.rlc-container):not(.heading-anchor):hover {
+  text-decoration-color: var(--accent);
+}
+
+/* inline code */
+:not(pre) > code {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.875em;
+  font-family: var(--font-mono);
+}
+
+/* ---------- code blocks (shiki dual theme) ---------- */
+
+pre.shiki {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  border: 1px solid var(--border);
+}
+
+pre.shiki code {
+  font-family: var(--font-mono);
+}
+
+/* code.js が pre をラップして言語ラベルとコピーボタンを付ける */
+.code-block {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.code-block pre.shiki {
+  margin: 0;
+}
+
+.code-block[data-lang]::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0.6rem;
+  right: 2.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.code-copy {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+}
+
+.code-copy svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+}
+
+.code-copy:hover {
+  color: var(--accent);
+  background: var(--bg-subtle);
+}
+
+.code-copy.copied {
+  color: var(--accent);
+}
+
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+:root[data-theme="dark"] .shiki,
+:root[data-theme="dark"] .shiki span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .shiki,
+  :root:not([data-theme="light"]) .shiki span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+}
+
+/* ---------- tables ---------- */
+
+table {
+  border-collapse: collapse;
+  margin: 2rem 0;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+}
+
+th {
+  background: var(--bg-subtle);
+  font-weight: 600;
+}
+
+/* ---------- footnotes ---------- */
+
+section[data-footnotes] {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+section[data-footnotes] h2 {
+  border: none;
+  font-size: 1rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* ---------- post page ---------- */
+
+.post-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+
+/* frontmatter風メタブロック（date / tags） */
+.post-frontmatter {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+}
+
+.post-frontmatter .fm-delim,
+.post-frontmatter .fm-line {
+  display: block;
+}
+
+.post-frontmatter .fm-delim {
+  /* 「見えない空行」にならないよう、区切り記号として読める程度の薄さにする */
+  color: color-mix(in srgb, var(--text-muted) 50%, transparent);
+  user-select: none;
+}
+
+.post-frontmatter .fm-key {
+  color: var(--text-muted);
+}
+
+.post-frontmatter time {
+  color: var(--text);
+}
+
+.post-frontmatter a {
+  color: var(--accent);
+}
+
+.post-frontmatter .fm-punct {
+  color: var(--text-muted);
+}
+
+article p img {
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+  max-height: 32rem;
+  width: auto;
+}
+
+/* ---------- post list ---------- */
+
+.post-list {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.post-list li {
+  margin: 0;
+}
+
+.post-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-block: 0.55rem;
+}
+
+/* 年マーカーはコメント記法（# 2026）で */
+.post-year {
+  color: var(--accent);
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  margin: 2.25rem 0 0.5rem;
+}
+
+.post-year::before {
+  content: "# ";
+}
+
+.post-list li:first-child .post-year {
+  margin-top: 0.5rem;
+}
+
+.post-list-title {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 0;
+}
+
+.post-list-title:hover {
+  color: var(--accent);
+}
+
+.post-list time {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* ---------- table of contents ---------- */
+/* 目次はfrontmatterの toc: キー。閉じているときは toc: [...] の1行、
+ * 開くとYAMLのリスト記法（ハイフン + ネストインデント）で並ぶ */
+
+.fm-toc summary {
+  cursor: pointer;
+  /* 開閉は三角マーカーではなく [...] で示す */
+  list-style: none;
+}
+
+.fm-toc summary::-webkit-details-marker {
+  display: none;
+}
+
+/* クリックできる値はtagsのリンクと同じくアクセント色で示す */
+.fm-toc .fm-toc-hint {
+  color: var(--accent);
+}
+
+.fm-toc summary:hover .fm-toc-hint {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.fm-toc[open] .fm-toc-hint {
+  display: none;
+}
+
+.fm-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.fm-toc li {
+  margin: 0;
+}
+
+.fm-toc li::before {
+  content: "- ";
+  color: var(--text-muted);
+}
+
+.fm-toc .toc-h2 {
+  padding-inline-start: 1.2em;
+}
+
+.fm-toc .toc-h3 {
+  padding-inline-start: 2.4em;
+}
+
+.fm-toc a {
+  color: var(--text);
+}
+
+.fm-toc a:hover {
+  color: var(--accent);
+}
+
+/* ---------- tags ---------- */
+
+/* タグは frontmatter の tags: [...] やタグページの #tag と同じ
+ * コード語彙（等幅トークン）で並べる */
+.tag-list {
+  list-style: none;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+}
+
+.tag-list li {
+  margin: 0;
+}
+
+.tag-list a {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.tag-list .tag-hash {
+  color: var(--accent);
+}
+
+.tag-list .tag-count {
+  color: var(--text-muted);
+  font-size: 0.85em;
+}
+
+.tag-list a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.tag-page-title {
+  border: none;
+}
+
+/* ---------- link card ---------- */
+
+.rlc-container {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 2rem 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--text);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.rlc-container:hover {
+  background: var(--bg-subtle);
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+.rlc-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 0.9rem 1.1rem;
+}
+
+.rlc-title {
+  font-weight: 600;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rlc-url-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rlc-url {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rlc-favicon {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.rlc-image-container {
+  flex-shrink: 0;
+  max-height: 10rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rlc-image {
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .rlc-container {
+    flex-direction: row;
+  }
+
+  .rlc-info {
+    flex: 2 1 0;
+  }
+
+  .rlc-image-container {
+    flex: 1 1 0;
+    max-height: 8.5rem;
+  }
+
+  .rlc-image {
+    height: 100%;
+  }
+}
+
+/* ---------- home ---------- */
+
+/* サイト構造を tree コマンド出力風に */
+.home-tree {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* h1だがtree出力の1行目としてナビ本文と同じ大きさで組む */
+.tree-root {
+  font-size: inherit;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tree {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0.25rem 0 0;
+}
+
+.tree li {
+  margin: 0.4rem 0;
+}
+
+.tree-branch {
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.tree a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.tree a:hover {
+  color: var(--accent);
+}
+
+main .home-recent h2 {
+  margin-top: 3.5rem;
+  font-size: 1.2rem;
+}
+
+.home-more {
+  margin-top: 1.25rem;
+  text-align: right;
+}
+
+/* ---------- bio ---------- */
+
+.bio-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1rem 0 2.5rem;
+}
+
+.bio-profile {
+  border-radius: 50%;
+}
+
+.bio-name {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.bio-role {
+  margin: 0.15rem 0 0;
+  color: var(--text-muted);
+}
+
+/* 事実リスト: キーをfrontmatter風の等幅で */
+.bio-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.bio-facts dt {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.bio-facts dt::after {
+  content: ":";
+}
+
+.bio-facts dd {
+  margin: 0;
+}
+
+/* 経歴タイムライン: 等幅の期間 + 内容の2カラム */
+.timeline {
+  list-style: none;
+  padding: 0 !important;
+  margin: 1.5rem 0;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  gap: 0.25rem 1.5rem;
+  padding-block: 0.7rem;
+  margin: 0;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-top: 0.2rem;
+}
+
+.timeline-body {
+  line-height: 1.6;
+}
+
+@media (max-width: 639px) {
+  .timeline li {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 404 ---------- */
+
+.error-code {
+  font-family: var(--font-mono);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1;
+  margin: 2rem 0 0.5rem;
+}
+
+.error-title {
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem;
+}
+
+/* ---------- policy ---------- */
+
+.license-img {
+  border: none;
+}
+
+/* ---------- article footer / site footer ---------- */
+
+/* 罫線はサイト全体ナビ（プロフィール行）の直前に引く。
+ * Read more / Edit の行は記事側の要素なので罫線の上に置く */
+.site-footer {
+  margin-top: 5rem;
+  font-size: 0.9rem;
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.article-meta-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.article-meta-links a {
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.article-meta-links a:hover {
+  color: var(--accent);
+}
+
+.article-meta-links .icon {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+
+.read-more {
+  font-weight: 600;
+}
+
+.footer-profile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.footer-profile img {
+  border-radius: 50%;
+}
+
+/* サイト名・ナビはパスなのでヘッダーと同じ等幅で揃える */
+.footer-site {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.footer-nav,
+.footer-sns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .footer-nav {
+    border-inline-start: 1px solid var(--border);
+    padding-inline-start: 1.5rem;
+  }
+
+  /* SNSアイコンはヘッダーのアクション群と同じく右端に寄せる */
+  .footer-sns {
+    margin-inline-start: auto;
+  }
+}
+
+.footer-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.sns-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: var(--text-muted);
+  vertical-align: middle;
+}
+
+a:hover .sns-icon {
+  fill: var(--accent);
+}
+
+/* ---------- narrow screens ---------- */
+
+@media (max-width: 639px) {
+  html {
+    /* モバイルはルート17px */
+    font-size: 106.25%;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin-top: 3rem;
+  }
+
+  .post-title {
+    font-size: 1.4rem;
+  }
+
+  /* コードブロックは画面幅いっぱいに広げる（JSラップ有無の両対応） */
+  pre.shiki {
+    margin-inline: calc(-1 * var(--pad));
+    padding-inline: var(--pad);
+    border-radius: 0;
+    border-inline: none;
+  }
+
+  .code-block {
+    margin-inline: calc(-1 * var(--pad));
+  }
+
+  blockquote {
+    padding-inline: 1rem;
+  }
+
+  main ul,
+  main ol {
+    padding-inline-start: 1.35rem;
+  }
+
+  /* Edit/History・RSS・サブタイトルはモバイルでは非表示 */
+  .article-meta-links,
+  .rss-link,
+  .site-subtitle {
+    display: none;
+  }
+
+  /* サイトフッター: 縦積みでセンタリング */
+  .footer-profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+    text-align: center;
+    padding-block: 0.5rem;
+  }
+
+  .footer-nav,
+  .footer-sns {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+/* ---------- touch targets ---------- */
+/* タッチ操作（または狭幅）ではタップ領域を44px前後まで広げる */
+
+@media (pointer: coarse), (max-width: 639px) {
+  .theme-toggle,
+  .rss-link {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .theme-toggle .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .post-list-title {
+    display: inline-block;
+    padding-block: 0.3rem;
+  }
+
+  .tag-list a {
+    padding-block: 0.45rem;
+  }
+
+  .post-frontmatter a {
+    display: inline-block;
+    padding-block: 0.25rem;
+  }
+
+  .footer-nav a,
+  .footer-sns a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .footer-sns .sns-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .tree a {
+    display: inline-block;
+    padding-block: 0.3rem;
+  }
+
+  .lightbox-close {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .read-more {
+    display: inline-block;
+    padding-block: 0.5rem;
+  }
+}
+
+/* ---------- lightbox ---------- */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  cursor: zoom-out;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 24px 64px var(--shadow);
+  cursor: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}

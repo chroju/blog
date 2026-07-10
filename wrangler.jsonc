@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "chroju-dev",
+  "compatibility_date": "2026-07-01",
+  "assets": {
+    // 末尾スラッシュなしのパーマリンクを維持する:
+    // /blog/foo は blog/foo.html から配信され、/blog/foo/ は /blog/foo へ301される
+    "directory": "./dist",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

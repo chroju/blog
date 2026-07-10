@@ -71,7 +71,7 @@ Kubernetes クラスタにアプリケーションを増やしていけば、い
 * ImagePullBackoff の発生
 * Restart の頻発
 
-Deployment については desired と同数の Pod が available になっていない状態が継続している場合、 Reconcile Loop が何らかの異常をきたしている可能性があるので、監視しておきたい。ただし、一時的にコンテナがダウンした場合や、 Horizontal Pod Autoscaler で desired が拡張され、一時的に available が不足するといった場合もあるので、閾値は多少ゆるめでいいと考えている。アプリケーションの提供に必要十分な数の Pod が起動していないのであれば、それはアプリケーションレイヤーで監視するべきであり、ここでは「Deployment の Reconcile Loop が長期間正常に動作していない」という「症状」に着目すればいい。
+Deployment については desired と同数の Pod が available になっていない状態が継続している場合、 Reconcile Loop が何らかの異常をきたしている可能性があるので、監視しておきたい。ただし、一時的にコンテナがダウンした場合や、 Horizontal Pod Autoscaler で desired が拡張され、一時的に available が不足するといった場合もあるので、閾値は多少ゆるめでいいと考えている。アプリケーションの提供に必要十分な数の Pod が起動していないのであれば、それはアプリケーションレイヤーで監視するべきであり、ここでは「Deployment の Reconcile Loop が長期間正常に動作していない」という「症状」に着目すればいい。
 
 その他のリソースについても同様に、 Reconcile Loop が働いていない場合にアラートすると考える。 DaemonSet であれば `unavailable >= 1` が継続している場合、 Job や CronJob であれば failed が多発している場合などだ。これらについては僕としてはページング相当と考えている。
 
