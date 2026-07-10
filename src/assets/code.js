@@ -31,4 +31,26 @@
     });
     wrap.appendChild(btn);
   });
+
+  // 記事末尾のアクション行: Markdownソースを取得してコピーする
+  var srcBtn = document.querySelector('.post-copy');
+  if (srcBtn) {
+    srcBtn.addEventListener('click', function () {
+      fetch(srcBtn.dataset.raw)
+        .then(function (res) {
+          return res.text();
+        })
+        .then(function (text) {
+          return navigator.clipboard.writeText(text);
+        })
+        .then(function () {
+          srcBtn.innerHTML = CHECK_ICON;
+          srcBtn.classList.add('copied');
+          setTimeout(function () {
+            srcBtn.innerHTML = COPY_ICON;
+            srcBtn.classList.remove('copied');
+          }, 1500);
+        });
+    });
+  }
 })();

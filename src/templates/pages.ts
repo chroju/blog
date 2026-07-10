@@ -83,8 +83,8 @@ export function blogIndexPage(posts: Post[]): string {
 function fmTocBlock(headings: Heading[]): string {
   if (headings.length < 3) return ''
   return html`
-    <details class="fm-toc">
-      <summary><span class="fm-key">toc:</span> <span class="fm-toc-hint">[...]</span></summary>
+    <details class="fm-fold fm-toc">
+      <summary><span class="fm-key">toc:</span> <span class="fm-fold-hint">[...]</span></summary>
       <ol>
         ${raw(
           headings
@@ -124,6 +124,26 @@ function frontmatterBlock(post: Post, headings: Heading[] = []): string {
   `
 }
 
+// 記事末尾のアクション行。GitHubのファイルビュー右上の並び（Raw・コピー・編集）を、
+// コードブロックのコピーボタンと同じゴーストボタンの語彙で再構成する
+function postActions(post: Post): string {
+  // コピーアイコンは code.js の COPY_ICON と同一（クリック時の差し替えもcode.js側で行う）
+  const copyIcon = raw(
+    '<svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>'
+  )
+  const editIcon = raw(
+    '<svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>'
+  )
+  const rawPath = `/blog/${encodeURI(post.id)}.md`
+  return html`
+    <div class="post-actions">
+      <a class="post-action" href="${rawPath}" title="Markdownソースを表示">Raw</a>
+      <button class="post-action post-copy" type="button" data-raw="${rawPath}" title="Markdownソースをコピー" aria-label="Markdownソースをコピー">${copyIcon}</button>
+      <a class="post-action" href="${site.repoURL}/edit/main/posts/${post.id}.md" title="GitHubで修正を提案する" aria-label="GitHubで修正を提案する">${editIcon}</a>
+    </div>
+  `
+}
+
 export function postPage(post: Post, contentHtml: string, headings: Heading[] = []): string {
   const pageTitle = `${post.title} - ${site.name}`
   const body = html`
@@ -131,6 +151,7 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
       <h1 class="post-title">${post.title}</h1>
       ${raw(frontmatterBlock(post, headings))}
       <div class="post-body">${raw(contentHtml)}</div>
+      ${raw(postActions(post))}
     </article>
   `
   return layout(
@@ -139,7 +160,6 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
       url: `${site.url}/blog/${encodeURI(post.id)}`,
       description: postDescription(post),
       ogImage: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
-      articleId: post.id,
       scripts: ['/js/lightbox.js', '/js/code.js'],
       extraHead: blogPostingJsonLd(post),
     },
@@ -306,7 +326,7 @@ export function policyPage(): string {
     </section>
     <section>
       <h2>Contact</h2>
-      <p>このサイトに関するご意見、ご質問等は、ソースコードをホストしている GitHub レポジトリ <a href="https://github.com/chroju/blog/issues">chroju/blog の Issue</a> で受け付けています。また、ブログ内の記事の修正依頼については、記事下部に記載されている「Edit this article」のリンクから Pull Request を作成いただくことができます。</p>
+      <p>このサイトに関するご意見、ご質問等は、ソースコードをホストしている GitHub レポジトリ <a href="https://github.com/chroju/blog/issues">chroju/blog の Issue</a> で受け付けています。また、ブログ内の記事の修正依頼については、記事末尾の鉛筆アイコンから GitHub 上で Pull Request を作成いただくことができます。</p>
       <p>chroju へ直接連絡を取りたい場合は、 Twitter の <a href="https://twitter.com/chroju">@chroju</a> までメンションもしくは DM にてご連絡ください。</p>
     </section>
   `
