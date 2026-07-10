@@ -1,5 +1,5 @@
 import { site } from '../config.ts'
-import { siGithub, siActivitypub, siBluesky, siX } from 'simple-icons'
+import { siGithub } from 'simple-icons'
 
 export function escapeHtml(s: string): string {
   return s
@@ -48,7 +48,7 @@ export function formatDate(dateString: string): string {
   return t ? `${d} ${t}` : d
 }
 
-function simpleIcon(icon: { title: string; path: string }, className = 'sns-icon'): Raw {
+function simpleIcon(icon: { title: string; path: string }, className = 'icon'): Raw {
   return raw(
     `<svg class="${className}" role="img" viewBox="0 0 24 24" aria-label="${escapeHtml(
       icon.title
@@ -185,12 +185,6 @@ ${raw(articleFooter)}
 <a href="/blog">/blog</a>
 <a href="/bio">/bio</a>
 <a href="/policy">/policy</a>
-</nav>
-<nav class="footer-sns">
-<a href="https://github.com/chroju">${simpleIcon(siGithub)}</a>
-<a href="https://pleroma.chroju.dev/users/chroju">${simpleIcon(siActivitypub)}</a>
-<a href="https://bsky.app/profile/chroju.dev">${simpleIcon(siBluesky)}</a>
-<a href="https://x.com/chroju">${simpleIcon(siX)}</a>
 </nav>
 </div>
 </footer>`)

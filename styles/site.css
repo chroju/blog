@@ -914,27 +914,19 @@ main .home-recent h2 {
   color: var(--text-muted);
 }
 
-/* 事実リスト: キーをfrontmatter風の等幅で */
-.bio-facts {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0.4rem 1.5rem;
+/* 事実ブロック: 記事のfrontmatterと同じ見た目（---区切り・fm-key等幅） */
+.bio-frontmatter {
   margin: 2rem 0;
 }
 
-.bio-facts dt {
-  font-family: var(--font-mono);
-  font-weight: 400;
+.bio-frontmatter .fm-nested {
+  padding-inline-start: 1.5rem;
+}
+
+/* expertiseはYAMLのリスト記法（ハイフン）で並べる */
+.bio-frontmatter .fm-list-item::before {
+  content: "- ";
   color: var(--text-muted);
-  margin: 0;
-}
-
-.bio-facts dt::after {
-  content: ":";
-}
-
-.bio-facts dd {
-  margin: 0;
 }
 
 /* 経歴タイムライン: 等幅の期間 + 内容の2カラム */
@@ -1056,8 +1048,7 @@ main .home-recent h2 {
   color: var(--text);
 }
 
-.footer-nav,
-.footer-sns {
+.footer-nav {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -1067,10 +1058,7 @@ main .home-recent h2 {
   .footer-nav {
     border-inline-start: 1px solid var(--border);
     padding-inline-start: 1.5rem;
-  }
-
-  /* SNSアイコンはヘッダーのアクション群と同じく右端に寄せる */
-  .footer-sns {
+    /* SNSアイコンを廃止した分、ナビをヘッダーのアクション群と同じく右端に寄せる */
     margin-inline-start: auto;
   }
 }
@@ -1079,17 +1067,6 @@ main .home-recent h2 {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text);
-}
-
-.sns-icon {
-  width: 1.35rem;
-  height: 1.35rem;
-  fill: var(--text-muted);
-  vertical-align: middle;
-}
-
-a:hover .sns-icon {
-  fill: var(--accent);
 }
 
 /* ---------- narrow screens ---------- */
@@ -1146,8 +1123,7 @@ a:hover .sns-icon {
     padding-block: 0.5rem;
   }
 
-  .footer-nav,
-  .footer-sns {
+  .footer-nav {
     justify-content: center;
     gap: 1.5rem;
   }
@@ -1182,17 +1158,11 @@ a:hover .sns-icon {
     padding-block: 0.25rem;
   }
 
-  .footer-nav a,
-  .footer-sns a {
+  .footer-nav a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0.6rem 0.4rem;
-  }
-
-  .footer-sns .sns-icon {
-    width: 1.5rem;
-    height: 1.5rem;
   }
 
   .tree a {

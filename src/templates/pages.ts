@@ -188,6 +188,39 @@ export function tagPage(encodedTag: string, posts: Post[]): string {
   )
 }
 
+// bio用のfrontmatter風メタブロック（location / expertise / social）
+function bioFrontmatterBlock(): string {
+  const expertise = ['Infrastructure as Code', 'Security', 'Cloud Architecture', 'Engineering Management']
+  const socialLinks: [string, string, string][] = [
+    ['github', 'chroju', 'https://github.com/chroju'],
+    ['activitypub', '@chroju@pleroma.chroju.dev', 'https://pleroma.chroju.dev/users/chroju'],
+    ['bluesky', '@chroju.dev', 'https://bsky.app/profile/chroju.dev'],
+    ['x', '@chroju', 'https://x.com/chroju'],
+  ]
+  return html`
+    <div class="post-frontmatter bio-frontmatter">
+      <span class="fm-delim" aria-hidden="true">---</span>
+      <span class="fm-line"><span class="fm-key">location:</span> Kanagawa, Japan</span>
+      <span class="fm-line"><span class="fm-key">expertise:</span></span>
+      ${raw(
+        expertise
+          .map((item) => html`<span class="fm-line fm-nested fm-list-item">${item}</span>`)
+          .join('')
+      )}
+      <span class="fm-line"><span class="fm-key">social:</span></span>
+      ${raw(
+        socialLinks
+          .map(
+            ([key, label, href]) =>
+              html`<span class="fm-line fm-nested"><span class="fm-key">${key}:</span> <a href="${href}">${label}</a></span>`
+          )
+          .join('')
+      )}
+      <span class="fm-delim" aria-hidden="true">---</span>
+    </div>
+  `
+}
+
 export function bioPage(): string {
   const body = html`
     <article class="bio">
@@ -198,12 +231,7 @@ export function bioPage(): string {
           <p class="bio-role">Site Reliability Engineer</p>
         </div>
       </div>
-      <dl class="bio-facts">
-        <dt>location</dt>
-        <dd>Kanagawa, Japan</dd>
-        <dt>favorite</dt>
-        <dd>Terraform / Kubernetes / Go / AWS</dd>
-      </dl>
+      ${raw(bioFrontmatterBlock())}
       <section>
         <h2>Experience</h2>
         <ol class="timeline">
