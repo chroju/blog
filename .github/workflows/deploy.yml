@@ -27,6 +27,9 @@ jobs:
 
       - run: npm run build
 
+      # デプロイ前に出力の整合性を検証（壊れた成果物を公開しない）
+      - run: npm run check
+
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

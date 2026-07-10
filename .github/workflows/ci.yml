@@ -19,3 +19,6 @@ jobs:
       - run: npx tsc --noEmit
 
       - run: node src/build.ts --skip-og
+
+      # 出力の整合性検証（全ページ存在・XML整形式・フィード件数等）
+      - run: node src/check.ts
