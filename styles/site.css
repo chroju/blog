@@ -544,6 +544,161 @@ section[data-footnotes] h2 {
   line-height: 1.5;
 }
 
+/* 記事フッター: 左にパンくず、右にアクション行を1本のバーとして並べる */
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 3rem 0 0;
+}
+
+/* 記事末尾のパンくず: パスの各階層がリンク、末尾の▴で最近の記事が上に開く */
+.post-crumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.post-crumb a {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.post-crumb a:hover {
+  color: var(--accent);
+}
+
+.crumb-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.crumb-sep {
+  color: color-mix(in srgb, var(--text-muted) 50%, transparent);
+  user-select: none;
+}
+
+/* 現在地（ファイル名）は非リンク。長いslugは省略記号で切る */
+.crumb-current {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.crumb-recent {
+  flex-shrink: 0;
+}
+
+.crumb-recent summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.crumb-recent summary::-webkit-details-marker {
+  display: none;
+}
+
+.crumb-recent summary:hover {
+  color: var(--accent);
+  background: var(--bg-subtle);
+}
+
+/* 開いている間は反転して「上に出ている」ことを示す */
+.crumb-caret {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.crumb-recent[open] .crumb-caret {
+  transform: rotate(180deg);
+}
+
+.crumb-panel {
+  position: absolute;
+  bottom: calc(100% + 0.4rem);
+  left: 0;
+  width: min(26rem, calc(100vw - 2 * var(--pad, 1.1rem)));
+  z-index: 10;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 6px 24px var(--shadow);
+  padding: 0.4rem 0;
+}
+
+.crumb-panel-label {
+  margin: 0;
+  padding: 0.25rem 0.9rem 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.crumb-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0 0 !important;
+}
+
+.crumb-panel li {
+  margin: 0;
+}
+
+.crumb-panel a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0.9rem;
+  color: var(--text);
+  /* 記事タイトルは本文の書体で読ませる */
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.crumb-panel a:hover {
+  background: var(--bg-subtle);
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.crumb-post-title {
+  min-width: 0;
+}
+
+.crumb-panel time {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.crumb-all {
+  border-top: 1px solid var(--border);
+  margin-top: 0.25rem !important;
+  padding-top: 0.25rem;
+}
+
+.crumb-all a {
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
 /* frontmatter風メタブロック（date / tags） */
 .post-frontmatter {
   font-family: var(--font-mono);
@@ -586,7 +741,6 @@ section[data-footnotes] h2 {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  margin: 3rem 0 0;
 }
 
 .post-action {

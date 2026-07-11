@@ -124,6 +124,44 @@ function frontmatterBlock(post: Post, headings: Heading[] = []): string {
   `
 }
 
+// 記事末尾のパンくず。パスの各階層がリンクで、末尾の▾を押すと
+// IDEのbreadcrumbのように同階層のファイル（最近の記事）が上方向に開く
+// （▾は「メニューがある」の記号なので、開く方向が上でも閉状態は▾で示す）
+function postBreadcrumb(post: Post, allPosts: Post[]): string {
+  const folderIcon = raw(
+    '<svg class="crumb-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>'
+  )
+  const sep = raw('<span class="crumb-sep" aria-hidden="true">/</span>')
+  const recent = allPosts.filter((p) => p.id !== post.id).slice(0, 5)
+  return html`
+    <nav class="post-crumb" aria-label="現在地">
+      ${folderIcon}
+      <a href="/">chroju.dev</a>
+      ${sep}
+      <a href="/blog">blog</a>
+      ${sep}
+      <span class="crumb-current">${post.id}.md</span>
+      <details class="crumb-recent">
+        <summary aria-label="最近の記事を表示"><span class="crumb-caret" aria-hidden="true">▾</span></summary>
+        <div class="crumb-panel">
+          <p class="crumb-panel-label">recent posts</p>
+          <ul>
+            ${raw(
+              recent
+                .map(
+                  (p) =>
+                    html`<li><a href="/blog/${raw(encodeURI(p.id))}"><span class="crumb-post-title">${p.title}</span><time datetime="${p.date}">${p.date.slice(0, 10)}</time></a></li>`
+                )
+                .join('')
+            )}
+            <li class="crumb-all"><a href="/blog">All articles →</a></li>
+          </ul>
+        </div>
+      </details>
+    </nav>
+  `
+}
+
 // 記事末尾のアクション行。GitHubのファイルビュー右上の並び（Raw・コピー・編集）を、
 // コードブロックのコピーボタンと同じゴーストボタンの語彙で再構成する
 function postActions(post: Post): string {
@@ -144,14 +182,22 @@ function postActions(post: Post): string {
   `
 }
 
-export function postPage(post: Post, contentHtml: string, headings: Heading[] = []): string {
+export function postPage(
+  post: Post,
+  contentHtml: string,
+  headings: Heading[] = [],
+  allPosts: Post[] = []
+): string {
   const pageTitle = `${post.title} - ${site.name}`
   const body = html`
     <article>
       <h1 class="post-title">${post.title}</h1>
       ${raw(frontmatterBlock(post, headings))}
       <div class="post-body">${raw(contentHtml)}</div>
-      ${raw(postActions(post))}
+      <div class="post-footer">
+        ${raw(postBreadcrumb(post, allPosts))}
+        ${raw(postActions(post))}
+      </div>
     </article>
   `
   return layout(
@@ -160,7 +206,7 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
       url: `${site.url}/blog/${encodeURI(post.id)}`,
       description: postDescription(post),
       ogImage: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
-      scripts: ['/js/lightbox.js', '/js/code.js'],
+      scripts: ['/js/lightbox.js', '/js/code.js', '/js/crumb.js'],
       extraHead: blogPostingJsonLd(post),
     },
     body
