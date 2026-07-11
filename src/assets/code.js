@@ -33,23 +33,35 @@
   });
 
   // 記事末尾のアクション行: Markdownソースを取得してコピーする
+  var CROSS_ICON =
+    '<svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>';
+
+  function flashIcon(btn, icon, className) {
+    btn.innerHTML = icon;
+    btn.classList.add(className);
+    setTimeout(function () {
+      btn.innerHTML = COPY_ICON;
+      btn.classList.remove(className);
+    }, 1500);
+  }
+
   var srcBtn = document.querySelector('.post-copy');
   if (srcBtn) {
     srcBtn.addEventListener('click', function () {
       fetch(srcBtn.dataset.raw)
         .then(function (res) {
+          if (!res.ok) throw new Error(res.status);
           return res.text();
         })
         .then(function (text) {
           return navigator.clipboard.writeText(text);
         })
         .then(function () {
-          srcBtn.innerHTML = CHECK_ICON;
-          srcBtn.classList.add('copied');
-          setTimeout(function () {
-            srcBtn.innerHTML = COPY_ICON;
-            srcBtn.classList.remove('copied');
-          }, 1500);
+          flashIcon(srcBtn, CHECK_ICON, 'copied');
+        })
+        .catch(function () {
+          // 取得もコピーもできなかったことだけ伝える（オフライン等）
+          flashIcon(srcBtn, CROSS_ICON, 'copy-failed');
         });
     });
   }
