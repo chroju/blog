@@ -106,7 +106,14 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
 
   // .md はブラウザでインライン表示できるよう text/plain で配信する。
   // slug自体が .md で終わる記事のHTMLページはグロブに巻き込まれるため個別に戻す
-  const headerRules = ['/blog/*.md', '  Content-Type: text/plain; charset=utf-8']
+  const headerRules = [
+    '/blog/*.md',
+    '  Content-Type: text/plain; charset=utf-8',
+    '',
+    // Cloudflareのデフォルト拡張子マッピングはcharset未指定でmojibakeの原因になる
+    '/llms.txt',
+    '  Content-Type: text/plain; charset=utf-8',
+  ]
   for (const id of mdSlugPosts) {
     headerRules.push('', `/blog/${encodeURI(id)}`, '  ! Content-Type', '  Content-Type: text/html; charset=utf-8')
   }
