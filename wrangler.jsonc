@@ -2,6 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "chroju-dev",
   "compatibility_date": "2026-07-01",
+  // chroju.dev をこのWorkerのcustom domainにする（DNSレコードと証明書はCloudflareが管理）
+  "routes": [{ "pattern": "chroju.dev", "custom_domain": true }],
+  // custom domain設定後もworkers.devのプレビューURLは残す
+  "workers_dev": true,
   "assets": {
     // 末尾スラッシュなしのパーマリンクを維持する:
     // /blog/foo は blog/foo.html から配信され、/blog/foo/ は /blog/foo へ301される
