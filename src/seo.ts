@@ -77,9 +77,15 @@ export function postDescription(post: Post, maxLength = 120): string {
   return text.length > maxLength ? `${text.slice(0, maxLength)}…` : text
 }
 
-/** 記事ページ用の JSON-LD (BlogPosting) */
+// script終端タグの混入を防ぐ
+function jsonLdScript(data: object): string {
+  const json = JSON.stringify(data).replace(/</g, '\\u003c')
+  return `<script type="application/ld+json">${json}</script>`
+}
+
+/** 記事ページ用の JSON-LD (BlogPosting + BreadcrumbList) */
 export function blogPostingJsonLd(post: Post): string {
-  const data = {
+  const posting = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
@@ -89,7 +95,15 @@ export function blogPostingJsonLd(post: Post): string {
     image: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
     keywords: post.tags.join(','),
   }
-  // script終端タグの混入を防ぐ
-  const json = JSON.stringify(data).replace(/</g, '\\u003c')
-  return `<script type="application/ld+json">${json}</script>`
+  // 記事フッターのパンくず（chroju.dev / blog / 記事）と同じ階層
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: site.name, item: site.url },
+      { '@type': 'ListItem', position: 2, name: 'blog', item: `${site.url}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title },
+    ],
+  }
+  return jsonLdScript(posting) + jsonLdScript(breadcrumb)
 }
