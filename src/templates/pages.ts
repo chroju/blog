@@ -83,8 +83,8 @@ export function blogIndexPage(posts: Post[]): string {
 function fmTocBlock(headings: Heading[]): string {
   if (headings.length < 3) return ''
   return html`
-    <details class="fm-toc">
-      <summary><span class="fm-key">toc:</span> <span class="fm-toc-hint">[...]</span></summary>
+    <details class="fm-fold fm-toc">
+      <summary><span class="fm-key">toc:</span> <span class="fm-fold-hint">[...]</span></summary>
       <ol>
         ${raw(
           headings
@@ -124,13 +124,80 @@ function frontmatterBlock(post: Post, headings: Heading[] = []): string {
   `
 }
 
-export function postPage(post: Post, contentHtml: string, headings: Heading[] = []): string {
+// 記事末尾のパンくず。パスの各階層がリンクで、末尾の▾を押すと
+// IDEのbreadcrumbのように同階層のファイル（最近の記事）が上方向に開く
+// （▾は「メニューがある」の記号なので、開く方向が上でも閉状態は▾で示す）
+function postBreadcrumb(post: Post, allPosts: Post[]): string {
+  const folderIcon = raw(
+    '<svg class="crumb-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>'
+  )
+  const sep = raw('<span class="crumb-sep" aria-hidden="true">/</span>')
+  const recent = allPosts.filter((p) => p.id !== post.id).slice(0, 5)
+  return html`
+    <nav class="post-crumb" aria-label="現在地">
+      ${folderIcon}
+      <a href="/">chroju.dev</a>
+      ${sep}
+      <a href="/blog">blog</a>
+      ${sep}
+      <span class="crumb-current">${post.id}.md</span>
+      <details class="crumb-recent">
+        <summary aria-label="最近の記事を表示"><span class="crumb-caret" aria-hidden="true">▾</span></summary>
+        <div class="crumb-panel">
+          <p class="crumb-panel-label">recent posts</p>
+          <ul>
+            ${raw(
+              recent
+                .map(
+                  (p) =>
+                    html`<li><a href="/blog/${raw(encodeURI(p.id))}"><span class="crumb-post-title">${p.title}</span><time datetime="${p.date}">${p.date.slice(0, 10)}</time></a></li>`
+                )
+                .join('')
+            )}
+            <li class="crumb-all"><a href="/blog">All articles →</a></li>
+          </ul>
+        </div>
+      </details>
+    </nav>
+  `
+}
+
+// 記事末尾のアクション行。GitHubのファイルビュー右上の並び（Raw・コピー・編集）を、
+// コードブロックのコピーボタンと同じゴーストボタンの語彙で再構成する
+function postActions(post: Post): string {
+  // コピーアイコンは code.js の COPY_ICON と同一（クリック時の差し替えもcode.js側で行う）
+  const copyIcon = raw(
+    '<svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>'
+  )
+  const editIcon = raw(
+    '<svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>'
+  )
+  const rawPath = `/blog/${encodeURI(post.id)}.md`
+  return html`
+    <div class="post-actions">
+      <a class="post-action" href="${rawPath}" title="Markdownソースを表示">Raw</a>
+      <button class="post-action post-copy" type="button" data-raw="${rawPath}" title="Markdownソースをコピー" aria-label="Markdownソースをコピー">${copyIcon}</button>
+      <a class="post-action" href="${site.repoURL}/edit/main/posts/${post.id}.md" title="GitHubで修正を提案する" aria-label="GitHubで修正を提案する">${editIcon}</a>
+    </div>
+  `
+}
+
+export function postPage(
+  post: Post,
+  contentHtml: string,
+  headings: Heading[] = [],
+  allPosts: Post[] = []
+): string {
   const pageTitle = `${post.title} - ${site.name}`
   const body = html`
     <article>
       <h1 class="post-title">${post.title}</h1>
       ${raw(frontmatterBlock(post, headings))}
       <div class="post-body">${raw(contentHtml)}</div>
+      <div class="post-footer">
+        ${raw(postBreadcrumb(post, allPosts))}
+        ${raw(postActions(post))}
+      </div>
     </article>
   `
   return layout(
@@ -139,8 +206,7 @@ export function postPage(post: Post, contentHtml: string, headings: Heading[] = 
       url: `${site.url}/blog/${encodeURI(post.id)}`,
       description: postDescription(post),
       ogImage: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
-      articleId: post.id,
-      scripts: ['/js/lightbox.js', '/js/code.js'],
+      scripts: ['/js/lightbox.js', '/js/code.js', '/js/crumb.js'],
       extraHead: blogPostingJsonLd(post),
     },
     body
@@ -188,6 +254,39 @@ export function tagPage(encodedTag: string, posts: Post[]): string {
   )
 }
 
+// bio用のfrontmatter風メタブロック（location / expertise / social）
+function bioFrontmatterBlock(): string {
+  const expertise = ['Infrastructure as Code', 'Security', 'Cloud Architecture', 'Engineering Management']
+  const socialLinks: [string, string, string][] = [
+    ['github', 'chroju', 'https://github.com/chroju'],
+    ['activitypub', '@chroju@pleroma.chroju.dev', 'https://pleroma.chroju.dev/users/chroju'],
+    ['bluesky', '@chroju.dev', 'https://bsky.app/profile/chroju.dev'],
+    ['x', '@chroju', 'https://x.com/chroju'],
+  ]
+  return html`
+    <div class="post-frontmatter bio-frontmatter">
+      <span class="fm-delim" aria-hidden="true">---</span>
+      <span class="fm-line"><span class="fm-key">location:</span> Kanagawa, Japan</span>
+      <span class="fm-line"><span class="fm-key">expertise:</span></span>
+      ${raw(
+        expertise
+          .map((item) => html`<span class="fm-line fm-nested fm-list-item">${item}</span>`)
+          .join('')
+      )}
+      <span class="fm-line"><span class="fm-key">social:</span></span>
+      ${raw(
+        socialLinks
+          .map(
+            ([key, label, href]) =>
+              html`<span class="fm-line fm-nested"><span class="fm-key">${key}:</span> <a href="${href}">${label}</a></span>`
+          )
+          .join('')
+      )}
+      <span class="fm-delim" aria-hidden="true">---</span>
+    </div>
+  `
+}
+
 export function bioPage(): string {
   const body = html`
     <article class="bio">
@@ -198,12 +297,7 @@ export function bioPage(): string {
           <p class="bio-role">Site Reliability Engineer</p>
         </div>
       </div>
-      <dl class="bio-facts">
-        <dt>location</dt>
-        <dd>Kanagawa, Japan</dd>
-        <dt>favorite</dt>
-        <dd>Terraform / Kubernetes / Go / AWS</dd>
-      </dl>
+      ${raw(bioFrontmatterBlock())}
       <section>
         <h2>Experience</h2>
         <ol class="timeline">
@@ -278,8 +372,8 @@ export function policyPage(): string {
     </section>
     <section>
       <h2>Contact</h2>
-      <p>このサイトに関するご意見、ご質問等は、ソースコードをホストしている GitHub レポジトリ <a href="https://github.com/chroju/blog/issues">chroju/blog の Issue</a> で受け付けています。また、ブログ内の記事の修正依頼については、記事下部に記載されている「Edit this article」のリンクから Pull Request を作成いただくことができます。</p>
-      <p>chroju へ直接連絡を取りたい場合は、 Twitter の <a href="https://twitter.com/chroju">@chroju</a> までメンションもしくは DM にてご連絡ください。</p>
+      <p>このサイトに関するご意見、ご質問等は、ソースコードをホストしている GitHub レポジトリ <a href="https://github.com/chroju/blog/issues">chroju/blog の Issue</a> で受け付けています。また、ブログ内の記事の修正依頼については、記事末尾の鉛筆アイコンから GitHub 上で Pull Request を作成いただくことができます。</p>
+      <p>chroju へ直接連絡を取りたい場合は、 Bluesky の <a href="https://bsky.app/profile/chroju.dev">@chroju.dev</a> もしくは X の <a href="https://x.com/chroju">@chroju</a> まで DM にてご連絡ください。</p>
     </section>
   `
   return layout(

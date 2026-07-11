@@ -1,5 +1,4 @@
 import { site } from '../config.ts'
-import { siGithub, siActivitypub, siBluesky, siX } from 'simple-icons'
 
 export function escapeHtml(s: string): string {
   return s
@@ -48,25 +47,10 @@ export function formatDate(dateString: string): string {
   return t ? `${d} ${t}` : d
 }
 
-function simpleIcon(icon: { title: string; path: string }, className = 'sns-icon'): Raw {
-  return raw(
-    `<svg class="${className}" role="img" viewBox="0 0 24 24" aria-label="${escapeHtml(
-      icon.title
-    )}" xmlns="http://www.w3.org/2000/svg"><path d="${icon.path}"/></svg>`
-  )
-}
-
 const icons = {
   rss: raw(
     '<svg class="icon" viewBox="0 0 24 24" aria-label="RSS" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>'
   ),
-  file: raw(
-    '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>'
-  ),
-  history: raw(
-    '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6a7 7 0 1 1 7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.96 8.96 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>'
-  ),
-  github: simpleIcon(siGithub, 'icon'),
   sun: raw(
     '<svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm10-8a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM6 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm12.07 7.07a1 1 0 0 1-1.41 0l-1.42-1.41a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41zM8.76 8.76a1 1 0 0 1-1.42 0L5.93 7.34a1 1 0 0 1 1.41-1.41l1.42 1.41a1 1 0 0 1 0 1.42zm9.31-2.83a1 1 0 0 1 0 1.41L16.66 8.76a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zM8.76 15.24a1 1 0 0 1 0 1.42l-1.42 1.41a1 1 0 0 1-1.41-1.41l1.41-1.42a1 1 0 0 1 1.42 0z"/></svg>'
   ),
@@ -88,8 +72,6 @@ export interface PageMeta {
   ogImage: string
   /** ブログ系ページか（RSS alternateとサブタイトルの表示） */
   isBlog?: boolean
-  /** 記事ページの場合の記事ID（フッターのEdit/Historyリンクに使用） */
-  articleId?: string
   footer?: boolean
   /** 追加で読み込むスクリプト（記事ページのlightbox等） */
   scripts?: string[]
@@ -111,25 +93,6 @@ export function layout(meta: PageMeta, body: string): string {
   const headerLink = segment ? `/${segment}` : '/'
   const isBlog = meta.isBlog ?? siteTitle === site.blogTitle
   const showFooter = meta.footer ?? true
-  const articleFooter =
-    meta.articleId !== undefined && meta.articleId !== ''
-      ? html`
-          <div class="article-footer">
-            <a class="read-more" href="/blog">Read more articles →</a>
-            <nav class="article-meta-links">
-              <a href="/blog/${raw(encodeURI(meta.articleId))}.md"
-                >${icons.file} Raw</a
-              >
-              <a href="${site.repoURL}/edit/main/posts/${meta.articleId}.md"
-                >${icons.github} Edit</a
-              >
-              <a href="${site.repoURL}/commits/main/posts/${meta.articleId}.md"
-                >${icons.history} History</a
-              >
-            </nav>
-          </div>
-        `
-      : ''
 
   return html`<!doctype html>
 <html lang="ja">
@@ -177,7 +140,6 @@ ${
   showFooter
     ? raw(html`
 <footer class="site-footer">
-${raw(articleFooter)}
 <div class="footer-profile">
 <img src="/images/profile.webp" width="40" height="40" alt="${site.author}">
 <a class="footer-site" href="/">${site.name}</a>
@@ -185,12 +147,6 @@ ${raw(articleFooter)}
 <a href="/blog">/blog</a>
 <a href="/bio">/bio</a>
 <a href="/policy">/policy</a>
-</nav>
-<nav class="footer-sns">
-<a href="https://github.com/chroju">${simpleIcon(siGithub)}</a>
-<a href="https://pleroma.chroju.dev/users/chroju">${simpleIcon(siActivitypub)}</a>
-<a href="https://bsky.app/profile/chroju.dev">${simpleIcon(siBluesky)}</a>
-<a href="https://x.com/chroju">${simpleIcon(siX)}</a>
 </nav>
 </div>
 </footer>`)

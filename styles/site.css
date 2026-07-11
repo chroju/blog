@@ -17,6 +17,8 @@
   --shadow: rgba(30, 30, 30, 0.08);
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
     "BIZ UDGothic", monospace;
+  --font-sans: "Helvetica Neue", Arial, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -57,8 +59,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
+  font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.9;
   letter-spacing: 0.02em;
@@ -544,6 +545,160 @@ section[data-footnotes] h2 {
   line-height: 1.5;
 }
 
+/* 記事フッター: 左にパンくず、右にアクション行を1本のバーとして並べる */
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 3rem 0 0;
+}
+
+/* 記事末尾のパンくず: パスの各階層がリンク、末尾の▴で最近の記事が上に開く */
+.post-crumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.post-crumb a {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.post-crumb a:hover {
+  color: var(--accent);
+}
+
+.crumb-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.crumb-sep {
+  color: color-mix(in srgb, var(--text-muted) 50%, transparent);
+  user-select: none;
+}
+
+/* 現在地（ファイル名）は非リンク。長いslugは省略記号で切る */
+.crumb-current {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.crumb-recent {
+  flex-shrink: 0;
+}
+
+.crumb-recent summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.crumb-recent summary::-webkit-details-marker {
+  display: none;
+}
+
+.crumb-recent summary:hover {
+  color: var(--accent);
+  background: var(--bg-subtle);
+}
+
+/* 開いている間は反転して「上に出ている」ことを示す */
+.crumb-caret {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.crumb-recent[open] .crumb-caret {
+  transform: rotate(180deg);
+}
+
+.crumb-panel {
+  position: absolute;
+  bottom: calc(100% + 0.4rem);
+  left: 0;
+  width: min(26rem, calc(100vw - 2 * var(--pad, 1.1rem)));
+  z-index: 10;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 6px 24px var(--shadow);
+  padding: 0.4rem 0;
+}
+
+.crumb-panel-label {
+  margin: 0;
+  padding: 0.25rem 0.9rem 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.crumb-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0 0 !important;
+}
+
+.crumb-panel li {
+  margin: 0;
+}
+
+.crumb-panel a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0.9rem;
+  color: var(--text);
+  /* 記事タイトルは本文の書体で読ませる */
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.crumb-panel a:hover {
+  background: var(--bg-subtle);
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.crumb-post-title {
+  min-width: 0;
+}
+
+.crumb-panel time {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.crumb-all {
+  border-top: 1px solid var(--border);
+  margin-top: 0.25rem !important;
+  padding-top: 0.25rem;
+}
+
+.crumb-all a {
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
 /* frontmatter風メタブロック（date / tags） */
 .post-frontmatter {
   font-family: var(--font-mono);
@@ -578,6 +733,50 @@ section[data-footnotes] h2 {
 
 .post-frontmatter .fm-punct {
   color: var(--text-muted);
+}
+
+/* 記事末尾のアクション行。GitHubのファイルビュー右上の並び（Raw・コピー・編集）を、
+ * コードブロックのコピーボタンと同じゴーストボタンの語彙で置く */
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.post-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-action svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+}
+
+.post-action:hover {
+  color: var(--accent);
+  background: var(--bg-subtle);
+}
+
+.post-copy.copied {
+  color: var(--accent);
+}
+
+/* コピー失敗時の✕はテーマのアクセントではなく注意色で示す */
+.post-copy.copy-failed {
+  color: #c25757;
 }
 
 article p img {
@@ -646,33 +845,36 @@ article p img {
 }
 
 
-/* ---------- table of contents ---------- */
-/* 目次はfrontmatterの toc: キー。閉じているときは toc: [...] の1行、
- * 開くとYAMLのリスト記法（ハイフン + ネストインデント）で並ぶ */
+/* ---------- frontmatter folds ---------- */
+/* toc: や source: は畳み込み可能なfrontmatterキー。閉じているときは
+ * key: [...] の1行、開くと中身が展開される */
 
-.fm-toc summary {
+.fm-fold summary {
   cursor: pointer;
   /* 開閉は三角マーカーではなく [...] で示す */
   list-style: none;
 }
 
-.fm-toc summary::-webkit-details-marker {
+.fm-fold summary::-webkit-details-marker {
   display: none;
 }
 
 /* クリックできる値はtagsのリンクと同じくアクセント色で示す */
-.fm-toc .fm-toc-hint {
+.fm-fold .fm-fold-hint {
   color: var(--accent);
 }
 
-.fm-toc summary:hover .fm-toc-hint {
+.fm-fold summary:hover .fm-fold-hint {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
-.fm-toc[open] .fm-toc-hint {
+.fm-fold[open] .fm-fold-hint {
   display: none;
 }
+
+/* ---------- table of contents ---------- */
+/* 目次を開くとYAMLのリスト記法（ハイフン + ネストインデント）で並ぶ */
 
 .fm-toc ol {
   list-style: none;
@@ -914,27 +1116,19 @@ main .home-recent h2 {
   color: var(--text-muted);
 }
 
-/* 事実リスト: キーをfrontmatter風の等幅で */
-.bio-facts {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0.4rem 1.5rem;
+/* 事実ブロック: 記事のfrontmatterと同じ見た目（---区切り・fm-key等幅） */
+.bio-frontmatter {
   margin: 2rem 0;
 }
 
-.bio-facts dt {
-  font-family: var(--font-mono);
-  font-weight: 400;
+.post-frontmatter .fm-nested {
+  padding-inline-start: 1.5rem;
+}
+
+/* expertiseはYAMLのリスト記法（ハイフン）で並べる */
+.bio-frontmatter .fm-list-item::before {
+  content: "- ";
   color: var(--text-muted);
-  margin: 0;
-}
-
-.bio-facts dt::after {
-  content: ":";
-}
-
-.bio-facts dd {
-  margin: 0;
 }
 
 /* 経歴タイムライン: 等幅の期間 + 内容の2カラム */
@@ -1000,41 +1194,6 @@ main .home-recent h2 {
   font-size: 0.9rem;
 }
 
-.article-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.article-meta-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.article-meta-links a {
-  color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-}
-
-.article-meta-links a:hover {
-  color: var(--accent);
-}
-
-.article-meta-links .icon {
-  width: 0.9rem;
-  height: 0.9rem;
-  fill: currentColor;
-}
-
-.read-more {
-  font-weight: 600;
-}
-
 .footer-profile {
   display: flex;
   align-items: center;
@@ -1056,8 +1215,7 @@ main .home-recent h2 {
   color: var(--text);
 }
 
-.footer-nav,
-.footer-sns {
+.footer-nav {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -1067,10 +1225,7 @@ main .home-recent h2 {
   .footer-nav {
     border-inline-start: 1px solid var(--border);
     padding-inline-start: 1.5rem;
-  }
-
-  /* SNSアイコンはヘッダーのアクション群と同じく右端に寄せる */
-  .footer-sns {
+    /* SNSアイコンを廃止した分、ナビをヘッダーのアクション群と同じく右端に寄せる */
     margin-inline-start: auto;
   }
 }
@@ -1079,17 +1234,6 @@ main .home-recent h2 {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text);
-}
-
-.sns-icon {
-  width: 1.35rem;
-  height: 1.35rem;
-  fill: var(--text-muted);
-  vertical-align: middle;
-}
-
-a:hover .sns-icon {
-  fill: var(--accent);
 }
 
 /* ---------- narrow screens ---------- */
@@ -1130,8 +1274,7 @@ a:hover .sns-icon {
     padding-inline-start: 1.35rem;
   }
 
-  /* Edit/History・RSS・サブタイトルはモバイルでは非表示 */
-  .article-meta-links,
+  /* RSS・サブタイトルはモバイルでは非表示 */
   .rss-link,
   .site-subtitle {
     display: none;
@@ -1143,11 +1286,11 @@ a:hover .sns-icon {
     align-items: center;
     gap: 0.85rem;
     text-align: center;
-    padding-block: 0.5rem;
+    /* 罫線とアイコンの間はデスクトップと同じ余白を保つ */
+    padding-block: 1.5rem 0.5rem;
   }
 
-  .footer-nav,
-  .footer-sns {
+  .footer-nav {
     justify-content: center;
     gap: 1.5rem;
   }
@@ -1182,17 +1325,11 @@ a:hover .sns-icon {
     padding-block: 0.25rem;
   }
 
-  .footer-nav a,
-  .footer-sns a {
+  .footer-nav a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0.6rem 0.4rem;
-  }
-
-  .footer-sns .sns-icon {
-    width: 1.5rem;
-    height: 1.5rem;
   }
 
   .tree a {
@@ -1202,11 +1339,6 @@ a:hover .sns-icon {
 
   .lightbox-close {
     padding: 0.75rem 1.25rem;
-  }
-
-  .read-more {
-    display: inline-block;
-    padding-block: 0.5rem;
   }
 }
 

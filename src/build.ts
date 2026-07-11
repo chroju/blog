@@ -96,7 +96,7 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
   const mdSlugPosts: string[] = []
   for (const post of publishedPosts) {
     const rendered = renderedById.get(post.id)!
-    write(`blog/${post.id}.html`, postPage(post, rendered.html, rendered.headings))
+    write(`blog/${post.id}.html`, postPage(post, rendered.html, rendered.headings, publishedPosts))
     fs.copyFileSync(
       path.join(root, 'posts', `${post.id}.md`),
       path.join(distDir, 'blog', `${post.id}.md`)
