@@ -1281,7 +1281,8 @@ main .home-recent h2 {
     align-items: center;
     gap: 0.85rem;
     text-align: center;
-    padding-block: 0.5rem;
+    /* 罫線とアイコンの間はデスクトップと同じ余白を保つ */
+    padding-block: 1.5rem 0.5rem;
   }
 
   .footer-nav {
