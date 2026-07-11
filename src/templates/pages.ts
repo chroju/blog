@@ -373,7 +373,7 @@ export function policyPage(): string {
     <section>
       <h2>Contact</h2>
       <p>このサイトに関するご意見、ご質問等は、ソースコードをホストしている GitHub レポジトリ <a href="https://github.com/chroju/blog/issues">chroju/blog の Issue</a> で受け付けています。また、ブログ内の記事の修正依頼については、記事末尾の鉛筆アイコンから GitHub 上で Pull Request を作成いただくことができます。</p>
-      <p>chroju へ直接連絡を取りたい場合は、 Twitter の <a href="https://twitter.com/chroju">@chroju</a> までメンションもしくは DM にてご連絡ください。</p>
+      <p>chroju へ直接連絡を取りたい場合は、 Bluesky の <a href="https://bsky.app/profile/chroju.dev">@chroju.dev</a> もしくは X の <a href="https://x.com/chroju">@chroju</a> まで DM にてご連絡ください。</p>
     </section>
   `
   return layout(
