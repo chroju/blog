@@ -17,6 +17,8 @@
   --shadow: rgba(30, 30, 30, 0.08);
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
     "BIZ UDGothic", monospace;
+  --font-sans: "Helvetica Neue", Arial, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -57,8 +59,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
+  font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.9;
   letter-spacing: 0.02em;
@@ -665,8 +666,7 @@ section[data-footnotes] h2 {
   padding: 0.35rem 0.9rem;
   color: var(--text);
   /* 記事タイトルは本文の書体で読ませる */
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", Meiryo, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   line-height: 1.6;
 }
