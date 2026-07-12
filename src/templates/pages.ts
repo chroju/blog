@@ -68,7 +68,7 @@ export function homePage(recentPosts: Post[]): string {
 }
 
 export function blogIndexPage(posts: Post[]): string {
-  const body = html`<h1 class="page-title">Articles</h1>${raw(postList(posts))}`
+  const body = html`${raw(postList(posts))}`
   return layout(
     {
       title: site.blogTitle,
