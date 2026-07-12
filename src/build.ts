@@ -140,7 +140,7 @@ export async function buildAll(options: BuildOptions = {}): Promise<void> {
   // OGP画像
   if (!options.skipOgImages) {
     await mapLimit(publishedPosts, 4, (post) =>
-      generateOgImage(post.title, path.join(distDir, 'og', `${post.id}.png`))
+      generateOgImage(post.title, path.join(distDir, 'og', `${post.id}.png`), post.date.slice(0, 10))
     )
     const fixedPages: [string, string][] = [
       ['site', site.name],

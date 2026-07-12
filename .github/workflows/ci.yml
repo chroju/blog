@@ -22,3 +22,77 @@ jobs:
 
       # 出力の整合性検証（全ページ存在・XML整形式・フィード件数等）
       - run: node src/check.ts
+
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # プレビュー確認用途のためOGP画像は生成しない（satoriのオーバーヘッドを避ける）
+      - run: node src/build.ts --skip-og
+
+      - name: Deploy preview version
+        id: deploy
+        uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # v4.0.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: versions upload --message "PR #${{ github.event.pull_request.number }}"
+
+      - name: Build preview comment
+        id: comment
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          COMMAND_OUTPUT: ${{ steps.deploy.outputs.command-output }}
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: |
+          # deployment-url が取れない場合はコマンド出力から workers.dev URL を拾う
+          PREVIEW_URL="$DEPLOYMENT_URL"
+          if [ -z "$PREVIEW_URL" ]; then
+            PREVIEW_URL=$(grep -oE 'https://[a-z0-9.-]+\.workers\.dev[^[:space:]]*' <<< "$COMMAND_OUTPUT" | head -1)
+          fi
+
+          {
+            echo "## Preview Deploy"
+            echo ""
+            if [ -n "$PREVIEW_URL" ]; then
+              echo "Preview: $PREVIEW_URL"
+            else
+              echo "Preview URL の取得に失敗しました。deploy stepのログを確認してください。"
+            fi
+            echo ""
+
+            # posts/*.md の追加・変更ファイルから記事ページへのリンクを列挙する
+            changed_posts=$(git diff --name-only --diff-filter=ACMR "$BASE_SHA" "$HEAD_SHA" -- 'posts/*.md' | sed -E 's#^posts/(.*)\.md$#\1#')
+            if [ -n "$PREVIEW_URL" ]; then
+              echo "### 変更されたページ"
+              echo ""
+              if [ -n "$changed_posts" ]; then
+                while IFS= read -r slug; do
+                  [ -z "$slug" ] && continue
+                  encoded=$(node -e "console.log(encodeURI(process.argv[1]))" "$slug")
+                  echo "- [$slug]($PREVIEW_URL/blog/$encoded)"
+                done <<< "$changed_posts"
+              else
+                # 記事以外（テンプレート・CSS・build.ts等）の変更はトップページで確認する
+                echo "- [トップページ]($PREVIEW_URL/)"
+              fi
+            fi
+          } > preview-comment.md
+
+      - uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          header: preview-deploy
+          path: preview-comment.md
