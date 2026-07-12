@@ -41,7 +41,7 @@ function el(type: string, style: Record<string, unknown>, children: unknown): un
   return { type, props: { style, children } }
 }
 
-async function renderOgSvg(title: string): Promise<string> {
+async function renderOgSvg(title: string, date?: string): Promise<string> {
   const tree = el(
     'div',
     {
@@ -81,8 +81,8 @@ async function renderOgSvg(title: string): Promise<string> {
           color: '#9aa3ad',
         },
         [
+          el('div', { display: 'flex' }, date ?? ''),
           el('div', { display: 'flex' }, site.blogTitle),
-          el('div', { display: 'flex' }, site.subTitle),
         ]
       ),
     ]
@@ -95,10 +95,10 @@ async function renderOgSvg(title: string): Promise<string> {
   })
 }
 
-export async function generateOgImage(title: string, outPath: string): Promise<void> {
+export async function generateOgImage(title: string, outPath: string, date?: string): Promise<void> {
   const key = crypto
     .createHash('sha1')
-    .update(`v${DESIGN_VERSION}:${title}`)
+    .update(`v${DESIGN_VERSION}:${title}:${date ?? ''}`)
     .digest('hex')
   const cachePath = path.join(cacheDir, `${key}.png`)
 
@@ -108,7 +108,7 @@ export async function generateOgImage(title: string, outPath: string): Promise<v
     return
   }
 
-  const svg = await renderOgSvg(title)
+  const svg = await renderOgSvg(title, date)
   const png = new Resvg(svg, { fitTo: { mode: 'width', value: WIDTH } }).render().asPng()
   fs.mkdirSync(cacheDir, { recursive: true })
   fs.writeFileSync(cachePath, png)
