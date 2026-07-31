@@ -31,7 +31,7 @@
     "@types/node": "24.13.3",
     "@types/rss": "^0.0.32",
     "fast-xml-parser": "^5.9.3",
-    "sudachi-synonyms-dictionary": "18.0.0",
+    "sudachi-synonyms-dictionary": "19.0.0",
     "textlint": "15.7.1",
     "textlint-rule-ja-no-abusage": "3.0.0",
     "textlint-rule-ja-no-redundant-expression": "4.0.1",
