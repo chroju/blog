@@ -43,14 +43,10 @@ mise run preview  # ビルド済み dist/ を配信のみ（再ビルドなし�
 ## Writing a Post
 
 ```bash
-mise run new-post YYYY-MM-DD-slug
+mise run new-post <slug>
 ```
 
-This will:
-1. Create a git branch named after the title
-2. Generate `posts/<title>.md` with front matter scaffolding
-3. Open the file in VS Code
-4. Start the dev server and open the preview in a browser
+`posts/<slug>.md` を front matter 付きで生成する（`date` は実行時刻で自動入力）。slug はそのまま URL（`/blog/<slug>`）になる。
 
 ### Front matter
 

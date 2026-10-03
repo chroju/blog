@@ -18,14 +18,6 @@ description = "Serve the built site without rebuilding"
 run = "node src/dev.ts --serve-only"
 
 [tasks.new-post]
-description = "Create a branch, scaffold a post, open it in VS Code, and start the dev server"
-usage = "arg \"<title>\""
-run = '''
-#!/usr/bin/env bash
-set -euo pipefail
-git checkout -b "$usage_title"
-./scripts/generate-post.sh "$usage_title"
-code "./posts/$usage_title.md"
-open "http://localhost:3000/blog/$usage_title"
-node src/dev.ts
-'''
+description = "Scaffold posts/<slug>.md"
+usage = "arg \"<slug>\""
+run = "./scripts/generate-post.sh \"$usage_slug\""
