@@ -21,3 +21,13 @@ run = "node src/dev.ts --serve-only"
 description = "Scaffold posts/<slug>.md"
 usage = "arg \"<slug>\""
 run = "./scripts/generate-post.sh \"$usage_slug\""
+
+[tasks.add-image]
+description = "Copy an image (or the clipboard) to public/images/<post date>/ and print the Markdown"
+quiet = true
+usage = '''
+arg "<slug>"
+arg "<name>"
+arg "[src]"
+'''
+run = "./scripts/add-image.sh \"$usage_slug\" \"$usage_name\" \"${usage_src:-}\""
