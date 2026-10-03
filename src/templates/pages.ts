@@ -206,7 +206,7 @@ export function postPage(
       url: `${site.url}/blog/${encodeURI(post.id)}`,
       description: postDescription(post),
       ogImage: `${site.url}/og/${encodeURIComponent(post.id)}.png`,
-      scripts: ['/js/lightbox.js', '/js/code.js', '/js/crumb.js'],
+      scripts: ['/js/lightbox.js', '/js/code.js', '/js/crumb.js', '/js/mermaid.js'],
       extraHead: blogPostingJsonLd(post),
     },
     body
