@@ -50,6 +50,21 @@ const headingAnchors: Plugin<[], HastRoot> = () => {
   }
 }
 
+// ```mermaid のコードブロックを <pre class="mermaid"> に置き換え、Shikiのハイライト対象から外す。
+// 図への描画はクライアント側（assets/mermaid.js）が行う。
+const mermaidBlocks: Plugin<[], HastRoot> = () => {
+  return (tree) => {
+    visit(tree, 'element', (node: Element) => {
+      if (node.tagName !== 'pre') return
+      const code = node.children.find((c): c is Element => c.type === 'element' && c.tagName === 'code')
+      const classes = code?.properties?.className
+      if (!code || !Array.isArray(classes) || !classes.includes('language-mermaid')) return
+      node.properties = { className: ['mermaid'] }
+      node.children = [{ type: 'text', value: textOf(code) }]
+    })
+  }
+}
+
 let processor: Processor | null = null
 
 function getProcessor() {
@@ -63,6 +78,7 @@ function getProcessor() {
       .use(rehypeRaw)
       .use(rehypeSlug)
       .use(headingAnchors)
+      .use(mermaidBlocks)
       .use(rehypeShiki, {
         themes: { light: 'github-light', dark: 'github-dark-dimmed' },
         defaultColor: false,
