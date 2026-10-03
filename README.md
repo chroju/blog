@@ -48,6 +48,14 @@ mise run new-post <slug>
 
 `posts/<slug>.md` を front matter 付きで生成する（`date` は実行時刻で自動入力）。slug はそのまま URL（`/blog/<slug>`）になる。
 
+### Images
+
+```bash
+mise run add-image <slug> <name> [src]
+```
+
+画像を `public/images/<記事の date>/<name>.<拡張子>` に配置し、埋め込み用の Markdown（`![name](/images/...)`）を標準出力に出してクリップボードにもコピーする。`src` を省略するとクリップボードの画像を PNG で保存する。Vim からは `:r !mise run add-image <slug> <name>` でカーソル位置に挿入できる。
+
 ### Front matter
 
 ```yaml
