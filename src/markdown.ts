@@ -6,7 +6,7 @@ import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import rehypeShiki from '@shikijs/rehype'
 import rehypeStringify from 'rehype-stringify'
-import { visit } from 'unist-util-visit'
+import { visit, SKIP } from 'unist-util-visit'
 import type { Root as HastRoot, Element, ElementContent } from 'hast'
 import remarkLinkCard from './linkcard.ts'
 
@@ -50,8 +50,9 @@ const headingAnchors: Plugin<[], HastRoot> = () => {
   }
 }
 
-// ```mermaid のコードブロックを <pre class="mermaid"> に置き換え、Shikiのハイライト対象から外す。
-// 図への描画はクライアント側（assets/mermaid.js）が行う。
+// ```mermaid のコードブロックを、図の描画元 <pre class="mermaid"> と、Shikiでハイライトされる
+// 通常のコードブロックの2つにする。図への描画と表示の切り替えはクライアント側（assets/mermaid.js）が行い、
+// JSが動かない場合は通常のコードブロックだけが見える。
 const mermaidBlocks: Plugin<[], HastRoot> = () => {
   return (tree) => {
     visit(tree, 'element', (node: Element) => {
@@ -59,8 +60,18 @@ const mermaidBlocks: Plugin<[], HastRoot> = () => {
       const code = node.children.find((c): c is Element => c.type === 'element' && c.tagName === 'code')
       const classes = code?.properties?.className
       if (!code || !Array.isArray(classes) || !classes.includes('language-mermaid')) return
-      node.properties = { className: ['mermaid'] }
-      node.children = [{ type: 'text', value: textOf(code) }]
+      const source: Element = {
+        type: 'element',
+        tagName: 'pre',
+        properties: { className: ['mermaid'] },
+        children: [{ type: 'text', value: textOf(code) }],
+      }
+      const raw: Element = { type: 'element', tagName: 'pre', properties: {}, children: [code] }
+      node.tagName = 'div'
+      node.properties = { className: ['mermaid-block'] }
+      node.children = [source, raw]
+      // 中の pre を再訪すると同じ変換を繰り返すため、子孫には降りない
+      return SKIP
     })
   }
 }

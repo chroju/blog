@@ -433,14 +433,32 @@ pre.shiki code {
   font-family: var(--font-mono);
 }
 
-/* mermaid.js が図に描画する。描画前のソースは目立たせない */
-pre.mermaid {
-  margin: 2rem 0;
+/* mermaid: JSが動くまでは通常のコードブロックだけを見せる。
+   mermaid.js が図の pre を .code-block 内へ移し、data-view で図とコードを切り替える */
+.mermaid-block > pre.mermaid,
+.code-block[data-view="diagram"] pre.shiki,
+.code-block[data-view="code"] pre.mermaid {
+  display: none;
+}
+
+.code-block pre.mermaid {
+  margin: 0;
+  padding: 2.75rem 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   overflow-x: auto;
   text-align: center;
+  /* 描画前のソースは目立たせない */
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 0.875rem;
+}
+
+/* 言語ラベル（right: 2.6rem、同じフォントで "mermaid" の7文字）の左に置く */
+.code-block .mermaid-toggle {
+  right: calc(2.6rem + 7ch + 0.3rem);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
 }
 
 /* code.js が pre をラップして言語ラベルとコピーボタンを付ける */
