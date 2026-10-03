@@ -19,7 +19,7 @@ https://chroju.dev
 ## Development
 
 ```bash
-npm run dev
+mise run dev
 ```
 
 Opens at http://localhost:3000. `posts/`, `src/`, `styles/` の変更を監視して自動で再ビルドする（OGP 画像の生成はスキップされる）。
@@ -27,7 +27,7 @@ Opens at http://localhost:3000. `posts/`, `src/`, `styles/` の変更を監視�
 ## Build
 
 ```bash
-npm run build
+mise run build
 ```
 
 `dist/` に静的サイト一式（HTML, feed.xml, OGP 画像）を出力する。
@@ -37,13 +37,13 @@ npm run build
 - OGP 画像は `.cache/og/` にキャッシュされる（gitignore 済み）
 
 ```bash
-npm run preview  # ビルド済み dist/ を配信のみ（再ビルドなし）
+mise run preview  # ビルド済み dist/ を配信のみ（再ビルドなし）
 ```
 
 ## Writing a Post
 
 ```bash
-make post title=YYYY-MM-DD-slug
+mise run new-post YYYY-MM-DD-slug
 ```
 
 This will:
