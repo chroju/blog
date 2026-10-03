@@ -1,0 +1,23 @@
+[tools]
+node = "26.9.0"
+
+[tasks.dev]
+description = "Start local dev server"
+run = "node src/dev.ts"
+
+[tasks.build]
+description = "Build the site"
+run = "node src/build.ts"
+
+[tasks.check]
+description = "Run checks"
+run = "node src/check.ts"
+
+[tasks.preview]
+description = "Serve the built site without rebuilding"
+run = "node src/dev.ts --serve-only"
+
+[tasks.new-post]
+description = "Scaffold posts/<slug>.md"
+usage = "arg \"<slug>\""
+run = "./scripts/generate-post.sh \"$usage_slug\""
