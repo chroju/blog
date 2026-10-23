@@ -1,5 +1,5 @@
 [tools]
-node = "26.12.0"
+node = "26.12.1"
 
 [tasks.dev]
 description = "Start local dev server"
