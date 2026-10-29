@@ -13,7 +13,7 @@ jobs:
 
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
-          node-version: 24
+          node-version: 26
           cache: npm
 
       # OGP画像キャッシュ（.cache/og/）を保持して再生成を避ける
