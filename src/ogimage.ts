@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import crypto from 'node:crypto'
 import satori from 'satori'
-import { Resvg } from '@resvg/resvg-js'
+import { Resvg, type RenderedImage } from '@resvg/resvg-js'
 import { site } from './config.ts'
 
 // OGP画像（1200x630）をビルド時に生成する。
@@ -11,7 +11,7 @@ import { site } from './config.ts'
 const WIDTH = 1200
 const HEIGHT = 630
 // デザインを変えたらこの値を上げてキャッシュを無効化する
-const DESIGN_VERSION = 1
+const DESIGN_VERSION = 2
 
 const cacheDir = path.join(process.cwd(), '.cache', 'og')
 
@@ -47,6 +47,8 @@ async function renderOgSvg(title: string, date?: string): Promise<string> {
     {
       width: '100%',
       height: '100%',
+      // satori 0.63以降はcontent-boxが既定になり、paddingの分だけ画像からはみ出す
+      boxSizing: 'border-box',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -95,6 +97,11 @@ async function renderOgSvg(title: string, date?: string): Promise<string> {
   })
 }
 
+export async function renderOgImage(title: string, date?: string): Promise<RenderedImage> {
+  const svg = await renderOgSvg(title, date)
+  return new Resvg(svg, { fitTo: { mode: 'width', value: WIDTH } }).render()
+}
+
 export async function generateOgImage(title: string, outPath: string, date?: string): Promise<void> {
   const key = crypto
     .createHash('sha1')
@@ -108,8 +115,7 @@ export async function generateOgImage(title: string, outPath: string, date?: str
     return
   }
 
-  const svg = await renderOgSvg(title, date)
-  const png = new Resvg(svg, { fitTo: { mode: 'width', value: WIDTH } }).render().asPng()
+  const png = (await renderOgImage(title, date)).asPng()
   fs.mkdirSync(cacheDir, { recursive: true })
   fs.writeFileSync(cachePath, png)
   fs.writeFileSync(outPath, png)

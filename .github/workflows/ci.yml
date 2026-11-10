@@ -23,6 +23,9 @@ jobs:
       # 出力の整合性検証（全ページ存在・XML整形式・フィード件数等）
       - run: node src/check.ts
 
+      # OGP画像を基準画像と比較し、satori等の更新によるレイアウト崩れを検知する
+      - run: node src/check-og.ts
+
   preview:
     runs-on: ubuntu-latest
     permissions:
