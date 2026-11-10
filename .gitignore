@@ -26,3 +26,5 @@ npm-debug.log*
 .env.production.local
 
 **/feed.xml
+# OGP snapshot check の差分出力
+/src/og-snapshots/*.actual.png
