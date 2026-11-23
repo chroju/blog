@@ -47,7 +47,7 @@ AIはその性質上、出力の不確実性がゼロにはならないわけだ
 
 認知するべきことは再分配されている、あるいは開発の高速化やAIを巡る世間的な潮流が速まるなかで増大している気がしていて、IT系の職種は駆逐されていくみたいな話も見るけれど本当にそうなのかなというのが今のところはよくわからない。やるべきことが減る形のパラダイムシフトは、これまでのキャリアでもクラウドの隆盛やIaCの発達のなかで経験してきたけれど、そのたびに別の知識が必要になったり、抽象化されてブラックボックスになったオンプレなどの知識も結局は要所要所では求められることもあった。インフラエンジニアは消えていくと散々脅されたが、結局在り方が変わっただけで「消滅した」とは言い難い。現在においても、AIで手放したことは多々あれど、その分仕事が減ったかと言えば、別のやることが増えている。
 
-セキュリティはその中でも顕著な話であって、これは従来ちゃんとやっていなかったことをちゃんとやりましょう、という向きになっただけではなくて、異様な数の修正パッチが出るようになったことで、それをどう捌くかといった別の課題が出てきている。こういった新たな課題をAIが自律的に拾って上手いことやってくれるから、人間は何も気にしなくていい日がそのうちにはくるのだろうとは思うけれど、今のところはそこまでを十全にやらせるのは難しい。いわゆる [アウターループ](https://www.oreilly.com/radar/own-the-outer-loop/) にあたる部分、そもそもAIに何を任せて、その結果をどう検証するのか、といった事業や業務そのもについての意思決定や判断は人間が担い続けているし、そこで考えなくてならないことはAIの隆盛によって増えてきているんじゃないか。
+セキュリティはその中でも顕著な話であって、これは従来ちゃんとやっていなかったことをちゃんとやりましょう、という向きになっただけではなくて、異様な数の修正パッチが出るようになったことで、それをどう捌くかといった別の課題が出てきている。こういった新たな課題をAIが自律的に拾って上手いことやってくれるから、人間は何も気にしなくていい日がそのうちにはくるのだろうとは思うけれど、今のところはそこまでを十全にやらせるのは難しい。いわゆる [アウターループ](https://www.oreilly.com/radar/own-the-outer-loop/) にあたる部分、そもそもAIに何を任せて、その結果をどう検証するのか、といった事業や業務そのものについての意思決定や判断は人間が担い続けているし、そこで考えなくてはならないことはAIの隆盛によって増えてきているんじゃないか。
 
 今までセキュリティをあまり気にしていなかった人も気にするようになっていたりするだろうし、自分の場合はAIの出力検証の観点でQA的な知識も身に付けなくてはならないんではないかと考えていたりもする。知的作業であれば、なんであれ任せればそれなりに上手いことやってくれるAIという存在が出来た以上、自分が管理できる専門知の手数も増やしたほうが今後有利に動けるはずだろうし、AIの出力を多角的に、信頼性や品質といった面でも問題ないかをやはり誰かしらが最終チェックする必要はある。そのチェック基準さえプロンプトに落とし込むのだとしても、プロンプトのチェックは要る。
 
@@ -69,7 +69,7 @@ AIはその性質上、出力の不確実性がゼロにはならないわけだ
 
 > For me, the goal of AI adoption is not to build a factory producing mountains of unmanaged content. It is to empower long-lived human teams to act as responsible, high-fidelity stewards of their value streams.
 > 
-> [Team Topologies for the AI age - stewardship of value flow — Team Topologies - Organizing for fast flow of value]([https://teamtopologies.com/news-blogs-newsletters/team-topologies-for-the-ai-age-stewardship-of-value-flow](https://teamtopologies.com/news-blogs-newsletters/team-topologies-for-the-ai-age-stewardship-of-value-flow))
+> [Team Topologies for the AI age - stewardship of value flow — Team Topologies - Organizing for fast flow of value](https://teamtopologies.com/news-blogs-newsletters/team-topologies-for-the-ai-age-stewardship-of-value-flow)
 
 
 
